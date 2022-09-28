@@ -6,3 +6,8 @@ export const isDarkThemeAtom = atom(
     default:false,
   }
 )
+
+export const isLogedInAtom = atom({
+  key:"isLogedIn",
+  default:false,
+})

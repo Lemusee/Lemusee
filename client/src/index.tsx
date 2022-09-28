@@ -1,14 +1,22 @@
 import React from "react";
+import { RecoilRoot } from "recoil";
 import ReactDOM from "react-dom";
-import { ThemeProvider } from "styled-components";
+import { QueryClient, QueryClientProvider } from "react-query";
 import App from "./App";
-import { lightTheme, darkTheme } from "./theme";
+import { Helmet } from "react-helmet";
+
+const queryClient = new QueryClient();
 
 ReactDOM.render(
   <React.StrictMode>
-    <ThemeProvider theme={darkTheme}>
-      <App />
-    </ThemeProvider>
+    <RecoilRoot>
+      <QueryClientProvider client={queryClient}>
+        <Helmet>
+          <link rel="icon" type="image/png" href="favicon.png" />
+        </Helmet>
+        <App />
+      </QueryClientProvider>
+    </RecoilRoot>  
   </React.StrictMode>,
   document.getElementById("root")
 );
