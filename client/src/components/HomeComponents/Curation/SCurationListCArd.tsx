@@ -21,6 +21,9 @@ export const Wrapper = styled.div<IBackgroundImg>`
   background-size: cover;
   background-position: center;
   overflow: hidden;
+  flex-wrap: nowrap;
+  flex-shrink: 0;
+  transition: 0.2s;
 `;
 
 export const Container = styled.div<IFocus>`
@@ -29,7 +32,7 @@ export const Container = styled.div<IFocus>`
   align-items: flex-start;
   justify-content: space-between;
   padding: 88px 10px 10px;
-  width: 100%;
+  width: 290px;
   height: 100%;
   text-align: left;
   color: ${props=> props.focus ? props.theme.lemuseeblack_00 : props.theme.lemuseeblack_70};

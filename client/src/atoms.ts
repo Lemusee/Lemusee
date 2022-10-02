@@ -72,3 +72,15 @@ export const channelState = atom<IChannelInfo[]>({
   key: "channelInfo",
   default: []
 })
+
+export interface ICurationInfo {
+  cardNum: number;
+  title: string; 
+  contents:string;
+  imgUrl:string;
+}
+
+export const curationState = atom<ICurationInfo[]>({
+  key: "curationInfo",
+  default:[],
+})

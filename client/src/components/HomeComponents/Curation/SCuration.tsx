@@ -1,4 +1,3 @@
-import { ImgHTMLAttributes } from "react";
 import styled from "styled-components";
 import * as G from "../../Global/Spacing/Spacing";
 import * as T from "../../Global/Text/Text"
@@ -25,13 +24,22 @@ export const CurationBoard = styled.div`
 export const BoardLeft = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  justify-content: space-between;
+`;
+
+export const BoardLeftText = styled.div`
+  display: flex;
+  flex-direction: column;
   gap: 0px;
   align-items: flex-start;
   text-align: left;
   ${T.Pretendard44B} {
     text-transform: uppercase;
     width: 660px;
-    word-break: keep-all;
+    white-space: normal;
+    word-break: break-all;
   }
   ${T.Pretendard17R} {
     color: ${props=>props.theme.lemuseeblack_70};
@@ -63,7 +71,7 @@ export const nexBtn = styled.button`
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin-top: 105px;
+  align-self: flex-start;
   ${T.Pretendard15M} {
     color: ${props=> props.theme.lemuseeblack_70};
   }
@@ -74,9 +82,20 @@ export const nexBtn = styled.button`
 
 export const CurationList = styled.div`
   display: flex;
+  flex-wrap: nowrap;
   flex-direction: row;
   gap: 0px;
   justify-content: flex-start;
   align-items: center;
-  width: 100%;
+  width: 1160px;
+  overflow-x: auto;
+  button {
+    background-color: transparent;
+  }
+  button:hover {
+    background-color: transparent;
+  }
+  button:active {
+    background-color: transparent;
+  }
 `;
