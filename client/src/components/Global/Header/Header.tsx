@@ -9,8 +9,8 @@ function Header () {
   const isLogedIn = useRecoilValue(isLogedInAtom);
   return (
     <>
-      <G.Wrapper>
-        <G.Container>
+      <S.Wrapper>
+        <S.Container>
           <S.MenuTop>
             <S.Logo>
               <Link to="/">
@@ -60,8 +60,8 @@ function Header () {
               </Link>
             </S.NavSubTitle>
           </S.MenuBottom>
-        </G.Container>
-      </G.Wrapper>
+        </S.Container>
+      </S.Wrapper>
     </>
   )
 }

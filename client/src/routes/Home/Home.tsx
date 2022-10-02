@@ -1,7 +1,8 @@
 import { Helmet } from "react-helmet";
 import Footer from "../../components/Global/Footer/Footer";
 import Header from "../../components/Global/Header/Header";
-import * as S from "./HomeStyle";
+import Recommends from "../../components/HomeComponents/Recommendation/Recommends";
+import * as S from "./SHome";
 
 
 function Home () {
@@ -14,7 +15,7 @@ function Home () {
       </Helmet>
       <Header/>
       <S.Wrapper>
-
+        <Recommends/>
       </S.Wrapper>
       <Footer/>
     </>

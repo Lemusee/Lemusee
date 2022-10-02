@@ -15,6 +15,8 @@ declare module 'styled-components' {
     lemuseeblack_00:string;
     error_red:string;
     pretendard:string;
+    logoBlack:string;
+    logoWhite:string;
   }
 }
 

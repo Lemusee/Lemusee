@@ -1,101 +1,132 @@
 import Router from './Router';
-import { createGlobalStyle } from 'styled-components';
 import { ThemeProvider } from "styled-components";
-import { darkTheme, lightTheme } from "./theme";
+import { darkTheme, lightTheme, GlobalStyle } from "./theme";
 import {ReactQueryDevtools} from "react-query/devtools";
-import { useRecoilValue } from "recoil";
-import { isDarkThemeAtom } from "./atoms"
+import { useRecoilState, useRecoilValue, useSetRecoilState } from "recoil";
+import { isDarkThemeAtom, playlistItemState, channelState, Categories, isLoadingAtom } from "./atoms";
+import { useQuery } from "react-query";
+import { fetchChannelInfo } from "./api";
+import dummyChannelInfo from "./assets/dummyData/dummyChannel.json";
+import dummySelfItem from "./assets/dummyData/dummySelfItems.json";
+import dummySocietyItme from "./assets/dummyData/dummySocietyItems.json";
+import dummyCultureItem from "./assets/dummyData/dummyCultureItems.json";
+import dummyScienceItem from "./assets/dummyData/dummyScienceItem.json";
+import dummyActivityItem from "./assets/dummyData/dummyActivityItem.json"
+import { useEffect } from 'react';
 
-const GlobalStyle = createGlobalStyle`
-  @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css");
-  @font-face {
-    font-family: 'Pretendard-Regular';
-    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
-    font-weight: 400;
-    font-style: normal;
-  }
-  html, body, div, span, applet, object, iframe,
-  h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-  a, abbr, acronym, address, big, cite, code,
-  del, dfn, em, img, ins, kbd, q, s, samp,
-  small, strike, strong, sub, sup, tt, var,
-  b, u, i, center,
-  dl, dt, dd, menu, ol, ul, li,
-  fieldset, form, label, legend,
-  table, caption, tbody, tfoot, thead, tr, th, td,
-  article, aside, canvas, details, embed,
-  figure, figcaption, footer, header, hgroup,
-  main, menu, nav, output, ruby, section, summary,
-  time, mark, audio, video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
-    font-family: ${props=> props.theme.pretendard};
-  }
-  /* HTML5 display-role reset for older browsers */
-  article, aside, details, figcaption, figure,
-  footer, header, hgroup, main, menu, nav, section {
-    display: block;
-  }
-  /* HTML5 hidden-attribute fix for newer browsers */
-  *[hidden] {
-      display: none;
-  }
-  body {
-    line-height: 1;
-  }
-  menu, ol, ul {
-    list-style: none;
-  }
-  blockquote, q {
-    quotes: none;
-  }
-  blockquote:before, blockquote:after,
-  q:before, q:after {
-    content: '';
-    content: none;
-  }
-  table {
-    border-collapse: collapse;
-    border-spacing: 0;
-  }
-  * {
-    box-sizing: border-box;
-  }
-  a {
-    text-decoration: none;
-    color: inherit;
-  }
-  button {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: transparent;
-    color: ${props => props.theme.lemuseeblack_100};
-    border: none;
-    padding: 3px 5px;
-    border-radius: 5px;
-    cursor: pointer;
-    &:hover {
-    background-color: ${props=>props.theme.lemuseeblack_30};
-    transition: 0.3s;
+const channelInfoData = {...dummyChannelInfo};
+const channelInfo = channelInfoData.items.map(data => {
+  return (
+    {
+      id:data.id,
+      publishedAt: data.snippet.publishedAt,
+      title:data.snippet.title,
+      description:data.snippet.description,
+      thumnails:data.snippet.thumbnails.medium,
+      statistics: data.statistics,
     }
-    &:active {
-      background-color: ${props => props.theme.lemuseeblack_50};
-    }
-  }
-  body {
-    font-family: ${props=>props.theme.pretendard};
-    background-color: ${props => props.theme.lemuseeblack_10};
-    color: ${props => props.theme.lemuseeblack_100};
-  }
-`;
+    )
+  })
+  
+const selfItemData = {...dummySelfItem};
+const societyItemData = {...dummySocietyItme};
+const scienceItemData = {...dummyScienceItem};
+const cultureItemData = {...dummyCultureItem};
+const activityItemData = {...dummyActivityItem};
+const videoItemList = [
+  selfItemData.items.map(list => {
+    return (
+      {
+        id: list.id,
+        playlistId : list.snippet.playlistId,
+        publishedAt : list.snippet.publishedAt,
+        title: list.snippet.title,
+        description: list.snippet.description,
+        thumnailUrl: list.snippet.thumbnails.medium?.url,
+        videoURL: list.snippet.resourceId.videoId,
+        category: Categories.self_dev,
+      }
+    )
+  }),
+  societyItemData.items.map(list => {
+    return (
+      {
+        id: list.id,
+        playlistId : list.snippet.playlistId,
+        publishedAt : list.snippet.publishedAt,
+        title: list.snippet.title,
+        description: list.snippet.description,
+        thumnailUrl: list.snippet.thumbnails.medium.url,
+        videoURL: list.snippet.resourceId.videoId,
+        category: Categories.humanities_society,
+      }
+    )
+  }),
+  scienceItemData.items.map(list => {
+    return (
+      {
+        id: list.id,
+        playlistId : list.snippet.playlistId,
+        publishedAt : list.snippet.publishedAt,
+        title: list.snippet.title,
+        description: list.snippet.description,
+        thumnailUrl: list.snippet.thumbnails.medium.url,
+        videoURL: list.snippet.resourceId.videoId,
+        category: Categories.science_tech,
+      }
+    )
+  }),
+  cultureItemData.items.map(list => {
+    return (
+      {
+        id: list.id,
+        playlistId : list.snippet.playlistId,
+        publishedAt : list.snippet.publishedAt,
+        title: list.snippet.title,
+        description: list.snippet.description,
+        thumnailUrl: list.snippet.thumbnails.medium.url,
+        videoURL: list.snippet.resourceId.videoId,
+        category: Categories.culture_art,
+      }
+    )
+  }),
+  activityItemData.items.map(list => {
+    return (
+      {
+        id: list.id,
+        playlistId : list.snippet.playlistId,
+        publishedAt : list.snippet.publishedAt,
+        title: list.snippet.title,
+        description: list.snippet.description,
+        thumnailUrl: list.snippet.thumbnails.medium.url,
+        videoURL: list.snippet.resourceId.videoId,
+        category: Categories.activity,
+      }
+    )
+  }),
+]
+const AllVideoList = [
+  ...videoItemList[0], 
+  ...videoItemList[1], 
+  ...videoItemList[2], 
+  ...videoItemList[3], 
+  ...videoItemList[4],
+]
+
 
 function App() {
+  // const {isLoading, data} = useQuery<IChannelInfo[]>("ChannelInfo", fetchChannelInfo);
+  // console.log(data);
+  // console.log(dummyChannelInfo);
+  const [videoItem, setVideoItem] = useRecoilState(playlistItemState);
+  const setChannelState = useSetRecoilState(channelState);
+  const setIsLoading = useSetRecoilState(isLoadingAtom);
+  useEffect(()=> {
+    setVideoItem(AllVideoList);
+    setChannelState([...channelInfo]);
+    setIsLoading(true);
+  },[]);
+  console.log(videoItem);
   const isDark = useRecoilValue(isDarkThemeAtom);
   return (
     <>

@@ -1,4 +1,14 @@
+import { NONAME } from "dns";
 import { atom } from "recoil";
+
+export enum Categories {
+  "self_dev"="self_dev",
+  "culture_art"="culture_art",
+  "humanities_society"="humanities_society",
+  "science_tech"="science_tech",
+  "activity"="activity",
+  "etc"="etc",
+}
 
 export const isDarkThemeAtom = atom(
   {
@@ -10,4 +20,55 @@ export const isDarkThemeAtom = atom(
 export const isLogedInAtom = atom({
   key:"isLogedIn",
   default:false,
+})
+
+export const isLoadingAtom = atom({
+  key: "isLoading",
+  default: false,
+})
+
+interface IThumnails {
+  url:string;
+  width:number;
+  height:number;
+}
+
+export interface IVideoItems {
+  id: string;
+  playlistId : string;
+  publishedAt : string;
+  title: string;
+  description: string;
+  thumnailUrl: string | undefined;
+  videoURL: string;
+  category: Categories;
+}
+
+export const categoryState = atom<Categories>({
+  key:"category",
+  default: Categories.etc,
+});
+
+export const playlistItemState = atom<IVideoItems[]>({
+  key:"videoItem",
+  default: []
+});
+
+export interface IChannelInfo {
+  id: string;
+  publishedAt: string;
+  title: string;
+  description: string;
+  thumnails: IThumnails;
+  statistics: {
+      viewCount: string;
+      subscriberCount: string;
+      hiddenSubscriberCount: boolean;
+      videoCount: string;
+  };
+}
+
+export const channelState = atom<IChannelInfo[]>({
+  key: "channelInfo",
+  default: []
 })

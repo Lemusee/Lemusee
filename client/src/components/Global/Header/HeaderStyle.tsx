@@ -1,4 +1,12 @@
 import styled from "styled-components";
+import * as G from "../Spacing/Spacing"
+
+export const Wrapper = styled(G.Wrapper)``;
+
+export const Container = styled(G.Container)`
+  padding: 50px 0;
+  gap: 60px;
+`;
 
 export const MenuTop = styled.div`
   width: 100%;

@@ -1,0 +1,527 @@
+{
+  "kind": "youtube#playlistItemListResponse",
+  "etag": "_qvAaaaUNBQtPM9ZaNK-T-cKOA8",
+  "items": [
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "KdJwcF6UYNXqPLlMotTTrCKJuQ0",
+      "id": "UExVeGlXLW9MZGxvd3ROdVFqcjFJSTU1Nmk3d2lJYWVXcy41NkI0NEY2RDEwNTU3Q0M2",
+      "snippet": {
+        "publishedAt": "2022-10-01T11:07:17Z",
+        "channelId": "UCGagrr6S5Q8dGXkxnT-ScmA",
+        "title": "2022-1 레뮤제: 한 학기를 돌아보며",
+        "description": "2022-1 레뮤제: 한 학기를 돌아보며\n오랜만에 대면 강연. 몇년만의 MT.\n여러모로 레뮤제에게 의미있는 학기였습니다.\nOT부터 마지막 강연까지, 2022년 3월부터 6월까지의 활동 모습을 영상으로 정리해보았습니다.\n다음학기 활동도 기대해주세요~!",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/FZLbNAjPaS8/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/FZLbNAjPaS8/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/FZLbNAjPaS8/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/FZLbNAjPaS8/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/FZLbNAjPaS8/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Le’Musée",
+        "playlistId": "PLUxiW-oLdlowtNuQjr1II556i7wiIaeWs",
+        "position": 0,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "FZLbNAjPaS8"
+        },
+        "videoOwnerChannelTitle": "Le’Musée",
+        "videoOwnerChannelId": "UCGagrr6S5Q8dGXkxnT-ScmA"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "PjgDpac4-vaBWSf51RuuDDIX4Kw",
+      "id": "UExVeGlXLW9MZGxvd3ROdVFqcjFJSTU1Nmk3d2lJYWVXcy4yODlGNEE0NkRGMEEzMEQy",
+      "snippet": {
+        "publishedAt": "2022-10-01T11:09:35Z",
+        "channelId": "UCGagrr6S5Q8dGXkxnT-ScmA",
+        "title": "술게임으로 강연하는 동아리가 있다? - 레뮤제 MT 브이로그",
+        "description": "술게임으로 강연하는 동아리가 있다? - 레뮤제 MT 브이로그 \n\n2022년 5월 20일에 1박 2일동안 레뮤제 MT가 진행되었습니다. \n너무나도 오랜만에 가게 된 MT라 신규, 기존, 그리고 OB회원들까지 많은 사람들이 참여하였습니다.\n물놀이도 하고, 게임도 하고, 심지어 칵테일도 먹으며 알차게 보냈던 이번 레뮤제 MT!\n그 생생한 모습을 브이로그로 담아보았습니다.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/AFI9gl3_U6o/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/AFI9gl3_U6o/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/AFI9gl3_U6o/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/AFI9gl3_U6o/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/AFI9gl3_U6o/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Le’Musée",
+        "playlistId": "PLUxiW-oLdlowtNuQjr1II556i7wiIaeWs",
+        "position": 1,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "AFI9gl3_U6o"
+        },
+        "videoOwnerChannelTitle": "Le’Musée",
+        "videoOwnerChannelId": "UCGagrr6S5Q8dGXkxnT-ScmA"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "mnh5a-3XS-jNm5LqmmUHfMOYsr4",
+      "id": "UExVeGlXLW9MZGxvd3ROdVFqcjFJSTU1Nmk3d2lJYWVXcy4wMTcyMDhGQUE4NTIzM0Y5",
+      "snippet": {
+        "publishedAt": "2022-10-01T11:10:04Z",
+        "channelId": "UCGagrr6S5Q8dGXkxnT-ScmA",
+        "title": "2022-1 3차 강연 현장 스케치",
+        "description": "2022-1 3차 강연 현장 스케치\n\n5월 26일 2022년 1학기 레뮤제 3차 강연이 진행되었습니다.\n이번에도 진행된 총 3번의 강연의 뒷 이야기가 어떤지 확인해보시죠! \n\n3차 강연 영상 링크↓\n약이 세상에 나오기까지 (김민기 연사자)\nhttps://www.youtube.com/watch?v=TbQ_mc6G8qo\n\n진정한 인플루언서가 되는 법 (이지원 연사자)\nhttps://www.youtube.com/watch?v=WoxuOtt4g9s\n\n운동의 정석 (김재민 연사자)\nhttps://www.youtube.com/watch?v=YQMqTs38OEs",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/k_790Pc0ihc/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/k_790Pc0ihc/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/k_790Pc0ihc/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/k_790Pc0ihc/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/k_790Pc0ihc/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Le’Musée",
+        "playlistId": "PLUxiW-oLdlowtNuQjr1II556i7wiIaeWs",
+        "position": 2,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "k_790Pc0ihc"
+        },
+        "videoOwnerChannelTitle": "Le’Musée",
+        "videoOwnerChannelId": "UCGagrr6S5Q8dGXkxnT-ScmA"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "6rx96uC0Nc8fR1J_y_P4ZtIJOhs",
+      "id": "UExVeGlXLW9MZGxvd3ROdVFqcjFJSTU1Nmk3d2lJYWVXcy41MjE1MkI0OTQ2QzJGNzNG",
+      "snippet": {
+        "publishedAt": "2022-10-01T11:14:53Z",
+        "channelId": "UCGagrr6S5Q8dGXkxnT-ScmA",
+        "title": "2022-1 1차 강연 현장스케치",
+        "description": "3월 31일에 2022년 1학기 레뮤제 1차 강연이 진행되었습니다.\n오랜만에 진행된 대면 강연의 촬영 비하인드를 공개합니다! \n\n1차 강연 영상 링크↓\n대학공부 Class 101 (허주영 연사자)\nhttps://www.youtube.com/watch?v=MkL1SbjbHb8\n\n알 카포네, 금주법과 우유 유통망 (지윤상 연사자)\nhttps://www.youtube.com/watch?v=hGqBykQpC68",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/y6pdJm9Ztgs/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/y6pdJm9Ztgs/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/y6pdJm9Ztgs/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/y6pdJm9Ztgs/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/y6pdJm9Ztgs/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Le’Musée",
+        "playlistId": "PLUxiW-oLdlowtNuQjr1II556i7wiIaeWs",
+        "position": 3,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "y6pdJm9Ztgs"
+        },
+        "videoOwnerChannelTitle": "Le’Musée",
+        "videoOwnerChannelId": "UCGagrr6S5Q8dGXkxnT-ScmA"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "m6IT5N31Ur3paxrHVosCWvQxZz4",
+      "id": "UExVeGlXLW9MZGxvd3ROdVFqcjFJSTU1Nmk3d2lJYWVXcy4wOTA3OTZBNzVEMTUzOTMy",
+      "snippet": {
+        "publishedAt": "2022-10-01T11:16:21Z",
+        "channelId": "UCGagrr6S5Q8dGXkxnT-ScmA",
+        "title": "[2021-2 레뮤제 정기강연] 메이킹 필름 X 촬영 비하인드컷",
+        "description": "📢 [2021-2 레뮤제 정기강연] 메이킹필름 X 촬영 비하인드컷 📢\n \n\n 안녕하세요? 건국대학교 중앙동아리 소속 강연 동아리 레뮤제입니다.\n\n 2021년 09월 09일 ~ 12월 31일까지 레뮤제에서는 \n총 5번에 걸쳐 비대면 정기 강연회를 기획하였는데요!\n\n 강연회가 진행되었던 과정을 기록하기 위해 촬영 비하인드컷 영상을 제작하였습니다. \n 촬영 현장에서 연사자분들이 강연을 준비하는 모습부터, \n 촬영진분들이 촬영장을 세팅하는 모습까지.\n 강연 영상만으로는 담아내기 힘든 부분들을 집중적으로 다루었습니다.\n\n또한 연사자분들의 생각을 조금 더 가까이서 들을 수 있는 기회를 마련하고자 영상 마지막에 연사자님 인터뷰도 넣었습니다.\n\n강연 촬영장의 모습과 연사분들의 리허설 장면을 위주로 영상을 제작했으니 예쁘게 시청해주시면 감사하겠습니다 :)\n\n\n✅1차 정기강연 (21.09.17)\n그 시절 우리가 열광했던 런던( 꼬꼬무 ver. )-정승혁 연사자\n이 맛에 산다 '소주 오리엔테이션'-지윤상 연사자\n\n✅2차 정기강연(21.10.08)\n레뮤제를 나가라-윤창우 연사자\n기록하기의 또 하나의 방법-이건우 연사자\n\n✅3차 정기강연(21.11.12)\n예상치 못한 불행을 맞이했을 때-양예진 연사자\n표현의 언어 : 시 쓰는 발명가-박성규 연사자\n\n✅4차 정기강연(21.11.25)\n표절에 관한 간단한 고찰-여용현 연사자\n공정무역, 그는 과연 공정한가?-이예린 연사자\n그 정도면 충분하다-허주영 연사자\n\n✅5차 정기강연(21.12.03)\n렘징어 GAME-성준현 연사자\n글쓰기가 어려운 여러분들에게-전한웅 연사자\n\n\n\n*본 촬영회는 정부의 방역지침을 준수하여 진행되었습니다.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/z9gq6XJnNCY/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/z9gq6XJnNCY/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/z9gq6XJnNCY/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/z9gq6XJnNCY/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/z9gq6XJnNCY/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Le’Musée",
+        "playlistId": "PLUxiW-oLdlowtNuQjr1II556i7wiIaeWs",
+        "position": 4,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "z9gq6XJnNCY"
+        },
+        "videoOwnerChannelTitle": "Le’Musée",
+        "videoOwnerChannelId": "UCGagrr6S5Q8dGXkxnT-ScmA"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "BzvCkoIIQ1olvqmqbsTXHHnOW_I",
+      "id": "UExVeGlXLW9MZGxvd3ROdVFqcjFJSTU1Nmk3d2lJYWVXcy4xMkVGQjNCMUM1N0RFNEUx",
+      "snippet": {
+        "publishedAt": "2022-10-01T11:25:30Z",
+        "channelId": "UCGagrr6S5Q8dGXkxnT-ScmA",
+        "title": "\"레뮤제X인액터스 건국 연합강연\" 메이킹 필름#2",
+        "description": "📢 [청년들을 위한 삶의 지침이 될, 삶과 꿈을 큐레이션하다]📢\n \n안녕하세요, 건국대 중앙동아리 소속 실전 경영학회 인액터스, 강연동아리 레뮤제입니다. \n코로나19에도 불구하고 긍정적 에너지를 교류하고자 두 동아리의 합동 강연을 기획했습니다.\n\n인액터스는 사회적 기업, 소셜벤처로 성장할 프로젝트를 기획, 운영하는 사회혁신 실천형 비즈니스 동아리이며 레뮤제는 따뜻한 인간관계를 바탕으로 수평적 지식나눔을 추구하는 모토로 정기적인 강연회를 여는 동아리입니다.\n \n본 강연에선 '성공적인 스타트업의 대표님과 국내 유명기업 종사자, 우리 또래의 강연자’들께서 유익한 이야기를 공유할 예정입니다.\n \n✅ 강연 일시 : 5월 20일 19시 30분 부터\n\n✅ 강연 채널 : 레뮤제 유튜브 라이브 스트리밍\n\n✅ 스트리밍 채널 링크: https://youtube.com/channel/UCGagrr6S...\n\n더 나은 나를 찾기 위한 청년들의 이야기에 많은 관심 부탁드립니다.\n\n*본 촬영회는 방역지침을 준수하여 진행되었습니다.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/R1TAmTbDAC4/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/R1TAmTbDAC4/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/R1TAmTbDAC4/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/R1TAmTbDAC4/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/R1TAmTbDAC4/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Le’Musée",
+        "playlistId": "PLUxiW-oLdlowtNuQjr1II556i7wiIaeWs",
+        "position": 5,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "R1TAmTbDAC4"
+        },
+        "videoOwnerChannelTitle": "Le’Musée",
+        "videoOwnerChannelId": "UCGagrr6S5Q8dGXkxnT-ScmA"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "Xb-lc4DTzk_2AS3VulO7ob0Dm7k",
+      "id": "UExVeGlXLW9MZGxvd3ROdVFqcjFJSTU1Nmk3d2lJYWVXcy41MzJCQjBCNDIyRkJDN0VD",
+      "snippet": {
+        "publishedAt": "2022-10-01T11:25:46Z",
+        "channelId": "UCGagrr6S5Q8dGXkxnT-ScmA",
+        "title": "\"레뮤제 X 인액터스 건국 연합강연\" 메이킹 필름!",
+        "description": "📢 [청년들을 위한 삶의 지침이 될, 삶과 꿈을 큐레이션하다]📢\n \n안녕하세요, 건국대 중앙동아리 소속 실전 경영학회 인액터스, 강연동아리 레뮤제입니다. \n코로나19에도 불구하고 긍정적 에너지를 교류하고자 두 동아리의 합동 강연을 기획했습니다.\n\n인액터스는 사회적 기업, 소셜벤처로 성장할 프로젝트를 기획, 운영하는 사회혁신 실천형 비즈니스 동아리이며 레뮤제는 따뜻한 인간관계를 바탕으로 수평적 지식나눔을 추구하는 모토로 정기적인 강연회를 여는 동아리입니다.\n \n본 강연에선 '성공적인 스타트업의 대표님과 국내 유명기업 종사자, 우리 또래의 강연자’들께서 유익한 이야기를 공유할 예정입니다.\n \n✅ 강연 일시 : 5월 20일 19시 30분 부터\n\n✅ 강연 채널 : 레뮤제 유튜브 라이브 스트리밍\n\n✅ 스트리밍 채널 링크: https://youtube.com/channel/UCGagrr6S5Q8dGXkxnT-ScmA\n\n더 나은 나를 찾기 위한 청년들의 이야기에 많은 관심 부탁드립니다.\n\n*본 촬영회는 방역지침을 준수하여 진행되었습니다.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/mUYx50KPPOM/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/mUYx50KPPOM/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/mUYx50KPPOM/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/mUYx50KPPOM/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/mUYx50KPPOM/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Le’Musée",
+        "playlistId": "PLUxiW-oLdlowtNuQjr1II556i7wiIaeWs",
+        "position": 6,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "mUYx50KPPOM"
+        },
+        "videoOwnerChannelTitle": "Le’Musée",
+        "videoOwnerChannelId": "UCGagrr6S5Q8dGXkxnT-ScmA"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "-tL6Bbqu-wiponbbHva-ptlzucI",
+      "id": "UExVeGlXLW9MZGxvd3ROdVFqcjFJSTU1Nmk3d2lJYWVXcy5DQUNERDQ2NkIzRUQxNTY1",
+      "snippet": {
+        "publishedAt": "2022-10-01T11:37:16Z",
+        "channelId": "UCGagrr6S5Q8dGXkxnT-ScmA",
+        "title": "❤️건국대 강연동아리 레뮤제 신입미션발표❤️",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/1VKMg9p8EHc/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/1VKMg9p8EHc/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/1VKMg9p8EHc/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/1VKMg9p8EHc/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/1VKMg9p8EHc/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Le’Musée",
+        "playlistId": "PLUxiW-oLdlowtNuQjr1II556i7wiIaeWs",
+        "position": 7,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "1VKMg9p8EHc"
+        },
+        "videoOwnerChannelTitle": "Le’Musée",
+        "videoOwnerChannelId": "UCGagrr6S5Q8dGXkxnT-ScmA"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "xgKOsvFaSpQhz6Zk32JMkMh0goo",
+      "id": "UExVeGlXLW9MZGxvd3ROdVFqcjFJSTU1Nmk3d2lJYWVXcy45NDk1REZENzhEMzU5MDQz",
+      "snippet": {
+        "publishedAt": "2022-10-01T11:38:20Z",
+        "channelId": "UCGagrr6S5Q8dGXkxnT-ScmA",
+        "title": "❤️VLOG #3 | 동아리 MT | 건국대 강연동아리 레뮤제 브이로그❤️",
+        "description": "안녕하세요. 건국대 강연동아리 레뮤제입니다. :)\n레뮤제는 9월 28일 토요일에 대성리로 MT를 다녀왔어요.\n같이 게임도 하고 재밌게 놀면서 신입회원분들과 많이 친해졌답니다. ^__^\n모두 다음주에 봐요.\n레뮤제 사랑해❤️\n\nCamera : Galaxy Note 10 / Tool : VLLO\nContact : posamsungwer@gmail.com\nInstagram : @lemusee08",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/uakMjO1tVyU/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/uakMjO1tVyU/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/uakMjO1tVyU/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/uakMjO1tVyU/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/uakMjO1tVyU/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Le’Musée",
+        "playlistId": "PLUxiW-oLdlowtNuQjr1II556i7wiIaeWs",
+        "position": 8,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "uakMjO1tVyU"
+        },
+        "videoOwnerChannelTitle": "Le’Musée",
+        "videoOwnerChannelId": "UCGagrr6S5Q8dGXkxnT-ScmA"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "fN6DrocLaLbV1Oe_IFjupXH2SLU",
+      "id": "UExVeGlXLW9MZGxvd3ROdVFqcjFJSTU1Nmk3d2lJYWVXcy5GNjNDRDREMDQxOThCMDQ2",
+      "snippet": {
+        "publishedAt": "2022-10-01T11:38:33Z",
+        "channelId": "UCGagrr6S5Q8dGXkxnT-ScmA",
+        "title": "🙆\u200d♂️VLOG #2 | 건국대 동아리 브이로그🙆\u200d♀️ | 신입회원 오리엔테이션 | 건국대 강연동아리 레뮤제",
+        "description": "안녕하세요 건국대 강연동아리 레뮤제입니다 :)\n오늘은 2019년 2학기 신입회원 오리엔테이션이 있었던 날이에요!\n신입회원분들의 자기소개가 있었어요\n신입회원 여러분 모두 환영합니다\n\nCamera : Galaxy Note 10 / Tool : VLLO\nContact : posamsungwer@gmail.com\nInstagram : @lemusee08",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/DTx2vwStmLU/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/DTx2vwStmLU/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/DTx2vwStmLU/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/DTx2vwStmLU/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/DTx2vwStmLU/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Le’Musée",
+        "playlistId": "PLUxiW-oLdlowtNuQjr1II556i7wiIaeWs",
+        "position": 9,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "DTx2vwStmLU"
+        },
+        "videoOwnerChannelTitle": "Le’Musée",
+        "videoOwnerChannelId": "UCGagrr6S5Q8dGXkxnT-ScmA"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "y7lotsosOETYab9Pj_IPKEp91Vg",
+      "id": "UExVeGlXLW9MZGxvd3ROdVFqcjFJSTU1Nmk3d2lJYWVXcy40NzZCMERDMjVEN0RFRThB",
+      "snippet": {
+        "publishedAt": "2022-10-01T11:38:55Z",
+        "channelId": "UCGagrr6S5Q8dGXkxnT-ScmA",
+        "title": "🍺VLOG #1 | 건국대 동아리 브이로그🍺 | 전체회의 | 건국대 강연동아리 레뮤제",
+        "description": "안녕하세요 건국대 강연동아리 레뮤제입니다 :)\n레뮤제의 일상모습을 담아봤어요 오늘은 2019년 2학기 전체회의가 있었던 날이에요!\n큐레이터님과 어드민, 컨텐츠, 컬쳐 팀장님의 2학기 일정 및 공약 설명이 있었어요!\n\nCamera : Galaxy Note 10 / Tool : VLLO\nContact : posamsungwer@gmail.com\nInstagram : @lemusee08",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/oQv_2oByz3U/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/oQv_2oByz3U/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/oQv_2oByz3U/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/oQv_2oByz3U/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/oQv_2oByz3U/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Le’Musée",
+        "playlistId": "PLUxiW-oLdlowtNuQjr1II556i7wiIaeWs",
+        "position": 10,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "oQv_2oByz3U"
+        },
+        "videoOwnerChannelTitle": "Le’Musée",
+        "videoOwnerChannelId": "UCGagrr6S5Q8dGXkxnT-ScmA"
+      }
+    }
+  ],
+  "pageInfo": {
+    "totalResults": 11,
+    "resultsPerPage": 50
+  }
+}

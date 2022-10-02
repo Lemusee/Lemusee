@@ -11,6 +11,13 @@ export const Container = styled.div`
   width: 1280px;
   display: flex;
   flex-direction: column;
-  gap: 60px;
-  margin: 50px 0; 
+`;
+
+export const contentTitle = styled.button`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 0px;
+  text-transform: uppercase;
+  color: ${props=>props.theme.lemuseeblack_100};
 `;
