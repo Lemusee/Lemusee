@@ -17,7 +17,7 @@ function VideoCard ({ title, description, publishedAt, videoURL } : IVideoItems)
               <Moment format="YY.MM.DD.">{publishedAt}</Moment>
             </T.Pretendard13R>
           </S.CardTitle>
-          <S.CardContent>{description}</S.CardContent>
+          <S.CardContent>{description.replace(/\n/g, " ")}</S.CardContent>
           <S.Speaker>{"윤창우 연사자"}</S.Speaker>
         </S.Card>
       </Link>

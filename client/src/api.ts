@@ -34,6 +34,10 @@ export function fetchScienceItem(){
   return fetch(`${BASE_URL}/playlistItems?part=snippet&maxResults=50&status=&playlistId=${playlistIDs.PLAYLIST_SCIENCE_ID}&key=${API_KEY}`).then(response => response.json());
 };
 
+export function fetchVideoDetail(VIDEO_ID:string){
+  return fetch(`${BASE_URL}/videos?part=snippet&status=&id=${VIDEO_ID}&key=${API_KEY}`);
+}
+
 
 
 const BASE_URL1 = `https://api.coinpaprika.com/v1`

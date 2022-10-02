@@ -21,3 +21,10 @@ export const contentTitle = styled.button`
   text-transform: uppercase;
   color: ${props=>props.theme.lemuseeblack_100};
 `;
+
+export const Space150px = styled.div`
+  display: flex;
+  width: 100px;
+  height: 150px;
+  background-color: transparent;
+`;
