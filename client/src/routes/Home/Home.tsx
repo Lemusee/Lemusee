@@ -5,6 +5,10 @@ import Curation from "../../components/HomeComponents/Curation/Curation";
 import Recommends from "../../components/HomeComponents/Recommendation/Recommends";
 import * as S from "./SHome";
 import * as G from "../../components/Global/Spacing/Spacing";
+import Teams from "../../components/HomeComponents/Teams/Teams";
+import Recent from "../../components/HomeComponents/Recent/Recent";
+import IndexByCategory from "../../components/HomeComponents/IndexByCategory/IndexByCategory";
+import Executives from "../../components/HomeComponents/Executives/Executives";
 
 
 function Home () {
@@ -20,6 +24,12 @@ function Home () {
         <Recommends />
         <G.Space150px />
         <Curation />
+        <Teams />
+        <Recent />
+        <IndexByCategory />
+        <G.Space150px />
+        <G.VerticalBar />
+        <Executives />
       </S.Wrapper>
       <Footer/>
     </>

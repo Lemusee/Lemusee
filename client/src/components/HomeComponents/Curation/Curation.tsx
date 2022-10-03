@@ -10,12 +10,22 @@ import Loading from "../../Global/Loading/Loading";
 
 function Curation () {
   const curationList = [...dummyCuration.result.items];
+  const curations = curationList.map((list) => {
+    return (
+      {
+        cardNum: list.cardNum,
+        title: list.title,
+        contents : list.contents,
+        imgUrl : list.imgUrl
+      }
+    )
+  })
   // const curationList = curationFetch.map(list => {return {...list, focus:false}});
   const [curationInfo, setCurationInfo] = useRecoilState(curationState);
   const [isLoading, setIsLoading] = useState(false);
   const [focus, setFocus] = useState(0);
   useEffect(()=>{
-    setCurationInfo(curationList);
+    setCurationInfo(curations);
     setIsLoading(true);
   }, []);
   function onClick (event:React.MouseEvent<HTMLButtonElement>) {
@@ -53,7 +63,7 @@ function Curation () {
           <S.CurationList>
             {isLoading ? (
               curationInfo.map(list => (
-                <button onClick={()=>setFocus(list.cardNum)}>
+                <button onClick={()=>setFocus(list.cardNum)} key={list.cardNum}>
                   <CurationListCard {...list} key={list.cardNum} focus={focus} />
                 </button>
               ))

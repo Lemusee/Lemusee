@@ -64,7 +64,7 @@ export const BoardRightImg = styled.img<ImgUrl>`
   background-position: center;
   background-repeat: no-repeat;
   background-image: url(${props => props.imgUrl || ""});
-  filter: grayscale(100%);
+  filter: grayscale(85%);
 `;
 
 export const nexBtn = styled.button`
@@ -91,6 +91,7 @@ export const CurationList = styled.div`
   overflow-x: auto;
   button {
     background-color: transparent;
+    padding: 0px;
   }
   button:hover {
     background-color: transparent;
