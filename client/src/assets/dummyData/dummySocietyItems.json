@@ -1,0 +1,809 @@
+{
+  "kind": "youtube#playlistItemListResponse",
+  "etag": "lK7wl6RQySiFnLdqKLivVjmVxj8",
+  "items": [
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "eE23e-gljGP8wWmbdnnlIl-01B0",
+      "id": "UExVeGlXLW9MZGxvd0lmaE5YbmpYZTdDWlJicjJfMDlQUC41NkI0NEY2RDEwNTU3Q0M2",
+      "snippet": {
+        "publishedAt": "2022-10-01T11:15:18Z",
+        "channelId": "UCGagrr6S5Q8dGXkxnT-ScmA",
+        "title": "알 카포네, 금주법과 우유 유통망 (지윤상 연사자)",
+        "description": "본 영상은 2022년 3월 31일 건국대학교 중앙 강연 동아리 레뮤제에서 진행된 강연 촬영본입니다. \n\n알 카포네, 금주법과 우유 유통망 – 지윤상 연사자\n\n미국에 내 지나친 음주 문제는 금주법의 시행으로 이어졌고, 금주법을 피한 불법행위가 증가하자 ‘알 카포네’라는 마피아가 혜성처럼 등장합니다. 금주법이 폐지되자, ‘알 카포네’는 그 당시 미국 내 심각한 문제였던 우유 산업에 뛰어들며 정부와 기업도 해결하지 못한 우유 유통 문제를 단숨에 해결하고 지금의 우유 산업의 기반을 만들게 됩니다\n\n*본 강연회는 정부의 방역수칙을 준수하여 진행되었습니다*",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/hGqBykQpC68/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/hGqBykQpC68/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/hGqBykQpC68/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/hGqBykQpC68/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/hGqBykQpC68/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Le’Musée",
+        "playlistId": "PLUxiW-oLdlowIfhNXnjXe7CZRbr2_09PP",
+        "position": 0,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "hGqBykQpC68"
+        },
+        "videoOwnerChannelTitle": "Le’Musée",
+        "videoOwnerChannelId": "UCGagrr6S5Q8dGXkxnT-ScmA"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "bZ5tJKICMvmVCog8-yQ2t4q-bNE",
+      "id": "UExVeGlXLW9MZGxvd0lmaE5YbmpYZTdDWlJicjJfMDlQUC4yODlGNEE0NkRGMEEzMEQy",
+      "snippet": {
+        "publishedAt": "2022-10-01T11:15:40Z",
+        "channelId": "UCGagrr6S5Q8dGXkxnT-ScmA",
+        "title": "대학공부 Class 101 (허주영 연사자)",
+        "description": "본 영상은 2022년 3월 31일 건국대학교 중앙 강연 동아리 레뮤제에서 진행된 강연 촬영본입니다\n\n대학공부 Class 101 – 허주영 연사자\n학습은 인간의 인지구조 속에서 컴퓨터와 같은 단계적인 과정을 거치며 단기기억부터 장기기억으로까지 이어질 수 있습니다. 정보처리과정을 알고 내가 잘 학습하는 방법을 안다면 더 최적의 상태에서 공부를 할 수 있을 것입니다.\n\n*본 강연회는 정부의 방역수칙을 준수하여 진행되었습니다",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/MkL1SbjbHb8/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/MkL1SbjbHb8/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/MkL1SbjbHb8/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/MkL1SbjbHb8/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/MkL1SbjbHb8/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Le’Musée",
+        "playlistId": "PLUxiW-oLdlowIfhNXnjXe7CZRbr2_09PP",
+        "position": 1,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "MkL1SbjbHb8"
+        },
+        "videoOwnerChannelTitle": "Le’Musée",
+        "videoOwnerChannelId": "UCGagrr6S5Q8dGXkxnT-ScmA"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "qdKuROYDmR5xBRccPY112pDZpts",
+      "id": "UExVeGlXLW9MZGxvd0lmaE5YbmpYZTdDWlJicjJfMDlQUC4wMTcyMDhGQUE4NTIzM0Y5",
+      "snippet": {
+        "publishedAt": "2022-10-01T11:16:41Z",
+        "channelId": "UCGagrr6S5Q8dGXkxnT-ScmA",
+        "title": "글쓰기가 어려운 여러분들에게 (전한웅 연사자)",
+        "description": "본 강연은 2021년 12월 02일 건국대학교 중앙 강연 동아리 레뮤제에서 진행된 비대면 강연 촬영본입니다.\n\n 글쓰기 활동을 하면서 느낀 점과 그동안의 노하우부터 시작하여\n 글쓰기를 어려워하고 주저하는 사람들에게 조언을 드리기까지,\n\n 글쓰기의 구조를\nintroduction(주제, 방법, 방향), body(비교, 분석, 근거), conclusion(정리, 의미, 한계)로 나누어 학술적 글쓰기에 관해 설명해보려 합니다.\n\n 전한웅 연사자님의 강연으로 여러분들을 초대합니다.\n\n* 본 강연회는 정부의 방역수칙을 준수하여 진행되었습니다. *",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/sgRHKY1aehw/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/sgRHKY1aehw/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/sgRHKY1aehw/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/sgRHKY1aehw/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/sgRHKY1aehw/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Le’Musée",
+        "playlistId": "PLUxiW-oLdlowIfhNXnjXe7CZRbr2_09PP",
+        "position": 2,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "sgRHKY1aehw"
+        },
+        "videoOwnerChannelTitle": "Le’Musée",
+        "videoOwnerChannelId": "UCGagrr6S5Q8dGXkxnT-ScmA"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "Ygq4RnseEm3-6aLbl_Maddf9wOc",
+      "id": "UExVeGlXLW9MZGxvd0lmaE5YbmpYZTdDWlJicjJfMDlQUC41MjE1MkI0OTQ2QzJGNzNG",
+      "snippet": {
+        "publishedAt": "2022-10-01T11:17:56Z",
+        "channelId": "UCGagrr6S5Q8dGXkxnT-ScmA",
+        "title": "공정무역, 그는 과연 공정한가? (이예린 연사자)",
+        "description": "본 강연은 2021년 11월 25일 건국대학교 중앙 강연 동아리 레뮤제에서 진행된 비대면 강연 촬영본입니다.\n\n 공정무역의 목적과 이면, 불공정성 공정무역이 나아가야 할 방향과 의의에 대해 소개합니다.\n \n 사람들은 '공정무역 제품이 다른 일반 제품보다 비싸다'라고만 생각하지만 본 강연을 듣고 난 뒤에는 '공정무역은 선진국이 베푸는 시혜가 아닌 우리가 부당하게 얻은 이익을 돌려주는 것이다'라는 생각을 가질 수 있으셨으면 좋겠습니다. \n\n 이예린 연사자님의 강연으로 여러분들을 초대합니다.\n\n* 본 강연회는 정부의 방역수칙을 준수하여 진행되었습니다. *",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/A5zdsBsX1Tc/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/A5zdsBsX1Tc/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/A5zdsBsX1Tc/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/A5zdsBsX1Tc/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/A5zdsBsX1Tc/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Le’Musée",
+        "playlistId": "PLUxiW-oLdlowIfhNXnjXe7CZRbr2_09PP",
+        "position": 3,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "A5zdsBsX1Tc"
+        },
+        "videoOwnerChannelTitle": "Le’Musée",
+        "videoOwnerChannelId": "UCGagrr6S5Q8dGXkxnT-ScmA"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "VpgGT8PHK17qG3pCUAm15aIYWbs",
+      "id": "UExVeGlXLW9MZGxvd0lmaE5YbmpYZTdDWlJicjJfMDlQUC4wOTA3OTZBNzVEMTUzOTMy",
+      "snippet": {
+        "publishedAt": "2022-10-01T11:21:16Z",
+        "channelId": "UCGagrr6S5Q8dGXkxnT-ScmA",
+        "title": "집 살 돈은 없지만 아는 척은 할 수 있어 (윤한성 연사자)",
+        "description": "본 강연은 2021년 06월 03일 건국대학교 중앙 강연 동아리 레뮤제에서 진행된 비대면 강연 촬영본입니다.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/lAZ7vy3bAlY/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/lAZ7vy3bAlY/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/lAZ7vy3bAlY/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/lAZ7vy3bAlY/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/lAZ7vy3bAlY/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Le’Musée",
+        "playlistId": "PLUxiW-oLdlowIfhNXnjXe7CZRbr2_09PP",
+        "position": 4,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "lAZ7vy3bAlY"
+        },
+        "videoOwnerChannelTitle": "Le’Musée",
+        "videoOwnerChannelId": "UCGagrr6S5Q8dGXkxnT-ScmA"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "bts2y8xFki3zxMj0iHPLytbutcw",
+      "id": "UExVeGlXLW9MZGxvd0lmaE5YbmpYZTdDWlJicjJfMDlQUC4xMkVGQjNCMUM1N0RFNEUx",
+      "snippet": {
+        "publishedAt": "2022-10-01T11:28:05Z",
+        "channelId": "UCGagrr6S5Q8dGXkxnT-ScmA",
+        "title": "쉽게 풀어 설명하는 경제이야기! 일본 버블 사태까지? 들어는 봤니! 레뮤경제 : 일본버블(이치헌 연사자)",
+        "description": "본 강연은 2021년 03월 25일 건국대학교 중앙 강연 동아리\n레뮤제에서 진행된 비대면 강연 촬영본입니다.\n\n환율에서 금리, 부동산 투기와 일본 버블에 이르기 까지? \n이치헌 연사자가 전하는 쉽게 쓰는 경제 이야기! \n과연 일본 버블 사태에 이르기까지의 과정은 어떤 것이었을까?\n레뮤 경제 : 일본 버블! -이치헌 연사자",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/sEzQ8U05Ank/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/sEzQ8U05Ank/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/sEzQ8U05Ank/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/sEzQ8U05Ank/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/sEzQ8U05Ank/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Le’Musée",
+        "playlistId": "PLUxiW-oLdlowIfhNXnjXe7CZRbr2_09PP",
+        "position": 5,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "sEzQ8U05Ank"
+        },
+        "videoOwnerChannelTitle": "Le’Musée",
+        "videoOwnerChannelId": "UCGagrr6S5Q8dGXkxnT-ScmA"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "8PHvr_HH58OC_Mxd5tzB0ytzVXQ",
+      "id": "UExVeGlXLW9MZGxvd0lmaE5YbmpYZTdDWlJicjJfMDlQUC41MzJCQjBCNDIyRkJDN0VD",
+      "snippet": {
+        "publishedAt": "2022-10-01T11:28:31Z",
+        "channelId": "UCGagrr6S5Q8dGXkxnT-ScmA",
+        "title": "사회에서 살아남기 위해 우리는 어떤 노력을 해야할까? 아직도 없니? 서바이벌키트-확장편(류다언 연사자)",
+        "description": "본 강연은 2021년 03월 25일 건국대학교 중앙 강연 동아리\n레뮤제에서 진행된 비대면 강연 촬영본입니다.\n\n사회에서 살아남기란 너무나 어려운 법이죠\n과연 류다언 연사자님의 서바이벌 키트에는 어떤 내용이 들어있을까요?\n살아남기 고수 류다언 연사자님의 서바이벌키트-확장편!",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/sTb8aT57auc/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/sTb8aT57auc/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/sTb8aT57auc/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/sTb8aT57auc/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/sTb8aT57auc/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Le’Musée",
+        "playlistId": "PLUxiW-oLdlowIfhNXnjXe7CZRbr2_09PP",
+        "position": 6,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "sTb8aT57auc"
+        },
+        "videoOwnerChannelTitle": "Le’Musée",
+        "videoOwnerChannelId": "UCGagrr6S5Q8dGXkxnT-ScmA"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "569iHJOE9CqRsNmquglsLGozPOo",
+      "id": "UExVeGlXLW9MZGxvd0lmaE5YbmpYZTdDWlJicjJfMDlQUC5DQUNERDQ2NkIzRUQxNTY1",
+      "snippet": {
+        "publishedAt": "2022-10-01T11:28:55Z",
+        "channelId": "UCGagrr6S5Q8dGXkxnT-ScmA",
+        "title": "대조영의 향수(nostalgia)는 무슨 향일까요? 킁카킁카..., 어서와 발해는 처음이지? (박경호 연사자)",
+        "description": "본 강연은 2020년 11월 19일 건국대학교 중앙 강연 동아리\n레뮤제에서 진행된 비대면 강연 촬영본입니다.\n\n발해는 정말 우리 역사일까요? 대조영은 정말 고구려의 후손이었을까요? 우리 것 같기도, 아닌 것 같기도 한 아리송한 발해의 정체성을 찾아주는 강연. 어서와, 발해는 처음이지? 이리와서 앉아 듣고 가. 발해가 왜 우리 역사인지 알려줄게!\n다년간 수많은 역사 강연에 빛나는 레뮤제의 역사이자 고인물, 박경호 연사자의 '어서와, 발해는 처음이지?'",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/K3wHMjOK1Qc/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/K3wHMjOK1Qc/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/K3wHMjOK1Qc/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/K3wHMjOK1Qc/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/K3wHMjOK1Qc/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Le’Musée",
+        "playlistId": "PLUxiW-oLdlowIfhNXnjXe7CZRbr2_09PP",
+        "position": 7,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "K3wHMjOK1Qc"
+        },
+        "videoOwnerChannelTitle": "Le’Musée",
+        "videoOwnerChannelId": "UCGagrr6S5Q8dGXkxnT-ScmA"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "rQ_2XHJ31VlcIkXX7u52P7oxIrQ",
+      "id": "UExVeGlXLW9MZGxvd0lmaE5YbmpYZTdDWlJicjJfMDlQUC45NDk1REZENzhEMzU5MDQz",
+      "snippet": {
+        "publishedAt": "2022-10-01T11:30:37Z",
+        "channelId": "UCGagrr6S5Q8dGXkxnT-ScmA",
+        "title": "재무제표 읽기!",
+        "description": "복식부기의 원리와 재무표제의 구성",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/fYbRjEEXlvg/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/fYbRjEEXlvg/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/fYbRjEEXlvg/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/fYbRjEEXlvg/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/fYbRjEEXlvg/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Le’Musée",
+        "playlistId": "PLUxiW-oLdlowIfhNXnjXe7CZRbr2_09PP",
+        "position": 8,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "fYbRjEEXlvg"
+        },
+        "videoOwnerChannelTitle": "Le’Musée",
+        "videoOwnerChannelId": "UCGagrr6S5Q8dGXkxnT-ScmA"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "Hma2lcm8dDhKs_wgY1Jsj_0SP14",
+      "id": "UExVeGlXLW9MZGxvd0lmaE5YbmpYZTdDWlJicjJfMDlQUC5GNjNDRDREMDQxOThCMDQ2",
+      "snippet": {
+        "publishedAt": "2022-10-01T11:31:20Z",
+        "channelId": "UCGagrr6S5Q8dGXkxnT-ScmA",
+        "title": "갈등을 바라보는 새로운 시각, 왜 우리는 서로 싸우게 되었나 - 갈등이라는 말(윤한성)",
+        "description": "본 강연은 2020년 10월 8일 건국대학교 중앙 강연 동아리 레뮤제에서 진행된 비대면 강연 촬영본입니다.\n\n\"거대한 사회적 갈등 앞에, 우리는 어떤 태도로 나아가야 하는가?\" \n유난히 사회적 갈등이 첨예한 우리 시대, 우리사회. 우리는 갈등이라는 것을 좀 더 새로운 시각으로 바라볼 필요가 있는 것 같습니다. 작금의 갈등을 몸소 체험하고 있는 우리 세대, 우리 동년배(!) 윤한성 레뮤지앙이 전하는 \"갈등이라는 말\".",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/IEkLRRI8mkU/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/IEkLRRI8mkU/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/IEkLRRI8mkU/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/IEkLRRI8mkU/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/IEkLRRI8mkU/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Le’Musée",
+        "playlistId": "PLUxiW-oLdlowIfhNXnjXe7CZRbr2_09PP",
+        "position": 9,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "IEkLRRI8mkU"
+        },
+        "videoOwnerChannelTitle": "Le’Musée",
+        "videoOwnerChannelId": "UCGagrr6S5Q8dGXkxnT-ScmA"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "rbLQ-nU1EkufzL-JmK9BU6MV7cM",
+      "id": "UExVeGlXLW9MZGxvd0lmaE5YbmpYZTdDWlJicjJfMDlQUC40NzZCMERDMjVEN0RFRThB",
+      "snippet": {
+        "publishedAt": "2022-10-01T11:33:13Z",
+        "channelId": "UCGagrr6S5Q8dGXkxnT-ScmA",
+        "title": "인천에서 울란바토르까지",
+        "description": "물류회사인턴이 설명해주는 물류이야기!",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/5pB9Eg9xKe4/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/5pB9Eg9xKe4/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/5pB9Eg9xKe4/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/5pB9Eg9xKe4/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/5pB9Eg9xKe4/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Le’Musée",
+        "playlistId": "PLUxiW-oLdlowIfhNXnjXe7CZRbr2_09PP",
+        "position": 10,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "5pB9Eg9xKe4"
+        },
+        "videoOwnerChannelTitle": "Le’Musée",
+        "videoOwnerChannelId": "UCGagrr6S5Q8dGXkxnT-ScmA"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "9_q2iFzfKxuAEZ1eSIsRmtUQ_6k",
+      "id": "UExVeGlXLW9MZGxvd0lmaE5YbmpYZTdDWlJicjJfMDlQUC5EMEEwRUY5M0RDRTU3NDJC",
+      "snippet": {
+        "publishedAt": "2022-10-01T11:35:08Z",
+        "channelId": "UCGagrr6S5Q8dGXkxnT-ScmA",
+        "title": "시를 잊은 그대에게",
+        "description": "시, 머리가 아닌 마음으로 읽으세요 ♡",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/aqekTgpJwIg/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/aqekTgpJwIg/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/aqekTgpJwIg/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/aqekTgpJwIg/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/aqekTgpJwIg/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Le’Musée",
+        "playlistId": "PLUxiW-oLdlowIfhNXnjXe7CZRbr2_09PP",
+        "position": 11,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "aqekTgpJwIg"
+        },
+        "videoOwnerChannelTitle": "Le’Musée",
+        "videoOwnerChannelId": "UCGagrr6S5Q8dGXkxnT-ScmA"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "CAp5SNI4Xz7eowklVG2Jh0h0YDE",
+      "id": "UExVeGlXLW9MZGxvd0lmaE5YbmpYZTdDWlJicjJfMDlQUC45ODRDNTg0QjA4NkFBNkQy",
+      "snippet": {
+        "publishedAt": "2022-10-01T11:36:16Z",
+        "channelId": "UCGagrr6S5Q8dGXkxnT-ScmA",
+        "title": "소통의 중요성",
+        "description": "소통의 중요성! 소통이 살아가는데 얼마나 중요한지 다들 잘 알고있을것이라 생각합니다. \n2018년도 2학기 마지막 강연을 장식해 주신 김현진 연사자님의 강연, 귀기울여 들어주세요~",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/IxfnjNZvD9M/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/IxfnjNZvD9M/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/IxfnjNZvD9M/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/IxfnjNZvD9M/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/IxfnjNZvD9M/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Le’Musée",
+        "playlistId": "PLUxiW-oLdlowIfhNXnjXe7CZRbr2_09PP",
+        "position": 12,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "IxfnjNZvD9M"
+        },
+        "videoOwnerChannelTitle": "Le’Musée",
+        "videoOwnerChannelId": "UCGagrr6S5Q8dGXkxnT-ScmA"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "It1JXjfFkhOWgqWoHWRFULCpSL4",
+      "id": "UExVeGlXLW9MZGxvd0lmaE5YbmpYZTdDWlJicjJfMDlQUC4zMDg5MkQ5MEVDMEM1NTg2",
+      "snippet": {
+        "publishedAt": "2022-10-01T11:36:39Z",
+        "channelId": "UCGagrr6S5Q8dGXkxnT-ScmA",
+        "title": "당신이 몰랐던 건국대",
+        "description": "건국대학교 교직원이 알려주는 학교생활 꿀팁!!",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/_k2fqPZY8zc/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/_k2fqPZY8zc/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/_k2fqPZY8zc/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/_k2fqPZY8zc/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/_k2fqPZY8zc/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Le’Musée",
+        "playlistId": "PLUxiW-oLdlowIfhNXnjXe7CZRbr2_09PP",
+        "position": 13,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "_k2fqPZY8zc"
+        },
+        "videoOwnerChannelTitle": "Le’Musée",
+        "videoOwnerChannelId": "UCGagrr6S5Q8dGXkxnT-ScmA"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "1M6DTvF1ysrQsESdJoHBGgs6Q6Q",
+      "id": "UExVeGlXLW9MZGxvd0lmaE5YbmpYZTdDWlJicjJfMDlQUC41Mzk2QTAxMTkzNDk4MDhF",
+      "snippet": {
+        "publishedAt": "2022-10-01T11:36:58Z",
+        "channelId": "UCGagrr6S5Q8dGXkxnT-ScmA",
+        "title": "4년차 연애선배가 알려주는 연애꿀팁",
+        "description": "1200일째 사랑중인 연애선배가 알려주는 연애의 모든것!!",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/Kef0AJABZpc/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/Kef0AJABZpc/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/Kef0AJABZpc/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/Kef0AJABZpc/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/Kef0AJABZpc/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Le’Musée",
+        "playlistId": "PLUxiW-oLdlowIfhNXnjXe7CZRbr2_09PP",
+        "position": 14,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "Kef0AJABZpc"
+        },
+        "videoOwnerChannelTitle": "Le’Musée",
+        "videoOwnerChannelId": "UCGagrr6S5Q8dGXkxnT-ScmA"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "yHn4scwia5qWDSob7OS0VzxcCiM",
+      "id": "UExVeGlXLW9MZGxvd0lmaE5YbmpYZTdDWlJicjJfMDlQUC5EQUE1NTFDRjcwMDg0NEMz",
+      "snippet": {
+        "publishedAt": "2022-10-01T11:37:34Z",
+        "channelId": "UCGagrr6S5Q8dGXkxnT-ScmA",
+        "title": "'진실'이라는 말 -윤한성",
+        "description": "일시 : 2019년 9월 26일\n장소 : 건국대학교 상허관 107호",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/rDTni4RXBqY/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/rDTni4RXBqY/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/rDTni4RXBqY/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/rDTni4RXBqY/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/rDTni4RXBqY/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Le’Musée",
+        "playlistId": "PLUxiW-oLdlowIfhNXnjXe7CZRbr2_09PP",
+        "position": 15,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "rDTni4RXBqY"
+        },
+        "videoOwnerChannelTitle": "Le’Musée",
+        "videoOwnerChannelId": "UCGagrr6S5Q8dGXkxnT-ScmA"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "I5F5TifpM5KEitliYofSdxspBR0",
+      "id": "UExVeGlXLW9MZGxvd0lmaE5YbmpYZTdDWlJicjJfMDlQUC41QTY1Q0UxMTVCODczNThE",
+      "snippet": {
+        "publishedAt": "2022-10-01T11:37:59Z",
+        "channelId": "UCGagrr6S5Q8dGXkxnT-ScmA",
+        "title": "\"나도 문화 유산 답사기 -공주-\" 박경호",
+        "description": "게시일: 2019.10.12\n\n일시 : 2019년 9월 26일\n장소 : 건국대학교 상허관 107호",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/Zyt-jxv_wzg/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/Zyt-jxv_wzg/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/Zyt-jxv_wzg/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/Zyt-jxv_wzg/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/Zyt-jxv_wzg/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Le’Musée",
+        "playlistId": "PLUxiW-oLdlowIfhNXnjXe7CZRbr2_09PP",
+        "position": 16,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "Zyt-jxv_wzg"
+        },
+        "videoOwnerChannelTitle": "Le’Musée",
+        "videoOwnerChannelId": "UCGagrr6S5Q8dGXkxnT-ScmA"
+      }
+    }
+  ],
+  "pageInfo": {
+    "totalResults": 17,
+    "resultsPerPage": 50
+  }
+}

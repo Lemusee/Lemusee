@@ -1,0 +1,715 @@
+{
+  "kind": "youtube#playlistItemListResponse",
+  "etag": "kibGYHUFe3oAkuAFYWMyPZ97pHA",
+  "items": [
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "258oaxR8KdJyQYmk9YfXqZSeZD0",
+      "id": "UExVeGlXLW9MZGxvd3F0UEpNMjRkLW1ka0FmUUpPcng1OS4yODlGNEE0NkRGMEEzMEQy",
+      "snippet": {
+        "publishedAt": "2021-09-16T09:56:12Z",
+        "channelId": "UCGagrr6S5Q8dGXkxnT-ScmA",
+        "title": "레뮤제 9월 16일 1차 정기 비대면 강연회(19시30분)",
+        "description": "건국대학교 중앙 강연 동아리 레뮤제에서 진행되는 비대면 강연회 스트리밍입니다.\n\n1. 강연 진행 과정\n    1) 지윤상 연사자 강연/ 질의 응답\n    2) 정승혁 연사자 강연/ 질의 응답\n\n2. 강연 순서\n    지윤상 - 소주 오리엔테이션\n    정승혁 - 그 시절 우리가 열광했던 런던(feat.준석)\n\n3. 강연 피드백\n강연 피드백은 연사자분들에게 큰 도움이 될 수 있습니다 :)  많은 응원과 참여 부탁드립니다!!!!!\n\n정승혁 연사자 피드백\nhttps://form.office.naver.com/form/responseView.cmd?formkey=YTIwYWM5NDMtN2E3OC00YTM5LTk5Y2MtZGI4YmJhZGYwNzZm&sourceId=editor\n\n지윤상 연사자 피드백\nhttps://form.office.naver.com/form/responseView.cmd?formkey=YjgxZDI3NzEtNmIwNy00YWY3LTkzOTItMmY2MDI4MGQwMzhi&sourceId=editor\n\n이 영상은 광고를 포함하고 있지 않습니다.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/oznwwigytsM/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/oznwwigytsM/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/oznwwigytsM/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/oznwwigytsM/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/oznwwigytsM/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Le’Musée",
+        "playlistId": "PLUxiW-oLdlowqtPJM24d-mdkAfQJOrx59",
+        "position": 0,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "oznwwigytsM"
+        },
+        "videoOwnerChannelTitle": "Le’Musée",
+        "videoOwnerChannelId": "UCGagrr6S5Q8dGXkxnT-ScmA"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "RxJIFO6Z1OGjGld4qtBULsFIAIk",
+      "id": "UExVeGlXLW9MZGxvd3F0UEpNMjRkLW1ka0FmUUpPcng1OS4wMTcyMDhGQUE4NTIzM0Y5",
+      "snippet": {
+        "publishedAt": "2021-10-07T10:30:04Z",
+        "channelId": "UCGagrr6S5Q8dGXkxnT-ScmA",
+        "title": "재밌고 쉽게 배우는 통신기술의 이해 (구민성 연사자)",
+        "description": "본 강연은 2021년 06월 03일 건국대학교 중앙 강연 동아리 레뮤제에서 진행된 비대면 강연 촬영본입니다.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/M0xT-2Skdmw/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/M0xT-2Skdmw/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/M0xT-2Skdmw/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/M0xT-2Skdmw/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/M0xT-2Skdmw/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Le’Musée",
+        "playlistId": "PLUxiW-oLdlowqtPJM24d-mdkAfQJOrx59",
+        "position": 1,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "M0xT-2Skdmw"
+        },
+        "videoOwnerChannelTitle": "Le’Musée",
+        "videoOwnerChannelId": "UCGagrr6S5Q8dGXkxnT-ScmA"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "85iplAyU67hSnpMVxyhclfMCsZs",
+      "id": "UExVeGlXLW9MZGxvd3F0UEpNMjRkLW1ka0FmUUpPcng1OS41MjE1MkI0OTQ2QzJGNzNG",
+      "snippet": {
+        "publishedAt": "2021-10-07T10:31:47Z",
+        "channelId": "UCGagrr6S5Q8dGXkxnT-ScmA",
+        "title": "집 살 돈은 없지만 아는 척은 할 수 있어 (윤한성 연사자)",
+        "description": "본 강연은 2021년 06월 03일 건국대학교 중앙 강연 동아리 레뮤제에서 진행된 비대면 강연 촬영본입니다.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/lAZ7vy3bAlY/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/lAZ7vy3bAlY/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/lAZ7vy3bAlY/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/lAZ7vy3bAlY/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/lAZ7vy3bAlY/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Le’Musée",
+        "playlistId": "PLUxiW-oLdlowqtPJM24d-mdkAfQJOrx59",
+        "position": 2,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "lAZ7vy3bAlY"
+        },
+        "videoOwnerChannelTitle": "Le’Musée",
+        "videoOwnerChannelId": "UCGagrr6S5Q8dGXkxnT-ScmA"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "tP7HteG4NRKE0HML6gSeh3-qfqE",
+      "id": "UExVeGlXLW9MZGxvd3F0UEpNMjRkLW1ka0FmUUpPcng1OS4wOTA3OTZBNzVEMTUzOTMy",
+      "snippet": {
+        "publishedAt": "2021-10-07T12:59:59Z",
+        "channelId": "UCGagrr6S5Q8dGXkxnT-ScmA",
+        "title": "기록하기의 또 하나의 방법 (이건우 연사자)",
+        "description": "본 강연은 2021년 10월 07일 건국대학교 중앙 강연 동아리 레뮤제에서 진행된 비대면 강연 촬영본입니다.\n\n 글쓰기를 접하고 발전해 나가게 된 과정, 좋은 글을 쓰기 위한 방법에 대해 소개합니다!\n\n 개발자로 공부하면서 점점 인간미를 잃어가는데, 글쓰기로 인간미를 찾는 과정에 대해 이야기 해보고 싶습니다. 또한, 이 강연을 들으신 분들이 글쓰기를 낯설어 하지 않고 한번쯤은 ‘글을 써보자’라는 생각이 들었으면 좋겠습니다!\n\n이건우 연사자님의 강연으로 여러분들을 초대합니다.\n\n* 본 강연회는 정부의 방역수칙을 준수하여 진행되었습니다. *",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/Pb3t9wMQ_zk/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/Pb3t9wMQ_zk/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/Pb3t9wMQ_zk/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/Pb3t9wMQ_zk/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/Pb3t9wMQ_zk/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Le’Musée",
+        "playlistId": "PLUxiW-oLdlowqtPJM24d-mdkAfQJOrx59",
+        "position": 3,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "Pb3t9wMQ_zk"
+        },
+        "videoOwnerChannelTitle": "Le’Musée",
+        "videoOwnerChannelId": "UCGagrr6S5Q8dGXkxnT-ScmA"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "pSd-MtXLV1N_omMe9dYtC_NIChs",
+      "id": "UExVeGlXLW9MZGxvd3F0UEpNMjRkLW1ka0FmUUpPcng1OS4xMkVGQjNCMUM1N0RFNEUx",
+      "snippet": {
+        "publishedAt": "2021-10-07T13:00:22Z",
+        "channelId": "UCGagrr6S5Q8dGXkxnT-ScmA",
+        "title": "'레뮤제를 나가라' (윤창우 연사자)",
+        "description": "본 강연은 2021년 10월 07일 건국대학교 중앙 강연 동아리 레뮤제에서 진행된 비대면 강연 촬영본입니다.\n\n  '진짜 나가진 마세요' \n\n 레뮤제에서 할 수 있었던 일, 강연을 접하고 직접 하기까지의 과정, 새로운 것들에 도전하는 힘을 통해 레뮤제 밖에서 시도 중인 다양한 일을 소개하고 싶습니다. 강연 제목의 의미, 레뮤제에 들어와서 한 일, 낯선 것들에 도전하는 힘을 바탕으로 레뮤제 밖에서 시작한 일을 소개합니다! ( 강연 후반부에는 에필로그도 준비되어 있으니 끝까지 집중해서 시청해주세요! )\n\n윤창우 연사자님의 강연으로 여러분들을 초대합니다.\n\n* 본 강연회는 정부의 방역수칙을 준수하여 진행되었습니다. *",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/a3hFG_KjEiA/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/a3hFG_KjEiA/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/a3hFG_KjEiA/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/a3hFG_KjEiA/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/a3hFG_KjEiA/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Le’Musée",
+        "playlistId": "PLUxiW-oLdlowqtPJM24d-mdkAfQJOrx59",
+        "position": 4,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "a3hFG_KjEiA"
+        },
+        "videoOwnerChannelTitle": "Le’Musée",
+        "videoOwnerChannelId": "UCGagrr6S5Q8dGXkxnT-ScmA"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "0oUX-H90P1LrWrTjcVNIdOI-tp0",
+      "id": "UExVeGlXLW9MZGxvd3F0UEpNMjRkLW1ka0FmUUpPcng1OS41MzJCQjBCNDIyRkJDN0VD",
+      "snippet": {
+        "publishedAt": "2021-11-12T14:12:31Z",
+        "channelId": "UCGagrr6S5Q8dGXkxnT-ScmA",
+        "title": "예상치 못한 불행을 맞이했을 때 (양예진 연사자)",
+        "description": "본 강연은 2021년 11월 11일 건국대학교 중앙 강연 동아리 레뮤제에서 진행된 비대면 강연 촬영본입니다.\n\n 누구에게나 예상치 못한 불행은 찾아올 수 있습니다. \n\n  \"지금 내가 할 수 있는 일부터 해보자\"라는 생각을 가지며 차근차근 불행을 극복했고  당시 느꼈던 생각과 감정을 레뮤지앙 분들과 공유하고 싶습니다. 여러분도 예상치 못한 불행이 찾아왔을 때 제 강연을 떠올리며 불행을 극복해 나가셨으면 좋겠습니다. \n\n 본 강연에서는 불행을 겪게 된 연사자님의 과거 이야기, 그리고 그 불행을 극복해 나아갔던 과정을 담담하게 풀어내고 있습니다. \n\n 양예진 연사자님의 강연으로 여러분들을 초대합니다.\n\n* 본 강연회는 정부의 방역수칙을 준수하여 진행되었습니다. *",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/-sYmrq_PzmE/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/-sYmrq_PzmE/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/-sYmrq_PzmE/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/-sYmrq_PzmE/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/-sYmrq_PzmE/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Le’Musée",
+        "playlistId": "PLUxiW-oLdlowqtPJM24d-mdkAfQJOrx59",
+        "position": 5,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "-sYmrq_PzmE"
+        },
+        "videoOwnerChannelTitle": "Le’Musée",
+        "videoOwnerChannelId": "UCGagrr6S5Q8dGXkxnT-ScmA"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "UfT0tcdsEQWVND4TjgWaQ1sBBrg",
+      "id": "UExVeGlXLW9MZGxvd3F0UEpNMjRkLW1ka0FmUUpPcng1OS5DQUNERDQ2NkIzRUQxNTY1",
+      "snippet": {
+        "publishedAt": "2021-11-12T14:34:31Z",
+        "channelId": "UCGagrr6S5Q8dGXkxnT-ScmA",
+        "title": "표현의 언어 : 시 쓰는 발명가 이야기 (박성규 연사자)",
+        "description": "본 강연은 2021년 11월 11일 건국대학교 중앙 강연 동아리 레뮤제에서 진행된 비대면 강연 촬영본입니다.\n\n '창의력은 나의 인생을 표현하는 표현의 언어'\n \n 시를 쓰고 발명하는 것. 누군가에게는 창의적이고 어려운 일이라고 생각될지라도 창의력은 나의 인생을 표현하는 표현의 언어 중 하나입니다. 창의력에 대한 오해, 그리고 자신을 표현하는 것의 중요성을 이야기 해보려고 합니다. \n 자신을 표현하는 것에는 많은 고민과 준비가 필요하겠지만, 망설이지는 않으셨으면 좋겠습니다. \n\n박성규 연사자님의 강연으로 여러분들을 초대합니다.\n\n* 본 강연회는 정부의 방역수칙을 준수하여 진행되었습니다. *",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/8_vy2M_7CUk/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/8_vy2M_7CUk/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/8_vy2M_7CUk/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/8_vy2M_7CUk/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/8_vy2M_7CUk/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Le’Musée",
+        "playlistId": "PLUxiW-oLdlowqtPJM24d-mdkAfQJOrx59",
+        "position": 6,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "8_vy2M_7CUk"
+        },
+        "videoOwnerChannelTitle": "Le’Musée",
+        "videoOwnerChannelId": "UCGagrr6S5Q8dGXkxnT-ScmA"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "7Y_QhXDvEbbYkkIJMBkfjo3cEBk",
+      "id": "UExVeGlXLW9MZGxvd3F0UEpNMjRkLW1ka0FmUUpPcng1OS5GNjNDRDREMDQxOThCMDQ2",
+      "snippet": {
+        "publishedAt": "2021-11-25T12:31:42Z",
+        "channelId": "UCGagrr6S5Q8dGXkxnT-ScmA",
+        "title": "공정무역, 그는 과연 공정한가? (이예린 연사자)",
+        "description": "본 강연은 2021년 11월 25일 건국대학교 중앙 강연 동아리 레뮤제에서 진행된 비대면 강연 촬영본입니다.\n\n 공정무역의 목적과 이면, 불공정성 공정무역이 나아가야 할 방향과 의의에 대해 소개합니다.\n \n 사람들은 '공정무역 제품이 다른 일반 제품보다 비싸다'라고만 생각하지만 본 강연을 듣고 난 뒤에는 '공정무역은 선진국이 베푸는 시혜가 아닌 우리가 부당하게 얻은 이익을 돌려주는 것이다'라는 생각을 가질 수 있으셨으면 좋겠습니다. \n\n 이예린 연사자님의 강연으로 여러분들을 초대합니다.\n\n* 본 강연회는 정부의 방역수칙을 준수하여 진행되었습니다. *",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/A5zdsBsX1Tc/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/A5zdsBsX1Tc/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/A5zdsBsX1Tc/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/A5zdsBsX1Tc/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/A5zdsBsX1Tc/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Le’Musée",
+        "playlistId": "PLUxiW-oLdlowqtPJM24d-mdkAfQJOrx59",
+        "position": 7,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "A5zdsBsX1Tc"
+        },
+        "videoOwnerChannelTitle": "Le’Musée",
+        "videoOwnerChannelId": "UCGagrr6S5Q8dGXkxnT-ScmA"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "1MT14zy5OBMmrFa-FN0ID4qreM0",
+      "id": "UExVeGlXLW9MZGxvd3F0UEpNMjRkLW1ka0FmUUpPcng1OS40NzZCMERDMjVEN0RFRThB",
+      "snippet": {
+        "publishedAt": "2021-11-25T12:35:39Z",
+        "channelId": "UCGagrr6S5Q8dGXkxnT-ScmA",
+        "title": "그 정도면 충분하다 (허주영 연사자)",
+        "description": "본 강연은 2021년 11월 25일 건국대학교 중앙 강연 동아리 레뮤제에서 진행된 비대면 강연 촬영본입니다.\n\n 완벽에 집착하게 된 중학생 시절, 완벽에 집착했지만 완벽하지 못해 자책을 하게 된 고등학교 시절, 대학교에 오고 자책에서 벗어나기 위해 했던 일들.\n \n 완벽함에 지나치게 집착을 했지만, 완벽하지 못해 본인에게 자책을 하던 시절이 있었습니다. 대학교에 오고 나서야 그런 자책에서 벗어날 수 있었고, 극복해 나가며 느꼈던 감정들을 레뮤지앙 여러분들과 공유하고 싶습니다. 완벽하지 못하더라도 나 자신에게 괜찮다는 말을 하고, 스스로를 사랑하는 여러분이 되었으면 좋겠습니다.\n\n 허주영 연사자님의 강연으로 여러분들을 초대합니다.\n\n* 본 강연회는 정부의 방역수칙을 준수하여 진행되었습니다. *",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/8K0FQ37FDS0/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/8K0FQ37FDS0/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/8K0FQ37FDS0/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/8K0FQ37FDS0/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/8K0FQ37FDS0/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Le’Musée",
+        "playlistId": "PLUxiW-oLdlowqtPJM24d-mdkAfQJOrx59",
+        "position": 8,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "8K0FQ37FDS0"
+        },
+        "videoOwnerChannelTitle": "Le’Musée",
+        "videoOwnerChannelId": "UCGagrr6S5Q8dGXkxnT-ScmA"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "JefRqmKRc8iLQlwR5fsdvld9vbc",
+      "id": "UExVeGlXLW9MZGxvd3F0UEpNMjRkLW1ka0FmUUpPcng1OS5EMEEwRUY5M0RDRTU3NDJC",
+      "snippet": {
+        "publishedAt": "2021-11-25T14:22:17Z",
+        "channelId": "UCGagrr6S5Q8dGXkxnT-ScmA",
+        "title": "표절에 관한 간단한 고찰 (여용현 연사자)",
+        "description": "본 강연은 2021년 11월 25일 건국대학교 중앙 강연 동아리 레뮤제에서 진행된 비대면 강연 촬영본입니다. \n\n 음악을 들어보며 음악에서의 표절에 대해 생각해보자.\n \n 흔히 표절이라고 하면 위법하고 나쁘다는 인식이 강하지만, 표절이 실질직으로 나쁘기만 한 것은 아닐 수 있습니다. 표절에 대한 기준과 표절사례, 표절로 오인되는 사례, 표절과 관련된 소송 사례들을 살펴보며 표절에 관해 생각해보는 시간을 가져봅시다.\n\n 여용현 연사자님의 강연으로 여러분들을 초대합니다.\n\n* 본 강연회는 정부의 방역수칙을 준수하여 진행되었습니다. *",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/OKmSo_WXIzo/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/OKmSo_WXIzo/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/OKmSo_WXIzo/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/OKmSo_WXIzo/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/OKmSo_WXIzo/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Le’Musée",
+        "playlistId": "PLUxiW-oLdlowqtPJM24d-mdkAfQJOrx59",
+        "position": 9,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "OKmSo_WXIzo"
+        },
+        "videoOwnerChannelTitle": "Le’Musée",
+        "videoOwnerChannelId": "UCGagrr6S5Q8dGXkxnT-ScmA"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "t_KXcIyAHedKTrd9M48QZVTM3Xk",
+      "id": "UExVeGlXLW9MZGxvd3F0UEpNMjRkLW1ka0FmUUpPcng1OS4zMDg5MkQ5MEVDMEM1NTg2",
+      "snippet": {
+        "publishedAt": "2021-12-02T14:52:06Z",
+        "channelId": "UCGagrr6S5Q8dGXkxnT-ScmA",
+        "title": "렘 징 어 GAME (성준현 연사자)",
+        "description": "본 강연은 2021년 12월 02일 건국대학교 중앙 강연 동아리 레뮤제에서 진행된 비대면 강연 촬영본입니다.\n\n 넷플릭스 원작 “오징어 게임”에 사용된 여러가지 촬영 기법들을 소개합니다.\n \n 강연의 순서는\n1. 스태틱샷/패닝샷/줌샷을 비롯한 여러가지 촬영 기법 설명, \n2. 촬영 기법을 적용하여 직접 연기를 하고 촬영한 장면들, \n3. 게임의 형식을 응용하여 레뮤지앙들이 각 장면에 사용된 촬영 기법을 맞추는 퀴즈로 구성되어 있습니다.\n\n 성준현 연사자님의 강연으로 여러분들을 초대합니다.\n\n* 본 강연회는 정부의 방역수칙을 준수하여 진행되었습니다. *",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/sqU2nuXQJwI/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/sqU2nuXQJwI/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/sqU2nuXQJwI/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/sqU2nuXQJwI/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/sqU2nuXQJwI/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Le’Musée",
+        "playlistId": "PLUxiW-oLdlowqtPJM24d-mdkAfQJOrx59",
+        "position": 10,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "sqU2nuXQJwI"
+        },
+        "videoOwnerChannelTitle": "Le’Musée",
+        "videoOwnerChannelId": "UCGagrr6S5Q8dGXkxnT-ScmA"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "gpOQNtovN3RqWc9U_xsmdohujTU",
+      "id": "UExVeGlXLW9MZGxvd3F0UEpNMjRkLW1ka0FmUUpPcng1OS41Mzk2QTAxMTkzNDk4MDhF",
+      "snippet": {
+        "publishedAt": "2021-12-02T14:55:17Z",
+        "channelId": "UCGagrr6S5Q8dGXkxnT-ScmA",
+        "title": "글쓰기가 어려운 여러분들에게 (전한웅 연사자)",
+        "description": "본 강연은 2021년 12월 02일 건국대학교 중앙 강연 동아리 레뮤제에서 진행된 비대면 강연 촬영본입니다.\n\n 글쓰기 활동을 하면서 느낀 점과 그동안의 노하우부터 시작하여\n 글쓰기를 어려워하고 주저하는 사람들에게 조언을 드리기까지,\n\n 글쓰기의 구조를\nintroduction(주제, 방법, 방향), body(비교, 분석, 근거), conclusion(정리, 의미, 한계)로 나누어 학술적 글쓰기에 관해 설명해보려 합니다.\n\n 전한웅 연사자님의 강연으로 여러분들을 초대합니다.\n\n* 본 강연회는 정부의 방역수칙을 준수하여 진행되었습니다. *",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/sgRHKY1aehw/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/sgRHKY1aehw/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/sgRHKY1aehw/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/sgRHKY1aehw/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/sgRHKY1aehw/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Le’Musée",
+        "playlistId": "PLUxiW-oLdlowqtPJM24d-mdkAfQJOrx59",
+        "position": 11,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "sgRHKY1aehw"
+        },
+        "videoOwnerChannelTitle": "Le’Musée",
+        "videoOwnerChannelId": "UCGagrr6S5Q8dGXkxnT-ScmA"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "5pZn30_Mlj3SfqGlToxvxHtCAhU",
+      "id": "UExVeGlXLW9MZGxvd3F0UEpNMjRkLW1ka0FmUUpPcng1OS5EQUE1NTFDRjcwMDg0NEMz",
+      "snippet": {
+        "publishedAt": "2021-12-02T15:29:48Z",
+        "channelId": "UCGagrr6S5Q8dGXkxnT-ScmA",
+        "title": "그 시절 우리가 열광했던 런던 ( 꼬꼬무 ver. )  -정승혁 연사자 ( feat. 박준석 레뮤지앙 )",
+        "description": "본 강연은 2021년 09월 16일 건국대학교 중앙 강연 동아리 레뮤제에서 진행된 비대면 강연 촬영본입니다. ( 강연 영상 중간에 저작권 문제로 인해 스킵되는 구간이 있으니, 이 점 양해 부탁드립니다. )\n\n 2012년 런던 올림픽 축구 경기,\n우리들의 기억 속에 있던 그 때의 전율을 다시금 떠오르게 해주고\n\n 강연 형식을 조금은 벗어난 가벼운 대화 소재의 프로그램 형식으로 구성되어\n박준석 레뮤지앙님과의 환상적인 케미가 돋 보인 런던 올림픽 축구 대표팀 이야기!\n\n 정승혁 연사자님의 강연으로 여러분들을 초대합니다.\n\n* 본 강연회는 정부의 방역수칙을 준수하여 진행되었습니다. *",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/WXZ8Txj0tic/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/WXZ8Txj0tic/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/WXZ8Txj0tic/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/WXZ8Txj0tic/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/WXZ8Txj0tic/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Le’Musée",
+        "playlistId": "PLUxiW-oLdlowqtPJM24d-mdkAfQJOrx59",
+        "position": 12,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "WXZ8Txj0tic"
+        },
+        "videoOwnerChannelTitle": "Le’Musée",
+        "videoOwnerChannelId": "UCGagrr6S5Q8dGXkxnT-ScmA"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "wl674J7kMif-qdRJlQl2lPnhAUU",
+      "id": "UExVeGlXLW9MZGxvd3F0UEpNMjRkLW1ka0FmUUpPcng1OS41QTY1Q0UxMTVCODczNThE",
+      "snippet": {
+        "publishedAt": "2021-12-02T15:30:14Z",
+        "channelId": "UCGagrr6S5Q8dGXkxnT-ScmA",
+        "title": "이 맛에 산다 '소주 오리엔테이션' -지윤상 연사자",
+        "description": "본 강연은 2021년 09월 16일 건국대학교 중앙 강연 동아리 레뮤제에서 진행된 비대면 강연 촬영본입니다.\n\n 다양한 술의 소개부터,\n술이 만들어지는 과정까지.\n\n 3년 째 술의 세계를 탐험하고 있는 지윤상 연사자님의 이야기를 담고 있는 강연입니다.  \n\n \" 소주 한 잔으로 사랑을 고백하기도,  슬픈 일을 위로하기도 하는 술.  알고 마시면 더 재밌겠지? \"\n\n 지윤상 연사자님의 강연으로 여러분들을 초대합니다.\n\n* 본 강연회는 정부의 방역수칙을 준수하여 진행되었습니다. *",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/il07tRfw21M/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/il07tRfw21M/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/il07tRfw21M/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/il07tRfw21M/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/il07tRfw21M/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Le’Musée",
+        "playlistId": "PLUxiW-oLdlowqtPJM24d-mdkAfQJOrx59",
+        "position": 13,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "il07tRfw21M"
+        },
+        "videoOwnerChannelTitle": "Le’Musée",
+        "videoOwnerChannelId": "UCGagrr6S5Q8dGXkxnT-ScmA"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "lCbyd2PyVN8rYDmZO1-z3M8nc1Y",
+      "id": "UExVeGlXLW9MZGxvd3F0UEpNMjRkLW1ka0FmUUpPcng1OS45RTgxNDRBMzUwRjQ0MDhC",
+      "snippet": {
+        "publishedAt": "2021-12-30T04:40:02Z",
+        "channelId": "UCGagrr6S5Q8dGXkxnT-ScmA",
+        "title": "[2021-2 레뮤제 정기강연] 메이킹 필름 X 촬영 비하인드컷",
+        "description": "📢 [2021-2 레뮤제 정기강연] 메이킹필름 X 촬영 비하인드컷 📢\n \n\n 안녕하세요? 건국대학교 중앙동아리 소속 강연 동아리 레뮤제입니다.\n\n 2021년 09월 09일 ~ 12월 31일까지 레뮤제에서는 \n총 5번에 걸쳐 비대면 정기 강연회를 기획하였는데요!\n\n 강연회가 진행되었던 과정을 기록하기 위해 촬영 비하인드컷 영상을 제작하였습니다. \n 촬영 현장에서 연사자분들이 강연을 준비하는 모습부터, \n 촬영진분들이 촬영장을 세팅하는 모습까지.\n 강연 영상만으로는 담아내기 힘든 부분들을 집중적으로 다루었습니다.\n\n또한 연사자분들의 생각을 조금 더 가까이서 들을 수 있는 기회를 마련하고자 영상 마지막에 연사자님 인터뷰도 넣었습니다.\n\n강연 촬영장의 모습과 연사분들의 리허설 장면을 위주로 영상을 제작했으니 예쁘게 시청해주시면 감사하겠습니다 :)\n\n\n✅1차 정기강연 (21.09.17)\n그 시절 우리가 열광했던 런던( 꼬꼬무 ver. )-정승혁 연사자\n이 맛에 산다 '소주 오리엔테이션'-지윤상 연사자\n\n✅2차 정기강연(21.10.08)\n레뮤제를 나가라-윤창우 연사자\n기록하기의 또 하나의 방법-이건우 연사자\n\n✅3차 정기강연(21.11.12)\n예상치 못한 불행을 맞이했을 때-양예진 연사자\n표현의 언어 : 시 쓰는 발명가-박성규 연사자\n\n✅4차 정기강연(21.11.25)\n표절에 관한 간단한 고찰-여용현 연사자\n공정무역, 그는 과연 공정한가?-이예린 연사자\n그 정도면 충분하다-허주영 연사자\n\n✅5차 정기강연(21.12.03)\n렘징어 GAME-성준현 연사자\n글쓰기가 어려운 여러분들에게-전한웅 연사자\n\n\n\n*본 촬영회는 정부의 방역지침을 준수하여 진행되었습니다.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/z9gq6XJnNCY/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/z9gq6XJnNCY/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/z9gq6XJnNCY/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/z9gq6XJnNCY/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/z9gq6XJnNCY/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Le’Musée",
+        "playlistId": "PLUxiW-oLdlowqtPJM24d-mdkAfQJOrx59",
+        "position": 14,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "z9gq6XJnNCY"
+        },
+        "videoOwnerChannelTitle": "Le’Musée",
+        "videoOwnerChannelId": "UCGagrr6S5Q8dGXkxnT-ScmA"
+      }
+    }
+  ],
+  "pageInfo": {
+    "totalResults": 15,
+    "resultsPerPage": 50
+  }
+}

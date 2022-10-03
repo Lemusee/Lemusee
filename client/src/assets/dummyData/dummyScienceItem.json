@@ -1,0 +1,433 @@
+{
+  "kind": "youtube#playlistItemListResponse",
+  "etag": "bEEUKJw5t_uf6iiIns0BquX472M",
+  "items": [
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "FkfdzZ01IpF4_t1bydtXVpBA33g",
+      "id": "UExVeGlXLW9MZGxveGYxYWRiNUVhUzVVb3N1Zm5FVWFSTC41NkI0NEY2RDEwNTU3Q0M2",
+      "snippet": {
+        "publishedAt": "2022-10-01T11:12:47Z",
+        "channelId": "UCGagrr6S5Q8dGXkxnT-ScmA",
+        "title": "약이 세상에 나오기까지 (김민기 연사자)",
+        "description": "본 영상은 2022년 5월 26일 건국대학교 중앙 강연 동아리 레뮤제에서 진행된 강연 촬영본입니다. \n\n약이 세상에 나오기까지 - 김민기 연사자\n\n10년이란 세월을 한 분야에서 엄청난 발전을 이룰 수 있는 시간입니다. 이번 강연에서 5단계를 거쳐 약이 만들어지는 과정을 하나하나 설명해드리면서 약의 개발과정에 대해 자세히 들여다보겠습니다.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/TbQ_mc6G8qo/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/TbQ_mc6G8qo/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/TbQ_mc6G8qo/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/TbQ_mc6G8qo/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/TbQ_mc6G8qo/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Le’Musée",
+        "playlistId": "PLUxiW-oLdloxf1adb5EaS5UosufnEUaRL",
+        "position": 0,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "TbQ_mc6G8qo"
+        },
+        "videoOwnerChannelTitle": "Le’Musée",
+        "videoOwnerChannelId": "UCGagrr6S5Q8dGXkxnT-ScmA"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "joNU1OPiWC0zC7C47SRlSRayiX0",
+      "id": "UExVeGlXLW9MZGxveGYxYWRiNUVhUzVVb3N1Zm5FVWFSTC4yODlGNEE0NkRGMEEzMEQy",
+      "snippet": {
+        "publishedAt": "2022-10-01T11:21:37Z",
+        "channelId": "UCGagrr6S5Q8dGXkxnT-ScmA",
+        "title": "재밌고 쉽게 배우는 통신기술의 이해 (구민성 연사자)",
+        "description": "본 강연은 2021년 06월 03일 건국대학교 중앙 강연 동아리 레뮤제에서 진행된 비대면 강연 촬영본입니다.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/M0xT-2Skdmw/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/M0xT-2Skdmw/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/M0xT-2Skdmw/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/M0xT-2Skdmw/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/M0xT-2Skdmw/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Le’Musée",
+        "playlistId": "PLUxiW-oLdloxf1adb5EaS5UosufnEUaRL",
+        "position": 1,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "M0xT-2Skdmw"
+        },
+        "videoOwnerChannelTitle": "Le’Musée",
+        "videoOwnerChannelId": "UCGagrr6S5Q8dGXkxnT-ScmA"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "GrsYtMRp8yhShIShHJcEG4REUpI",
+      "id": "UExVeGlXLW9MZGxveGYxYWRiNUVhUzVVb3N1Zm5FVWFSTC4wMTcyMDhGQUE4NTIzM0Y5",
+      "snippet": {
+        "publishedAt": "2022-10-01T11:23:10Z",
+        "channelId": "UCGagrr6S5Q8dGXkxnT-ScmA",
+        "title": "우린 환경보호를 위해 어떻게 해야 할까? 'Environment' (김아연 연사자)",
+        "description": "본 강연은 2021년 05월 24일 건국대학교 중앙 강연 동아리 레뮤제에서 진행된 비대면 강연 촬영본입니다.\n\n1. 환경 오염, 심각한가?\n2. 환경 보호, 적절한가?\n3. 앞으로의 환경보호는 어떻게 해야 하는가?\n\n이 세 가지 질문에 대해 알아보면서 환경문제에 대해 생각해보는 시간을 갖게 해주는 김아연 연사자의\n'우린 환경보호를 위해 어떻게 해야 할까? Environment'\n\n* 본 강연회는 정부의 방역수칙을 준수하여 진행되었습니다.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/5Pdb4G-TIkQ/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/5Pdb4G-TIkQ/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/5Pdb4G-TIkQ/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/5Pdb4G-TIkQ/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/5Pdb4G-TIkQ/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Le’Musée",
+        "playlistId": "PLUxiW-oLdloxf1adb5EaS5UosufnEUaRL",
+        "position": 2,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "5Pdb4G-TIkQ"
+        },
+        "videoOwnerChannelTitle": "Le’Musée",
+        "videoOwnerChannelId": "UCGagrr6S5Q8dGXkxnT-ScmA"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "gTUakqFIKPtiMPecUipNv5pmzwM",
+      "id": "UExVeGlXLW9MZGxveGYxYWRiNUVhUzVVb3N1Zm5FVWFSTC41MjE1MkI0OTQ2QzJGNzNG",
+      "snippet": {
+        "publishedAt": "2022-10-01T11:26:23Z",
+        "channelId": "UCGagrr6S5Q8dGXkxnT-ScmA",
+        "title": "나무와 문명이 우리에게 들려주는 이야기(신준영 연사자)",
+        "description": "본 강연은 2021년 05월 6일 건국대학교 중앙 강연 동아리\n레뮤제에서 진행된 비대면 강연 촬영본입니다.\n\n역사속에서 문명이 성장하는데 나무는 필수적인 요소였다.\n그렇다면 나무의 입장에서 문명의 성장을 바라본다면?\n과연 나무와 문명은 어떤 이야기를 가지고 있을까?\n나무와 문명이 우리에게 들려주는 이야기! - 신준영 연사자",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/yKC3o88eMJk/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/yKC3o88eMJk/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/yKC3o88eMJk/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/yKC3o88eMJk/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/yKC3o88eMJk/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Le’Musée",
+        "playlistId": "PLUxiW-oLdloxf1adb5EaS5UosufnEUaRL",
+        "position": 3,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "yKC3o88eMJk"
+        },
+        "videoOwnerChannelTitle": "Le’Musée",
+        "videoOwnerChannelId": "UCGagrr6S5Q8dGXkxnT-ScmA"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "Z2qNU2twoNukVzTkbmfWzDRkamM",
+      "id": "UExVeGlXLW9MZGxveGYxYWRiNUVhUzVVb3N1Zm5FVWFSTC4wOTA3OTZBNzVEMTUzOTMy",
+      "snippet": {
+        "publishedAt": "2022-10-01T11:30:59Z",
+        "channelId": "UCGagrr6S5Q8dGXkxnT-ScmA",
+        "title": "WHO AM I",
+        "description": "본 강연은 2016년 05월 26일 촬영된 황혜림 레뮤지앙의 강연입니다.\n\n기술과학 / 뇌과학 \n\n내가 나인 걸 어떻게 알 수 있을까? 자의식 모델 탐구로 가기 위한, '자아 형성에 대한 원리'를 뇌과학적으로 간단히 접근해본다.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/IGJnWAqKan8/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/IGJnWAqKan8/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/IGJnWAqKan8/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/IGJnWAqKan8/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/IGJnWAqKan8/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Le’Musée",
+        "playlistId": "PLUxiW-oLdloxf1adb5EaS5UosufnEUaRL",
+        "position": 4,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "IGJnWAqKan8"
+        },
+        "videoOwnerChannelTitle": "Le’Musée",
+        "videoOwnerChannelId": "UCGagrr6S5Q8dGXkxnT-ScmA"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "Oi2PRUO7j1CBUkwOnyd37l03JZo",
+      "id": "UExVeGlXLW9MZGxveGYxYWRiNUVhUzVVb3N1Zm5FVWFSTC4xMkVGQjNCMUM1N0RFNEUx",
+      "snippet": {
+        "publishedAt": "2022-10-01T11:31:37Z",
+        "channelId": "UCGagrr6S5Q8dGXkxnT-ScmA",
+        "title": "방구석에서 체험하는 로켓 발사 강연, ADD MORE ROCKETS!(윤창우 연사자)",
+        "description": "본 강연은 2020년 10월 8일 건국대학교 중앙 강연 동아리 레뮤제에서 진행하는 비대면 강연 촬영본입니다.\n\n방구석 여포질 끝판왕 언택트 우주여행, 방에서 체험하는 로켓 발사 강연!\n우주가 점점 가까워지고 있는 오늘날, 어쩌면 우주비행사라는 꿈은 그리 허황된 것이 아닐지도 모릅니다! 평범한 일상 속 평범한 게임 속에서 우주인의 생활을 꿈꾸고 있는 윤창우 연사자와 함께 로켓의 조립부터 발사, 지구로의 귀환까지의 여행을 강연을 통해 함께해요!",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/yoekOcYhrDo/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/yoekOcYhrDo/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/yoekOcYhrDo/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/yoekOcYhrDo/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/yoekOcYhrDo/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Le’Musée",
+        "playlistId": "PLUxiW-oLdloxf1adb5EaS5UosufnEUaRL",
+        "position": 5,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "yoekOcYhrDo"
+        },
+        "videoOwnerChannelTitle": "Le’Musée",
+        "videoOwnerChannelId": "UCGagrr6S5Q8dGXkxnT-ScmA"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "pAP88oh_LoMNpT-yAMzKR-LAd2M",
+      "id": "UExVeGlXLW9MZGxveGYxYWRiNUVhUzVVb3N1Zm5FVWFSTC41MzJCQjBCNDIyRkJDN0VD",
+      "snippet": {
+        "publishedAt": "2022-10-01T11:33:13Z",
+        "channelId": "UCGagrr6S5Q8dGXkxnT-ScmA",
+        "title": "인천에서 울란바토르까지",
+        "description": "물류회사인턴이 설명해주는 물류이야기!",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/5pB9Eg9xKe4/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/5pB9Eg9xKe4/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/5pB9Eg9xKe4/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/5pB9Eg9xKe4/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/5pB9Eg9xKe4/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Le’Musée",
+        "playlistId": "PLUxiW-oLdloxf1adb5EaS5UosufnEUaRL",
+        "position": 6,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "5pB9Eg9xKe4"
+        },
+        "videoOwnerChannelTitle": "Le’Musée",
+        "videoOwnerChannelId": "UCGagrr6S5Q8dGXkxnT-ScmA"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "wa6dhF9Jy9fSwkb_qAThqPjxkPc",
+      "id": "UExVeGlXLW9MZGxveGYxYWRiNUVhUzVVb3N1Zm5FVWFSTC5DQUNERDQ2NkIzRUQxNTY1",
+      "snippet": {
+        "publishedAt": "2022-10-01T11:33:42Z",
+        "channelId": "UCGagrr6S5Q8dGXkxnT-ScmA",
+        "title": "발명이 바꿀 당신의 삶",
+        "description": "당신도 발명 할 수 있습니다.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/1HG2fQpdc6w/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/1HG2fQpdc6w/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/1HG2fQpdc6w/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/1HG2fQpdc6w/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/1HG2fQpdc6w/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Le’Musée",
+        "playlistId": "PLUxiW-oLdloxf1adb5EaS5UosufnEUaRL",
+        "position": 7,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "1HG2fQpdc6w"
+        },
+        "videoOwnerChannelTitle": "Le’Musée",
+        "videoOwnerChannelId": "UCGagrr6S5Q8dGXkxnT-ScmA"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "zJdDiIq2_jCA-lForBEdGCeRggE",
+      "id": "UExVeGlXLW9MZGxveGYxYWRiNUVhUzVVb3N1Zm5FVWFSTC45NDk1REZENzhEMzU5MDQz",
+      "snippet": {
+        "publishedAt": "2022-10-01T11:34:31Z",
+        "channelId": "UCGagrr6S5Q8dGXkxnT-ScmA",
+        "title": "우리의 Tommorow",
+        "description": "지구를 아낍시다",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/ezYjJp3izSw/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/ezYjJp3izSw/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/ezYjJp3izSw/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/ezYjJp3izSw/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/ezYjJp3izSw/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Le’Musée",
+        "playlistId": "PLUxiW-oLdloxf1adb5EaS5UosufnEUaRL",
+        "position": 8,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "ezYjJp3izSw"
+        },
+        "videoOwnerChannelTitle": "Le’Musée",
+        "videoOwnerChannelId": "UCGagrr6S5Q8dGXkxnT-ScmA"
+      }
+    }
+  ],
+  "pageInfo": {
+    "totalResults": 9,
+    "resultsPerPage": 50
+  }
+}

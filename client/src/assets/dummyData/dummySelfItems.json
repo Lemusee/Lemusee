@@ -1,0 +1,1085 @@
+{
+  "kind": "youtube#playlistItemListResponse",
+  "etag": "FDIWyS7cr_xqMADvwTtFgihLYJ0",
+  "items": [
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "U4agjK_ZGV2iZgW2gAnU67g7KKg",
+      "id": "UExVeGlXLW9MZGxvd2hKMC0tUTNxbTg1ZV9vYjg1TzdQZC41NkI0NEY2RDEwNTU3Q0M2",
+      "snippet": {
+        "publishedAt": "2022-10-01T11:04:06Z",
+        "channelId": "UCGagrr6S5Q8dGXkxnT-ScmA",
+        "title": "그루밍 리스트 - 구민성 연사자",
+        "description": "- 강연 소개\n자기 관리하는 남자가 되기 위한 기초적인 관리 목록에 대한 강연\n\n- 강연 한 마디\n이제는 남자도 관리를 해야 하는 시대입니다. \n소개팅과 미팅이 아닌 여러분 스스로가 더 나은 사람이 되기 위해 가꾸고 관리 하는 것이 노력입니다.\n한번에 모든 관리를 하려고 하지 말고 하나씩 천천히 해보면서 우리 스스로를 가꾸어봅시다.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/skYFpUsKoew/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/skYFpUsKoew/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/skYFpUsKoew/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Le’Musée",
+        "playlistId": "PLUxiW-oLdlowhJ0--Q3qm85e_ob85O7Pd",
+        "position": 0,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "skYFpUsKoew"
+        },
+        "videoOwnerChannelTitle": "Le’Musée",
+        "videoOwnerChannelId": "UCGagrr6S5Q8dGXkxnT-ScmA"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "Bd4hT-AIq7HHntLDOiJ4Q8V-uTI",
+      "id": "UExVeGlXLW9MZGxvd2hKMC0tUTNxbTg1ZV9vYjg1TzdQZC4yODlGNEE0NkRGMEEzMEQy",
+      "snippet": {
+        "publishedAt": "2022-10-01T11:06:16Z",
+        "channelId": "UCGagrr6S5Q8dGXkxnT-ScmA",
+        "title": "여행이 각인되기까지 - 여용현 연사자",
+        "description": "- 강연 소개\n미국 여행 중 우연히 들은 노래로 깨달은 기억의 매개체에 대한 강연\n\n- 강연 한 마디\n이것은 여행 만으로 국한되지 않는다고 생각합니다. \n살면서 다짐한 것이 있는데, 쉽게 잊히거나 잘 안 지켜지는 경우가 많을 수 있습니다.\n여러분도 자신의 살아가면서 했던 다짐이나 얻은 깨달음을 꾸준히 기억할 수 있는 장치나 매개체를 찾아보거나 만드는 것을 추천해봅니다.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/tPJ-AZYr1Ig/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/tPJ-AZYr1Ig/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/tPJ-AZYr1Ig/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Le’Musée",
+        "playlistId": "PLUxiW-oLdlowhJ0--Q3qm85e_ob85O7Pd",
+        "position": 1,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "tPJ-AZYr1Ig"
+        },
+        "videoOwnerChannelTitle": "Le’Musée",
+        "videoOwnerChannelId": "UCGagrr6S5Q8dGXkxnT-ScmA"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "fIv52Y3Yggeq2whS9rn8paCxHl0",
+      "id": "UExVeGlXLW9MZGxvd2hKMC0tUTNxbTg1ZV9vYjg1TzdQZC4wMTcyMDhGQUE4NTIzM0Y5",
+      "snippet": {
+        "publishedAt": "2022-10-01T11:11:46Z",
+        "channelId": "UCGagrr6S5Q8dGXkxnT-ScmA",
+        "title": "운동의 정석 (김재민 연사자)",
+        "description": "본 영상은 2022년 5월 26일 건국대학교 중앙 강연 동아리 레뮤제에서 진행된 강연 촬영본입니다. \n\n운동의 정석 - 김재민 연사자\n\n헬스를 왜 하는지, 어떤 운동이 있고 어떻게 하는지 직접 동작을 보여주며 알려드립니다.\n이 강연을 통해 헬스에 대한 기초적인 이해와 입문 과정에 대한 접근이 더욱 수월해질 것입니다.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/YQMqTs38OEs/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/YQMqTs38OEs/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/YQMqTs38OEs/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/YQMqTs38OEs/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/YQMqTs38OEs/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Le’Musée",
+        "playlistId": "PLUxiW-oLdlowhJ0--Q3qm85e_ob85O7Pd",
+        "position": 2,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "YQMqTs38OEs"
+        },
+        "videoOwnerChannelTitle": "Le’Musée",
+        "videoOwnerChannelId": "UCGagrr6S5Q8dGXkxnT-ScmA"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "NQL40l7TetEQup8OfOXzmhC45l4",
+      "id": "UExVeGlXLW9MZGxvd2hKMC0tUTNxbTg1ZV9vYjg1TzdQZC41MjE1MkI0OTQ2QzJGNzNG",
+      "snippet": {
+        "publishedAt": "2022-10-01T11:12:16Z",
+        "channelId": "UCGagrr6S5Q8dGXkxnT-ScmA",
+        "title": "진정한 인플루언서가 되는 법 (이지원 연사자)",
+        "description": "본 영상은 2022년 5월 26일 건국대학교 중앙 강연 동아리 레뮤제에서 진행된 강연 촬영본입니다. \n\n진정한 인플루언서가 되는 법 - 이지원 연사자\n\n대학생활동안 다양한 활동을 하며 알게 된 적성 분석법!\n연사자의 경험과 함께 자신의 적성을 찾는 방법과 적성 분석방법,\n진정한 인플루언서는 누구이며 어떻게 진정한 인플루언서가 되는지 소개합니다!",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/WoxuOtt4g9s/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/WoxuOtt4g9s/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/WoxuOtt4g9s/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/WoxuOtt4g9s/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/WoxuOtt4g9s/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Le’Musée",
+        "playlistId": "PLUxiW-oLdlowhJ0--Q3qm85e_ob85O7Pd",
+        "position": 3,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "WoxuOtt4g9s"
+        },
+        "videoOwnerChannelTitle": "Le’Musée",
+        "videoOwnerChannelId": "UCGagrr6S5Q8dGXkxnT-ScmA"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "gXQvIYdK2fioPGX5U7Vf0LNLCRs",
+      "id": "UExVeGlXLW9MZGxvd2hKMC0tUTNxbTg1ZV9vYjg1TzdQZC4wOTA3OTZBNzVEMTUzOTMy",
+      "snippet": {
+        "publishedAt": "2022-10-01T11:13:40Z",
+        "channelId": "UCGagrr6S5Q8dGXkxnT-ScmA",
+        "title": "아는 친구 얘기 (이건영 연사자)",
+        "description": "본 영상은 2022년 5월 12일 건국대학교 중앙 강연 동아리 레뮤제에서 진행된 강연 촬영본입니다. \n\n아는 친구 얘기 - 이건영 연사자 \n\n저에게 자신의 인생 흐름을 놓쳤다고 미래의 목표를 좇아야만 한다고 생각하던 친구가 있었습니다. 막막한 미래를 보며 좌절하던 시기부터 현재의 삶을 충실히 하게 된 과정까지, 제 친구의 이야기를 들려드립니다.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/dJhXe_auHFA/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/dJhXe_auHFA/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/dJhXe_auHFA/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/dJhXe_auHFA/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/dJhXe_auHFA/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Le’Musée",
+        "playlistId": "PLUxiW-oLdlowhJ0--Q3qm85e_ob85O7Pd",
+        "position": 4,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "dJhXe_auHFA"
+        },
+        "videoOwnerChannelTitle": "Le’Musée",
+        "videoOwnerChannelId": "UCGagrr6S5Q8dGXkxnT-ScmA"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "EZawkkLdskcQTFkQhVANtjTlkq0",
+      "id": "UExVeGlXLW9MZGxvd2hKMC0tUTNxbTg1ZV9vYjg1TzdQZC4xMkVGQjNCMUM1N0RFNEUx",
+      "snippet": {
+        "publishedAt": "2022-10-01T11:17:37Z",
+        "channelId": "UCGagrr6S5Q8dGXkxnT-ScmA",
+        "title": "그 정도면 충분하다 (허주영 연사자)",
+        "description": "본 강연은 2021년 11월 25일 건국대학교 중앙 강연 동아리 레뮤제에서 진행된 비대면 강연 촬영본입니다.\n\n 완벽에 집착하게 된 중학생 시절, 완벽에 집착했지만 완벽하지 못해 자책을 하게 된 고등학교 시절, 대학교에 오고 자책에서 벗어나기 위해 했던 일들.\n \n 완벽함에 지나치게 집착을 했지만, 완벽하지 못해 본인에게 자책을 하던 시절이 있었습니다. 대학교에 오고 나서야 그런 자책에서 벗어날 수 있었고, 극복해 나가며 느꼈던 감정들을 레뮤지앙 여러분들과 공유하고 싶습니다. 완벽하지 못하더라도 나 자신에게 괜찮다는 말을 하고, 스스로를 사랑하는 여러분이 되었으면 좋겠습니다.\n\n 허주영 연사자님의 강연으로 여러분들을 초대합니다.\n\n* 본 강연회는 정부의 방역수칙을 준수하여 진행되었습니다. *",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/8K0FQ37FDS0/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/8K0FQ37FDS0/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/8K0FQ37FDS0/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/8K0FQ37FDS0/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/8K0FQ37FDS0/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Le’Musée",
+        "playlistId": "PLUxiW-oLdlowhJ0--Q3qm85e_ob85O7Pd",
+        "position": 5,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "8K0FQ37FDS0"
+        },
+        "videoOwnerChannelTitle": "Le’Musée",
+        "videoOwnerChannelId": "UCGagrr6S5Q8dGXkxnT-ScmA"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "KwHonPufxpOFPRFLGsTNU_kzTN4",
+      "id": "UExVeGlXLW9MZGxvd2hKMC0tUTNxbTg1ZV9vYjg1TzdQZC41MzJCQjBCNDIyRkJDN0VD",
+      "snippet": {
+        "publishedAt": "2022-10-01T11:19:03Z",
+        "channelId": "UCGagrr6S5Q8dGXkxnT-ScmA",
+        "title": "표현의 언어 : 시 쓰는 발명가 이야기 (박성규 연사자)",
+        "description": "본 강연은 2021년 11월 11일 건국대학교 중앙 강연 동아리 레뮤제에서 진행된 비대면 강연 촬영본입니다.\n\n '창의력은 나의 인생을 표현하는 표현의 언어'\n \n 시를 쓰고 발명하는 것. 누군가에게는 창의적이고 어려운 일이라고 생각될지라도 창의력은 나의 인생을 표현하는 표현의 언어 중 하나입니다. 창의력에 대한 오해, 그리고 자신을 표현하는 것의 중요성을 이야기 해보려고 합니다. \n 자신을 표현하는 것에는 많은 고민과 준비가 필요하겠지만, 망설이지는 않으셨으면 좋겠습니다. \n\n박성규 연사자님의 강연으로 여러분들을 초대합니다.\n\n* 본 강연회는 정부의 방역수칙을 준수하여 진행되었습니다. *",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/8_vy2M_7CUk/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/8_vy2M_7CUk/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/8_vy2M_7CUk/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/8_vy2M_7CUk/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/8_vy2M_7CUk/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Le’Musée",
+        "playlistId": "PLUxiW-oLdlowhJ0--Q3qm85e_ob85O7Pd",
+        "position": 6,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "8_vy2M_7CUk"
+        },
+        "videoOwnerChannelTitle": "Le’Musée",
+        "videoOwnerChannelId": "UCGagrr6S5Q8dGXkxnT-ScmA"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "goUILitDTrLZmuvqB89Uut_J7BY",
+      "id": "UExVeGlXLW9MZGxvd2hKMC0tUTNxbTg1ZV9vYjg1TzdQZC5DQUNERDQ2NkIzRUQxNTY1",
+      "snippet": {
+        "publishedAt": "2022-10-01T11:19:26Z",
+        "channelId": "UCGagrr6S5Q8dGXkxnT-ScmA",
+        "title": "예상치 못한 불행을 맞이했을 때 (양예진 연사자)",
+        "description": "본 강연은 2021년 11월 11일 건국대학교 중앙 강연 동아리 레뮤제에서 진행된 비대면 강연 촬영본입니다.\n\n 누구에게나 예상치 못한 불행은 찾아올 수 있습니다. \n\n  \"지금 내가 할 수 있는 일부터 해보자\"라는 생각을 가지며 차근차근 불행을 극복했고  당시 느꼈던 생각과 감정을 레뮤지앙 분들과 공유하고 싶습니다. 여러분도 예상치 못한 불행이 찾아왔을 때 제 강연을 떠올리며 불행을 극복해 나가셨으면 좋겠습니다. \n\n 본 강연에서는 불행을 겪게 된 연사자님의 과거 이야기, 그리고 그 불행을 극복해 나아갔던 과정을 담담하게 풀어내고 있습니다. \n\n 양예진 연사자님의 강연으로 여러분들을 초대합니다.\n\n* 본 강연회는 정부의 방역수칙을 준수하여 진행되었습니다. *",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/-sYmrq_PzmE/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/-sYmrq_PzmE/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/-sYmrq_PzmE/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/-sYmrq_PzmE/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/-sYmrq_PzmE/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Le’Musée",
+        "playlistId": "PLUxiW-oLdlowhJ0--Q3qm85e_ob85O7Pd",
+        "position": 7,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "-sYmrq_PzmE"
+        },
+        "videoOwnerChannelTitle": "Le’Musée",
+        "videoOwnerChannelId": "UCGagrr6S5Q8dGXkxnT-ScmA"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "0DfqzhLqSjyF-4WrRCgT5tq4St0",
+      "id": "UExVeGlXLW9MZGxvd2hKMC0tUTNxbTg1ZV9vYjg1TzdQZC45NDk1REZENzhEMzU5MDQz",
+      "snippet": {
+        "publishedAt": "2022-10-01T11:20:58Z",
+        "channelId": "UCGagrr6S5Q8dGXkxnT-ScmA",
+        "title": "'레뮤제를 나가라' (윤창우 연사자)",
+        "description": "본 강연은 2021년 10월 07일 건국대학교 중앙 강연 동아리 레뮤제에서 진행된 비대면 강연 촬영본입니다.\n\n  '진짜 나가진 마세요' \n\n 레뮤제에서 할 수 있었던 일, 강연을 접하고 직접 하기까지의 과정, 새로운 것들에 도전하는 힘을 통해 레뮤제 밖에서 시도 중인 다양한 일을 소개하고 싶습니다. 강연 제목의 의미, 레뮤제에 들어와서 한 일, 낯선 것들에 도전하는 힘을 바탕으로 레뮤제 밖에서 시작한 일을 소개합니다! ( 강연 후반부에는 에필로그도 준비되어 있으니 끝까지 집중해서 시청해주세요! )\n\n윤창우 연사자님의 강연으로 여러분들을 초대합니다.\n\n* 본 강연회는 정부의 방역수칙을 준수하여 진행되었습니다. *",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/a3hFG_KjEiA/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/a3hFG_KjEiA/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/a3hFG_KjEiA/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/a3hFG_KjEiA/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/a3hFG_KjEiA/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Le’Musée",
+        "playlistId": "PLUxiW-oLdlowhJ0--Q3qm85e_ob85O7Pd",
+        "position": 8,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "a3hFG_KjEiA"
+        },
+        "videoOwnerChannelTitle": "Le’Musée",
+        "videoOwnerChannelId": "UCGagrr6S5Q8dGXkxnT-ScmA"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "N6o8PdPcF-wJYrd2QXDm_SvHhOo",
+      "id": "UExVeGlXLW9MZGxvd2hKMC0tUTNxbTg1ZV9vYjg1TzdQZC5GNjNDRDREMDQxOThCMDQ2",
+      "snippet": {
+        "publishedAt": "2022-10-01T11:22:56Z",
+        "channelId": "UCGagrr6S5Q8dGXkxnT-ScmA",
+        "title": "삶의 방향을 고민하는 나에게 (성준현 연사자)",
+        "description": "본 강연은 2021년 05월 24일 건국대학교 중앙 강연 동아리 레뮤제에서 진행된 비대면 강연 촬영본입니다.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/CmSdhaLdCog/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/CmSdhaLdCog/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/CmSdhaLdCog/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/CmSdhaLdCog/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          }
+        },
+        "channelTitle": "Le’Musée",
+        "playlistId": "PLUxiW-oLdlowhJ0--Q3qm85e_ob85O7Pd",
+        "position": 9,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "CmSdhaLdCog"
+        },
+        "videoOwnerChannelTitle": "Le’Musée",
+        "videoOwnerChannelId": "UCGagrr6S5Q8dGXkxnT-ScmA"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "RSuk2Dd7VSfddmHTDgK7_SUmoes",
+      "id": "UExVeGlXLW9MZGxvd2hKMC0tUTNxbTg1ZV9vYjg1TzdQZC40NzZCMERDMjVEN0RFRThB",
+      "snippet": {
+        "publishedAt": "2022-10-01T11:23:57Z",
+        "channelId": "UCGagrr6S5Q8dGXkxnT-ScmA",
+        "title": "[레뮤제X인액터스 건국 연합강연] ANSWER INSIDE, 삼성전자 통신사업부 RF HW Engineer 구민성 연사자",
+        "description": "📢 [청년들을 위한 지침이 될, 삶과 꿈을 큐레이션하다]📢\n \n안녕하세요, 건국대학교 중앙동아리 소속 인액터스,  레뮤제입니다!\n저희는 코로나19에도 불구하고 중앙 동아리 사이에서 긍정적 에너지를 교류하고자 지난 2021년 5월 20일, 두 동아리의 비대면 합동 강연을 진행했습니다!\n\n인액터스는 사회적 기업, 소셜벤처로 성장할 프로젝트를 기획, 운영하는 사회혁신 실천형 비즈니스 동아리이며 레뮤제는 따뜻한 인간관계를 바탕으로 수평적 지식나눔을 추구하는 모토로 정기적인 강연회를 여는 동아리입니다.\n\n본 영상은 국내 반도체 선도 기업 삼성전자에서 통산사업부 RF HW Engineer이신 구민성 연사자님의 강연 촬영본입니다!\n강연 주제는 아래와 같습니다!\n\n\"초등학교 시절부터 대학교까지 열등감으로 똘똘 뭉쳐 있던 한 아이의 이야기.\"\n\n*본 강연회는 정부의 방역수칙을 준수하여 진행되었습니다.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/sqtS4Q2B1A8/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/sqtS4Q2B1A8/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/sqtS4Q2B1A8/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/sqtS4Q2B1A8/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/sqtS4Q2B1A8/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Le’Musée",
+        "playlistId": "PLUxiW-oLdlowhJ0--Q3qm85e_ob85O7Pd",
+        "position": 10,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "sqtS4Q2B1A8"
+        },
+        "videoOwnerChannelTitle": "Le’Musée",
+        "videoOwnerChannelId": "UCGagrr6S5Q8dGXkxnT-ScmA"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "F_Kx6LavB_OpDcevogtcgkHbIRM",
+      "id": "UExVeGlXLW9MZGxvd2hKMC0tUTNxbTg1ZV9vYjg1TzdQZC5EMEEwRUY5M0RDRTU3NDJC",
+      "snippet": {
+        "publishedAt": "2022-10-01T11:24:41Z",
+        "channelId": "UCGagrr6S5Q8dGXkxnT-ScmA",
+        "title": "[레뮤제X인액터스 건국 연합강연] 인액터스에서 시작된 스타트업의 꿈을 실현시키기까지, 그 동기와 과정, sailors 대표 양유정 연사자",
+        "description": "📢 [청년들을 위한 지침이 될, 삶과 꿈을 큐레이션하다]📢\n \n안녕하세요, 건국대학교 중앙동아리 소속 인액터스,  레뮤제입니다!\n저희는 코로나19에도 불구하고 중앙 동아리 사이에서 긍정적 에너지를 교류하고자 지난 2021년 5월 20일, 두 동아리의 비대면 합동 강연을 진행했습니다!\n\n인액터스는 사회적 기업, 소셜벤처로 성장할 프로젝트를 기획, 운영하는 사회혁신 실천형 비즈니스 동아리이며 레뮤제는 따뜻한 인간관계를 바탕으로 수평적 지식나눔을 추구하는 모토로 정기적인 강연회를 여는 동아리입니다.\n\n본 영상은 스타트업 [sailors] 대표이신 양유정 연사자님의 강연 촬영본입니다!\n강연 주제는 아래와 같습니다!\n\n\"인엑터스에서 시작된 스타트업 꿈을 실현시키기까지, 그 동기와 과정\n스타트업을 시작하게 된 동기와 과정을 통해 관객들로 하여금 동기의 중요성을 설명하고, 창업까지의 길을 이해할 수 있도록 그 과정을 설명하고자 합니다.\"\n\n*본 강연회는 정부의 방역수칙을 준수하여 진행되었습니다.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/owsY6H7VBD4/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/owsY6H7VBD4/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/owsY6H7VBD4/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/owsY6H7VBD4/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/owsY6H7VBD4/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Le’Musée",
+        "playlistId": "PLUxiW-oLdlowhJ0--Q3qm85e_ob85O7Pd",
+        "position": 11,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "owsY6H7VBD4"
+        },
+        "videoOwnerChannelTitle": "Le’Musée",
+        "videoOwnerChannelId": "UCGagrr6S5Q8dGXkxnT-ScmA"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "xiGAWWzTOtEIOL0rIEBefaHzlQA",
+      "id": "UExVeGlXLW9MZGxvd2hKMC0tUTNxbTg1ZV9vYjg1TzdQZC45ODRDNTg0QjA4NkFBNkQy",
+      "snippet": {
+        "publishedAt": "2022-10-01T11:25:00Z",
+        "channelId": "UCGagrr6S5Q8dGXkxnT-ScmA",
+        "title": "[레뮤제X인액터스 건국 연합강연] 내 자리의 모양을 찾아서,게임회사 플랫폼 서비스 기획자 김민석",
+        "description": "📢 [청년들을 위한 지침이 될, 삶과 꿈을 큐레이션하다]📢\n \n안녕하세요, 건국대학교 중앙동아리 소속 인액터스, 레뮤제입니다!\n저희는 코로나19에도 불구하고 중앙 동아리 사이에서 긍정적 에너지를 교류하고자 지난 2021년 5월 20일, 두 동아리의 비대면 합동 강연을 진행했습니다!\n\n인액터스는 사회적 기업, 소셜벤처로 성장할 프로젝트를 기획, 운영하는 사회혁신 실천형 비즈니스 동아리이며 레뮤제는 따뜻한 인간관계를 바탕으로 수평적 지식나눔을 추구하는 모토로 정기적인 강연회를 여는 동아리입니다.\n\n본 영상은 국내 유명 게임기업에서 서비스 플랫폼 기획을 맡고 계신 김민석 연사자님의 강연 활영본입니다.\n강연 주제는 아래와 같습니다!\n\n\"'저는 어디에 있는 누구입니다’라고 소개하는 것을 어쩐지 민망해하던 사람이, 나에게 꼭 맞는 자리의 모양을 발견해내려고 여기저기 기웃대며 고군분투하는 이야기입니다.\"\n\n*본 강연회는 정부의 방역수칙을 준수하여 진행되었습니다.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/dHfL9d37PAs/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/dHfL9d37PAs/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/dHfL9d37PAs/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/dHfL9d37PAs/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/dHfL9d37PAs/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Le’Musée",
+        "playlistId": "PLUxiW-oLdlowhJ0--Q3qm85e_ob85O7Pd",
+        "position": 12,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "dHfL9d37PAs"
+        },
+        "videoOwnerChannelTitle": "Le’Musée",
+        "videoOwnerChannelId": "UCGagrr6S5Q8dGXkxnT-ScmA"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "VLes1ZRMbJ29eg6s7Ej29aWbbew",
+      "id": "UExVeGlXLW9MZGxvd2hKMC0tUTNxbTg1ZV9vYjg1TzdQZC4zMDg5MkQ5MEVDMEM1NTg2",
+      "snippet": {
+        "publishedAt": "2022-10-01T11:25:14Z",
+        "channelId": "UCGagrr6S5Q8dGXkxnT-ScmA",
+        "title": "[레뮤제X인액터스 건국 연합강연] TO SPEAK, 건국대학교 부동산학과 이치헌 연사자",
+        "description": "📢 [청년들을 위한 지침이 될, 삶과 꿈을 큐레이션하다]📢\n \n안녕하세요, 건국대학교 중앙동아리 소속 인액터스, 레뮤제입니다!\n저희는 코로나19에도 불구하고 중앙 동아리 사이에서 긍정적 에너지를 교류하고자 지난 2021년 5월 20일, 두 동아리의 비대면 합동 강연을 진행했습니다!\n\n인액터스는 사회적 기업, 소셜벤처로 성장할 프로젝트를 기획, 운영하는 사회혁신 실천형 비즈니스 동아리이며 레뮤제는 따뜻한 인간관계를 바탕으로 수평적 지식나눔을 추구하는 모토로 정기적인 강연회를 여는 동아리입니다.\n\n본 영상은 건국대학교 부동산학과에 재학 중이신 이치헌 연사자님의 강연 촬영본입니다!\n강연 주제는 아래와 같습니다!\n\n\"말하기 위해 살아온 21년, 그리고 난 오늘도 말한다.\"\n\n*본 강연회는 정부의 방역수칙을 준수하여 진행되었습니다.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/PGvG9z8iBKM/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/PGvG9z8iBKM/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/PGvG9z8iBKM/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/PGvG9z8iBKM/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/PGvG9z8iBKM/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Le’Musée",
+        "playlistId": "PLUxiW-oLdlowhJ0--Q3qm85e_ob85O7Pd",
+        "position": 13,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "PGvG9z8iBKM"
+        },
+        "videoOwnerChannelTitle": "Le’Musée",
+        "videoOwnerChannelId": "UCGagrr6S5Q8dGXkxnT-ScmA"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "0NpxCozbkYKvqHRcW2rxS6iGlqU",
+      "id": "UExVeGlXLW9MZGxvd2hKMC0tUTNxbTg1ZV9vYjg1TzdQZC41Mzk2QTAxMTkzNDk4MDhF",
+      "snippet": {
+        "publishedAt": "2022-10-01T11:26:04Z",
+        "channelId": "UCGagrr6S5Q8dGXkxnT-ScmA",
+        "title": "다들 안녕하신가요? 그렇다면 인간관계는요? '너'로부터 아프지 않는 방법(홍다형 연사자)",
+        "description": "본 강연은 2021년 04월 08일 건국대학교 중앙 강연 동아리 레뮤제에서 진행된 비대면 강연 촬영본입니다.\n\n우리는 왜 자꾸 사람에게 기대하고 또 실망하는 걸까요? \n아프지 않고 싶은데 그 방법을 모르겠어요\n대학에 온 만큼, 이번엔 내면을 성숙시켜볼까요?\n'너'로부터 아프지 않는 방법 - 홍다형 연사자",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/w-MLrYR_u_k/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/w-MLrYR_u_k/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/w-MLrYR_u_k/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/w-MLrYR_u_k/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/w-MLrYR_u_k/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Le’Musée",
+        "playlistId": "PLUxiW-oLdlowhJ0--Q3qm85e_ob85O7Pd",
+        "position": 14,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "w-MLrYR_u_k"
+        },
+        "videoOwnerChannelTitle": "Le’Musée",
+        "videoOwnerChannelId": "UCGagrr6S5Q8dGXkxnT-ScmA"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "r9pu-XVvbUpOfMtv9S9UFyM-1cY",
+      "id": "UExVeGlXLW9MZGxvd2hKMC0tUTNxbTg1ZV9vYjg1TzdQZC5EQUE1NTFDRjcwMDg0NEMz",
+      "snippet": {
+        "publishedAt": "2022-10-01T11:28:31Z",
+        "channelId": "UCGagrr6S5Q8dGXkxnT-ScmA",
+        "title": "사회에서 살아남기 위해 우리는 어떤 노력을 해야할까? 아직도 없니? 서바이벌키트-확장편(류다언 연사자)",
+        "description": "본 강연은 2021년 03월 25일 건국대학교 중앙 강연 동아리\n레뮤제에서 진행된 비대면 강연 촬영본입니다.\n\n사회에서 살아남기란 너무나 어려운 법이죠\n과연 류다언 연사자님의 서바이벌 키트에는 어떤 내용이 들어있을까요?\n살아남기 고수 류다언 연사자님의 서바이벌키트-확장편!",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/sTb8aT57auc/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/sTb8aT57auc/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/sTb8aT57auc/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/sTb8aT57auc/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/sTb8aT57auc/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Le’Musée",
+        "playlistId": "PLUxiW-oLdlowhJ0--Q3qm85e_ob85O7Pd",
+        "position": 15,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "sTb8aT57auc"
+        },
+        "videoOwnerChannelTitle": "Le’Musée",
+        "videoOwnerChannelId": "UCGagrr6S5Q8dGXkxnT-ScmA"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "NaU5diZ2v9O-xw2agXd9tUptKso",
+      "id": "UExVeGlXLW9MZGxvd2hKMC0tUTNxbTg1ZV9vYjg1TzdQZC41QTY1Q0UxMTVCODczNThE",
+      "snippet": {
+        "publishedAt": "2022-10-01T11:30:17Z",
+        "channelId": "UCGagrr6S5Q8dGXkxnT-ScmA",
+        "title": "무채색의 학생이던 내게 물감이 되어 준 레뮤제, 내가 레뮤제를 사랑하는 이유 (구민성 연사자)",
+        "description": "본 강연은 2020년 11월 12일 건국대학교 중앙 강연 동아리 레뮤제에서 진행된 비대면 강연 촬영본입니다.\n\n무채색의 학생이 색을 갖게된 이유\n레뮤제를 사랑하는 이유,\n레뮤제를 사랑할 수 밖에 없었던 이유",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/nLtUXE-fG6Q/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/nLtUXE-fG6Q/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/nLtUXE-fG6Q/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/nLtUXE-fG6Q/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/nLtUXE-fG6Q/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Le’Musée",
+        "playlistId": "PLUxiW-oLdlowhJ0--Q3qm85e_ob85O7Pd",
+        "position": 16,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "nLtUXE-fG6Q"
+        },
+        "videoOwnerChannelTitle": "Le’Musée",
+        "videoOwnerChannelId": "UCGagrr6S5Q8dGXkxnT-ScmA"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "H9sFBiT4aKwyhrynbUXJB9zmiWA",
+      "id": "UExVeGlXLW9MZGxvd2hKMC0tUTNxbTg1ZV9vYjg1TzdQZC4yMUQyQTQzMjRDNzMyQTMy",
+      "snippet": {
+        "publishedAt": "2022-10-01T11:32:38Z",
+        "channelId": "UCGagrr6S5Q8dGXkxnT-ScmA",
+        "title": "Airplane mode",
+        "description": "2019년 12월 5일 \n스마트폰을 놓는 순간, 당신의 목표에 더 가까워 질 겁니다.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/E1EKRwceNqo/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/E1EKRwceNqo/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/E1EKRwceNqo/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/E1EKRwceNqo/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/E1EKRwceNqo/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Le’Musée",
+        "playlistId": "PLUxiW-oLdlowhJ0--Q3qm85e_ob85O7Pd",
+        "position": 17,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "E1EKRwceNqo"
+        },
+        "videoOwnerChannelTitle": "Le’Musée",
+        "videoOwnerChannelId": "UCGagrr6S5Q8dGXkxnT-ScmA"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "PvGymN_EIn1rLlglQ78iKDUuJVA",
+      "id": "UExVeGlXLW9MZGxvd2hKMC0tUTNxbTg1ZV9vYjg1TzdQZC45RTgxNDRBMzUwRjQ0MDhC",
+      "snippet": {
+        "publishedAt": "2022-10-01T11:32:57Z",
+        "channelId": "UCGagrr6S5Q8dGXkxnT-ScmA",
+        "title": "21살 인생 복습하기",
+        "description": "군대가기 전, 인생을 돌아보는 21살 건대생의 이야기\n난 무엇을 했나..",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/uE7EdbzTvUo/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/uE7EdbzTvUo/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/uE7EdbzTvUo/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/uE7EdbzTvUo/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/uE7EdbzTvUo/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Le’Musée",
+        "playlistId": "PLUxiW-oLdlowhJ0--Q3qm85e_ob85O7Pd",
+        "position": 18,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "uE7EdbzTvUo"
+        },
+        "videoOwnerChannelTitle": "Le’Musée",
+        "videoOwnerChannelId": "UCGagrr6S5Q8dGXkxnT-ScmA"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "e0xwLAv0OGLn69caHyvoAW4UN40",
+      "id": "UExVeGlXLW9MZGxvd2hKMC0tUTNxbTg1ZV9vYjg1TzdQZC5ENDU4Q0M4RDExNzM1Mjcy",
+      "snippet": {
+        "publishedAt": "2022-10-01T11:33:42Z",
+        "channelId": "UCGagrr6S5Q8dGXkxnT-ScmA",
+        "title": "발명이 바꿀 당신의 삶",
+        "description": "당신도 발명 할 수 있습니다.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/1HG2fQpdc6w/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/1HG2fQpdc6w/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/1HG2fQpdc6w/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/1HG2fQpdc6w/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/1HG2fQpdc6w/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Le’Musée",
+        "playlistId": "PLUxiW-oLdlowhJ0--Q3qm85e_ob85O7Pd",
+        "position": 19,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "1HG2fQpdc6w"
+        },
+        "videoOwnerChannelTitle": "Le’Musée",
+        "videoOwnerChannelId": "UCGagrr6S5Q8dGXkxnT-ScmA"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "eejlVflFPVeRldsMN4L9t5-46KU",
+      "id": "UExVeGlXLW9MZGxvd2hKMC0tUTNxbTg1ZV9vYjg1TzdQZC4yMDhBMkNBNjRDMjQxQTg1",
+      "snippet": {
+        "publishedAt": "2022-10-01T11:33:57Z",
+        "channelId": "UCGagrr6S5Q8dGXkxnT-ScmA",
+        "title": "Private video",
+        "description": "This video is private.",
+        "thumbnails": {},
+        "channelTitle": "Le’Musée",
+        "playlistId": "PLUxiW-oLdlowhJ0--Q3qm85e_ob85O7Pd",
+        "position": 20,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "AnduJ0bgKvY"
+        }
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "lHvQpbh2j5OkYNahzlEkRX4iYhk",
+      "id": "UExVeGlXLW9MZGxvd2hKMC0tUTNxbTg1ZV9vYjg1TzdQZC5GM0Q3M0MzMzY5NTJFNTdE",
+      "snippet": {
+        "publishedAt": "2022-10-01T11:35:43Z",
+        "channelId": "UCGagrr6S5Q8dGXkxnT-ScmA",
+        "title": "쉼표 홍다형연사자",
+        "description": "힘들땐 잠시 쉬어가요, 우리 그동안 달려만 왔잖아요..\n지난 삶을 되돌아 보아요.\n당신의 노력은 결코 헛된게 아니예요!",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/uthna8jfU20/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/uthna8jfU20/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/uthna8jfU20/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/uthna8jfU20/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/uthna8jfU20/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Le’Musée",
+        "playlistId": "PLUxiW-oLdlowhJ0--Q3qm85e_ob85O7Pd",
+        "position": 21,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "uthna8jfU20"
+        },
+        "videoOwnerChannelTitle": "Le’Musée",
+        "videoOwnerChannelId": "UCGagrr6S5Q8dGXkxnT-ScmA"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "oAMVQEX3byZi9XMrcTxKvKrpY0o",
+      "id": "UExVeGlXLW9MZGxvd2hKMC0tUTNxbTg1ZV9vYjg1TzdQZC4zRjM0MkVCRTg0MkYyQTM0",
+      "snippet": {
+        "publishedAt": "2022-10-01T11:35:59Z",
+        "channelId": "UCGagrr6S5Q8dGXkxnT-ScmA",
+        "title": "아직도 없니? 서바이벌 키트",
+        "description": "아직도 없니? 서바이벌 키트\n우리는 세계화라는 말이 이제는 어색할 정도로 너무 당연한 시대를 살고 있습니다. 앞으로 우리가 나아갈 세상에서 잘 살아남으러면 어떤 준비를 해야할까요? \n해외에서 다양한 경험을 통해 자신만의 서바이벌 키트를 가지고 계신 류다언 연사자님의 \"아직도 없니? 서바이벌키트\"강연을 통해 알아보는 시간을 가졌습니다.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/k1JCbSQiKJU/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/k1JCbSQiKJU/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/k1JCbSQiKJU/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/k1JCbSQiKJU/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/k1JCbSQiKJU/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Le’Musée",
+        "playlistId": "PLUxiW-oLdlowhJ0--Q3qm85e_ob85O7Pd",
+        "position": 22,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "k1JCbSQiKJU"
+        },
+        "videoOwnerChannelTitle": "Le’Musée",
+        "videoOwnerChannelId": "UCGagrr6S5Q8dGXkxnT-ScmA"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "JRXnWlLrilw5fyPIZMdo1wnNoIU",
+      "id": "UExVeGlXLW9MZGxvd2hKMC0tUTNxbTg1ZV9vYjg1TzdQZC45NzUwQkI1M0UxNThBMkU0",
+      "snippet": {
+        "publishedAt": "2022-10-01T11:36:58Z",
+        "channelId": "UCGagrr6S5Q8dGXkxnT-ScmA",
+        "title": "4년차 연애선배가 알려주는 연애꿀팁",
+        "description": "1200일째 사랑중인 연애선배가 알려주는 연애의 모든것!!",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/Kef0AJABZpc/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/Kef0AJABZpc/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/Kef0AJABZpc/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/Kef0AJABZpc/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/Kef0AJABZpc/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Le’Musée",
+        "playlistId": "PLUxiW-oLdlowhJ0--Q3qm85e_ob85O7Pd",
+        "position": 23,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "Kef0AJABZpc"
+        },
+        "videoOwnerChannelTitle": "Le’Musée",
+        "videoOwnerChannelId": "UCGagrr6S5Q8dGXkxnT-ScmA"
+      }
+    }
+  ],
+  "pageInfo": {
+    "totalResults": 24,
+    "resultsPerPage": 50
+  }
+}
