@@ -9,6 +9,7 @@ import Editor from "./routes/Editor/Editor";
 import Home from "./routes/Home/Home";
 import Login from "./routes/Member/Login";
 import Members from "./routes/Member/Members";
+import Personal from "./routes/Personal/Personal";
 import Player from "./routes/Player/Player";
 
 function Router(){
@@ -27,6 +28,7 @@ function Router(){
           <Route path="content/:contentId" element={<CommunityContent/>}></Route>
         </Route>
         <Route path="/editor" element={<Editor/>}></Route>
+        <Route path="/personal" element={<Personal/>}></Route>
         <Route path="/admin" element={<Admin/>}></Route>
       </Routes>
     </BrowserRouter>

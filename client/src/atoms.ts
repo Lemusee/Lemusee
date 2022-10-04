@@ -10,6 +10,13 @@ export enum Categories {
   "etc"="etc",
 }
 
+export enum Teams {
+  "curator" = "curator",
+  "contents" = "contents",
+  "culture"= "culture",
+  "admin" = "admin"
+}
+
 export const isDarkThemeAtom = atom(
   {
     key:"isDark",
@@ -63,7 +70,6 @@ export interface IChannelInfo {
   statistics: {
       viewCount: string;
       subscriberCount: string;
-      hiddenSubscriberCount: boolean;
       videoCount: string;
   };
 }
@@ -75,7 +81,7 @@ export const channelState = atom<IChannelInfo[]>({
 
 export interface ICurationInfo {
   cardNum: number;
-  title: string; 
+  title: string;
   contents:string;
   imgUrl:string;
 }

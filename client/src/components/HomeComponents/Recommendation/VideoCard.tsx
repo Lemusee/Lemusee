@@ -6,7 +6,6 @@ import * as S from "./SVideoCard";
 import Moment from "react-moment";
 
 function VideoCard ({ title, description, publishedAt, videoURL } : IVideoItems) {
-  console.log(title);
   return (
     <>
       <Link to={`player/${videoURL}`}>

@@ -23,7 +23,11 @@ const channelInfo = channelInfoData.items.map(data => {
       title:data.snippet.title,
       description:data.snippet.description,
       thumnails:data.snippet.thumbnails.medium,
-      statistics: data.statistics,
+      statistics: {
+        viewCount:data.statistics.viewCount,
+        subscriberCount:data.statistics.subscriberCount,
+        videoCount:data.statistics.videoCount
+      },
     }
     )
   })
@@ -119,14 +123,13 @@ function App() {
   // console.log(data);
   // console.log(dummyChannelInfo);
   const [videoItem, setVideoItem] = useRecoilState(playlistItemState);
-  const setChannelState = useSetRecoilState(channelState);
+  const [channelData, setChannelData] = useRecoilState(channelState);
   const setIsLoading = useSetRecoilState(isLoadingAtom);
   useEffect(()=> {
     setVideoItem(AllVideoList);
-    setChannelState([...channelInfo]);
+    setChannelData([...channelInfo]);
     setIsLoading(true);
   },[]);
-  console.log(videoItem);
   const isDark = useRecoilValue(isDarkThemeAtom);
   return (
     <>
