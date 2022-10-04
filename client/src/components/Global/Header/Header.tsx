@@ -23,22 +23,22 @@ function Header ({thickness}:IHeader) {
             </S.Logo>
             <S.NavTitles thickness={thickness}>
               <S.NavTitle>
-                <Link to="about">
+                <Link to="/about">
                   <T.Pretendard17M>ABOUT US</T.Pretendard17M>
                 </Link>
               </S.NavTitle>
               <S.NavTitle>
-                <Link to="archive">
+                <Link to="/archive">
                   <T.Pretendard17M>ARCHIVE</T.Pretendard17M>
                 </Link>
               </S.NavTitle>
               <S.NavTitle>
-                <Link to="community/notice">
+                <Link to="/community/notice">
                   <T.Pretendard17M>NOTICE</T.Pretendard17M>
                 </Link>
               </S.NavTitle>
               <S.NavTitle>
-                <Link to="community">
+                <Link to="/community">
                   <T.Pretendard17M>COMMUNITY</T.Pretendard17M>
                 </Link>
               </S.NavTitle>
