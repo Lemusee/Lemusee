@@ -17,7 +17,7 @@ function VideoCard ({ title, publishedAt, videoURL, thumnailUrl, category } : IV
   }
   return (
     <>
-      <Link to={`player/${videoURL}`}>
+      <Link to={`/player/${videoURL}`}>
         <S.Wrapper>
           <S.VideoImg thumnailUrl={thumnailUrl}/>
           <T.Pretendard15M>{title}</T.Pretendard15M>
