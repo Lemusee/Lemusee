@@ -1,5 +1,6 @@
 import * as S from "./SMembers";
 import * as T from "../../components/Global/Text/Text";
+import { Outlet } from "react-router-dom";
 
 function Members () {
   return (
@@ -26,7 +27,8 @@ function Members () {
               </S.SubTitles>
             </S.ContentAreaLeft>
             <S.ContentAreaRight>
-
+              <T.Pretendard17R>{"Welcome."}</T.Pretendard17R>
+              <Outlet context={"login"}/>
             </S.ContentAreaRight>
           </S.ContentArea>
         </S.Container>

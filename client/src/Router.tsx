@@ -8,9 +8,11 @@ import CommunityList from "./routes/Community/CommunityList";
 import Editor from "./routes/Editor/Editor";
 import Home from "./routes/Home/Home";
 import Login from "./routes/Member/Login";
+import SignUp1 from "./routes/Member/SignUp1";
 import Members from "./routes/Member/Members";
 import Personal from "./routes/Personal/Personal";
 import Player from "./routes/Player/Player";
+import SignUp2 from "./routes/Member/SignUp2";
 
 function Router(){
   return (
@@ -19,6 +21,8 @@ function Router(){
         <Route path="/" element={<Home/>}></Route>
         <Route path="/members/*" element={<Members/>}>
           <Route path="login" element={<Login/>}></Route>
+          <Route path="signup1" element={<SignUp1/>}></Route>
+          <Route path="signup2" element={<SignUp2/>}></Route>
         </Route>
         <Route path="/about" element={<AboutUs/>}></Route>
         <Route path="/archive" element={<Archive/>}></Route>

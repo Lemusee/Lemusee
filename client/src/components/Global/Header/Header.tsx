@@ -3,14 +3,14 @@ import * as T from "../Text/Text";
 import * as G from "../../Global/Spacing/Spacing"
 import { Link } from "react-router-dom";
 import { useRecoilValue } from "recoil";
-import { isLogedInAtom } from "../../../atoms"
+import { isLoggedInAtom } from "../../../atoms"
 
 interface IHeader {
   thickness?:boolean;
 }
 
 function Header ({thickness}:IHeader) {
-  const isLogedIn = useRecoilValue(isLogedInAtom);
+  const isLogedIn = useRecoilValue(isLoggedInAtom);
   return (
     <>
       <S.Wrapper thickness={thickness}>
@@ -44,7 +44,7 @@ function Header ({thickness}:IHeader) {
               </S.NavTitle>
               {thickness ? <></> : 
               <S.NavTitle>
-                <Link to={isLogedIn ? "personal" : "members/login"}>
+                <Link to={isLogedIn ? "/personal" : "/members/login"}>
                   <T.Pretendard17R>{isLogedIn ? `${"여용현"} 님` : "LogIn/SignUp"}</T.Pretendard17R>
                 </Link>
               </S.NavTitle>
@@ -67,7 +67,7 @@ function Header ({thickness}:IHeader) {
                 </S.NavSubTitle>
               </S.NavSubTitles>
               <S.NavSubTitle>
-                <Link to={isLogedIn ? "personal" : "members/login"}>
+                <Link to={isLogedIn ? "/personal" : "/members/login"}>
                   <T.Pretendard13R>{isLogedIn ? `안녕하세요, ${"여용현"} 님` : "Log In / Sign Up"}</T.Pretendard13R>
                 </Link>
               </S.NavSubTitle>

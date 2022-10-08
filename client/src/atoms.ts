@@ -1,4 +1,3 @@
-import { NONAME } from "dns";
 import { atom } from "recoil";
 
 export enum Categories {
@@ -17,6 +16,15 @@ export enum Teams {
   "admin" = "admin"
 }
 
+export enum Certification {
+  "활동"=0,
+  "비활동"=1,
+  "졸업"=2,
+  "미정"=3,
+}
+
+//======================================
+
 export const isDarkThemeAtom = atom(
   {
     key:"isDark",
@@ -24,7 +32,7 @@ export const isDarkThemeAtom = atom(
   }
 )
 
-export const isLogedInAtom = atom({
+export const isLoggedInAtom = atom({
   key:"isLogedIn",
   default:false,
 })
@@ -90,3 +98,4 @@ export const curationState = atom<ICurationInfo[]>({
   key: "curationInfo",
   default:[],
 })
+

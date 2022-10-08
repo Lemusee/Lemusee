@@ -62,3 +62,4 @@ export const VerticalBar = styled.div`
   align-self: center;
   background-color: ${props=>props.theme.lemuseeblack_60};
 `;
+

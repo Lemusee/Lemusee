@@ -31,13 +31,6 @@ export const ContentAreaLeft = styled.div`
   gap: 230px;
 `;
 
-export const ContentAreaRight = styled.div`
-  width: 510px;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-`;
 
 export const TitleArea = styled.div`
   width: 100%;
@@ -60,14 +53,14 @@ export const TitleArea = styled.div`
     color: ${props=>props.theme.lemuseeblack_60};
     margin-top: 30px;
   }
-`;
+  `;
 
 export const SubTitles = styled.div`
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-`;
+  `;
 
 export const SubTitleBox = styled.div`
   display: flex;
@@ -83,3 +76,15 @@ export const SubTitleBox = styled.div`
     color: ${props=>props.theme.lemuseeblack_60};
   }
 `;
+
+export const ContentAreaRight = styled.div`
+  width: 510px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  ${T.Pretendard17R} {
+    margin-bottom: 65px;
+  }
+`;
+
