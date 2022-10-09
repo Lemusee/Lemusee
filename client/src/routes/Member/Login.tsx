@@ -62,7 +62,7 @@ function Login () {
             />
             <span>{errors?.password?.message}</span>
           </S.InputBox>
-          <Link to="">
+          <Link to="/members/findaccount">
             <SubNextBtn type={"button"} name={"비밀번호 찾기"}/>
           </Link>
           <S.InputBox>

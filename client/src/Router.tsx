@@ -13,6 +13,8 @@ import Members from "./routes/Member/Members";
 import Personal from "./routes/Personal/Personal";
 import Player from "./routes/Player/Player";
 import SignUp2 from "./routes/Member/SignUp2";
+import FindAccount from "./routes/Member/FindAccount";
+import ResetPassword from "./routes/Member/ResetPassword";
 
 function Router(){
   return (
@@ -23,6 +25,8 @@ function Router(){
           <Route path="login" element={<Login/>}></Route>
           <Route path="signup1" element={<SignUp1/>}></Route>
           <Route path="signup2" element={<SignUp2/>}></Route>
+          <Route path="findaccount" element={<FindAccount/>}></Route>
+          <Route path="resetpassword" element={<ResetPassword/>}></Route>
         </Route>
         <Route path="/about" element={<AboutUs/>}></Route>
         <Route path="/archive" element={<Archive/>}></Route>

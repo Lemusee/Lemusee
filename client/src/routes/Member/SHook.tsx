@@ -25,6 +25,7 @@ export const btnArea = styled.div`
 `;
 
 export const InputBox = styled.div`
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 7px;
@@ -34,6 +35,7 @@ export const InputBox = styled.div`
     color: ${props=>props.theme.lemuseeblack_100};
   }
   input {
+    width: 220px;
     color: ${props=>props.theme.lemuseeblack_60};
     font-size: 13px;
     font-weight: 400;
