@@ -1,6 +1,7 @@
 import * as S from "./SMembers";
 import * as T from "../../components/Global/Text/Text";
-import { Outlet } from "react-router-dom";
+import { Outlet, Link } from "react-router-dom";
+import HomeBtn from "../../components/Global/Buttons/HomeBtn";
 
 function Members () {
   return (
@@ -14,6 +15,9 @@ function Members () {
                 <T.Pretendard44B>lemusee</T.Pretendard44B>
                 <T.Pretendard44R>be a speaker.</T.Pretendard44R>
                 <T.Pretendard15R>따뜻한 인간관계를 바탕으로 수평적인 인간 관계 속에서 지식 나눔을 추구합니다.</T.Pretendard15R>
+                <Link to="/">
+                  <HomeBtn type={"button"} name={"Back to Home"}/>
+                </Link>
               </S.TitleArea>
               <S.SubTitles>
                 <S.SubTitleBox>

@@ -15,6 +15,7 @@ import Player from "./routes/Player/Player";
 import SignUp2 from "./routes/Member/SignUp2";
 import FindAccount from "./routes/Member/FindAccount";
 import ResetPassword from "./routes/Member/ResetPassword";
+import Recruitment from "./routes/Recruitment/Recruitment";
 
 function Router(){
   return (
@@ -37,6 +38,7 @@ function Router(){
         </Route>
         <Route path="/editor" element={<Editor/>}></Route>
         <Route path="/personal" element={<Personal/>}></Route>
+        <Route path="/recruitment" element={<Recruitment/>}></Route>
         <Route path="/admin" element={<Admin/>}></Route>
       </Routes>
     </BrowserRouter>

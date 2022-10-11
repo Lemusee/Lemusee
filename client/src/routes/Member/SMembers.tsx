@@ -48,10 +48,10 @@ export const TitleArea = styled.div`
     color: ${props=>props.theme.lemuseeblack_100};
     letter-spacing: 4.4px;
     text-align: left;
+    margin-bottom: 30px;
   }
   ${T.Pretendard15R} {
     color: ${props=>props.theme.lemuseeblack_60};
-    margin-top: 30px;
   }
   `;
 
@@ -87,4 +87,3 @@ export const ContentAreaRight = styled.div`
     margin-bottom: 65px;
   }
 `;
-

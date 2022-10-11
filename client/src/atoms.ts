@@ -42,6 +42,11 @@ export const isLoadingAtom = atom({
   default: false,
 })
 
+export const isRecruitmentAtom = atom({
+  key: "isRecruitment",
+  default: false,
+})
+
 interface IThumnails {
   url:string;
   width:number;
@@ -99,3 +104,14 @@ export const curationState = atom<ICurationInfo[]>({
   default:[],
 })
 
+export interface IRecruitment {
+  recruitment_link?:string;
+  inquiry?:string;
+  due_at?:string;
+  content?:string;
+}
+
+export const recruitmentInfoAtom = atom<IRecruitment>({
+  key: "recruitmentInfo",
+  default: {},
+})

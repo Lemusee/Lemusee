@@ -15,7 +15,7 @@ function Teams () {
           </S.contentTitle>
           <S.TeamCardList>
             {teamInfo.map(list => (
-              <Link to={`community/${list.title.replace(/ /g, "")}`}>
+              <Link key={list.title} to={`community/${list.title.replace(/ /g, "")}`}>
                 <TeamCard {...list}/>
               </Link>
             ))}
