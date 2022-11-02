@@ -16,6 +16,7 @@ import SignUp2 from "./routes/Member/SignUp2";
 import FindAccount from "./routes/Member/FindAccount";
 import ResetPassword from "./routes/Member/ResetPassword";
 import Recruitment from "./routes/Recruitment/Recruitment";
+import Loading from "./components/Global/Loading/Loading";
 
 function Router(){
   return (
@@ -40,6 +41,7 @@ function Router(){
         <Route path="/personal" element={<Personal/>}></Route>
         <Route path="/recruitment" element={<Recruitment/>}></Route>
         <Route path="/admin" element={<Admin/>}></Route>
+        <Route path="/loading" element={<Loading/>}></Route>
       </Routes>
     </BrowserRouter>
   )

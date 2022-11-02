@@ -10,7 +10,9 @@ import Recent from "../../components/HomeComponents/Recent/Recent";
 import IndexByCategory from "../../components/HomeComponents/IndexByCategory/IndexByCategory";
 import Executives from "../../components/HomeComponents/Executives/Executives";
 import RecruitmentBanner from "../../components/Global/Banners/RecruitmentBanner";
-
+import { useScroll } from "framer-motion";
+import { useEffect, useState } from "react";
+import React from "react";
 
 function Home () {
   return (
@@ -38,4 +40,4 @@ function Home () {
   )
 }
 
-export default Home;
+export default React.memo(Home);

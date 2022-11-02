@@ -9,6 +9,7 @@ interface IHeader {
   thickness?:boolean;
 }
 
+
 function Header ({thickness}:IHeader) {
   const isLogedIn = useRecoilValue(isLoggedInAtom);
   return (
@@ -38,7 +39,7 @@ function Header ({thickness}:IHeader) {
                 </Link>
               </S.NavTitle>
               <S.NavTitle>
-                <Link to="/community">
+                <Link to="/community/all/list">
                   <T.Pretendard17M>COMMUNITY</T.Pretendard17M>
                 </Link>
               </S.NavTitle>
