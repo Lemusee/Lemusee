@@ -18,3 +18,27 @@ export const Categories = styled.div`
   align-items: flex-start;
 `;
 
+export const Lists = styled.div`
+  width: 840px;
+  height: 881px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap:50px;
+`;
+
+export const ListTitle = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  color: ${props=> props.theme.lemuseeblack_100};
+  ${T.Pretendard24B} {
+    color: inherit;
+  }
+  &:first-child {
+    color: ${props=>props.theme.lemuseeblack_50};
+  }
+`;

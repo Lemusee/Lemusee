@@ -1,5 +1,7 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
+import { useRecoilState } from "recoil";
+import {communityPageIndex} from "../../atoms";
 import styled from "styled-components";
 import * as T from "../../components/Global/Text/Text";
 
@@ -39,7 +41,8 @@ const Subtitle = styled.button<isSelected>`
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  color: ${props=>props.theme.lemuseeblack_50};
+  color: ${props=> props.isSelected ? props.theme.lemuseeblack_100 : props.theme.lemuseeblack_50};
+  background-color: ${props=> props.isSelected ? props.theme.lemuseeblack_30 : "transparent"};
   &:hover {
     color: ${props=>props.theme.lemuseeblack_100};
   };
@@ -70,33 +73,53 @@ const ParamsMatch:ParamsMatchType = {
   admin_proceedings:14,
   admin_ref:15,
   freeBoard:16,
-}
+};
 
 
 function CommunityCategory ({title, subtitles}:ICategory) {
   const [openSub, setOpenSub] = useState(false);
-  const [isSelected, setIsSelected] = useState(false);
-  const pageId = useParams().category as string;
-  console.log(pageId)
+  const [indexState, setIndexState] = useRecoilState(communityPageIndex);
+  const pageParam = useParams();
+  const pageId = pageParam["*"] as string;
+  const pageIndex = ParamsMatch[pageId] as number;
 
-  const onClickHandler = (index:number) => {
-    const pageIndex = ParamsMatch[pageId];
-    if (index === pageIndex) {
-      setIsSelected(true);
-    }
-  };
+  useEffect(()=>{
+    console.log("indexState", indexState, "pageIndex", pageIndex);
+    console.log("title", title, "open", openSub)
+  },[indexState, pageIndex]);
   
   return (
     <>
-      <CategoryTitle onClick={()=> setOpenSub(prev => !prev)} isSelected={openSub || isSelected}>
-        <T.Pretendard44M>{title}</T.Pretendard44M>
-        <T.Pretendard44M>/</T.Pretendard44M>
-      </CategoryTitle>
-      {openSub ? (
+      {subtitles[0].name ? (
+        <CategoryTitle 
+          onClick={()=> setOpenSub(prev => !prev)} 
+          isSelected={openSub}
+        >
+          <T.Pretendard44M>{title}</T.Pretendard44M>
+          <T.Pretendard44M>/</T.Pretendard44M>
+        </CategoryTitle>
+      ) : (
+        <Link to={`/community/${Object.keys(ParamsMatch).find(key => ParamsMatch[key] === subtitles[0].index) as string}`}>
+          <CategoryTitle 
+            onClick={()=> setOpenSub(prev => !prev)} 
+            isSelected={openSub}
+          >
+            <T.Pretendard44M>{title}</T.Pretendard44M>
+            <T.Pretendard44M>/</T.Pretendard44M>
+          </CategoryTitle>
+        </Link>
+      )}
+      {openSub || (pageIndex === indexState) ? (
         <Subtitles>
           {(subtitles[0].name) ? subtitles?.map(subtitle => (
-            <Link to={Object.keys(ParamsMatch).find(key => ParamsMatch[key] === subtitle.index) as string}>
-              <Subtitle onClick={() => onClickHandler(subtitle.index)} isSelected={isSelected}>
+            <Link to={`/community/${Object.keys(ParamsMatch).find(key => ParamsMatch[key] === subtitle.index) as string}`}>
+              <Subtitle 
+                onClick={() => {
+                  setIndexState(subtitle.index);
+                  setOpenSub(subtitle.index === pageIndex);
+                }} 
+                isSelected={(subtitle.index === pageIndex)}
+              >
                 <T.Pretendard15R>{subtitle?.name}</T.Pretendard15R>
               </Subtitle>
             </Link>

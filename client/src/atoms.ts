@@ -115,3 +115,8 @@ export const recruitmentInfoAtom = atom<IRecruitment>({
   key: "recruitmentInfo",
   default: {},
 })
+
+export const communityPageIndex = atom<number>({
+  key:"communityPageIndex",
+  default:0,
+})

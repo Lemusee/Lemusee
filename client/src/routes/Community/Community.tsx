@@ -2,11 +2,12 @@ import Header from "../../components/Global/Header/Header";
 import styled from "styled-components";
 import * as S from "./SCommunity";
 import * as G from "../../components/Global/Spacing/Spacing";
+import * as T from "../../components/Global/Text/Text";
 import CommunityCategory from "../../components/CommunityComponents/Category";
 import CommunityCategories from "../../assets/dummyData/dummyCommunityCategories.json";
 import { useEffect, useState } from "react";
 import Loading from "../../components/Global/Loading/Loading";
-import { useParams } from "react-router-dom";
+import { Outlet, useParams } from "react-router-dom";
 
 interface ICategoriesData {
   title?:string;
@@ -64,6 +65,7 @@ function Community () {
   const [copydata, setCopydata] = useState<ICategoriesData[]>();
   const [category, setCategory] = useState<ICategories[]>();
   const [isLoading, setIsLoading] = useState(true);
+  const {pageId} = useParams();
 
   useEffect(()=>{
     setCopydata([...CommunityCategories.result]);
@@ -85,6 +87,9 @@ function Community () {
                   <CommunityCategory key={i.title} title={i.title} subtitles={i.subtitle} />
                 ))}
               </S.Categories>
+              <S.Lists>
+                <Outlet context={{pageId}}/>
+              </S.Lists>
             </S.Container>
           </S.Wrapper>
         </>

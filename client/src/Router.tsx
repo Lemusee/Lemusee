@@ -33,7 +33,7 @@ function Router(){
         <Route path="/about" element={<AboutUs/>}></Route>
         <Route path="/archive" element={<Archive/>}></Route>
         <Route path="/player/:videoId" element={<Player/>}></Route>
-        <Route path="/community/:category/*" element={<Community/>}>
+        <Route path="/:category/*" element={<Community/>}>
           <Route path="list" element={<CommunityList/>}></Route>
           <Route path="content/:contentId" element={<CommunityContent/>}></Route>
         </Route>
