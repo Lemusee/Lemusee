@@ -1,8 +1,9 @@
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import styled from "styled-components";
 import * as T from "../Global/Text/Text";
+import Moment from "react-moment";
 
-interface IItem {
+export interface IItem {
     id: number;
     title : string;
     preview : string;
@@ -17,6 +18,13 @@ const Wrapper = styled.div`
   justify-content: space-between;
   padding: 0 0 40px;
   gap: 20px;
+  &:hover {
+    background-color: ${props=>props.theme.lemuseeblack_30};
+    transition: 0.3s;
+  };
+  &:active {
+    background-color: ${props => props.theme.lemuseeblack_50};
+  };
 `;
 
 const Line = styled.div`
@@ -31,6 +39,7 @@ const Item = styled.div`
   column-gap: 85px;
   ${T.Pretendard13R} {
     color: ${props=>props.theme.lemuseeblack_70};
+    margin: 0 5px;
   }
 `;
 
@@ -42,19 +51,23 @@ const Content = styled.div`
   gap: 10px;
 `;
 
-function ListItem (data:IItem) {
+function ListItem ({id, updatedAt, title, preview, writer}:IItem) {
+  const pageParam = useParams();
+
   return(
     <>
-      <Link to={`content/${data.id}`}>
+      <Link to={`/${pageParam.category}/content/${id}`}>
         <Wrapper>
           <Line/>
           <Item>
-            <T.Pretendard13R>{data.updatedAt}</T.Pretendard13R>
+            <T.Pretendard13R>
+              <Moment format="YY.MM.DD.">{updatedAt}</Moment>
+            </T.Pretendard13R>
             <Content>
-              <T.Pretendard15M>{data.title}</T.Pretendard15M>
-              <T.Pretendard13R>{data.preview}</T.Pretendard13R>
+              <T.Pretendard15M>{title}</T.Pretendard15M>
+              <T.Pretendard13R>{preview}</T.Pretendard13R>
             </Content>
-            <T.Pretendard13R>{data.writer}</T.Pretendard13R>
+            <T.Pretendard13R>{`${writer} 레뮤지앙`}</T.Pretendard13R>
           </Item>
         </Wrapper>
       </Link>

@@ -10,6 +10,7 @@ import Loading from "../../components/Global/Loading/Loading";
 import { Outlet, useParams } from "react-router-dom";
 import { useSetRecoilState } from "recoil";
 import { communityCategoryState } from "../../atoms";
+import Footer from "../../components/Global/Footer/Footer";
 
 interface ICategoriesData {
   title?:string;
@@ -80,9 +81,9 @@ function Community () {
 
   return (
     <>
+      <Header thickness={false} />
       {isLoading ? <Loading/> : (
         <>
-          <Header thickness={false} />
           <G.Space150px/>
           <S.Wrapper>
             <S.Container>
@@ -96,8 +97,10 @@ function Community () {
               </S.Lists>
             </S.Container>
           </S.Wrapper>
+          <G.Space150px />
         </>
       )}
+      <Footer/>
     </>
   )
 }

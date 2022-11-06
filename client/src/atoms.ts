@@ -116,7 +116,7 @@ export const recruitmentInfoAtom = atom<IRecruitment>({
   default: {},
 })
 
-interface ICategories {
+export interface ICategories {
   title?:string;
   subtitle:{
       name?:string;

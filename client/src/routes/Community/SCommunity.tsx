@@ -9,6 +9,7 @@ export const Container = styled(G.Container)`
   flex-direction: row;
   justify-content: space-between;
   width: 1280px;
+  height: fit-content;
 `;
 
 export const Categories = styled.div`
@@ -20,7 +21,6 @@ export const Categories = styled.div`
 
 export const Lists = styled.div`
   width: 840px;
-  height: 881px;
   display: flex;
   flex-direction: column;
   align-items: center;
