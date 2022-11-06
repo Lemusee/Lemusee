@@ -10,6 +10,7 @@ import Recent from "../../components/HomeComponents/Recent/Recent";
 import IndexByCategory from "../../components/HomeComponents/IndexByCategory/IndexByCategory";
 import Executives from "../../components/HomeComponents/Executives/Executives";
 import RecruitmentBanner from "../../components/Global/Banners/RecruitmentBanner";
+import {ReactComponent as Favicon} from "../../assets/icons/favicon.svg";
 import { useScroll } from "framer-motion";
 import { useEffect, useState } from "react";
 import React from "react";

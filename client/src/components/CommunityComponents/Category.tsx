@@ -80,28 +80,31 @@ function CommunityCategory ({title, subtitles}:ICategory) {
   const [openSub, setOpenSub] = useState(false);
   const [indexState, setIndexState] = useRecoilState(communityPageIndex);
   const pageParam = useParams();
-  const pageId = pageParam["*"] as string;
+  const pageId = pageParam["category"] as string;
   const pageIndex = ParamsMatch[pageId] as number;
 
   useEffect(()=>{
-    console.log("indexState", indexState, "pageIndex", pageIndex);
-    console.log("title", title, "open", openSub)
-  },[indexState, pageIndex]);
+    setOpenSub(subtitles.filter(ele => ele.index === pageIndex).length !== 0);
+  },[indexState, pageParam]);
   
   return (
     <>
       {subtitles[0].name ? (
         <CategoryTitle 
-          onClick={()=> setOpenSub(prev => !prev)} 
+          onClick={()=> {
+            setOpenSub(prev => !prev);
+          }} 
           isSelected={openSub}
         >
           <T.Pretendard44M>{title}</T.Pretendard44M>
           <T.Pretendard44M>/</T.Pretendard44M>
         </CategoryTitle>
       ) : (
-        <Link to={`/community/${Object.keys(ParamsMatch).find(key => ParamsMatch[key] === subtitles[0].index) as string}`}>
+        <Link to={`/${Object.keys(ParamsMatch).find(key => ParamsMatch[key] === subtitles[0].index) as string}/list`}>
           <CategoryTitle 
-            onClick={()=> setOpenSub(prev => !prev)} 
+            onClick={()=> {
+              setOpenSub(prev => !prev);
+            }} 
             isSelected={openSub}
           >
             <T.Pretendard44M>{title}</T.Pretendard44M>
@@ -109,14 +112,14 @@ function CommunityCategory ({title, subtitles}:ICategory) {
           </CategoryTitle>
         </Link>
       )}
-      {openSub || (pageIndex === indexState) ? (
+      {openSub ? (
         <Subtitles>
           {(subtitles[0].name) ? subtitles?.map(subtitle => (
-            <Link to={`/community/${Object.keys(ParamsMatch).find(key => ParamsMatch[key] === subtitle.index) as string}`}>
+            <Link to={`/${Object.keys(ParamsMatch).find(key => ParamsMatch[key] === subtitle.index) as string}/list`}>
               <Subtitle 
                 onClick={() => {
                   setIndexState(subtitle.index);
-                  setOpenSub(subtitle.index === pageIndex);
+                  setOpenSub(true);
                 }} 
                 isSelected={(subtitle.index === pageIndex)}
               >

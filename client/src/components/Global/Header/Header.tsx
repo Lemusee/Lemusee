@@ -3,7 +3,7 @@ import * as T from "../Text/Text";
 import * as G from "../../Global/Spacing/Spacing"
 import { Link } from "react-router-dom";
 import { useRecoilValue } from "recoil";
-import { isLoggedInAtom } from "../../../atoms"
+import { isLoggedInAtom } from "../../../atoms";
 
 interface IHeader {
   thickness?:boolean;
