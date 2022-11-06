@@ -8,6 +8,8 @@ import CommunityCategories from "../../assets/dummyData/dummyCommunityCategories
 import { useEffect, useState } from "react";
 import Loading from "../../components/Global/Loading/Loading";
 import { Outlet, useParams } from "react-router-dom";
+import { useSetRecoilState } from "recoil";
+import { communityCategoryState } from "../../atoms";
 
 interface ICategoriesData {
   title?:string;
@@ -62,15 +64,17 @@ const resultHandler = (data:ICategoriesData[]) => {
 
 
 function Community () {
+  const [isLoading, setIsLoading] = useState(true);
   const [copydata, setCopydata] = useState<ICategoriesData[]>();
   const [category, setCategory] = useState<ICategories[]>();
-  const [isLoading, setIsLoading] = useState(true);
+  const setCategoryState = useSetRecoilState(communityCategoryState);
   const {pageId} = useParams();
 
   useEffect(()=>{
     setCopydata([...CommunityCategories.result]);
     const sortedData = resultHandler([...CommunityCategories.result]) as ICategories[];
     setCategory(sortedData);
+    setCategoryState(sortedData);
     setIsLoading(false);
   },[]);
 

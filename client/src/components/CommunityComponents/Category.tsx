@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
-import { useRecoilState } from "recoil";
+import { RecoilBridge, useRecoilState } from "recoil";
 import {communityPageIndex} from "../../atoms";
 import styled from "styled-components";
 import * as T from "../../components/Global/Text/Text";
+import { motion } from "framer-motion";
 
 interface ICategory {
   title?:string;
@@ -17,11 +18,12 @@ interface isSelected {
   isSelected?:boolean;
 };
 
-const CategoryTitle = styled.button<isSelected>`
+const CategoryTitle = styled(motion.button)<isSelected>`
   display: flex;
   flex-direction: row;
   gap:15px;
   color: ${props=> props.isSelected ? props.theme.lemuseeblack_100 : props.theme.lemuseeblack_50};
+  transition: 0.3s;
   &:hover {
     color: ${props=>props.theme.lemuseeblack_100};
   };
@@ -30,7 +32,7 @@ const CategoryTitle = styled.button<isSelected>`
   };
 `;
 
-const Subtitles = styled.div`
+const Subtitles = styled(motion.div)`
   display: flex;
   flex-direction: row;
   margin-left: 5px;
@@ -57,23 +59,37 @@ type ParamsMatchType = {
 
 const ParamsMatch:ParamsMatchType = {
   all:0,
-  electionCommittee_notice:1,
-  electionCommittee_proceedings:2,
-  electionCommittee_ref:3,
-  curator_notice:4,
-  curator_proceedings:5,
-  curator_ref:6,
-  contents_notice:7,
-  contents_proceedings:8,
-  contents_ref:9,
-  culture_notice:10,
-  culture_proceedings:11,
-  culture_ref:12,
-  admin_notice:13,
-  admin_proceedings:14,
-  admin_ref:15,
-  freeBoard:16,
+  notice:1,
+  electionCommittee_notice:2,
+  electionCommittee_proceedings:3,
+  electionCommittee_ref:4,
+  curator_notice:5,
+  curator_proceedings:6,
+  curator_ref:7,
+  contents_notice:8,
+  contents_proceedings:9,
+  contents_ref:10,
+  culture_notice:11,
+  culture_proceedings:12,
+  culture_ref:13,
+  admin_notice:14,
+  admin_proceedings:15,
+  admin_ref:16,
+  freeBoard:17,
 };
+
+const SubtitleVariants = {
+  start: {
+    y:-10,
+    opacity:0,
+  },
+  end: {
+    y:0,
+    opacity:1,
+  }
+};
+
+
 
 
 function CommunityCategory ({title, subtitles}:ICategory) {
@@ -104,6 +120,7 @@ function CommunityCategory ({title, subtitles}:ICategory) {
           <CategoryTitle 
             onClick={()=> {
               setOpenSub(prev => !prev);
+              setIndexState(subtitles[0].index);
             }} 
             isSelected={openSub}
           >
@@ -113,7 +130,14 @@ function CommunityCategory ({title, subtitles}:ICategory) {
         </Link>
       )}
       {openSub ? (
-        <Subtitles>
+        <Subtitles
+          variants={SubtitleVariants}
+          initial="start"
+          animate="end"
+          transition={{
+            duration:0.3
+          }}
+        >
           {(subtitles[0].name) ? subtitles?.map(subtitle => (
             <Link to={`/${Object.keys(ParamsMatch).find(key => ParamsMatch[key] === subtitle.index) as string}/list`}>
               <Subtitle 

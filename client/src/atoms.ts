@@ -116,6 +116,19 @@ export const recruitmentInfoAtom = atom<IRecruitment>({
   default: {},
 })
 
+interface ICategories {
+  title?:string;
+  subtitle:{
+      name?:string;
+      index:number;
+    }[]
+};
+
+export const communityCategoryState = atom<ICategories[]>({
+  key: "communityCategoryState",
+  default: []
+})
+
 export const communityPageIndex = atom<number>({
   key:"communityPageIndex",
   default:0,
