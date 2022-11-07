@@ -1,7 +1,7 @@
 function CommunityContent () {
   return (
     <>
-    
+      <h1>content area</h1>
     </>
   )
 }

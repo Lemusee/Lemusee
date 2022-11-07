@@ -133,3 +133,8 @@ export const communityPageIndex = atom<number>({
   key:"communityPageIndex",
   default:0,
 })
+
+export const communitypagenationIndex = atom<number>({
+  key:"communitypagenationIndex",
+  default:1,
+})

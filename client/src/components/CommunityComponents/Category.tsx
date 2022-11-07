@@ -90,8 +90,6 @@ const SubtitleVariants = {
 };
 
 
-
-
 function CommunityCategory ({title, subtitles}:ICategory) {
   const [openSub, setOpenSub] = useState(false);
   const [indexState, setIndexState] = useRecoilState(communityPageIndex);
@@ -102,6 +100,13 @@ function CommunityCategory ({title, subtitles}:ICategory) {
   useEffect(()=>{
     setOpenSub(subtitles.filter(ele => ele.index === pageIndex).length !== 0);
   },[indexState, pageParam]);
+
+  const handleTop = () => {  // 클릭하면 스크롤이 위로 올라가는 함수
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    })
+  };
   
   return (
     <>
@@ -121,6 +126,7 @@ function CommunityCategory ({title, subtitles}:ICategory) {
             onClick={()=> {
               setOpenSub(prev => !prev);
               setIndexState(subtitles[0].index);
+              handleTop();
             }} 
             isSelected={openSub}
           >
@@ -144,6 +150,7 @@ function CommunityCategory ({title, subtitles}:ICategory) {
                 onClick={() => {
                   setIndexState(subtitle.index);
                   setOpenSub(true);
+                  handleTop();
                 }} 
                 isSelected={(subtitle.index === pageIndex)}
               >

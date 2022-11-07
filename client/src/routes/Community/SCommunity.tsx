@@ -12,11 +12,16 @@ export const Container = styled(G.Container)`
   height: fit-content;
 `;
 
+export const CategoryArea = styled.div`
+  height: 100vh;
+`;
+
 export const Categories = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
+  position: fixed;
 `;
 
 export const Lists = styled.div`
@@ -25,6 +30,7 @@ export const Lists = styled.div`
   flex-direction: column;
   align-items: center;
   gap:50px;
+  margin-left: 440px;
 `;
 
 export const ListTitle = styled.div`

@@ -1,15 +1,15 @@
 import { useEffect, useState } from "react";
-import { useRecoilValue } from "recoil";
+import { useRecoilState, useRecoilValue } from "recoil";
 import styled from "styled-components";
 import * as T from "../../components/Global/Text/Text";
-import { communityPageIndex, communityCategoryState } from "../../atoms";
+import { communityPageIndex, communityCategoryState, communitypagenationIndex } from "../../atoms";
 import dummyList from "../../assets/dummyData/dummyCommunityListData.json";
 import ListItem, {IItem} from "../../components/CommunityComponents/ListItem";
 import Loading from "../../components/Global/Loading/Loading";
 import { AnimatePresence, motion } from "framer-motion";
 import {ReactComponent as NextBtnSVG} from "../../assets/icons/next_pagenation.svg";
 import {ReactComponent as PrevBtnSVG} from "../../assets/icons/prev_pagenation.svg";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 interface ICategories {
   title?:string;
@@ -95,6 +95,7 @@ const PagenationNumArea = styled.div`
 `;
 
 const OFFSET = 10;
+const pageOffset = 10;
 
 const rowVariants = {
   prev: (back:boolean) => ({
@@ -112,14 +113,21 @@ const rowVariants = {
 };
 
 function CommunityList () {
+  //sorted category list, category index, page parametor
   const categoryState = useRecoilValue(communityCategoryState);
   const indexState = useRecoilValue(communityPageIndex);
+  const pageParam = useParams();
+
+  //now on title & subtitle
   const [title, setTitle] = useState("");
   const [subtitle, setSubTitle] = useState("");
+
+  //data fetched & is loading
   const [listData, setListData] = useState<IItem[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(false);
-  const [index, setIndex] = useState(0);
-  const [maxIndex, setMaxIndex] = useState(0);
+
+  const [index, setIndex] = useRecoilState(communitypagenationIndex); //page index
+  const [maxIndex, setMaxIndex] = useState(0); //max pageIndex
   const [totalLength, setTotalLength] = useState(0);
   const [pagenationArray, setPagenationArray] = useState<number[]>([]);
 
@@ -139,7 +147,7 @@ function CommunityList () {
     setTotalLength(listData.length);
     setMaxIndex(Math.floor(totalLength / OFFSET));
     setPagenationArray(Array(maxIndex+1).fill(0).map((arr, i) => {return i+1}));
-  }, [categoryState, indexState]);
+  }, [categoryState, indexState, pageParam]);
   
   /**pagenation의 전후를 표시 */
   const [back, setBack] = useState(false);
@@ -159,20 +167,23 @@ function CommunityList () {
     }
     setBack(true);
   };
+
+  /**클릭하면 스크롤이 위로 올라가는 함수 */
+  const handleTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    })
+  };
+
+  useEffect(()=> {
+    handleTop();
+  }, [index])
+  
   
   return (
     <>
       <Wrapper>
-        <UpperArea>
-          <TitleArea>
-            <Title>{`${title} /`}</Title>
-            <SubTitle>{`${subtitle ? subtitle + " /" : ""}`}</SubTitle>
-            <SubTitle>{`#${index+1}`}</SubTitle>
-          </TitleArea>
-          <Link to="/editor">
-            <AddBtn>+ Add New</AddBtn>
-          </Link>
-        </UpperArea>
         <AnimatePresence initial={false} custom={back} mode="wait">
           <ListArea
             key={index}

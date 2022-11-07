@@ -7,9 +7,9 @@ import CommunityCategory from "../../components/CommunityComponents/Category";
 import CommunityCategories from "../../assets/dummyData/dummyCommunityCategories.json";
 import { useEffect, useState } from "react";
 import Loading from "../../components/Global/Loading/Loading";
-import { Outlet, useParams } from "react-router-dom";
-import { useSetRecoilState } from "recoil";
-import { communityCategoryState } from "../../atoms";
+import { Link, Outlet, useParams } from "react-router-dom";
+import { useSetRecoilState, useRecoilState, useRecoilValue } from "recoil";
+import { communityCategoryState, communityPageIndex, communitypagenationIndex } from "../../atoms";
 import Footer from "../../components/Global/Footer/Footer";
 
 interface ICategoriesData {
@@ -24,6 +24,32 @@ interface ICategories {
       index:number;
     }[]
 };
+
+const UpperArea = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+`;
+
+const Title = styled(T.Pretendard24B)`
+  color: ${props=>props.theme.lemuseeblack_50};
+`;
+
+const SubTitle = styled(T.Pretendard24B)`
+  color: ${props=>props.theme.lemuseeblack_100};
+`;
+
+const TitleArea = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 10px;
+`;
+
+const AddBtn = styled.button``;
 
 /**{title : _title-_subtitle, index : _number} 형식의 data를 받아서 [..., {title:_title, subtitle:[]}, ...]의 형태로 반환하는 함수*/
 const titlelistHandler = (data:ICategoriesData[]) => {
@@ -68,8 +94,13 @@ function Community () {
   const [isLoading, setIsLoading] = useState(true);
   const [copydata, setCopydata] = useState<ICategoriesData[]>();
   const [category, setCategory] = useState<ICategories[]>();
-  const setCategoryState = useSetRecoilState(communityCategoryState);
+  const [categoryState, setCategoryState] = useRecoilState(communityCategoryState);
+  const indexState = useRecoilValue(communityPageIndex);
+  const index = useRecoilValue(communitypagenationIndex);
   const {pageId} = useParams();
+
+  const [title, setTitle] = useState("");
+  const [subtitle, setSubTitle] = useState("");
 
   useEffect(()=>{
     setCopydata([...CommunityCategories.result]);
@@ -79,6 +110,13 @@ function Community () {
     setIsLoading(false);
   },[]);
 
+  useEffect(()=>{
+    const categoryObj = categoryState.find(i => i.subtitle.find(j => j.index === indexState)) as ICategories;
+    const subCategoryObj = categoryObj.subtitle.filter(i => i.index === indexState);
+    setTitle(categoryObj.title as string);
+    setSubTitle(subCategoryObj[0].name as string);
+  },[categoryState, indexState, pageId]);
+
   return (
     <>
       <Header thickness={false} />
@@ -87,12 +125,24 @@ function Community () {
           <G.Space150px/>
           <S.Wrapper>
             <S.Container>
-              <S.Categories>
-                {category?.map((i) => (
-                  <CommunityCategory key={i.title} title={i.title} subtitles={i.subtitle} />
-                ))}
-              </S.Categories>
+              <S.CategoryArea>
+                <S.Categories>
+                  {category?.map((i) => (
+                    <CommunityCategory key={i.title} title={i.title} subtitles={i.subtitle} />
+                  ))}
+                </S.Categories>
+              </S.CategoryArea>
               <S.Lists>
+                <UpperArea>
+                  <TitleArea>
+                    <Title>{`${title} /`}</Title>
+                    <SubTitle>{`${subtitle ? subtitle + " /" : ""}`}</SubTitle>
+                    <SubTitle>{`#${index+1}`}</SubTitle>
+                  </TitleArea>
+                  <Link to="/editor">
+                    <AddBtn>+ Add New</AddBtn>
+                  </Link>
+                </UpperArea>
                 <Outlet context={{pageId}}/>
               </S.Lists>
             </S.Container>

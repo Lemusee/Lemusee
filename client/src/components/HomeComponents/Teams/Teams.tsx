@@ -3,9 +3,17 @@ import * as T from "../../Global/Text/Text";
 import teamData from "../../../assets/StaticData/Team.json";
 import TeamCard from "./TeamCard";
 import { Link } from "react-router-dom";
+import {useState} from "react";
+
+interface ITeam {
+  title : string;
+  routerUrl : string;
+  imgUrl : string;
+  content : string;
+};
 
 function Teams () {
-  const teamInfo = [...teamData];
+  const [team, setTeam] = useState<ITeam[]>([...teamData]);
   return (
     <>
       <S.Wrapper>
@@ -14,8 +22,8 @@ function Teams () {
             <T.Pretendard17M>Teams of lemusee</T.Pretendard17M>
           </S.contentTitle>
           <S.TeamCardList>
-            {teamInfo.map(list => (
-              <Link key={list.title} to={`community/${list.title.replace(/ /g, "")}`}>
+            {team.map((list:ITeam) => (
+              <Link key={list.title} to={list.routerUrl}>
                 <TeamCard {...list}/>
               </Link>
             ))}

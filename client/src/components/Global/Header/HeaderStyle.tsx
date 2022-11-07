@@ -11,7 +11,7 @@ export const EmptyBlock = styled(G.Wrapper)`
 `;
 
 export const Wrapper = styled(G.Wrapper)<INavState>`
-  border-bottom: 1px solid ${props=>props.thickness ? "transperant" : props.theme.lemuseeblack_20};
+  /* border-bottom: 1px solid ${props=>props.thickness ? "transperant" : props.theme.lemuseeblack_20}; */
   position: ${props=>props.thickness ? "unset" : "fixed"};
   top: ${props=>props.thickness ? "unset" : "0"};
   background-color: ${props=>props.theme.lemuseeblack_10};
