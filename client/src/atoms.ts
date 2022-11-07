@@ -127,14 +127,19 @@ export interface ICategories {
 export const communityCategoryState = atom<ICategories[]>({
   key: "communityCategoryState",
   default: []
-})
+});
 
 export const communityPageIndex = atom<number>({
   key:"communityPageIndex",
   default:0,
-})
+});
 
 export const communitypagenationIndex = atom<number>({
   key:"communitypagenationIndex",
   default:1,
-})
+});
+
+export const contentTitle = atom<string>({
+  key:"contentTitle",
+  default:"",
+});

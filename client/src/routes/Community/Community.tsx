@@ -9,7 +9,7 @@ import { useEffect, useState } from "react";
 import Loading from "../../components/Global/Loading/Loading";
 import { Link, Outlet, useParams } from "react-router-dom";
 import { useSetRecoilState, useRecoilState, useRecoilValue } from "recoil";
-import { communityCategoryState, communityPageIndex, communitypagenationIndex } from "../../atoms";
+import { communityCategoryState, communityPageIndex, communitypagenationIndex, contentTitle } from "../../atoms";
 import Footer from "../../components/Global/Footer/Footer";
 
 interface ICategoriesData {
@@ -39,6 +39,10 @@ const Title = styled(T.Pretendard24B)`
 
 const SubTitle = styled(T.Pretendard24B)`
   color: ${props=>props.theme.lemuseeblack_100};
+  max-width: 540px;
+  white-space: no-wrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 `;
 
 const TitleArea = styled.div`
@@ -97,7 +101,9 @@ function Community () {
   const [categoryState, setCategoryState] = useRecoilState(communityCategoryState);
   const indexState = useRecoilValue(communityPageIndex);
   const index = useRecoilValue(communitypagenationIndex);
-  const {pageId} = useParams();
+  const contTitle = useRecoilValue(contentTitle);
+  let pageId = useParams();
+  
 
   const [title, setTitle] = useState("");
   const [subtitle, setSubTitle] = useState("");
@@ -111,10 +117,12 @@ function Community () {
   },[]);
 
   useEffect(()=>{
-    const categoryObj = categoryState.find(i => i.subtitle.find(j => j.index === indexState)) as ICategories;
-    const subCategoryObj = categoryObj.subtitle.filter(i => i.index === indexState);
-    setTitle(categoryObj.title as string);
-    setSubTitle(subCategoryObj[0].name as string);
+    if (categoryState && indexState) {
+      const categoryObj = categoryState.find(i => i.subtitle.find(j => j.index === indexState)) as ICategories;
+      const subCategoryObj = categoryObj.subtitle.filter(i => i.index === indexState);
+      setTitle(categoryObj.title as string);
+      setSubTitle(subCategoryObj[0].name as string);
+    }
   },[categoryState, indexState, pageId]);
 
   return (
@@ -137,11 +145,16 @@ function Community () {
                   <TitleArea>
                     <Title>{`${title} /`}</Title>
                     <SubTitle>{`${subtitle ? subtitle + " /" : ""}`}</SubTitle>
-                    <SubTitle>{`#${index+1}`}</SubTitle>
+                    <SubTitle>{`#${index+1} ${pageId.contentId ? " /" : ""}`}</SubTitle>
+                    {pageId.contentId ? (
+                      <SubTitle>{contTitle}</SubTitle>
+                    ) : null}
                   </TitleArea>
-                  <Link to="/editor">
-                    <AddBtn>+ Add New</AddBtn>
-                  </Link>
+                  {pageId.contentId ? <></> : (
+                    <Link to="/editor">
+                      <AddBtn>+ Add New</AddBtn>
+                    </Link>
+                  )}
                 </UpperArea>
                 <Outlet context={{pageId}}/>
               </S.Lists>

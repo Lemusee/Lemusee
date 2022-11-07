@@ -28,33 +28,6 @@ const Wrapper = styled.div`
   gap: 50px;
 `;
 
-const UpperArea = styled.div`
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-`;
-
-const Title = styled(T.Pretendard24B)`
-  color: ${props=>props.theme.lemuseeblack_50};
-`;
-
-const SubTitle = styled(T.Pretendard24B)`
-  color: ${props=>props.theme.lemuseeblack_100};
-`;
-
-const TitleArea = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 10px;
-`;
-
-
-const AddBtn = styled.button``;
-
 const ListArea = styled(motion.div)`
   width: 100%;
   display: flex;
@@ -118,10 +91,6 @@ function CommunityList () {
   const indexState = useRecoilValue(communityPageIndex);
   const pageParam = useParams();
 
-  //now on title & subtitle
-  const [title, setTitle] = useState("");
-  const [subtitle, setSubTitle] = useState("");
-
   //data fetched & is loading
   const [listData, setListData] = useState<IItem[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(false);
@@ -132,12 +101,6 @@ function CommunityList () {
   const [pagenationArray, setPagenationArray] = useState<number[]>([]);
 
   useEffect(()=> {
-    /**category data를 처리해서 리스트의 제목에 부여함 */
-    const categoryObj = categoryState.find(i => i.subtitle.find(j => j.index === indexState)) as ICategories;
-    const subCategoryObj = categoryObj.subtitle.filter(i => i.index === indexState);
-    setTitle(categoryObj.title as string);
-    setSubTitle(subCategoryObj[0].name as string);
-
     /**list data를 받아서 저장 */
     setListData([...dummyList.result.list]);
     setIsLoading(true);
