@@ -37,6 +37,11 @@ export const isLoggedInAtom = atom({
   default:false,
 })
 
+export const myUserIdAtom = atom<number>({
+  key:"myUserId",
+  default: 8, //임시로 지정된 userId
+});
+
 export const isLoadingAtom = atom({
   key: "isLoading",
   default: false,

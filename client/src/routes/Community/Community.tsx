@@ -9,7 +9,7 @@ import { useEffect, useState } from "react";
 import Loading from "../../components/Global/Loading/Loading";
 import { Link, Outlet, useParams } from "react-router-dom";
 import { useSetRecoilState, useRecoilState, useRecoilValue } from "recoil";
-import { communityCategoryState, communityPageIndex, communitypagenationIndex, contentTitle } from "../../atoms";
+import { communityCategoryState, communityPageIndex, communitypagenationIndex, contentTitle, isLoggedInAtom } from "../../atoms";
 import Footer from "../../components/Global/Footer/Footer";
 
 interface ICategoriesData {
@@ -96,6 +96,7 @@ const resultHandler = (data:ICategoriesData[]) => {
 
 function Community () {
   const [isLoading, setIsLoading] = useState(true);
+  const isLogged = useRecoilValue(isLoggedInAtom);
   const [copydata, setCopydata] = useState<ICategoriesData[]>();
   const [category, setCategory] = useState<ICategories[]>();
   const [categoryState, setCategoryState] = useRecoilState(communityCategoryState);
@@ -150,7 +151,7 @@ function Community () {
                       <SubTitle>{contTitle}</SubTitle>
                     ) : null}
                   </TitleArea>
-                  {pageId.contentId ? <></> : (
+                  {(isLogged && pageId.contentId) ? null : (
                     <Link to="/editor">
                       <AddBtn>+ Add New</AddBtn>
                     </Link>

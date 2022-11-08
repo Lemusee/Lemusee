@@ -26,6 +26,7 @@ const Wrapper = styled.div`
   justify-content: flex-start;
   align-items: center;
   gap: 50px;
+  margin-top: 50px;
 `;
 
 const ListArea = styled(motion.div)`

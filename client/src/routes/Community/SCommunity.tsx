@@ -29,7 +29,7 @@ export const Lists = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap:50px;
+  gap:0px;
   margin-left: 440px;
 `;
 
