@@ -13,12 +13,17 @@ interface IComment {
   updatedAt : string;
 };
 
+interface isMine {
+  isMine: boolean;
+}
 
-const Wrapper = styled(G.Wrapper)`
+const Wrapper = styled(G.Wrapper)<isMine>`
   width: 100%;
   padding: 15px 5px;
   display: flex;
   flex-direction: column;
+  border-radius: 10px;
+  background-color: ${props=> props.isMine ? props.theme.lemuseeblack_20 : "transparent"};
   ${T.Pretendard15R} {
     color: ${props=>props.theme.lemuseeblack_70};
   }
@@ -60,7 +65,7 @@ function Comments ({id, userId, writer, content, updatedAt}:IComment) {
   const userIdState = useRecoilValue(myUserIdAtom);
   return (
     <>
-      <Wrapper>
+      <Wrapper isMine={(userId === userIdState) && isloged}>
         <UserDate>
           <T.Pretendard15M>{writer}</T.Pretendard15M>
           <T.Pretendard13R>
@@ -68,7 +73,7 @@ function Comments ({id, userId, writer, content, updatedAt}:IComment) {
           </T.Pretendard13R>
         </UserDate>
         <T.Pretendard15R>{content}</T.Pretendard15R>
-        {userIdState === userId ? (
+        {isloged && userIdState === userId ? (
           <Btns>
             <EditBtn>
               <T.Pretendard11R>수정</T.Pretendard11R>

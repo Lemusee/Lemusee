@@ -14,15 +14,15 @@ interface ICategory {
     }[];
 };
 
-interface isSelected {
-  isSelected?:boolean;
+type $isselected = {
+  $isselected?:boolean;
 };
 
-const CategoryTitle = styled(motion.button)<isSelected>`
+const CategoryTitle = styled(motion.button)<$isselected>`
   display: flex;
   flex-direction: row;
   gap:15px;
-  color: ${props=> props.isSelected ? props.theme.lemuseeblack_100 : props.theme.lemuseeblack_50};
+  color: ${props=> props.$isselected ? props.theme.lemuseeblack_100 : props.theme.lemuseeblack_50};
   transition: 0.3s;
   &:hover {
     color: ${props=>props.theme.lemuseeblack_100};
@@ -38,13 +38,13 @@ const Subtitles = styled(motion.div)`
   margin-left: 5px;
 `;
 
-const Subtitle = styled.button<isSelected>`
+const Subtitle = styled.button<$isselected>`
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  color: ${props=> props.isSelected ? props.theme.lemuseeblack_100 : props.theme.lemuseeblack_50};
-  background-color: ${props=> props.isSelected ? props.theme.lemuseeblack_30 : "transparent"};
+  color: ${props=> props.$isselected ? props.theme.lemuseeblack_100 : props.theme.lemuseeblack_50};
+  background-color: ${props=> props.$isselected ? props.theme.lemuseeblack_30 : "transparent"};
   &:hover {
     color: ${props=>props.theme.lemuseeblack_100};
   };
@@ -115,7 +115,7 @@ function CommunityCategory ({title, subtitles}:ICategory) {
           onClick={()=> {
             setOpenSub(prev => !prev);
           }} 
-          isSelected={openSub}
+          $isselected={openSub}
         >
           <T.Pretendard44M>{title}</T.Pretendard44M>
           <T.Pretendard44M>/</T.Pretendard44M>
@@ -128,7 +128,7 @@ function CommunityCategory ({title, subtitles}:ICategory) {
               setIndexState(subtitles[0].index);
               handleTop();
             }} 
-            isSelected={openSub}
+            $isselected={openSub}
           >
             <T.Pretendard44M>{title}</T.Pretendard44M>
             <T.Pretendard44M>/</T.Pretendard44M>
@@ -145,14 +145,14 @@ function CommunityCategory ({title, subtitles}:ICategory) {
           }}
         >
           {(subtitles[0].name) ? subtitles?.map(subtitle => (
-            <Link to={`/${Object.keys(ParamsMatch).find(key => ParamsMatch[key] === subtitle.index) as string}/list`}>
+            <Link to={`/${Object.keys(ParamsMatch).find(key => ParamsMatch[key] === subtitle.index) as string}/list`} key={subtitle.index}>
               <Subtitle 
                 onClick={() => {
                   setIndexState(subtitle.index);
                   setOpenSub(true);
                   handleTop();
                 }} 
-                isSelected={(subtitle.index === pageIndex)}
+                $isselected={(subtitle.index === pageIndex)}
               >
                 <T.Pretendard15R>{subtitle?.name}</T.Pretendard15R>
               </Subtitle>

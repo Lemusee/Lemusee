@@ -1,13 +1,17 @@
 import { useEffect, useState } from "react";
 import { useRecoilState, useRecoilValue } from "recoil";
 import contentData from "../../assets/dummyData/dummyCommunityContent.json";
-import { contentTitle, isLoggedInAtom, myUserIdAtom } from "../../atoms";
+import { isLoggedInAtom, myUserIdAtom, commentOpenAtom } from "../../atoms";
 import styled from "styled-components";
 import * as G from "../../components/Global/Spacing/Spacing";
 import * as T from "../../components/Global/Text/Text";
 import Loading from "../../components/Global/Loading/Loading";
 import Moment from "react-moment";
 import Comment from "../../components/CommunityComponents/Comment";
+import {ReactComponent as AddNewSVG} from "../../assets/icons/add_new.svg";
+import NewCommentForm from "../../components/CommunityComponents/NewCommentForm";
+import * as DOMPurify from 'dompurify';
+import "./CommunityContent.css";
 
 interface IComment {
   id: number;
@@ -92,12 +96,34 @@ const Comments = styled.div`
   margin-top: 15px;
 `;
 
+const NewCommentsBtn = styled.button`
+  width: 100%;
+  height: 100px;
+  border-radius: 5px;
+  padding: 10px 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center;
+  border: dashed 2px ${props=> props.theme.lemuseeblack_60};
+`;
+
+const TitleArea = styled(T.Pretendard17B)`
+  width: 100%;
+  margin-bottom: 30px;
+`;
+
 
 function CommunityContent () {
   const [copydata, setCopydata] = useState<IContent>();
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const isLogedIn = useRecoilValue(isLoggedInAtom);
   const userId = useRecoilValue(myUserIdAtom);
+  const [commentOpen, setCommentOpen] = useRecoilState(commentOpenAtom);
+  const createMarkup = (textdata:string | undefined) => {
+    if (!textdata) return;
+    return {__html: DOMPurify.sanitize(textdata)};
+  }
   
   useEffect(()=>{
     const data = contentData.result;
@@ -116,7 +142,7 @@ function CommunityContent () {
                   <Moment format="YY.MM.DD.">{copydata?.updatedAt}</Moment>
                 </T.Pretendard13R>
               </NameDate>
-              {copydata && (userId === copydata?.userId) ? (
+              {(isLogedIn && copydata && (userId === copydata?.userId)) ? (
                 <EditArea>
                   <Btn>
                     <T.Pretendard13R>수정</T.Pretendard13R>
@@ -127,12 +153,24 @@ function CommunityContent () {
                 </EditArea>
               ) : null}
             </UserArea>
-            <TextArea>{copydata?.content}</TextArea>
+            <TitleArea>{copydata?.title}</TitleArea>
+            <TextArea dangerouslySetInnerHTML={createMarkup(copydata?.content)}/>
             <T.Pretendard17M>COMMENTS</T.Pretendard17M>
             <Comments>
               {copydata && copydata?.comments.map(i => (
-                <Comment id={i.id} userId={i.userId} writer={i.writer} content={i.content} updatedAt={i.updatedAt} />
+                <Comment key={i.id} id={i.id} userId={i.userId} writer={i.writer} content={i.content} updatedAt={i.updatedAt} />
               ))}
+            </Comments>
+            <Comments>
+              {!isLogedIn ? (
+                null
+              ) : commentOpen ? (
+                <NewCommentForm userId={userId} />
+              ) : (
+                <NewCommentsBtn onClick={()=>setCommentOpen(true)}>
+                  <AddNewSVG/>
+                </NewCommentsBtn>
+              )}
             </Comments>
           </Wrapper>
         )}

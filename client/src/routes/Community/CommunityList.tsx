@@ -180,7 +180,7 @@ function CommunityList () {
           </PagenationBtn>
           <PagenationNumArea>
             {pagenationArray.map((i:number) => (
-                <PagenationBtn isSelected={i === index+1} onClick={() => {setIndex(i-1)}}>
+                <PagenationBtn key={i} isSelected={i === index+1} onClick={() => {setIndex(i-1)}}>
                   <T.Pretendard13R>{i}</T.Pretendard13R>
                 </PagenationBtn>
               ))}

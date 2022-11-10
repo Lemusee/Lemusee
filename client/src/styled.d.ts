@@ -1,5 +1,13 @@
 import 'styled-components';
 
+declare module '*.css' {
+  interface IClassNames {
+    [className: string]: string
+  }
+  const classNames: IClassNames;
+  export = classNames;
+}
+
 declare module 'styled-components' {
   export interface DefaultTheme {
     lemuseeblack_100:string;

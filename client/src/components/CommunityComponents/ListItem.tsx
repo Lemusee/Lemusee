@@ -2,6 +2,8 @@ import { Link, useParams } from "react-router-dom";
 import styled from "styled-components";
 import * as T from "../Global/Text/Text";
 import Moment from "react-moment";
+import { contentTitleAtom } from "../../atoms";
+import { useSetRecoilState } from "recoil";
 
 export interface IItem {
     id: number;
@@ -53,10 +55,11 @@ const Content = styled.div`
 
 function ListItem ({id, updatedAt, title, preview, writer}:IItem) {
   const pageParam = useParams();
+  const setContentTitle = useSetRecoilState(contentTitleAtom);
 
   return(
     <>
-      <Link to={`/${pageParam.category}/content/${id}`}>
+      <Link to={`/${pageParam.category}/content/${id}`} onClick={()=>setContentTitle(title)}>
         <Wrapper>
           <Line/>
           <Item>

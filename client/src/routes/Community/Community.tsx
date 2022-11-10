@@ -9,7 +9,7 @@ import { useEffect, useState } from "react";
 import Loading from "../../components/Global/Loading/Loading";
 import { Link, Outlet, useParams } from "react-router-dom";
 import { useSetRecoilState, useRecoilState, useRecoilValue } from "recoil";
-import { communityCategoryState, communityPageIndex, communitypagenationIndex, contentTitle, isLoggedInAtom } from "../../atoms";
+import { communityCategoryState, communityPageIndex, communitypagenationIndex, contentTitleAtom, isLoggedInAtom, communityCategoryTitleAtom, communityCategorySubTitleAtom } from "../../atoms";
 import Footer from "../../components/Global/Footer/Footer";
 
 interface ICategoriesData {
@@ -43,6 +43,19 @@ const SubTitle = styled(T.Pretendard24B)`
   white-space: no-wrap;
   overflow: hidden;
   text-overflow: ellipsis;
+`;
+
+const ContentTitleArea = styled.div`
+  display: flex;
+  flex-direction: row;
+`;
+
+const ContentTitle = styled(T.Pretendard24B)`
+  color: ${props=>props.theme.lemuseeblack_100};
+  max-width: 350px;
+  max-height: 30px;
+  white-space: no-wrap;
+  overflow: hidden;
 `;
 
 const TitleArea = styled.div`
@@ -102,12 +115,11 @@ function Community () {
   const [categoryState, setCategoryState] = useRecoilState(communityCategoryState);
   const indexState = useRecoilValue(communityPageIndex);
   const index = useRecoilValue(communitypagenationIndex);
-  const contTitle = useRecoilValue(contentTitle);
+  const contTitle = useRecoilValue(contentTitleAtom);
   let pageId = useParams();
-  
 
-  const [title, setTitle] = useState("");
-  const [subtitle, setSubTitle] = useState("");
+  const [title, setTitle] = useRecoilState(communityCategoryTitleAtom);
+  const [subtitle, setSubTitle] = useRecoilState(communityCategorySubTitleAtom);
 
   useEffect(()=>{
     setCopydata([...CommunityCategories.result]);
@@ -118,11 +130,13 @@ function Community () {
   },[]);
 
   useEffect(()=>{
-    if (categoryState && indexState) {
-      const categoryObj = categoryState.find(i => i.subtitle.find(j => j.index === indexState)) as ICategories;
-      const subCategoryObj = categoryObj.subtitle.filter(i => i.index === indexState);
-      setTitle(categoryObj.title as string);
-      setSubTitle(subCategoryObj[0].name as string);
+    if (categoryState && (indexState !== undefined)) {
+      const categoryObj = categoryState.find(i => i.subtitle?.find(j => j.index === indexState)) as ICategories;
+      if (categoryObj?.subtitle !== undefined) {
+        const subCategoryObj = categoryObj.subtitle.filter(i => i.index === indexState);
+        setSubTitle(subCategoryObj[0].name as string);
+        setTitle(categoryObj.title as string);
+      }
     }
   },[categoryState, indexState, pageId]);
 
@@ -148,10 +162,13 @@ function Community () {
                     <SubTitle>{`${subtitle ? subtitle + " /" : ""}`}</SubTitle>
                     <SubTitle>{`#${index+1} ${pageId.contentId ? " /" : ""}`}</SubTitle>
                     {pageId.contentId ? (
-                      <SubTitle>{contTitle}</SubTitle>
+                      <ContentTitleArea>
+                        <ContentTitle>{`${contTitle}`}</ContentTitle>
+                        <ContentTitle>... /</ContentTitle>
+                      </ContentTitleArea>
                     ) : null}
                   </TitleArea>
-                  {(isLogged && pageId.contentId) ? null : (
+                  {(!isLogged && pageId.contentId) ? null : (
                     <Link to="/editor">
                       <AddBtn>+ Add New</AddBtn>
                     </Link>

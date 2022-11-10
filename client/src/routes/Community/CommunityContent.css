@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap');
+
+strong {
+  font-weight: bold !important;
+}
+
+.ql-syntax {
+  background-color: #dbdbdb !important;
+  color: #202020 !important;
+}
+
+.ql-font-monospace {
+  font-family: 'Roboto Mono', monospace !important;
+}
+
+.ql-font-serif {
+  font-family: 'Nanum Myeongjo', serif !important;
+}

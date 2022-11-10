@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap');
+
+.quill {
+  display: flex;
+  flex-direction: column;
+}
+
+.ql-toolbar {
+  z-index: 100;
+  border: none !important;
+  background-color: #eee;
+  text-align: center;
+  position: fixed;
+  display: flex;
+  align-self: center;
+  top: 150px;
+}
+
+.ql-container {
+  z-index: 50;
+  width: 100%;
+  top: 190px;
+  border:none !important;
+  font-family: inherit;
+  font-size: 17px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+}
+
+.ql-container strong {
+  font-weight: bold !important;
+}
+
+.ql-syntax {
+  background-color: #dbdbdb !important;
+  color: #202020 !important;
+}
+
+.ql-font-monospace {
+  font-family: 'Roboto Mono', monospace !important;
+}
+
+.ql-font-serif {
+  font-family: 'Nanum Myeongjo', serif !important;
+}
