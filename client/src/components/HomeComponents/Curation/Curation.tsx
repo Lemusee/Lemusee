@@ -7,6 +7,7 @@ import React, { ReactElement, useEffect, useState } from "react";
 import { useRecoilState} from "recoil";
 import { curationState } from "../../../atoms";
 import Loading from "../../Global/Loading/Loading";
+import {ReactComponent as NextCurationSVG} from "../../../assets/icons/nextCuration.svg";
 
 function Curation () {
   const curationList = [...dummyCuration.result.items];
@@ -30,10 +31,10 @@ function Curation () {
   }, []);
   function onClick (event:React.MouseEvent<HTMLButtonElement>) {
     setFocus((prev:number) => {
-      if (focus <= curationInfo.length-1){
-        return prev+1
+      if (focus < curationInfo.length-1){
+        return prev+1;
       } else {
-        return prev
+        return 0;
       }})
   };
   return (
@@ -60,15 +61,20 @@ function Curation () {
               <S.BoardRightImg imgUrl={curationInfo[focus].imgUrl}/>
             </S.CurationBoard>
           ) : <Loading/>}
-          <S.CurationList>
-            {isLoading ? (
-              curationInfo.map(list => (
-                <button onClick={()=>setFocus(list.cardNum)} key={list.cardNum}>
-                  <CurationListCard {...list} key={list.cardNum} focus={focus} />
-                </button>
-              ))
-            ) : <Loading/>}
-          </S.CurationList>
+          <S.CurationListArea>
+            <S.CurationList>
+              {isLoading ? (
+                curationInfo.map(list => (
+                  <button onClick={()=>setFocus(list.cardNum)} key={list.cardNum}>
+                    <CurationListCard {...list} key={list.cardNum} focus={focus} />
+                  </button>
+                ))
+              ) : <Loading/>}
+            </S.CurationList>
+            <S.NextCurationBtn onClick={onClick}>
+              <NextCurationSVG/>
+            </S.NextCurationBtn>
+          </S.CurationListArea>
         </S.Container>
       </S.Wrapper>
     </>

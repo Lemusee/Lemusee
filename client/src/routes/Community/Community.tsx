@@ -7,7 +7,7 @@ import CommunityCategory from "../../components/CommunityComponents/Category";
 import CommunityCategories from "../../assets/dummyData/dummyCommunityCategories.json";
 import { useEffect, useState } from "react";
 import Loading from "../../components/Global/Loading/Loading";
-import { Link, Outlet, useParams } from "react-router-dom";
+import { Link, Outlet, useNavigate, useParams } from "react-router-dom";
 import { useSetRecoilState, useRecoilState, useRecoilValue } from "recoil";
 import { communityCategoryState, communityPageIndex, communitypagenationIndex, contentTitleAtom, isLoggedInAtom, communityCategoryTitleAtom, communityCategorySubTitleAtom } from "../../atoms";
 import Footer from "../../components/Global/Footer/Footer";
@@ -43,6 +43,14 @@ const SubTitle = styled(T.Pretendard24B)`
   white-space: no-wrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  border-radius: 5px;
+  padding: 0 3px;
+  &:hover {
+    background-color: ${props=> props.theme.lemuseeblack_30};
+  };
+  &:active {
+    background-color: ${props=>props.theme.lemuseeblack_50};
+  }
 `;
 
 const ContentTitleArea = styled.div`
@@ -117,6 +125,7 @@ function Community () {
   const index = useRecoilValue(communitypagenationIndex);
   const contTitle = useRecoilValue(contentTitleAtom);
   let pageId = useParams();
+  const navigate = useNavigate();
 
   const [title, setTitle] = useRecoilState(communityCategoryTitleAtom);
   const [subtitle, setSubTitle] = useRecoilState(communityCategorySubTitleAtom);
@@ -160,7 +169,7 @@ function Community () {
                   <TitleArea>
                     <Title>{`${title} /`}</Title>
                     <SubTitle>{`${subtitle ? subtitle + " /" : ""}`}</SubTitle>
-                    <SubTitle>{`#${index+1} ${pageId.contentId ? " /" : ""}`}</SubTitle>
+                    <SubTitle onClick={() => {navigate(-1)}} style={{cursor:'pointer'}}>{`#${index+1} ${pageId.contentId ? " /" : ""}`}</SubTitle>
                     {pageId.contentId ? (
                       <ContentTitleArea>
                         <ContentTitle>{`${contTitle}`}</ContentTitle>

@@ -1,17 +1,26 @@
 import * as S from "./HeaderStyle";
 import * as T from "../Text/Text";
-import * as G from "../../Global/Spacing/Spacing"
 import { Link } from "react-router-dom";
 import { useRecoilValue } from "recoil";
-import { isLoggedInAtom } from "../../../atoms";
+import { isLoggedInAtom, myUserIdAtom } from "../../../atoms";
+import PersonalInfo from "../../../assets/dummyData/dummyPersonalInfo.json";
+import { useEffect, useState } from "react";
 
 interface IHeader {
   thickness?:boolean;
-}
+};
 
 
 function Header ({thickness}:IHeader) {
   const isLogedIn = useRecoilValue(isLoggedInAtom);
+  const userIdAtom = useRecoilValue(myUserIdAtom);
+  const [userId, setUserID] = useState<number>(-1);
+  const [userName, setUserName] = useState<string>("");
+  useEffect(()=>{
+    if (isLogedIn) {setUserID(userIdAtom)};
+    //fetch personal info by userId
+    setUserName(PersonalInfo.result.nickName);
+  },[])
   return (
     <>
       <S.Wrapper thickness={thickness}>
@@ -46,7 +55,7 @@ function Header ({thickness}:IHeader) {
               {thickness ? <></> : 
               <S.NavTitle>
                 <Link to={isLogedIn ? "/personal" : "/members/login"}>
-                  <T.Pretendard17R>{isLogedIn ? `${"여용현"} 님` : "LogIn/SignUp"}</T.Pretendard17R>
+                  <T.Pretendard17R>{isLogedIn ? `${userName} 님` : "LogIn/SignUp"}</T.Pretendard17R>
                 </Link>
               </S.NavTitle>
               }
@@ -61,6 +70,10 @@ function Header ({thickness}:IHeader) {
                 <S.Bar/>
                 <S.NavSubTitle>
                   <T.Pretendard13R><a href="https://www.youtube.com/channel/UCGagrr6S5Q8dGXkxnT-ScmA/featured">Youtube</a></T.Pretendard13R>
+                </S.NavSubTitle>
+                <S.Bar/>
+                <S.NavSubTitle>
+                  <T.Pretendard13R><a href="">Workspace</a></T.Pretendard13R>
                 </S.NavSubTitle>
                 <S.Bar/>
                 <S.NavSubTitle>

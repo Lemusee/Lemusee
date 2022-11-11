@@ -80,6 +80,13 @@ export const nexBtn = styled.button`
   }
 `;
 
+export const CurationListArea = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+`;
+
 export const CurationList = styled.div`
   display: flex;
   flex-wrap: nowrap;
@@ -99,4 +106,24 @@ export const CurationList = styled.div`
   button:active {
     background-color: transparent;
   }
+`;
+
+export const NextCurationBtn = styled.button`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  width: 40px;
+  height: 40px;
+  margin-left: 50px;
+  padding: 5px;
+  &:hover {
+    background-color: ${props=>props.theme.lemuseeblack_30};
+  };
+  &:active {
+    background-color: ${props=>props.theme.lemuseeblack_50};
+  };
+  svg {
+    fill: ${props=>props.theme.lemuseeblack_100};
+  };
 `;

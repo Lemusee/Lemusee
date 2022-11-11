@@ -57,7 +57,7 @@ const SubTitle = styled(T.Pretendard24B)`
 const TitleInput = styled.input`
   color: ${props=>props.theme.lemuseeblack_100};
   overflow: hidden;
-  width: 560px;
+  width: 500px;
   font-size: 24px;
   font-weight: bold;
   font-stretch: normal;
@@ -111,11 +111,15 @@ function Editor () {
             <Titles>
               <Title>{`${title} /`}</Title>
               <SubTitle>{`${subtitle ? subtitle + " /" : ""}`}</SubTitle>
-              <TitleInput placeholder="제목을 입력하세요" onChange={onChangeHandler} maxLength={36}/>
+              <TitleInput placeholder="제목을 입력하세요" onChange={onChangeHandler} maxLength={30}/>
             </Titles>
             <NextBtn 
               name="Save Changes" 
               onClick={() => {
+                if(contents === ""){
+                  let exit = window.confirm("작성된 내용이 없습니다. 정말로 페이지를 나가시겠습니까?");
+                  if (exit) navigate(-1);
+                };
                 console.log(newcontentTitle, contents.replaceAll("\"", "\'"));
                 navigate(-1);
               }}

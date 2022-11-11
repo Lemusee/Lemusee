@@ -1,0 +1,19 @@
+{
+  "isSuccess": true,
+  "code": 1000,
+  "message": "요청에 성공하였습니다.",
+  "result": {
+      "id" : 8,
+      "email" : "bomrom97@naver.com",
+      "nickName" : "여용현",
+      "birthYear" : "1997.04.17",
+      "department" : "의생명공학과",
+      "phone" : "01022967806",
+      "studentId" : "201713195",
+      "introduce": "과학자를 꿈꾸는 디자이너, 문비입니다.\n@changmoonbi @deegong_official",
+      "team": "어드민 팀",
+      "role": "활동",
+      "createdAt": "2022-09-09T11:12:47Z",
+      "updatedAt": "2022-09-10T11:12:47Z"
+  }
+}
