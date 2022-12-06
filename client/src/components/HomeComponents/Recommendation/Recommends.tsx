@@ -21,7 +21,7 @@ function Recommends () {
       <S.Wrapper>
         <S.Container>
           <S.ConstentTitle>
-            <Link to="archive/recommendation">
+            <Link to="archive">
               <T.Pretendard17M>recommendation</T.Pretendard17M>
             </Link>
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
