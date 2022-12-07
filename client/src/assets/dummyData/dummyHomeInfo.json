@@ -1,0 +1,11 @@
+{
+  "isSuccess": true,
+  "code": 1000,
+  "message": "요청에 성공하였습니다.",
+  "result": {
+      "visitorThisMonth" : 200,
+      "visitorThisWeek": 15,
+      "visitorThisDay": 3,
+      "visitorAccumulated": 3061
+  }
+}

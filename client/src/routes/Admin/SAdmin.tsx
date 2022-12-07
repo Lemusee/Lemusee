@@ -58,6 +58,16 @@ export const Category = styled.button<$isselected>`
 
 export const Middle = styled.div`
   padding: 80px 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+`;
+
+export const TitleWrapper = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 `;
 
 export const Right = styled.div`
