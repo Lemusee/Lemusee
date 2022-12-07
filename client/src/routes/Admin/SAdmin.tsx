@@ -15,6 +15,45 @@ export const Left = styled.div`
   height: 100vh;
   padding: 24px;
   border-right: solid 1px ${props=>props.theme.lemuseeblack_30};
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+`;
+
+export const LeftTitle = styled.button`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 51px;
+  ${T.Pretendard24B} {
+    color: ${props=>props.theme.lemuseeblack_60};
+    letter-spacing: 3.6px;
+  };
+  ${T.Pretendard24M} {
+    color: ${props=>props.theme.lemuseeblack_100};
+    letter-spacing: normal;
+  };
+`;
+
+export const LeftCategories = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 15px;
+  margin-top: 240px;
+`;
+
+type $isselected = {
+  $isselected?:boolean;
+};
+
+export const Category = styled.button<$isselected>`
+  ${T.Pretendard21M} {
+    color: ${props => props.$isselected ? props.theme.lemuseeblack_100 : props.theme.lemuseeblack_50};
+  };
+  ${T.Pretendard21M}:hover {
+    color: ${props=>props.theme.lemuseeblack_80};
+  };
 `;
 
 export const Middle = styled.div`
@@ -36,6 +75,15 @@ export const RightTop = styled.div`
   height: 75%;
   width: 100%;
   background-color: ${props => props.theme.lemuseeblack_20};
+  display: flex;
+  flex-direction: column;
+`;
+
+export const RightTitle = styled.div`
+  margin-bottom: 70px;
+  ${T.Pretendard21R} {
+    color: ${props => props.theme.lemuseeblack_70};
+  }
 `;
 
 export const RightBottom = styled.div`
@@ -44,11 +92,22 @@ export const RightBottom = styled.div`
   width: 100%;
   padding-left: 60px;
   display: flex;
+  gap: 20px;
   flex-direction: row;
   align-items: center;
   background-color: ${props=>props.theme.lemuseeblack_70};
   &:hover {
     background-color: ${props=>props.theme.lemuseeblack_60};
     transition: 0.3s;
+  };
+  &:active {
+    background-color: ${props=>props.theme.lemuseeblack_50};
+    transition: 0.3s;
   }
+  ${T.Pretendard24B} {
+    color: ${props => props.theme.lemuseeblack_00};
+  };
+  path {
+    stroke: ${props => props.theme.lemuseeblack_00};
+  };
 `;

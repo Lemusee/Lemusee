@@ -47,6 +47,11 @@ export const isLoadingAtom = atom({
   default: false,
 });
 
+export const isAdmin = atom({
+  key: "isAdmin",
+  default: false,
+});
+
 export const isRecruitmentAtom = atom({
   key: "isRecruitment",
   default: false,

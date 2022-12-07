@@ -4,8 +4,8 @@ import NextBtn from "../../components/Global/Buttons/NextBtn";
 import SubNextBtn from "../../components/Global/Buttons/SubNextBtn";
 import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
-import { useRecoilState } from "recoil";
-import { isLoggedInAtom } from "../../atoms";
+import { useRecoilState, useSetRecoilState } from "recoil";
+import { isAdmin, isLoggedInAtom } from "../../atoms";
 
 interface IForm {
   extraError: string;
@@ -16,10 +16,17 @@ interface IForm {
 function Login () {
   const { register, handleSubmit, setValue, setError, formState:{errors}, } = useForm<IForm>();
   const [isLoggedIn, setLoggedIn] = useRecoilState(isLoggedInAtom);
+  const setIsAdmin = useSetRecoilState(isAdmin)
   const navigate = useNavigate();
   const onValid = (data:IForm) => {
     setError("extraError", {message:"Server offline"});
     setValue("password", "");
+    /**admin access는 프론트에서 처리되며, loggedin state는 false */
+    if (data.username === "admin" && data.password === "lemusee1335") {
+      setIsAdmin(true);
+      navigate("/admin", {replace:true});
+      return;
+    };
     setLoggedIn(true);
   };
   if (isLoggedIn) navigate("/", {replace:true});
