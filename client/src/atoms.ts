@@ -173,3 +173,15 @@ export const commentOpenAtom = atom<boolean>({
   key:"commentOpen",
   default: false,
 });
+
+export interface IAdminCurationAtom {
+  cardNum?: number;
+  title?: string;
+  contents?: string;
+  imgUrl?: string;
+};
+
+export const adminCurationAtom = atom<IAdminCurationAtom[]>({
+  key: "adminCurationAtom",
+  default: []
+});

@@ -1,5 +1,5 @@
 import { useRecoilState } from "recoil";
-import { isAdmin } from "../../atoms";
+import { isAdmin, adminCurationAtom } from "../../atoms";
 import React, { useEffect, useRef, useState } from "react";
 import Loading from "../../components/Global/Loading/Loading";
 import * as T from "../../components/Global/Text/Text";
@@ -9,11 +9,41 @@ import Titles from "../../assets/StaticData/AdminTitle.json";
 import AdminTitle from "../../components/AdminComponent/AdminTitle";
 import HomeInfo from "../../components/AdminComponent/HomeInfo";
 import MemberInfo from "../../components/AdminComponent/MemberInfo";
-import ExecutiveFileUpLoader from "../../components/AdminComponent/ExecutiveFilleUpLoader";
+import FileUpLoader from "../../components/AdminComponent/FilleUpLoader";
+import CurationItem from "../../components/AdminComponent/CurationItem";
+import dummyCuration from "../../assets/dummyData/dummyCurationGET.json";
 
 function Admin () {
   const navigate = useNavigate();
+  //초기 데이터
+  const [adminCurationData, setAdminCurationData] = useRecoilState(adminCurationAtom);
+
+  //===============접근 권한 테스트
   const [isAdminAccess, setIsAdminAccess] = useRecoilState(isAdmin);
+  /**접근 권한 테스트 및 초기 데이터 설정 */
+  useEffect(() => {
+    if (!isAdminAccess) {
+      let access = window.confirm("접근권한이 없습니다.");
+      if (access) navigate(-1);
+    };
+    setAdminCurationData(dummyCuration.result.items);
+  },[]);
+  /**제목 클릭 시 admin page 빠져나감, Admin access 권한 제거 */
+  const titleHandler = () => {
+    let exit = window.confirm("지금 페이지를 나가면 변경 사항이 저장되지 않습니다");
+    if (exit) navigate("/", {replace: true});
+    setIsAdminAccess(false);
+  };
+  /**변경 사항 저장 및 저장 여부 confirm */
+  const saveHandler = () => {
+    let save = window.confirm("변경 사항을 저장하시겠습니까?");
+    if (save) {
+      //변경 사항 저장, 변경 사항 저장 성공 시
+      window.alert("변경 사항이 저장되었습니다.");
+    };
+  };
+
+  //===============카테고리 처리
   const [isSelected, setIsSelected] = useState<string | null>("");
   const ref_0 = useRef<HTMLDivElement>(null);
   const ref_1 = useRef<HTMLDivElement>(null);
@@ -32,27 +62,13 @@ function Admin () {
     if (e.currentTarget.childNodes[0].textContent === ".../Members/State") {ref_4.current?.scrollIntoView({ behavior: 'smooth' });}
     if (e.currentTarget.childNodes[0].textContent === "/Recruting") {ref_5.current?.scrollIntoView({ behavior: 'smooth' });}
   };
-  /**제목 클릭 시 admin page 빠져나감, Admin access 권한 제거 */
-  const titleHandler = () => {
-    let exit = window.confirm("지금 페이지를 나가면 변경 사항이 저장되지 않습니다");
-    if (exit) navigate("/", {replace: true});
-    setIsAdminAccess(false);
-  };
-  /**변경 사항 저장 및 저장 여부 confirm */
-  const saveHandler = () => {
-    let save = window.confirm("변경 사항을 저장하시겠습니까?");
-    if (save) {
-      //변경 사항 저장, 변경 사항 저장 성공 시
-      window.alert("변경 사항이 저장되었습니다.");
-    };
-  };
-  /**접근 권한 테스트 */
-  useEffect(() => {
-    if (!isAdminAccess) {
-      let access = window.confirm("접근권한이 없습니다.");
-      if (access) navigate(-1);
-    };
-  },[]);
+
+
+  //=================큐레이션 처리
+
+
+
+
   return (
     <>
       {
@@ -91,10 +107,20 @@ function Admin () {
               </S.TitleWrapper>
               <S.TitleWrapper ref={ref_1}>
                 <AdminTitle {...Titles[1]}/>
-                <ExecutiveFileUpLoader/>
+                <FileUpLoader/>
               </S.TitleWrapper>
               <S.TitleWrapper ref={ref_2}>
                 <AdminTitle {...Titles[2]}/>
+                <S.CurationList>
+                  <>
+                    {
+                      adminCurationData && adminCurationData.map(item=>(
+                        <CurationItem key={item.cardNum} {...item}/>
+                      ))
+                    }
+                    <CurationItem/>
+                  </>
+                </S.CurationList>
               </S.TitleWrapper>
               <S.TitleWrapper ref={ref_3}>
                 <AdminTitle {...Titles[3]}/>

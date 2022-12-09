@@ -70,6 +70,13 @@ export const TitleWrapper = styled.div`
   gap: 40px;
 `;
 
+export const CurationList = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+`;
+
 export const Right = styled.div`
   position: sticky;
   right: 0;
