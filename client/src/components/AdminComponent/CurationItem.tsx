@@ -2,6 +2,7 @@ import styled from "styled-components";
 import * as T from "../Global/Text/Text";
 import FileUpLoader from "./FilleUpLoader";
 import { IAdminCurationAtom } from "../../atoms";
+import { useForm } from "react-hook-form";
 
 const Wrapper = styled.div`
   width: 100%;
@@ -33,9 +34,57 @@ const Content = styled.div`
   gap: 20px;
 `;
 
+const Form = styled.form`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  input {
+    width: 100%;
+    border: none;
+    background: transparent;
+    outline: none;
+    font-family: Pretendard;
+    font-size: 21px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.19;
+    letter-spacing: normal;
+    text-align: left;
+    color: ${props=>props.theme.lemuseeblack_100};
+  };
+  textarea {
+    height: 106px;
+    border: none;
+    background: transparent;
+    outline: none;
+    resize: none;
+    font-family: Pretendard;
+    font-size: 17px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.18;
+    letter-spacing: normal;
+    text-align: left;
+    color: ${props=>props.theme.lemuseeblack_80};
+  };
+`;
 
+interface IForm {
+  extraError: string;
+  title?: string;
+  contents?: string;
+  imgUrl?:string;
+};
 
 function CurationItem ({cardNum, title, contents, imgUrl}:IAdminCurationAtom) {
+  const { register, handleSubmit, setValue, setError, formState:{errors}, } = useForm<IForm>();
+  const onValid = (data:IForm) => {
+    setError("extraError", {message:"Server offline"});
+
+  };
   return (
     <>
       <Wrapper>
@@ -49,6 +98,20 @@ function CurationItem ({cardNum, title, contents, imgUrl}:IAdminCurationAtom) {
         </Title>
         <Content>
           <FileUpLoader imgUrlPlaceholder={imgUrl ? imgUrl : undefined}/>
+          <Form onSubmit={handleSubmit(onValid)}>
+            <input 
+                {...register("title", {
+                  required: "120자 이내로 제목을 입력하세요"
+                })}
+                placeholder={title ? title : "120자 이내로 제목을 입력하세요"}
+              />
+            <textarea 
+              {...register("contents", {
+                required: "300자 이내로 제목을 입력하세요"
+              })}
+              placeholder={contents ? contents : "300자 이내로 제목을 입력하세요"}
+              />
+          </Form>
         </Content>
       </Wrapper>
     </>

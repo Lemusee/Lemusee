@@ -14,6 +14,7 @@ const ImgViewer = styled.div<Iurl>`
   height: 194px;
   background-image: url(${props => props.imgurl});
   background-size: cover;
+  background-position: center;
   ${T.Pretendard15B} {
     color: transparent;
   };
@@ -37,9 +38,11 @@ const ImgViewer = styled.div<Iurl>`
 `;
 
 const FileUploaderForm = styled.div`
+  width: 300px;
+  height: 194px;
   label {
-    width: 300px;
-    height: 194px;
+    width: 100%;
+    height: 100%;
     margin: 0 28px 0 0;
     padding: 88px 72px;
     border-radius: 15px;
