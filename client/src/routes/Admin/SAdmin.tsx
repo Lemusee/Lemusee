@@ -103,10 +103,12 @@ export const RightTitle = styled.div`
   }
 `;
 
-export const RightBottom = styled.div`
+export const RightBottom = styled.button`
   cursor: pointer;
   height: 25%;
   width: 100%;
+  padding: 0;
+  border-radius: 0;
   padding-left: 60px;
   display: flex;
   gap: 20px;

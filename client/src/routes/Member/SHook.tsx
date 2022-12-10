@@ -33,25 +33,26 @@ export const InputBox = styled.div`
   justify-content: flex-start;
   ${T.Pretendard13R}{
     color: ${props=>props.theme.lemuseeblack_100};
-  }
+  };
   input {
     width: 220px;
     color: ${props=>props.theme.lemuseeblack_60};
     font-size: 13px;
     font-weight: 400;
     width: 100%;
-    background-color: transparent;
+    background-color: transparent !important;
     border: none;
     outline: none;
     &:focus {
       border-bottom: 1px solid ${props=>props.theme.lemuseeblack_60};
-    }
-  }
+      background-color: transparent !important;
+    };
+  };
   span {
     font-size: 11px;
     color: ${props=>props.theme.error_red};
     text-align: left;
-  }
+  };
 `;
 
 export const GoogleLoginBtn = styled.div`

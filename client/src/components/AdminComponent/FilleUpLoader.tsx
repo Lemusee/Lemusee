@@ -7,6 +7,7 @@ const fileTypes = ["JPG", "PNG", "GIF"];
 
 interface Iurl {
   imgurl?:string;
+  grayscale?:number;
 }
 
 const ImgViewer = styled.div<Iurl>`
@@ -15,6 +16,7 @@ const ImgViewer = styled.div<Iurl>`
   background-image: url(${props => props.imgurl});
   background-size: cover;
   background-position: center;
+  filter: ${props => props.grayscale ? `grayscale(${props.grayscale}%)` : "grayscale(0%)"};
   ${T.Pretendard15B} {
     color: transparent;
   };
@@ -41,13 +43,15 @@ const FileUploaderForm = styled.div`
   width: 300px;
   height: 194px;
   label {
-    width: 100%;
+    min-width: 300px !important;
+    width: 300px !important;
     height: 100%;
     margin: 0 28px 0 0;
-    padding: 88px 72px;
+    padding: 0;
     border-radius: 15px;
     border: dashed 2px ${props => props.theme.lemuseeblack_60};
     background-color: ${props => props.theme.lemuseeblack_20};
+    margin: 0;
   };
   svg {
     display: none;
@@ -64,9 +68,10 @@ const FileUploaderForm = styled.div`
 
 interface IPlaceholder {
   imgUrlPlaceholder?: string;
+  grayscale?:number;
 };
 
-function FileUpLoader({imgUrlPlaceholder}:IPlaceholder) {
+function FileUpLoader({imgUrlPlaceholder, grayscale}:IPlaceholder) {
   const [imgFile, setImgFile] = useState(null);
   const [imgURL, setImgURL] = useState<string | undefined>(imgUrlPlaceholder);
   const handleChange = (file:any) => {
@@ -77,7 +82,7 @@ function FileUpLoader({imgUrlPlaceholder}:IPlaceholder) {
   return (
     <>
       {imgURL ? (
-        <ImgViewer imgurl={imgURL} onClick={()=>{setImgFile(null); setImgURL(undefined)}}>
+        <ImgViewer imgurl={imgURL} grayscale={grayscale} onClick={()=>{setImgFile(null); setImgURL(undefined)}}>
           <div>
             <T.Pretendard15B>Click again to delete your image.</T.Pretendard15B>
           </div>

@@ -1,8 +1,10 @@
 import styled from "styled-components";
 import * as T from "../Global/Text/Text";
 import FileUpLoader from "./FilleUpLoader";
-import { IAdminCurationAtom } from "../../atoms";
+import { adminCurationAtom, IAdminCurationAtom } from "../../atoms";
 import { useForm } from "react-hook-form";
+import React, { useState } from "react";
+import { useRecoilState, useSetRecoilState } from "recoil";
 
 const Wrapper = styled.div`
   width: 100%;
@@ -34,6 +36,10 @@ const Content = styled.div`
   gap: 20px;
 `;
 
+const FileUploaderLayout = styled.div`
+  flex-basis: 300px;
+`;
+
 const Form = styled.form`
   width: 100%;
   display: flex;
@@ -53,9 +59,12 @@ const Form = styled.form`
     letter-spacing: normal;
     text-align: left;
     color: ${props=>props.theme.lemuseeblack_100};
+    text-transform: uppercase;
   };
+
   textarea {
-    height: 106px;
+    width: 100%;
+    height: 130px;
     border: none;
     background: transparent;
     outline: none;
@@ -79,37 +88,56 @@ interface IForm {
   imgUrl?:string;
 };
 
-function CurationItem ({cardNum, title, contents, imgUrl}:IAdminCurationAtom) {
-  const { register, handleSubmit, setValue, setError, formState:{errors}, } = useForm<IForm>();
+interface IData {
+  index:number;
+  cardNum?: number;
+  title?: string;
+  contents?: string;
+  imgUrl?: string;
+};
+
+function CurationItem ({index, cardNum, title, contents, imgUrl}:IData) {
+  const { register, handleSubmit, setValue, setError, formState:{errors}, getValues} = useForm<IForm>();
   const onValid = (data:IForm) => {
     setError("extraError", {message:"Server offline"});
-
+    const multipleValues = getValues(['title', 'contents']);
+    console.log(multipleValues);
   };
+  const [adminCurationData ,setAdminCurationData] = useRecoilState(adminCurationAtom);
+  const handleDelete = () => {
+    let data = [...adminCurationData];
+    data.splice(index, 1);
+    setAdminCurationData(data);
+  };
+
   return (
     <>
       <Wrapper>
         <Title>
-          <T.Pretendard17M>{`Curation #${cardNum}`}</T.Pretendard17M>
-          <DeleteBtn>
+          <T.Pretendard17M>{`Curation #${index}`}</T.Pretendard17M>
+          <DeleteBtn onClick={handleDelete}>
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M7.05024 7.05025L16.9497 16.9497M7.05024 16.9497L16.9497 7.05025" stroke="black" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
           </DeleteBtn>
         </Title>
         <Content>
-          <FileUpLoader imgUrlPlaceholder={imgUrl ? imgUrl : undefined}/>
+          <FileUploaderLayout>
+            <FileUpLoader imgUrlPlaceholder={imgUrl ? imgUrl : undefined} grayscale={85}/>
+          </FileUploaderLayout>
           <Form onSubmit={handleSubmit(onValid)}>
             <input 
+              type="text"
                 {...register("title", {
-                  required: "120자 이내로 제목을 입력하세요"
+                  maxLength: 60,
+                  value: `${title ? title : "120자 이내로 제목을 입력하세요"}`
                 })}
-                placeholder={title ? title : "120자 이내로 제목을 입력하세요"}
               />
             <textarea 
               {...register("contents", {
-                required: "300자 이내로 제목을 입력하세요"
+                maxLength: 300,
+                value: `${contents ? contents : "300자 이내로 제목을 입력하세요"}`
               })}
-              placeholder={contents ? contents : "300자 이내로 제목을 입력하세요"}
               />
           </Form>
         </Content>

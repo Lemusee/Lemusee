@@ -114,11 +114,11 @@ function Admin () {
                 <S.CurationList>
                   <>
                     {
-                      adminCurationData && adminCurationData.map(item=>(
-                        <CurationItem key={item.cardNum} {...item}/>
+                      adminCurationData && adminCurationData.map((item, index)=>(
+                        <CurationItem key={item.cardNum} {...item} index={index}/>
                       ))
                     }
-                    <CurationItem/>
+                    <CurationItem index={adminCurationData.length}/>
                   </>
                 </S.CurationList>
               </S.TitleWrapper>
@@ -139,7 +139,7 @@ function Admin () {
                   <T.Pretendard21R>Changes</T.Pretendard21R>
                 </S.RightTitle>
               </S.RightTop>
-              <S.RightBottom onClick={saveHandler}>
+              <S.RightBottom onClick={saveHandler} type="submit">
                 <T.Pretendard24B>Save Changes</T.Pretendard24B>
                 <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 15H27M27 15C23 14 20.5 12 19 8M27 15C23 16 20.5 19 19 22" stroke="black" strokeLinecap="round" strokeLinejoin="round"/>
