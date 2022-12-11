@@ -77,6 +77,22 @@ export const CurationList = styled.div`
   gap: 45px;
 `;
 
+export const AddNewCurationBtn = styled.button`
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  border: dashed 2px ${props => props.theme.lemuseeblack_60};
+  background-color: ${props => props.theme.lemuseeblack_20};
+  margin: 0;
+  padding: 0;
+  ${T.Pretendard15M} {
+    color: ${props => props.theme.lemuseeblack_60};
+  };
+`;
+
 export const Right = styled.div`
   position: sticky;
   right: 0;
@@ -109,11 +125,12 @@ export const RightBottom = styled.button`
   width: 100%;
   padding: 0;
   border-radius: 0;
-  padding-left: 60px;
   display: flex;
   gap: 20px;
   flex-direction: row;
   align-items: center;
+  justify-content: flex-start;
+  padding-left: 60px;
   background-color: ${props=>props.theme.lemuseeblack_70};
   &:hover {
     background-color: ${props=>props.theme.lemuseeblack_60};

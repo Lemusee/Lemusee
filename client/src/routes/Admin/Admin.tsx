@@ -51,6 +51,7 @@ function Admin () {
   const ref_3 = useRef<HTMLDivElement>(null);
   const ref_4 = useRef<HTMLDivElement>(null);
   const ref_5 = useRef<HTMLDivElement>(null);
+  /**w카테고리를 클릭할 시 해당 위치로 이동시켜주는 함수 */
   const categoryHandler = (e:React.MouseEvent<HTMLButtonElement>) => {
     /**현재 클릭된 카테고리 innerText를 isSelected로 지정 */
     setIsSelected(e.currentTarget.childNodes[0].textContent);
@@ -65,7 +66,11 @@ function Admin () {
 
 
   //=================큐레이션 처리
-
+  /**curation을 추가하는 버튼에 할당된 함수. onClcik 시 recoil adminCurationAtom에 빈 객체를 하나 추가함 */
+  const handleNewCuration = () => {
+    const data = [...adminCurationData, {cardNum:adminCurationData.length, title:undefined, contents: undefined, imgUrl: undefined}]
+    setAdminCurationData(data);
+  };
 
 
 
@@ -118,7 +123,9 @@ function Admin () {
                         <CurationItem key={item.cardNum} {...item} index={index}/>
                       ))
                     }
-                    <CurationItem index={adminCurationData.length}/>
+                    <S.AddNewCurationBtn onClick={handleNewCuration}>
+                      <T.Pretendard15M>Click here to add a new curation.</T.Pretendard15M>
+                    </S.AddNewCurationBtn>
                   </>
                 </S.CurationList>
               </S.TitleWrapper>
