@@ -12,6 +12,8 @@ import MemberInfo from "../../components/AdminComponent/MemberInfo";
 import FileUpLoader from "../../components/AdminComponent/FilleUpLoader";
 import CurationItem from "../../components/AdminComponent/CurationItem";
 import dummyCuration from "../../assets/dummyData/dummyCurationGET.json";
+import RecruitingForm from "../../components/AdminComponent/RecruitingForm";
+import MemberState from "../../components/AdminComponent/MemberState";
 
 function Admin () {
   const navigate = useNavigate();
@@ -135,9 +137,11 @@ function Admin () {
               </S.TitleWrapper>
               <S.TitleWrapper ref={ref_4}>
                 <AdminTitle {...Titles[4]}/>
+                <MemberState/>
               </S.TitleWrapper>
               <S.TitleWrapper ref={ref_5}>
                 <AdminTitle {...Titles[5]}/>
+                <RecruitingForm/>
               </S.TitleWrapper>
             </S.Middle>
             <S.Right>

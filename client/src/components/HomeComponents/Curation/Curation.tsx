@@ -45,7 +45,7 @@ function Curation () {
             <S.CurationBoard>
               <S.BoardLeft>
                 <S.BoardLeftText>
-                  <T.Pretendard44B color="#b7b7b7">{`CURATION#${curationInfo[focus].cardNum}`}</T.Pretendard44B>
+                  <T.Pretendard44B color="#b7b7b7">{`CURATION#${curationInfo[focus]?.cardNum}`}</T.Pretendard44B>
                   <T.Pretendard44B>{curationInfo[focus].title}</T.Pretendard44B>
                   <T.Pretendard17R>
                     {curationInfo[focus].contents}

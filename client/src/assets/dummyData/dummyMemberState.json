@@ -1,0 +1,245 @@
+{
+  "isSuccess": true,
+  "code": 1000,
+  "message": "요청에 성공하였습니다.",
+  "result": [
+    {
+      "id": 1,
+      "nickname": "길세원",
+      "role": "admin",
+      "team": "curator",
+      "isChief": true
+    },
+    {
+      "id": 2,
+      "nickname": "김민기",
+      "role": "user",
+      "team": "content",
+      "isChief": true
+    },
+    {
+      "id": 3,
+      "nickname": "오준원",
+      "role": "user",
+      "team": "culture",
+      "isChief": true
+    },
+    {
+      "id": 4,
+      "nickname": "이유빈",
+      "role": "user",
+      "team": "admin",
+      "isChief": true
+    },
+    {
+      "id": 5,
+      "nickname": "고은서",
+      "role": "user",
+      "team": "content",
+      "isChief": false
+    },
+    {
+      "id": 6,
+      "nickname": "김민서",
+      "role": "user",
+      "team": "content",
+      "isChief": false
+    },
+    {
+      "id": 7,
+      "nickname": "김민정",
+      "role": "user",
+      "team": "content",
+      "isChief": false
+    },
+    {
+      "id": 8,
+      "nickname": "김민지",
+      "role": "user",
+      "team": "content",
+      "isChief": false
+    },
+    {
+      "id": 9,
+      "nickname": "류민정",
+      "role": "user",
+      "team": "content",
+      "isChief": false
+    },
+    {
+      "id": 10,
+      "nickname": "류민정",
+      "role": "user",
+      "team": "curator",
+      "isChief": false
+    },
+    {
+      "id": 11,
+      "nickname": "박노윤",
+      "role": "user",
+      "team": "curator",
+      "isChief": false
+    },
+    {
+      "id": 12,
+      "nickname": "박성규",
+      "role": "user",
+      "team": "curator",
+      "isChief": false
+    },
+    {
+      "id": 13,
+      "nickname": "박지호",
+      "role": "user",
+      "team": "curator",
+      "isChief": false
+    },
+    {
+      "id": 14,
+      "nickname": "박하린",
+      "role": "user",
+      "team": "curator",
+      "isChief": false
+    },
+    {
+      "id": 15,
+      "nickname": "송혜연",
+      "role": "user",
+      "team": "culture",
+      "isChief": false
+    },
+    {
+      "id": 16,
+      "nickname": "여용현",
+      "role": "user",
+      "team": "culture",
+      "isChief": false
+    },
+    {
+      "id": 17,
+      "nickname": "오다예",
+      "role": "user",
+      "team": "culture",
+      "isChief": false
+    },
+    {
+      "id": 18,
+      "nickname": "오준원",
+      "role": "user",
+      "team": "culture",
+      "isChief": false
+    },
+    {
+      "id": 19,
+      "nickname": "우정훈",
+      "role": "user",
+      "team": "culture",
+      "isChief": false
+    },
+    {
+      "id": 20,
+      "nickname": "이승범",
+      "role": "user",
+      "team": "admin",
+      "isChief": false
+    },
+    {
+      "id": 21,
+      "nickname": "김서민",
+      "role": "user",
+      "team": "admin",
+      "isChief": false
+    },
+    {
+      "id": 22,
+      "nickname": "이원재",
+      "role": "user",
+      "team": "admin",
+      "isChief": false
+    },
+    {
+      "id": 23,
+      "nickname": "이주석",
+      "role": "user",
+      "team": "admin",
+      "isChief": false
+    },
+    {
+      "id": 24,
+      "nickname": "이지원",
+      "role": "user",
+      "team": "admin",
+      "isChief": false
+    },
+    {
+      "id": 25,
+      "nickname": "이채원",
+      "role": "user",
+      "team": null,
+      "isChief": false
+    },
+    {
+      "id": 26,
+      "nickname": "임새연",
+      "role": "user",
+      "team": null,
+      "isChief": false
+    },
+    {
+      "id": 27,
+      "nickname": "임종우",
+      "role": "user",
+      "team": null,
+      "isChief": false
+    },
+    {
+      "id": 28,
+      "nickname": "정다혜",
+      "role": "user",
+      "team": null,
+      "isChief": false
+    },
+    {
+      "id": 29,
+      "nickname": "정지원",
+      "role": "user",
+      "team": null,
+      "isChief": false
+    },
+    {
+      "id": 30,
+      "nickname": "정태민",
+      "role": "user",
+      "team": null,
+      "isChief": false
+    },
+    {
+      "id": 31,
+      "nickname": "정현주",
+      "role": "user",
+      "team": null,
+      "isChief": false
+    },
+    {
+      "id": 32,
+      "nickname": "윤창우",
+      "role": "user",
+      "team": "inactive",
+      "isChief": false
+    },
+    {
+      "id": 33,
+      "nickname": "신원석",
+      "role": "user",
+      "team": "inactive",
+      "isChief": false
+    },
+    {
+      "id": 34,
+      "nickname": "구민성",
+      "role": "user",
+      "team": "inactive",
+      "isChief": false
+    }
+  ]
+}

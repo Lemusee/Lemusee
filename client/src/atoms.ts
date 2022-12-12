@@ -1,4 +1,5 @@
 import { atom } from "recoil";
+import {v1} from "uuid";
 
 export enum Categories {
   "self_dev"="self_dev",
@@ -27,33 +28,33 @@ export enum Certification {
 
 export const isDarkThemeAtom = atom(
   {
-    key:"isDark",
+    key:`userState/${v1()}`,
     default:false,
   }
 );
 
 export const isLoggedInAtom = atom({
-  key:"isLogedIn",
+  key:`userState/${v1()}`,
   default:false,
 });
 
 export const myUserIdAtom = atom<number>({
-  key:"myUserId",
+  key:`userState/${v1()}`,
   default: 8, //임시로 지정된 userId
 });
 
 export const isLoadingAtom = atom({
-  key: "isLoading",
+  key:`userState/${v1()}`,
   default: false,
 });
 
 export const isAdmin = atom({
-  key: "isAdmin",
+  key:`userState/${v1()}`,
   default: false,
 });
 
 export const isRecruitmentAtom = atom({
-  key: "isRecruitment",
+  key:`userState/${v1()}`,
   default: false,
 });
 
@@ -75,12 +76,12 @@ export interface IVideoItems {
 };
 
 export const categoryState = atom<Categories>({
-  key:"category",
+  key:`userState/${v1()}`,
   default: Categories.etc,
 });
 
 export const playlistItemState = atom<IVideoItems[]>({
-  key:"videoItem",
+  key:`userState/${v1()}`,
   default: []
 });
 
@@ -98,7 +99,7 @@ export interface IChannelInfo {
 };
 
 export const channelState = atom<IChannelInfo[]>({
-  key: "channelInfo",
+  key:`userState/${v1()}`,
   default: []
 });
 
@@ -110,7 +111,7 @@ export interface ICurationInfo {
 };
 
 export const curationState = atom<ICurationInfo[]>({
-  key: "curationInfo",
+  key:`userState/${v1()}`,
   default:[],
 });
 
@@ -122,7 +123,7 @@ export interface IRecruitment {
 };
 
 export const recruitmentInfoAtom = atom<IRecruitment>({
-  key: "recruitmentInfo",
+  key:`userState/${v1()}`,
   default: {},
 });
 
@@ -135,42 +136,42 @@ export interface ICategories {
 };
 
 export const communityCategoryState = atom<ICategories[]>({
-  key: "communityCategoryState",
+  key:`userState/${v1()}`,
   default: []
 });
 
 export const communityPageIndex = atom<number>({
-  key:"communityPageIndex",
+  key:`userState/${v1()}`,
   default:0,
 });
 
 export const communityCategoryTitleAtom = atom<string>({
-  key: "communityCategoryTitleAtom",
+  key:`userState/${v1()}`,
   default: "",
 });
 
 export const communityCategorySubTitleAtom = atom<string>({
-  key: "communityCategorySubTitleAtom",
+  key:`userState/${v1()}`,
   default: "",
 });
 
 export const communitypagenationIndex = atom<number>({
-  key:"communitypagenationIndex",
+  key:`userState/${v1()}`,
   default:1,
 });
 
 export const contentTitleAtom = atom<string>({
-  key:"contentTitle",
+  key:`userState/${v1()}`,
   default:"",
 });
 
 export const newContentTitleAtom = atom<string>({
-  key:"newContentTitle",
+  key:`userState/${v1()}`,
   default:""
 });
 
 export const commentOpenAtom = atom<boolean>({
-  key:"commentOpen",
+  key:`userState/${v1()}`,
   default: false,
 });
 
@@ -182,6 +183,46 @@ export interface IAdminCurationAtom {
 };
 
 export const adminCurationAtom = atom<IAdminCurationAtom[]>({
-  key: "adminCurationAtom",
+  key:`userState/${v1()}`,
   default: []
+});
+
+export interface IAdminRecruitingAtom {
+  recruitment_link?: string;
+  inquiry?: string;
+  due_at?: string;
+  content?: string;
+};
+
+export const adminRecruitingAtom = atom<IAdminRecruitingAtom>({
+  key:`userState/${v1()}`,
+  default: {},
+});
+
+export interface IAdminMember {
+  id: number;
+  nickname: string;
+  role: string;
+  team: string | null;
+  isChief: boolean;
+};
+
+export interface IAdminMemberState {
+  [key: string]: IAdminMember[];
+};
+
+export const adminMemberStateAtom = atom<IAdminMemberState>({
+  key:`userState/${v1()}`,
+  default: {
+    "등록 대기": [],
+    "비활동 회원": [],
+    "큐레이터": [],
+    "컨텐츠 팀장": [],
+    "컬처 팀장": [],
+    "어드민 팀장": [],
+    "큐레이터 팀": [],
+    "컨텐츠 팀": [],
+    "컬처 팀": [],
+    "어드민 팀": []
+  },
 });
