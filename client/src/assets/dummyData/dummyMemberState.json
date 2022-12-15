@@ -240,6 +240,13 @@
       "role": "user",
       "team": "inactive",
       "isChief": false
+    },
+    {
+      "id": 35,
+      "nickname": "허주영",
+      "role": "user",
+      "team": "admin",
+      "isChief": false
     }
   ]
 }

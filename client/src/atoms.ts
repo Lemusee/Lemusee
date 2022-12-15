@@ -40,7 +40,7 @@ export const isLoggedInAtom = atom({
 
 export const myUserIdAtom = atom<number>({
   key:`userState/${v1()}`,
-  default: 8, //임시로 지정된 userId
+  default: -1, //임시로 지정된 userId
 });
 
 export const isLoadingAtom = atom({

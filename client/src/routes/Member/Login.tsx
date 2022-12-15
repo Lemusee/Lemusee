@@ -5,29 +5,56 @@ import SubNextBtn from "../../components/Global/Buttons/SubNextBtn";
 import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { useRecoilState, useSetRecoilState } from "recoil";
-import { isAdmin, isLoggedInAtom } from "../../atoms";
+import { isAdmin, isLoggedInAtom, myUserIdAtom } from "../../atoms";
+import dummyLogInResponse from "../../assets/dummyData/dummyLogInResponse.json";
+import dummyPersonalInfo from "../../assets/dummyData/dummyPersonalInfo.json";
+import { useState } from "react";
 
 interface IForm {
   extraError: string;
-  username?: string;
+  email?: string;
   password?: string;
-}
+};
+
+interface IPersonalData {
+  id?:number;
+  nickname?:string;
+  team?: string;
+  role?: string;
+  isChief?: boolean;
+};
 
 function Login () {
   const { register, handleSubmit, setValue, setError, formState:{errors}, } = useForm<IForm>();
+  const [personalData, setPersonalData] = useState<IPersonalData>({});
   const [isLoggedIn, setLoggedIn] = useRecoilState(isLoggedInAtom);
-  const setIsAdmin = useSetRecoilState(isAdmin)
+  const setUserId = useSetRecoilState(myUserIdAtom);
+  const setIsAdmin = useSetRecoilState(isAdmin);
   const navigate = useNavigate();
   const onValid = (data:IForm) => {
     setError("extraError", {message:"Server offline"});
     setValue("password", "");
     /**admin access는 프론트에서 처리되며, loggedin state는 false */
-    if (data.username === "admin" && data.password === "lemusee1335") {
-      setIsAdmin(true);
-      navigate("/admin", {replace:true});
-      return;
+    if (dummyLogInResponse.isSuccess && dummyLogInResponse.code === 1000) {
+      setLoggedIn(true);
+      setUserId(dummyLogInResponse.result.userId);
+      /**Personal Data fatch */
+      const personal = {
+        id: dummyPersonalInfo.result.id,
+        nickname: dummyPersonalInfo.result.nickName,
+        team: dummyPersonalInfo.result.team,
+        role: dummyPersonalInfo.result.role,
+        isChief: dummyPersonalInfo.result.isChief,
+      };
+      setPersonalData(personal);
+      if (personal.role === "admin") {
+        setIsAdmin(true);
+      };
+    } else if (dummyLogInResponse && dummyLogInResponse.code === 2017) {
+      window.alert("존재하지 않는 회원정보입니다.");
+    } else if (dummyLogInResponse && dummyLogInResponse.code === 4000) {
+      window.alert("서버 연결 오류");
     };
-    setLoggedIn(true);
   };
   if (isLoggedIn) navigate("/", {replace:true});
   return (
@@ -35,14 +62,15 @@ function Login () {
       <form onSubmit={handleSubmit(onValid)}>
         <S.hookGrid>
           <S.InputBox>
-            <T.Pretendard13R>Username</T.Pretendard13R>
+            <T.Pretendard13R>Email</T.Pretendard13R>
             <input 
-              {...register("username", {
-                required: "이름을 입력해주세요"
+              {...register("email", {
+                required: "이메일을 입력해주세요",
+                pattern:{value:/^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i, message: "이메일 양식이 아닙니다."}
               })}
-              placeholder="실명으로 입력해주세요."
+              placeholder="이메일을 입력해주세요"
             />
-            <span>{errors?.username?.message}</span>
+            <span>{errors?.email?.message}</span>
           </S.InputBox>
           <div></div>
           <S.InputBox>

@@ -12,14 +12,15 @@ interface IForm {
   email?:string;
   password?: string;
   passwordConfirm?:string;
-}
+};
 
 function SignUp1 () {
-  const { register, handleSubmit, setValue, setError, formState:{errors}, } = useForm<IForm>();
+  const { register, handleSubmit, setValue, setError, formState:{errors}, getValues} = useForm<IForm>();
   const onValid = (data:IForm) => {
     setError("extraError", {message:"Server offline"});
     setValue("password", "");
     setValue("passwordConfirm", "");
+    getValues(["username", "email", "password"]);
   };
   return (
     <>

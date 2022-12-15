@@ -20,7 +20,7 @@ function Curation () {
         imgUrl : list.imgUrl
       }
     )
-  })
+  });
   // const curationList = curationFetch.map(list => {return {...list, focus:false}});
   const [curationInfo, setCurationInfo] = useRecoilState(curationState);
   const [isLoading, setIsLoading] = useState(false);

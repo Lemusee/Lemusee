@@ -23,7 +23,7 @@ function Recent () {
       <S.Wrapper>
         <S.Container>
           <S.contentTitle>
-            <T.Pretendard17M>recent lecture</T.Pretendard17M>
+            <T.Pretendard17M>recent lectures</T.Pretendard17M>
           </S.contentTitle>
           <S.CardBlock>
             {

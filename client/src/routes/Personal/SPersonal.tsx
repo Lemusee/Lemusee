@@ -8,7 +8,10 @@ export const Wrapper = styled(G.Wrapper)`
   height: 100vh;
 `;
 
-export const Container = styled(G.Container)`
+export const Container = styled.form`
+  width: 1280px;
+  display: flex;
+  flex-direction: column;
   height: 600px;
   justify-content: space-between;
   padding: 5px 20px;
@@ -27,7 +30,7 @@ export const Introduce = styled.textarea`
   outline: none;
   border: none;
   width: 249px;
-  height: 39px;
+  height: 45px;
   resize: none;
   font-family: inherit;
   font-size: 15px;
@@ -113,23 +116,27 @@ export const InputBtn = styled.div`
   };
 `;
 
-// export const Input = styled.input`
-//   color: ${props=>props.theme.lemuseeblack_60};
-//   background-color: transparent;
-//   outline: none;
-//   border: none;
-//   height: 53px;
-//   min-width: 83px;
-//   max-width: 490px;
-//   font-family: Pretendard;
-//   font-size: 44px;
-//   font-weight: 500;
-//   font-stretch: normal;
-//   font-style: normal;
-//   line-height: 1.2;
-//   letter-spacing: 6.6px;
-//   text-align: left;
-// `;
+interface IInputWidth {
+  width?:number;
+}
+
+export const Input = styled.input<IInputWidth>`
+  display: inline-flex;
+  width: ${props=> props.width ? props.width+"px" : "490px"};
+  color: ${props=>props.theme.lemuseeblack_60};
+  background-color: transparent;
+  outline: none;
+  border: none;
+  height: 53px;
+  min-width: 83px;
+  font-family: Pretendard;
+  font-size: 44px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.2;
+  text-align: left;
+`;
 
 export const Bottom = styled.div`
   display: flex;

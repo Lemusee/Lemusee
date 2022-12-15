@@ -2,6 +2,7 @@ import styled from "styled-components";
 import * as T from "../../components/Global/Text/Text";
 
 export const Wrapper = styled.div`
+  width: 100vw;
   display: grid;
   grid-template-columns: 360fr 1120fr 440fr;
   background-color: ${props=>props.theme.lemuseeblack_10};

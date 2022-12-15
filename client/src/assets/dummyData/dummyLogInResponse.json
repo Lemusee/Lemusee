@@ -1,0 +1,9 @@
+{
+  "isSuccess": true,
+  "code": 1000,
+  "message": "요청에 성공하였습니다.",
+  "result" : {
+    "token" : "abcf1b9b-e011-4737-a506-608a3a168cdd",
+    "userId" : 8
+  }
+}

@@ -47,7 +47,7 @@ function SignUp2 () {
             />
             <span>{errors?.phone?.message}</span>
           </S.InputBox>
-          <S.InputBox>
+          {/* <S.InputBox>
             <T.Pretendard13R>소속 팀</T.Pretendard13R>
             <input 
               {...register("team", {
@@ -65,7 +65,7 @@ function SignUp2 () {
               placeholder="활동, 비활동, 졸업, 기타"
             />
             <span>{errors?.certification?.message}</span>
-          </S.InputBox>
+          </S.InputBox> */}
           <S.InputBox>
             <T.Pretendard13R>학과</T.Pretendard13R>
             <input 

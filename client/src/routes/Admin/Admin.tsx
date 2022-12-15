@@ -33,8 +33,7 @@ function Admin () {
   /**제목 클릭 시 admin page 빠져나감, Admin access 권한 제거 */
   const titleHandler = () => {
     let exit = window.confirm("지금 페이지를 나가면 변경 사항이 저장되지 않습니다");
-    if (exit) navigate("/", {replace: true});
-    setIsAdminAccess(false);
+    if (exit) navigate("/");
   };
   /**변경 사항 저장 및 저장 여부 confirm */
   const saveHandler = () => {
