@@ -63,7 +63,7 @@ function Header ({thickness}:IHeader) {
                 </Link>
               </S.NavTitle>
               <S.NavTitle>
-                <Link to="/all/list">
+                <Link to="/freeBoard_free/list">
                   <T.Pretendard17M>COMMUNITY</T.Pretendard17M>
                 </Link>
               </S.NavTitle>

@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import styled from "styled-components";
 import * as G from "../../Global/Spacing/Spacing";
 import * as T from "../../Global/Text/Text";
@@ -11,7 +12,7 @@ interface IFocus {
   focus?:boolean | false;
 }
 
-export const Wrapper = styled.div<IBackgroundImg>`
+export const Wrapper = styled(motion.div)<IBackgroundImg>`
   cursor: pointer;
   width: 290px;
   height: 400px;

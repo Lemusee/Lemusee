@@ -4,7 +4,8 @@ import * as T from "../Text/Text";
 
 interface INavState {
   thickness?:boolean;
-}
+  isDark?:boolean;
+};
 
 export const EmptyBlock = styled(G.Wrapper)`
   height: 80px;

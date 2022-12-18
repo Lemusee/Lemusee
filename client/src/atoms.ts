@@ -175,6 +175,8 @@ export const commentOpenAtom = atom<boolean>({
   default: false,
 });
 
+//admin Atoms
+
 export interface IAdminCurationAtom {
   cardNum?: number;
   title?: string;
@@ -226,3 +228,4 @@ export const adminMemberStateAtom = atom<IAdminMemberState>({
     "어드민 팀": []
   },
 });
+

@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import styled from "styled-components";
 import * as G from "../../Global/Spacing/Spacing";
 import * as T from "../../Global/Text/Text"
@@ -80,14 +81,19 @@ export const nexBtn = styled.button`
   }
 `;
 
-export const CurationListArea = styled.div`
+export const CurationListArea = styled(motion.div)`
+  width: 100%;
+  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  overflow: hidden;
+  height: 400px;
 `;
 
-export const CurationList = styled.div`
+export const CurationList = styled(motion.div)`
+  position: absolute;
   display: flex;
   flex-wrap: nowrap;
   flex-direction: row;
@@ -95,7 +101,7 @@ export const CurationList = styled.div`
   justify-content: flex-start;
   align-items: center;
   width: 1160px;
-  overflow-x: auto;
+  overflow-x: hidden;
   button {
     background-color: transparent;
     padding: 0px;
@@ -109,6 +115,8 @@ export const CurationList = styled.div`
 `;
 
 export const NextCurationBtn = styled.button`
+  position: absolute;
+  right: 0px;
   display: flex;
   align-items: center;
   justify-content: center;

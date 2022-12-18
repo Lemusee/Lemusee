@@ -2,41 +2,97 @@ import * as S from "./SCuration";
 import * as T from "../../Global/Text/Text";
 import CurationListCard from "./CurationListCard";
 import dummyCuration from "../../../assets/dummyData/dummyCurationGET.json";
-import { listenerCount } from "process";
 import React, { ReactElement, useEffect, useState } from "react";
 import { useRecoilState} from "recoil";
 import { curationState } from "../../../atoms";
 import Loading from "../../Global/Loading/Loading";
 import {ReactComponent as NextCurationSVG} from "../../../assets/icons/nextCuration.svg";
+import { motion, AnimatePresence, useScroll } from "framer-motion";
+import styled from "styled-components";
+
+interface ICurationSorted {
+  cardNum: number;
+  title: string;
+  contents: string;
+  imgUrl: string;
+};
+
+const initialData: ICurationSorted[] = [{
+  cardNum: 0,
+  title: "Curation Title",
+  contents : "Curation Contents",
+  imgUrl : ""
+}]
+
+const CardBox = styled(motion.div)``;
+
+const offset = 4;
+
+const rowVariants = {
+  hidden: {
+    x: window.outerWidth + 3,
+    opacity: 0,
+  },
+  visible: {
+    x: 0,
+    opacity: 1,
+  },
+  exit: {
+    x: -window.outerWidth - 3,
+    opacity: 1,
+  },
+};
 
 function Curation () {
-  const curationList = [...dummyCuration.result.items];
-  const curations = curationList.map((list) => {
-    return (
-      {
-        cardNum: list.cardNum,
-        title: list.title,
-        contents : list.contents,
-        imgUrl : list.imgUrl
-      }
-    )
-  });
-  // const curationList = curationFetch.map(list => {return {...list, focus:false}});
+  const [curationList, setCurationList] = useState([...dummyCuration.result.items]);
+  const [curationSorted, setCurationSorted] = useState<ICurationSorted[]>(initialData);
   const [curationInfo, setCurationInfo] = useRecoilState(curationState);
   const [isLoading, setIsLoading] = useState(false);
   const [focus, setFocus] = useState(0);
+  const [index, setIndex] = useState(0);
+  const [leaving, setLeaving] = useState(false);
   useEffect(()=>{
+    setCurationList([...dummyCuration.result.items]);
+    const curations = curationList.map((list) => {
+      return (
+        {
+          cardNum: list.cardNum,
+          title: list.title,
+          contents : list.contents,
+          imgUrl : list.imgUrl
+        }
+      )
+    });
+    setCurationSorted(curations);
     setCurationInfo(curations);
     setIsLoading(true);
   }, []);
-  function onClick (event:React.MouseEvent<HTMLButtonElement>) {
-    setFocus((prev:number) => {
-      if (focus < curationInfo.length-1){
-        return prev+1;
-      } else {
-        return 0;
-      }})
+  const totalCards = curationInfo.length - 1;
+  const extraCard = (totalCards+1) % offset;
+  const maxIndex = Math.floor(totalCards / offset);
+  const onClick = () => {
+    if ((((focus+1) / offset) >= (index+1)) && (maxIndex > index)) {
+      setIndex((prev) => (prev === maxIndex ? 0 : prev+1));
+      setFocus(prev => prev+1);
+    } else {
+      setFocus((prev:number) => {
+        if (focus < totalCards){
+          return prev+1;
+        } else {
+          setIndex(0);
+          return 0;
+        }});
+    };
+    };
+  const toggleLeaving = () => setLeaving(prev => !prev);
+  const increaseIndex = () => {
+    if (curationList) {
+      toggleLeaving();
+      setIndex((prev) => (prev === maxIndex ? 0 : prev+1));
+      setFocus(index == maxIndex ? 0 : (index+1)*offset);
+    }
   };
+
   return (
     <>
       <S.Wrapper>
@@ -62,16 +118,33 @@ function Curation () {
             </S.CurationBoard>
           ) : <Loading/>}
           <S.CurationListArea>
-            <S.CurationList>
-              {isLoading ? (
-                curationInfo.map(list => (
-                  <button onClick={()=>setFocus(list.cardNum)} key={list.cardNum}>
-                    <CurationListCard {...list} key={list.cardNum} focus={focus} />
-                  </button>
-                ))
-              ) : <Loading/>}
-            </S.CurationList>
-            <S.NextCurationBtn onClick={onClick}>
+            <AnimatePresence initial={false} onExitComplete={toggleLeaving}>
+              <S.CurationList
+                key={index}
+                variants={rowVariants}
+                initial="hidden"
+                animate="visible"
+                exit="exit"
+                transition={{type:"tween", duration:0.3}}
+              >
+                {isLoading ? (
+                  curationInfo.slice(offset*index, offset*index + offset).map(list => (
+                    <CardBox
+                      layoutId={list.cardNum+''}
+                      key={list.cardNum}
+                      onClick={()=>setFocus(list.cardNum)} 
+                    >
+                      <CurationListCard 
+                        {...list} 
+                        key={list.cardNum} 
+                        focus={focus}
+                      />
+                    </CardBox>
+                  ))
+                ) : <Loading/>}
+              </S.CurationList>
+            </AnimatePresence>
+            <S.NextCurationBtn onClick={increaseIndex}>
               <NextCurationSVG/>
             </S.NextCurationBtn>
           </S.CurationListArea>

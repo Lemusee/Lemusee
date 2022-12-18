@@ -12,7 +12,6 @@ interface ICurationInfo {
 
 function CurationListCard ({title, contents, imgUrl, cardNum, focus}:ICurationInfo) {
   return (
-    <>
       <S.Wrapper imgUrl={imgUrl} focus={focus===cardNum}>
         <S.Container focus={focus===cardNum}>
           <S.TextBox focus={focus===cardNum}>
@@ -23,7 +22,6 @@ function CurationListCard ({title, contents, imgUrl, cardNum, focus}:ICurationIn
           <T.Pretendard19B>{`CURATION #${cardNum}`}</T.Pretendard19B>
         </S.Container>
       </S.Wrapper>
-    </>
   )
 }
 
