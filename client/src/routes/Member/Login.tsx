@@ -72,7 +72,10 @@ function Login () {
             />
             <span>{errors?.email?.message}</span>
           </S.InputBox>
-          <div></div>
+          <S.AutoLogInInput>
+            <input type="checkbox"></input>
+            <T.Pretendard13R>자동 로그인</T.Pretendard13R>
+          </S.AutoLogInInput>
           <S.InputBox>
             <T.Pretendard13R>Password</T.Pretendard13R>
             <input 

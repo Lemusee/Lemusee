@@ -7,6 +7,8 @@ import { Categories } from "../../../atoms";
 
 
 function VideoCard ({ title, publishedAt, videoURL, thumnailUrl, category } : IVideoItems) {
+  const titles = (title.indexOf('(') !== -1) ? title.split('(') : [title, ')'];
+  const [titleSorted, nameSorted] = [titles[0], titles[1].replace(')', '')];
   const categoryList = {
     self_dev: "자기계발",
     culture_art: "문화예술",
@@ -20,9 +22,9 @@ function VideoCard ({ title, publishedAt, videoURL, thumnailUrl, category } : IV
       <Link to={`/player/${videoURL}`}>
         <S.Wrapper>
           <S.VideoImg thumnailUrl={thumnailUrl}/>
-          <T.Pretendard15M>{title}</T.Pretendard15M>
+          <T.Pretendard15M>{titleSorted}</T.Pretendard15M>
           <S.videoDetailText>
-            <T.Pretendard13R>{"윤창우 연사자"}</T.Pretendard13R>
+            <T.Pretendard13R>{nameSorted}</T.Pretendard13R>
             <T.Pretendard11R>
               <Moment format="YY.MM.DD.">{publishedAt}</Moment>
             </T.Pretendard11R>

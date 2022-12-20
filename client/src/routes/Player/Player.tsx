@@ -11,6 +11,8 @@ function Player () {
   const {videoId} = useParams();
   const comments = [...CommentsData.result.items];
   const videoDetail = {...dummyVideoDetail.result};
+  const titles = (videoDetail.snippet.title.indexOf('(') !== -1) ? videoDetail.snippet.title.split('(') : [videoDetail.snippet.title, ')'];
+  const [titleSorted, nameSorted] = [titles[0], titles[1].replace(')', '')];
   const copy = () => {
     navigator.clipboard.writeText(`https://youtu.be/${videoId}`).then(()=> {alert("링크가 복사되었습니다")});
   };
@@ -24,9 +26,9 @@ function Player () {
       </S.VideoWrapper>
       <S.Wrapper>
         <S.TitleContainer>
-          <T.Pretendard19B>{videoDetail.title}</T.Pretendard19B>
+          <T.Pretendard19B>{titleSorted}</T.Pretendard19B>
           <S.TitleBox>
-            <T.Pretendard13R>{videoDetail.speaker}</T.Pretendard13R>
+            <T.Pretendard13R>{nameSorted}</T.Pretendard13R>
             <button onClick={copy}>
               <T.Pretendard13R>{"공유하기"}</T.Pretendard13R>
             </button>
@@ -36,7 +38,7 @@ function Player () {
       <S.DescriptionWrapper>
         <S.DescriptionContainer>
           <T.Pretendard15R>
-            {videoDetail.description}
+            {videoDetail.snippet.description}
           </T.Pretendard15R>
         </S.DescriptionContainer>
       </S.DescriptionWrapper>

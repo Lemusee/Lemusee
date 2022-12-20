@@ -55,11 +55,28 @@ export const Tag = styled.div<IFocus>`
   }
 `;
 
-export const VerticalBar = styled.div`
-  width: 1px;
-  height: 130px;
+interface ISpacer {
+  height?:number;
+  width?:number;
+};
+
+export const VerticalBar = styled.div<ISpacer>`
+  width: ${props => props.width ? props.width : 1}px;
+  height: ${props=> props.height ? props.height : 130}px;
   flex-grow: 0;
   align-self: center;
   background-color: ${props=>props.theme.lemuseeblack_60};
 `;
 
+export const HorizentalBar = styled.div<ISpacer>`
+  height: ${props => props.height ? props.height : 1}px;
+  width: ${props => props.width ? props.width : 0}px;
+  background-color: ${props=>props.theme.lemuseeblack_60};
+`;
+
+
+export const Spacer = styled.div<ISpacer>`
+  background-color: transparent;
+  height: ${props => props.height ? props.height : 0}px;
+  width: ${props => props.width ? props.width : 0}px;
+`;
