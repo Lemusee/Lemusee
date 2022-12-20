@@ -1,3 +1,8 @@
+import axios from "axios";
+
+
+//======youtube Item apis
+
 // import dotenv from "dotenv";
 // dotenv.config({ path: "../.env", encoding: "utf8" });
 
@@ -12,7 +17,7 @@ const playlistIDs = {
   PLAYLIST_SOCIETY_ID : `PLUxiW-oLdlowIfhNXnjXe7CZRbr2_09PP`,
   PLAYLIST_SCIENCE_ID : `PLUxiW-oLdloxf1adb5EaS5UosufnEUaRL`,
   PLAYLIST_ACTIVITY_ID : `PLUxiW-oLdlowtNuQjr1II556i7wiIaeWs`,
-}
+};
 
 export function fetchChannelInfo(){
   return fetch(`${BASE_URL}/chennels?key=${API_KEY}&id=${CHANNEL_ID}&part=snippet,contentDetails,statistics`).then(response => response.json());
@@ -37,6 +42,50 @@ export function fetchScienceItem(){
 export function fetchVideoDetail(VIDEO_ID:string){
   return fetch(`${BASE_URL}/videos?part=snippet&status=&id=${VIDEO_ID}&key=${API_KEY}`);
 }
+
+//=========================
+
+export interface IJoinBody {
+  name: string;
+  email: string;
+  password: string;
+  birthYear?: number;
+  depaartment?: string;
+  phone?: string;
+  studentId?: string;
+  introduce?: string;
+  team?: string;
+  role?: string;
+  isChief?: boolean;
+};
+
+export function fetchJoin (joinData :IJoinBody){
+  return fetch('/auth/join', {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(joinData),
+  }).then(response => response.json())
+  .catch((error) => console.log(error));
+};
+
+export interface ISignupBody {
+  name: string;
+  password: string;
+  autoSignup: boolean;
+};
+
+export function fetchSignup (signupData: ISignupBody) {
+  return fetch('/auth/signup', {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(signupData),
+  }).then(response => response.json())
+  .catch((error) => console.log(error));
+};
 
 
 

@@ -1,5 +1,5 @@
 import { useRecoilState } from "recoil";
-import { isAdmin, adminCurationAtom } from "../../atoms";
+import { isAdmin, adminCurationAtom, adminExecutiveAtom } from "../../atoms";
 import React, { useEffect, useRef, useState } from "react";
 import Loading from "../../components/Global/Loading/Loading";
 import * as T from "../../components/Global/Text/Text";
@@ -11,14 +11,16 @@ import HomeInfo from "../../components/AdminComponent/HomeInfo";
 import MemberInfo from "../../components/AdminComponent/MemberInfo";
 import FileUpLoader from "../../components/AdminComponent/FilleUpLoader";
 import CurationItem from "../../components/AdminComponent/CurationItem";
-import dummyCuration from "../../assets/dummyData/dummyCurationGET.json";
 import RecruitingForm from "../../components/AdminComponent/RecruitingForm";
 import MemberState from "../../components/AdminComponent/MemberState";
+import dummyCuration from "../../assets/dummyData/dummyCurationGET.json";
+import dummyExecutive from "../../assets/dummyData/dummyExecutiveGET.json";
 
 function Admin () {
   const navigate = useNavigate();
   //초기 데이터
   const [adminCurationData, setAdminCurationData] = useRecoilState(adminCurationAtom);
+  const [adminExecutiveData, setAdminExecutiveData] = useRecoilState(adminExecutiveAtom);
 
   //===============접근 권한 테스트
   const [isAdminAccess, setIsAdminAccess] = useRecoilState(isAdmin);
@@ -113,7 +115,7 @@ function Admin () {
               </S.TitleWrapper>
               <S.TitleWrapper ref={ref_1}>
                 <AdminTitle {...Titles[1]}/>
-                <FileUpLoader/>
+                <FileUpLoader setRecoil={setAdminExecutiveData}/>
               </S.TitleWrapper>
               <S.TitleWrapper ref={ref_2}>
                 <AdminTitle {...Titles[2]}/>

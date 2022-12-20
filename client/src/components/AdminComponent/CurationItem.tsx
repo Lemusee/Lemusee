@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import * as T from "../Global/Text/Text";
 import FileUpLoader from "./FilleUpLoader";
-import { adminCurationAtom, IAdminCurationAtom } from "../../atoms";
+import { adminCurationAtom, IAdminCurationAtom, adminCurationFileAtom } from "../../atoms";
 import { useForm } from "react-hook-form";
 import React, { useState } from "react";
 import { useRecoilState, useSetRecoilState } from "recoil";
@@ -97,7 +97,8 @@ interface IData {
 };
 
 function CurationItem ({index, cardNum, title, contents, imgUrl}:IData) {
-  const { register, handleSubmit, setValue, setError, formState:{errors}, getValues} = useForm<IForm>();
+  const setAdminCurationFileData = useSetRecoilState(adminCurationFileAtom);
+  const { register, handleSubmit, setError, formState:{errors}, getValues} = useForm<IForm>();
   const onValid = (data:IForm) => {
     setError("extraError", {message:"Server offline"});
     const multipleValues = getValues(['title', 'contents']);
@@ -123,7 +124,7 @@ function CurationItem ({index, cardNum, title, contents, imgUrl}:IData) {
         </Title>
         <Content>
           <FileUploaderLayout>
-            <FileUpLoader imgUrlPlaceholder={imgUrl ? imgUrl : undefined} grayscale={85}/>
+            <FileUpLoader imgUrlPlaceholder={imgUrl ? imgUrl : undefined} grayscale={85} setRecoil={setAdminCurationFileData} />
           </FileUploaderLayout>
           <Form onSubmit={handleSubmit(onValid)}>
             <input 

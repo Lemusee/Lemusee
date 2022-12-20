@@ -177,6 +177,20 @@ export const commentOpenAtom = atom<boolean>({
 
 //admin Atoms
 
+export interface IAdminFileUploadereAtom {
+  imgFile?: File;
+};
+
+export const adminExecutiveAtom = atom<IAdminFileUploadereAtom[]>({
+  key:`userState/${v1()}`,
+  default: []
+});
+
+export const adminCurationFileAtom = atom<IAdminFileUploadereAtom[]>({
+  key:`userState/${v1()}`,
+  default: []
+});
+
 export interface IAdminCurationAtom {
   cardNum?: number;
   title?: string;

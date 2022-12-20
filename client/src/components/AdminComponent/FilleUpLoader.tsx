@@ -2,6 +2,10 @@ import styled from "styled-components";
 import React, { useState } from "react";
 import { FileUploader } from "react-drag-drop-files";
 import * as T from "../Global/Text/Text";
+import { SetterOrUpdater } from "recoil";
+import { IAdminFileUploadereAtom } from "../../atoms";
+
+type SetRecoilAtom = SetterOrUpdater<IAdminFileUploadereAtom[]>;
 
 const fileTypes = ["JPG", "PNG", "GIF"];
 
@@ -69,15 +73,17 @@ const FileUploaderForm = styled.div`
 interface IPlaceholder {
   imgUrlPlaceholder?: string;
   grayscale?:number;
+  setRecoil: SetRecoilAtom;
 };
 
-function FileUpLoader({imgUrlPlaceholder, grayscale}:IPlaceholder) {
+function FileUpLoader({imgUrlPlaceholder, grayscale, setRecoil}:IPlaceholder) {
   const [imgFile, setImgFile] = useState(null);
   const [imgURL, setImgURL] = useState<string | undefined>(imgUrlPlaceholder);
   const handleChange = (file:any) => {
     setImgFile(file);
     const url = URL.createObjectURL(file);
     setImgURL(url);
+    setRecoil(prev => [...prev, file]);
   };
   return (
     <>
