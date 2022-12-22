@@ -3,6 +3,7 @@ import styled from "styled-components";
 import React from "react";
 import { useSetRecoilState } from "recoil";
 import { adminMemberStateAtom } from "../../../../atoms";
+import { IDraggableCardProps } from "../../../../Types";
 
 const Card = styled.div<{isDragging: boolean}>`
   background-color: ${props => props.isDragging ? props.theme.lemuseeblack_30 : props.theme.lemuseeblack_00};
@@ -28,12 +29,6 @@ const DeleteBtn = styled.button`
   cursor: pointer;
 `;
 
-interface IDraggableCardProps {
-  itemId:number;
-  itemText:string;
-  index:number;
-  boardId:string;
-}
 
 function DraggableCard ({itemId, index, itemText, boardId}:IDraggableCardProps) {
   const setMemberstate = useSetRecoilState(adminMemberStateAtom);

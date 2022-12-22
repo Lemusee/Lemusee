@@ -5,6 +5,7 @@ import { adminRecruitingAtom } from "../../../../atoms";
 import dummyRecruitingData from "../../../../assets/dummyData/dummyRecruitment.json";
 import { useForm } from "react-hook-form";
 import * as T from "../../../../GlobalComponents/Text/Text";
+import { IRecruitingForm } from "../../../../Types";
 
 const Form = styled.form`
   width: 100%;
@@ -59,22 +60,14 @@ const FormTextarea = styled.textarea`
   overflow: auto;
 `;
 
-interface IForm {
-  extraError: string;
-  recruitment_link?: string;
-  inquiry?: string;
-  due_at?:string;
-  content?: string;
-};
-
 function RecruitingForm () {
   const [recruitingData, setRecruitingData] = useRecoilState(adminRecruitingAtom);
   useEffect(()=> {
     const data = {...dummyRecruitingData.result};
     setRecruitingData(data);
   }, []);
-  const { register, handleSubmit, setError, formState:{errors}, getValues} = useForm<IForm>();
-  const onValid = (data:IForm) => {
+  const { register, handleSubmit, setError, formState:{errors}, getValues} = useForm<IRecruitingForm>();
+  const onValid = (data:IRecruitingForm) => {
     setError("extraError", {message:"Server offline"});
     const multipleValues = getValues(['recruitment_link', 'inquiry', 'due_at', 'content']);
     console.log(multipleValues);

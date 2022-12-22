@@ -3,6 +3,7 @@ import styled from "styled-components";
 import dummyHomeInfo from "../../../../assets/dummyData/dummyHomeInfo.json";
 import Loading from "../../../../GlobalComponents/Loading/Loading";
 import * as T from "../../../../GlobalComponents/Text/Text";
+import { IVisitorInfoData } from "../../../../Types";
 
 const Wrapper = styled.div`
   width: 100%;
@@ -24,16 +25,10 @@ const Num = styled.div`
   };
 `;
 
-interface IData {
-  visitorThisMonth?: number;
-  visitorThisWeek?: number;
-  visitorThisDay?: number;
-  visitorAccumulated?: number;
-};
 
 function HomeInfo () {
   const [isLoading, setIsLoading] = useState<boolean>(true);
-  const [homeInfoData, setHomeInfoData] = useState<IData>({});
+  const [homeInfoData, setHomeInfoData] = useState<IVisitorInfoData>({});
   useEffect(() => {
     setHomeInfoData(dummyHomeInfo.result);
     setIsLoading(false);

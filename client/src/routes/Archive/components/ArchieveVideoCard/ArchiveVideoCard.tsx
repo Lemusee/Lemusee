@@ -3,7 +3,6 @@ import * as T from "../../../../GlobalComponents/Text/Text";
 import { IVideoItems } from "../../../../atoms";
 import Moment from "react-moment";
 import { Link } from "react-router-dom";
-import { Categories } from "../../../../atoms";
 
 
 function VideoCard ({ title, publishedAt, videoURL, thumnailUrl, category } : IVideoItems) {

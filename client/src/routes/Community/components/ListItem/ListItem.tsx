@@ -4,14 +4,7 @@ import * as T from "../../../../GlobalComponents/Text/Text";
 import Moment from "react-moment";
 import { contentTitleAtom } from "../../../../atoms";
 import { useSetRecoilState } from "recoil";
-
-export interface IItem {
-    id: number;
-    title : string;
-    preview : string;
-    writer : string;
-    updatedAt : string;
-};
+import { ICommunityListItem } from "../../../../Types";
 
 const Wrapper = styled.div`
   width: 100%;
@@ -53,7 +46,7 @@ const Content = styled.div`
   gap: 10px;
 `;
 
-function ListItem ({id, updatedAt, title, preview, writer}:IItem) {
+function ListItem ({id, updatedAt, title, preview, writer}:ICommunityListItem) {
   const pageParam = useParams();
   const setContentTitle = useSetRecoilState(contentTitleAtom);
 

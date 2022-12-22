@@ -3,8 +3,8 @@ import * as T from "../../../../GlobalComponents/Text/Text";
 import FileUpLoader from "../FileUpLoader/FilleUpLoader";
 import { adminCurationAtom, IAdminCurationAtom, adminCurationFileAtom } from "../../../../atoms";
 import { useForm } from "react-hook-form";
-import React, { useState } from "react";
 import { useRecoilState, useSetRecoilState } from "recoil";
+import { ICurationItemForm, ICurationItemData } from "../../../../Types";
 
 const Wrapper = styled.div`
   width: 100%;
@@ -81,25 +81,10 @@ const Form = styled.form`
   };
 `;
 
-interface IForm {
-  extraError: string;
-  title?: string;
-  contents?: string;
-  imgUrl?:string;
-};
-
-interface IData {
-  index:number;
-  cardNum?: number;
-  title?: string;
-  contents?: string;
-  imgUrl?: string;
-};
-
-function CurationItem ({index, cardNum, title, contents, imgUrl}:IData) {
+function CurationItem ({index, cardNum, title, contents, imgUrl}:ICurationItemData) {
   const setAdminCurationFileData = useSetRecoilState(adminCurationFileAtom);
-  const { register, handleSubmit, setError, formState:{errors}, getValues} = useForm<IForm>();
-  const onValid = (data:IForm) => {
+  const { register, handleSubmit, setError, formState:{errors}, getValues} = useForm<ICurationItemForm>();
+  const onValid = (data:ICurationItemForm) => {
     setError("extraError", {message:"Server offline"});
     const multipleValues = getValues(['title', 'contents']);
     console.log(multipleValues);

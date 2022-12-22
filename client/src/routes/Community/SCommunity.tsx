@@ -48,3 +48,54 @@ export const ListTitle = styled.div`
     color: ${props=>props.theme.lemuseeblack_50};
   }
 `;
+
+export const UpperArea = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+`;
+
+export const Title = styled(T.Pretendard24B)`
+  color: ${props=>props.theme.lemuseeblack_50};
+`;
+
+export const SubTitle = styled(T.Pretendard24B)`
+  color: ${props=>props.theme.lemuseeblack_100};
+  max-width: 540px;
+  white-space: no-wrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border-radius: 5px;
+  padding: 0 3px;
+  &:hover {
+    background-color: ${props=> props.theme.lemuseeblack_30};
+  };
+  &:active {
+    background-color: ${props=>props.theme.lemuseeblack_50};
+  }
+`;
+
+export const ContentTitleArea = styled.div`
+  display: flex;
+  flex-direction: row;
+`;
+
+export const ContentTitle = styled(T.Pretendard24B)`
+  color: ${props=>props.theme.lemuseeblack_100};
+  max-width: 350px;
+  max-height: 30px;
+  white-space: no-wrap;
+  overflow: hidden;
+`;
+
+export const TitleArea = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 10px;
+`;
+
+export const AddBtn = styled.button``;

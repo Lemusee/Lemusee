@@ -3,6 +3,7 @@ import styled from "styled-components";
 import dummyMemberInfo from "../../../../assets/dummyData/dummyMemberInfo.json";
 import Loading from "../../../../GlobalComponents/Loading/Loading";
 import * as T from "../../../../GlobalComponents/Text/Text";
+import { IMemberInfoData } from "../../../../Types";
 
 const Wrapper = styled.div`
   width: 100%;
@@ -24,16 +25,9 @@ const Num = styled.div`
   };
 `;
 
-interface IData {
-  memberActiveThisSemester?: number;
-  memberInactive?: number;
-  memberGraduated?: number;
-  memberTotal?: number;
-};
-
 function MemberInfo () {
   const [isLoading, setIsLoading] = useState<boolean>(true);
-  const [MemberInfoData, setMemberInfoData] = useState<IData>({});
+  const [MemberInfoData, setMemberInfoData] = useState<IMemberInfoData>({});
   useEffect(() => {
     setMemberInfoData(dummyMemberInfo.result);
     setIsLoading(false);

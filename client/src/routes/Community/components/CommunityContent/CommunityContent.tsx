@@ -8,29 +8,12 @@ import * as T from "../../../../GlobalComponents/Text/Text";
 import Loading from "../../../../GlobalComponents/Loading/Loading";
 import Moment from "react-moment";
 import Comment from "../Comment/Comment";
-import {ReactComponent as AddNewSVG} from "../../../assets/icons/add_new.svg";
+import {ReactComponent as AddNewSVG} from "../../../../assets/icons/add_new.svg";
 import NewCommentForm from "../NewCommentForm/NewCommentForm";
 import * as DOMPurify from 'dompurify';
 import "./CommunityContent.css";
+import { IContent } from "../../../../Types";
 
-interface IComment {
-  id: number;
-  userId : number;
-  writer : string;
-  content : string;
-  updatedAt : string;
-};
-
-interface IContent {
-  id: number;
-  communityTitleId: string;
-  title: string;
-  updatedAt: string;
-  userId: number;
-  writer: string;
-  content: string;
-  comments: IComment[];
-};
 
 const Wrapper = styled(G.Wrapper)`
   flex-direction: column;

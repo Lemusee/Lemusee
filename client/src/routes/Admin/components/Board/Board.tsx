@@ -1,10 +1,8 @@
-import { useForm } from "react-hook-form";
 import {Droppable} from "react-beautiful-dnd";
 import DraggableCard from "../DraggableCard/DraggableCard";
 import styled from "styled-components";
-import { adminMemberStateAtom, IAdminMember } from "../../../../atoms";
-import { useSetRecoilState } from "recoil";
 import * as T from "../../../../GlobalComponents/Text/Text";
+import { IAreaProps, IBoardProps } from "../../../../Types";
 
 
 const Wrapper = styled.div`
@@ -21,11 +19,6 @@ const Wrapper = styled.div`
   };
 `;
 
-interface IAreaProps {
-  isDraggingOver:boolean;
-  isDraggingFromThis:boolean;
-};
-
 const Area = styled.div<IAreaProps>`
   background-color: ${props => props.isDraggingOver ? props.theme.lemuseeblack_50 : props.isDraggingFromThis ? props.theme.lemuseeblack_40 : "transparent"};
   flex-grow: 1;
@@ -38,10 +31,6 @@ const Area = styled.div<IAreaProps>`
   padding: 10px 25px 20px 25px;
 `;
 
-interface IBoardProps {
-  items:IAdminMember[];
-  boardId: string;
-};
 
 function Board ({items, boardId}:IBoardProps) {
   return (

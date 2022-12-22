@@ -4,20 +4,10 @@ import styled from "styled-components";
 import * as G from "../../../../GlobalComponents/Spacing/Spacing";
 import * as T from "../../../../GlobalComponents/Text/Text";
 import Moment from "react-moment";
+import { IComment, IisMine } from "../../../../Types";
 
-interface IComment {
-  id : number;
-  userId : number;
-  writer : string;
-  content : string;
-  updatedAt : string;
-};
 
-interface isMine {
-  isMine: boolean;
-}
-
-const Wrapper = styled(G.Wrapper)<isMine>`
+const Wrapper = styled(G.Wrapper)<IisMine>`
   width: 100%;
   padding: 15px 5px;
   display: flex;

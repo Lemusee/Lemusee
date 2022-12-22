@@ -4,20 +4,13 @@ import styled from "styled-components";
 import * as T from "../../../../GlobalComponents/Text/Text";
 import { communityPageIndex, communityCategoryState, communitypagenationIndex } from "../../../../atoms";
 import dummyList from "../../../../assets/dummyData/dummyCommunityListData.json";
-import ListItem, {IItem} from "../ListItem/ListItem";
+import ListItem from "../ListItem/ListItem";
 import Loading from "../../../../GlobalComponents/Loading/Loading";
 import { AnimatePresence, motion } from "framer-motion";
-import {ReactComponent as NextBtnSVG} from "../../../assets/icons/next_pagenation.svg";
-import {ReactComponent as PrevBtnSVG} from "../../../assets/icons/prev_pagenation.svg";
+import {ReactComponent as NextBtnSVG} from "../../../../assets/icons/next_pagenation.svg";
+import {ReactComponent as PrevBtnSVG} from "../../../../assets/icons/prev_pagenation.svg";
 import { Link, useParams } from "react-router-dom";
-
-interface ICategories {
-  title?:string;
-  subtitle:{
-      name?:string;
-      index:number;
-    }[]
-};
+import { IisSelected, ICommunityListItem } from "../../../../Types";
 
 const Wrapper = styled.div`
   width: 100%;
@@ -43,11 +36,7 @@ const PagenationArea = styled.div`
   gap: 10px;
 `;
 
-interface isSelected {
-  isSelected?:boolean;
-};
-
-const PagenationBtn = styled.button<isSelected>`
+const PagenationBtn = styled.button<IisSelected>`
   width: 23px;
   height: 24px;
   display: flex;
@@ -69,7 +58,6 @@ const PagenationNumArea = styled.div`
 `;
 
 const OFFSET = 10;
-const pageOffset = 10;
 
 const rowVariants = {
   prev: (back:boolean) => ({
@@ -93,7 +81,7 @@ function CommunityList () {
   const pageParam = useParams();
 
   //data fetched & is loading
-  const [listData, setListData] = useState<IItem[]>([]);
+  const [listData, setListData] = useState<ICommunityListItem[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
   const [index, setIndex] = useRecoilState(communitypagenationIndex); //page index

@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import * as T from "../../../../GlobalComponents/Text/Text";
+import { IAdminChaptorTitle } from "../../../../Types";
 
 const Title = styled.div`
   display: flex;
@@ -18,12 +19,7 @@ const Bar = styled.div`
   background-color: ${props=>props.theme.lemuseeblack_70};
 `;
 
-interface ITitle {
-  title?:string;
-  subtitle?:string;
-};
-
-function AdminTitle (data:ITitle) {
+function AdminTitle (data:IAdminChaptorTitle) {
   return (
     <>
       <Title>
