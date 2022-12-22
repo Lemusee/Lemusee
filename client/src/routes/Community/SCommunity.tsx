@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import styled from "styled-components";
-import * as G from "../../components/Global/Spacing/Spacing";
-import * as T from "../../components/Global/Text/Text";
+import * as G from "../../GlobalComponents/Spacing/Spacing";
+import * as T from "../../GlobalComponents/Text/Text";
 
 export const Wrapper = styled(G.Wrapper)``;
 

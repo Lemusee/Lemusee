@@ -1,12 +1,12 @@
 import * as S from "./SPersonal";
-import * as T from "../../components/Global/Text/Text";
+import * as T from "../../GlobalComponents/Text/Text";
 import PersonalData from "../../assets/dummyData/dummyPersonalInfo.json";
 import React, { useEffect, useRef, useState } from "react";
-import PrevPageBtn from "../../components/Global/Buttons/PrevPageBtn";
+import PrevPageBtn from "../../GlobalComponents/Buttons/PrevPageBtn";
 import Moment from "react-moment";
 import { useRecoilValue } from "recoil";
 import { isLoggedInAtom } from "../../atoms";
-import Loading from "../../components/Global/Loading/Loading";
+import Loading from "../../GlobalComponents/Loading/Loading";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 
@@ -65,7 +65,7 @@ function Personal () {
       window.alert("로그인 해주세요");
       navigate(-1);
     };
-  },[]);
+  },[isLogedIn, navigate]);
   useEffect(()=> {
     if (copyData?.team === null) {
       setTeamView("비활동 회원")

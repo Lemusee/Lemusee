@@ -1,7 +1,7 @@
 import * as S from "./SMembers";
-import * as T from "../../components/Global/Text/Text";
+import * as T from "../../GlobalComponents/Text/Text";
 import { Outlet, Link } from "react-router-dom";
-import HomeBtn from "../../components/Global/Buttons/HomeBtn";
+import HomeBtn from "../../GlobalComponents/Buttons/HomeBtn";
 
 function Members () {
   return (

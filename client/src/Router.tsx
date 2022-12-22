@@ -3,20 +3,20 @@ import AboutUs from "./routes/AboutUs/AboutUs";
 import Admin from "./routes/Admin/Admin";
 import Archive from "./routes/Archive/Archive";
 import Community from "./routes/Community/Community";
-import CommunityContent from "./routes/Community/CommunityContent";
-import CommunityList from "./routes/Community/CommunityList";
+import CommunityContent from "./routes/Community/components/CommunityContent";
+import CommunityList from "./routes/Community/components/CommunityList";
 import Editor from "./routes/Editor/Editor";
 import Home from "./routes/Home/Home";
-import Login from "./routes/Member/Login";
-import SignUp1 from "./routes/Member/SignUp1";
+import Login from "./routes/Member/components/Login";
+import SignUp1 from "./routes/Member/components/SignUp1";
 import Members from "./routes/Member/Members";
 import Personal from "./routes/Personal/Personal";
 import Player from "./routes/Player/Player";
-import SignUp2 from "./routes/Member/SignUp2";
-import FindAccount from "./routes/Member/FindAccount";
-import ResetPassword from "./routes/Member/ResetPassword";
+import SignUp2 from "./routes/Member/components/SignUp2";
+import FindAccount from "./routes/Member/components/FindAccount";
+import ResetPassword from "./routes/Member/components/ResetPassword";
 import Recruitment from "./routes/Recruitment/Recruitment";
-import Loading from "./components/Global/Loading/Loading";
+import Loading from "./GlobalComponents/Loading/Loading";
 
 function Router(){
   return (

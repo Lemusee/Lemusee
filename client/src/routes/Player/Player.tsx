@@ -1,10 +1,10 @@
-import Header from "../../components/Global/Header/Header";
+import Header from "../../GlobalComponents/Header/Header";
 import * as S from "./SPlayer";
-import * as T from "../../components/Global/Text/Text";
+import * as T from "../../GlobalComponents/Text/Text";
 import { useParams } from "react-router-dom";
-import Footer from "../../components/Global/Footer/Footer";
+import Footer from "../../GlobalComponents/Footer/Footer";
 import CommentsData from "../../assets/dummyData/dummyComments.json";
-import CommentsCard from "../../components/PlayerComponents/CommentsCard";
+import CommentsCard from "./components/CommentsCard";
 import dummyVideoDetail from "../../assets/dummyData/dummyVideoDetail.json";
 
 function Player () {

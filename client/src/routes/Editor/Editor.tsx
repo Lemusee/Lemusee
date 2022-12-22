@@ -1,14 +1,14 @@
 import { useRecoilState, useRecoilValue } from "recoil";
 import { communityCategoryTitleAtom, communityCategorySubTitleAtom, communityPageIndex, contentTitleAtom, newContentTitleAtom } from "../../atoms";
 import styled from "styled-components";
-import * as T from "../../components/Global/Text/Text";
-import * as G from "../../components/Global/Spacing/Spacing";
+import * as T from "../../GlobalComponents/Text/Text";
+import * as G from "../../GlobalComponents/Spacing/Spacing";
 import ReactQuill, { Quill } from "react-quill";
 import "react-quill/dist/quill.snow.css";
 import React, { useRef, useState, useMemo } from "react";
 import "./Editor.css";
 import { useNavigate } from "react-router-dom";
-import NextBtn from "../../components/Global/Buttons/NextBtn";
+import NextBtn from "../../GlobalComponents/Buttons/NextBtn";
 
 const Container = styled(G.Container)`
   align-items: center;

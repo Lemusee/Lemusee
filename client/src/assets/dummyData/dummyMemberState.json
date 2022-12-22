@@ -15,7 +15,7 @@
       "nickname": "김민기",
       "role": "user",
       "team": "content",
-      "isChief": true
+      "isChief": false
     },
     {
       "id": 3,
@@ -247,6 +247,13 @@
       "role": "user",
       "team": "admin",
       "isChief": false
+    },
+    {
+      "id": 36,
+      "nickname": "차현주",
+      "role": "user",
+      "team": "content",
+      "isChief": true
     }
   ]
 }

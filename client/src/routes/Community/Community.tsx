@@ -1,16 +1,16 @@
-import Header from "../../components/Global/Header/Header";
+import Header from "../../GlobalComponents/Header/Header";
 import styled from "styled-components";
 import * as S from "./SCommunity";
-import * as G from "../../components/Global/Spacing/Spacing";
-import * as T from "../../components/Global/Text/Text";
-import CommunityCategory from "../../components/CommunityComponents/Category";
+import * as G from "../../GlobalComponents/Spacing/Spacing";
+import * as T from "../../GlobalComponents/Text/Text";
+import CommunityCategory from "./components/Category";
 import CommunityCategories from "../../assets/dummyData/dummyCommunityCategories.json";
 import { useEffect, useState } from "react";
-import Loading from "../../components/Global/Loading/Loading";
+import Loading from "../../GlobalComponents/Loading/Loading";
 import { Link, Outlet, useNavigate, useParams } from "react-router-dom";
 import { useSetRecoilState, useRecoilState, useRecoilValue } from "recoil";
 import { communityCategoryState, communityPageIndex, communitypagenationIndex, contentTitleAtom, isLoggedInAtom, communityCategoryTitleAtom, communityCategorySubTitleAtom } from "../../atoms";
-import Footer from "../../components/Global/Footer/Footer";
+import Footer from "../../GlobalComponents/Footer/Footer";
 
 interface ICategoriesData {
   title?:string;
@@ -136,7 +136,7 @@ function Community () {
     setCategory(sortedData);
     setCategoryState(sortedData);
     setIsLoading(false);
-  },[]);
+  },[setCategoryState]);
 
   useEffect(()=>{
     if (categoryState && (indexState !== undefined)) {
@@ -147,7 +147,7 @@ function Community () {
         setTitle(categoryObj.title as string);
       }
     }
-  },[categoryState, indexState, pageId]);
+  },[categoryState, indexState, pageId, setSubTitle, setTitle]);
 
   return (
     <>

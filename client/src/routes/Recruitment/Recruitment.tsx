@@ -1,5 +1,5 @@
-import Header from "../../components/Global/Header/Header";
-import * as T from "../../components/Global/Text/Text";
+import Header from "../../GlobalComponents/Header/Header";
+import * as T from "../../GlobalComponents/Text/Text";
 import * as S from "./SRecruitment";
 
 function Recruitment () {

@@ -1,18 +1,18 @@
 import { useRecoilState } from "recoil";
 import { isAdmin, adminCurationAtom, adminExecutiveAtom } from "../../atoms";
 import React, { useEffect, useRef, useState } from "react";
-import Loading from "../../components/Global/Loading/Loading";
-import * as T from "../../components/Global/Text/Text";
+import Loading from "../../GlobalComponents/Loading/Loading";
+import * as T from "../../GlobalComponents/Text/Text";
 import * as S from "./SAdmin";
 import { useNavigate } from "react-router-dom";
 import Titles from "../../assets/StaticData/AdminTitle.json";
-import AdminTitle from "../../components/AdminComponent/AdminTitle";
-import HomeInfo from "../../components/AdminComponent/HomeInfo";
-import MemberInfo from "../../components/AdminComponent/MemberInfo";
-import FileUpLoader from "../../components/AdminComponent/FilleUpLoader";
-import CurationItem from "../../components/AdminComponent/CurationItem";
-import RecruitingForm from "../../components/AdminComponent/RecruitingForm";
-import MemberState from "../../components/AdminComponent/MemberState";
+import AdminTitle from "./components/AdminTitle/AdminTitle";
+import HomeInfo from "./components/HomeInfo/HomeInfo";
+import MemberInfo from "./components/MemberInfo/MemberInfo";
+import FileUpLoader from "./components/FileUpLoader/FilleUpLoader";
+import CurationItem from "./components/CurationItem/CurationItem";
+import RecruitingForm from "./components/RecruitungForm/RecruitingForm";
+import MemberState from "./components/MemberState/MemberState";
 import dummyCuration from "../../assets/dummyData/dummyCurationGET.json";
 import dummyExecutive from "../../assets/dummyData/dummyExecutiveGET.json";
 

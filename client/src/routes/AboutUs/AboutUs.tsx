@@ -1,8 +1,8 @@
-import Header from "../../components/Global/Header/Header";
-import Footer from "../../components/Global/Footer/Footer";
-import * as T from "../../components/Global/Text/Text";
+import Header from "../../GlobalComponents/Header/Header";
+import Footer from "../../GlobalComponents/Footer/Footer";
+import * as T from "../../GlobalComponents/Text/Text";
 import * as S from "./SAboutUs";
-import * as G from "../../components/Global/Spacing/Spacing";
+import * as G from "../../GlobalComponents/Spacing/Spacing";
 import {ReactComponent as Logo} from "../../assets/icons/logo.svg";
 
 function AboutUs () {

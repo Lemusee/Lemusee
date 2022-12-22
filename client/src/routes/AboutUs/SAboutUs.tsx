@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import imgUrls from "../../assets/StaticData/AboutUs.json";
-import * as T from "../../components/Global/Text/Text";
+import * as T from "../../GlobalComponents/Text/Text";
 
 export const Wrapper = styled.div`
   width: 100vw;
