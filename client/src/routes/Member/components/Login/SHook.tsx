@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import * as G from "../../../GlobalComponents/Spacing/Spacing";
-import * as T from "../../../GlobalComponents/Text/Text"; 
+import * as G from "../../../../GlobalComponents/Spacing/Spacing";
+import * as T from "../../../../GlobalComponents/Text/Text"; 
 
 export const hookGrid = styled.div`
   width: 510px;

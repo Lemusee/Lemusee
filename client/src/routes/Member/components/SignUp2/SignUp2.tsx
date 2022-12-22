@@ -1,10 +1,10 @@
-import * as S from "./SHook";
-import * as T from "../../../GlobalComponents/Text/Text";
-import NextBtn from "../../../GlobalComponents/Buttons/NextBtn";
+import * as S from "../Login/SHook";
+import * as T from "../../../../GlobalComponents/Text/Text";
+import NextBtn from "../../../../GlobalComponents/Buttons/NextBtn";
 import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { useRecoilState } from "recoil";
-import { Certification } from "../../../atoms";
+import { Certification } from "../../../../atoms";
 
 interface IForm {
   extraError: string;

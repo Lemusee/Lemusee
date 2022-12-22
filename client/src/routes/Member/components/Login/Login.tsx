@@ -1,13 +1,13 @@
 import * as S from "./SHook";
-import * as T from "../../../GlobalComponents/Text/Text";
-import NextBtn from "../../../GlobalComponents/Buttons/NextBtn";
-import SubNextBtn from "../../../GlobalComponents/Buttons/SubNextBtn";
+import * as T from "../../../../GlobalComponents/Text/Text";
+import NextBtn from "../../../../GlobalComponents/Buttons/NextBtn";
+import SubNextBtn from "../../../../GlobalComponents/Buttons/SubNextBtn";
 import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { useRecoilState, useSetRecoilState } from "recoil";
-import { isAdmin, isLoggedInAtom, myUserIdAtom } from "../../../atoms";
-import dummyLogInResponse from "../../../assets/dummyData/dummyLogInResponse.json";
-import dummyPersonalInfo from "../../../assets/dummyData/dummyPersonalInfo.json";
+import { isAdmin, isLoggedInAtom, myUserIdAtom } from "../../../../atoms";
+import dummyLogInResponse from "../../../../assets/dummyData/dummyLogInResponse.json";
+import dummyPersonalInfo from "../../../../assets/dummyData/dummyPersonalInfo.json";
 import { useState } from "react";
 
 interface IForm {

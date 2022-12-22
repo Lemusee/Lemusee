@@ -4,7 +4,7 @@ import * as T from "../../GlobalComponents/Text/Text";
 import { useParams } from "react-router-dom";
 import Footer from "../../GlobalComponents/Footer/Footer";
 import CommentsData from "../../assets/dummyData/dummyComments.json";
-import CommentsCard from "./components/CommentsCard";
+import CommentsCard from "./components/CommentsCard/CommentsCard";
 import dummyVideoDetail from "../../assets/dummyData/dummyVideoDetail.json";
 
 function Player () {

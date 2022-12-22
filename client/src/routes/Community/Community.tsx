@@ -3,7 +3,7 @@ import styled from "styled-components";
 import * as S from "./SCommunity";
 import * as G from "../../GlobalComponents/Spacing/Spacing";
 import * as T from "../../GlobalComponents/Text/Text";
-import CommunityCategory from "./components/Category";
+import CommunityCategory from "./components/Category/Category";
 import CommunityCategories from "../../assets/dummyData/dummyCommunityCategories.json";
 import { useEffect, useState } from "react";
 import Loading from "../../GlobalComponents/Loading/Loading";

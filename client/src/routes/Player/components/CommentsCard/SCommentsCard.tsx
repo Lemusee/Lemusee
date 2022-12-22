@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import * as T from "../../../GlobalComponents/Text/Text";
-import * as G from "../../../GlobalComponents/Spacing/Spacing";
+import * as T from "../../../../GlobalComponents/Text/Text";
+import * as G from "../../../../GlobalComponents/Spacing/Spacing";
 
 export const Wrapper = styled.button`
   width: 100%;

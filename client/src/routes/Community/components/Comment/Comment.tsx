@@ -1,8 +1,8 @@
 import { useRecoilValue } from "recoil";
-import { myUserIdAtom, isLoggedInAtom } from "../../../atoms";
+import { myUserIdAtom, isLoggedInAtom } from "../../../../atoms";
 import styled from "styled-components";
-import * as G from "../../../GlobalComponents/Spacing/Spacing";
-import * as T from "../../../GlobalComponents/Text/Text";
+import * as G from "../../../../GlobalComponents/Spacing/Spacing";
+import * as T from "../../../../GlobalComponents/Text/Text";
 import Moment from "react-moment";
 
 interface IComment {

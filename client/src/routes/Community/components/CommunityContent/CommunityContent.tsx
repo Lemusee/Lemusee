@@ -1,15 +1,15 @@
 import { useEffect, useState } from "react";
 import { useRecoilState, useRecoilValue } from "recoil";
-import contentData from "../../../assets/dummyData/dummyCommunityContent.json";
-import { isLoggedInAtom, myUserIdAtom, commentOpenAtom } from "../../../atoms";
+import contentData from "../../../../assets/dummyData/dummyCommunityContent.json";
+import { isLoggedInAtom, myUserIdAtom, commentOpenAtom } from "../../../../atoms";
 import styled from "styled-components";
-import * as G from "../../../GlobalComponents/Spacing/Spacing";
-import * as T from "../../../GlobalComponents/Text/Text";
-import Loading from "../../../GlobalComponents/Loading/Loading";
+import * as G from "../../../../GlobalComponents/Spacing/Spacing";
+import * as T from "../../../../GlobalComponents/Text/Text";
+import Loading from "../../../../GlobalComponents/Loading/Loading";
 import Moment from "react-moment";
-import Comment from "./Comment";
+import Comment from "../Comment/Comment";
 import {ReactComponent as AddNewSVG} from "../../../assets/icons/add_new.svg";
-import NewCommentForm from "./NewCommentForm";
+import NewCommentForm from "../NewCommentForm/NewCommentForm";
 import * as DOMPurify from 'dompurify';
 import "./CommunityContent.css";
 

@@ -1,5 +1,5 @@
 import * as S from "./SCommentsCard";
-import * as T from "../../../GlobalComponents/Text/Text";
+import * as T from "../../../../GlobalComponents/Text/Text";
 import Moment from "react-moment";
 import 'moment/locale/ko';
 

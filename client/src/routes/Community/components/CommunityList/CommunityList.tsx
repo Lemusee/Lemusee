@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import { useRecoilState, useRecoilValue } from "recoil";
 import styled from "styled-components";
-import * as T from "../../../GlobalComponents/Text/Text";
-import { communityPageIndex, communityCategoryState, communitypagenationIndex } from "../../../atoms";
-import dummyList from "../../../assets/dummyData/dummyCommunityListData.json";
-import ListItem, {IItem} from "./ListItem";
-import Loading from "../../../GlobalComponents/Loading/Loading";
+import * as T from "../../../../GlobalComponents/Text/Text";
+import { communityPageIndex, communityCategoryState, communitypagenationIndex } from "../../../../atoms";
+import dummyList from "../../../../assets/dummyData/dummyCommunityListData.json";
+import ListItem, {IItem} from "../ListItem/ListItem";
+import Loading from "../../../../GlobalComponents/Loading/Loading";
 import { AnimatePresence, motion } from "framer-motion";
 import {ReactComponent as NextBtnSVG} from "../../../assets/icons/next_pagenation.svg";
 import {ReactComponent as PrevBtnSVG} from "../../../assets/icons/prev_pagenation.svg";
