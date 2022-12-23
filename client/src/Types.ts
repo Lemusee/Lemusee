@@ -1,6 +1,17 @@
 import { SetterOrUpdater } from "recoil";
 import { IAdminFileUploadereAtom } from "./atoms";
 
+export enum Categories {
+  "self_dev"="self_dev",
+  "culture_art"="culture_art",
+  "humanities_society"="humanities_society",
+  "science_tech"="science_tech",
+  "activity"="activity",
+  "etc"="etc",
+};
+
+
+
 //Community Page
 export interface ICategoriesData {
   title?:string;
@@ -163,3 +174,170 @@ export interface IDraggableCardProps {
 };
 
 //Archieve
+
+export interface IVideoItems {
+  id: string;
+  playlistId : string;
+  publishedAt : string;
+  title: string;
+  description: string;
+  thumnailUrl: string | undefined;
+  videoURL: string;
+  category: Categories;
+};
+
+export interface IThumnailUrl {
+  thumnailUrl?:string;
+};
+
+export interface ISearchFocus {
+  focus?:boolean;
+};
+
+
+//Community
+
+export interface INewComment {
+  userId:number;
+};
+
+//Home
+
+export interface IHomeCurationSorted {
+  cardNum: number;
+  title: string;
+  contents: string;
+  imgUrl: string;
+};
+
+export interface IHomeCurationListCardInfo {
+  title?:string;
+  contents?:string;
+  imgUrl?:string;
+  cardNum?:number;
+  focus?:number;
+  onClick?:() => void;
+};
+
+export interface IHomeImgUrl {
+  imgUrl:string;
+};
+
+export interface IHomeCurationCardBackgroundImg {
+  imgUrl?:string;
+  focus?:boolean | false;
+};
+
+export interface IHomeCurationFocus {
+  focus?:boolean | false;
+};
+
+export interface IHomeRecentCardData {
+  title:string;
+  content?:string;
+  category:Categories;
+  videoUrl?:string;
+};
+
+export interface IHomeTeamCard {
+  title:string;
+  imgUrl:string;
+  content:string;
+};
+
+export interface IHomeTeamData {
+  title : string;
+  routerUrl : string;
+  imgUrl : string;
+  content : string;
+};
+
+//Member
+
+export interface IMemberPersonalData {
+  id?:number;
+  nickname?:string;
+  team?: string;
+  role?: string;
+  isChief?: boolean;
+};
+
+//Member Forms
+export interface IMemberFindAccountForm {
+  extraError: string;
+  email?:string;
+};
+
+export interface IMemberLoginForm {
+  extraError: string;
+  email?: string;
+  password?: string;
+};
+
+export interface IMemberResetPWForm {
+  extraError: string;
+  password?: string;
+  passwordConfirm?:string;
+};
+
+export interface IMemberSignupForm {
+  extraError: string;
+  username?: string;
+  email?:string;
+  password?: string;
+  passwordConfirm?:string;
+};
+
+export interface IMemberSignupDetailForm {
+  extraError: string;
+  birthday?: number;
+  phone?:string;
+  department?:string;
+  studentNum?:string;
+};
+
+//Personal
+
+export interface IPersonal {
+  id: number;
+  email: string;
+  nickName: string;
+  birthYear?: string;
+  department?: string;
+  phone?: string;
+  studentId?: string;
+  introduce?: string;
+  team?: string;
+  role?: string;
+  isChief?: boolean;
+  createdAt: string;
+  updatedAt?: string;
+};
+
+export interface IPersonalTeam {
+  [key:string]: string;
+};
+
+export interface IPersonalAdjustmentForm {
+  extraError: string;
+  email: string;
+  nickName: string;
+  birthYear?: string;
+  department?: string;
+  phone?: string;
+  studentId?: string;
+  introduce?: string;
+};
+
+export interface IPersonalResponsiveInputWidth {
+  width?:number;
+};
+
+//Player
+
+export interface IPlayerComments {
+  username?:string;
+  createdAt?:string;
+  content?:string;
+  writtenByUser?:boolean;
+};

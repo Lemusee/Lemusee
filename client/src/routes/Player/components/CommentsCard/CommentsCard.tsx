@@ -2,15 +2,9 @@ import * as S from "./SCommentsCard";
 import * as T from "../../../../GlobalComponents/Text/Text";
 import Moment from "react-moment";
 import 'moment/locale/ko';
+import { IPlayerComments } from "../../../../Types";
 
-interface IComments {
-  username?:string;
-  createdAt?:string;
-  content?:string;
-  writtenByUser?:boolean;
-}
-
-function CommentsCard ({username, createdAt, content, writtenByUser}:IComments) {
+function CommentsCard ({username, createdAt, content, writtenByUser}:IPlayerComments) {
   return (
     <>
       <S.Wrapper>

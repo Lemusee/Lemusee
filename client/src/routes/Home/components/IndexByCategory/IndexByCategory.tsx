@@ -3,11 +3,12 @@ import * as T from "../../../../GlobalComponents/Text/Text";
 import * as G from "../../../../GlobalComponents/Spacing/Spacing";
 import * as R from "../Recommendation/SRecommends";
 import { useRecoilValue } from "recoil";
-import { playlistItemState, Categories, isLoadingAtom } from "../../../../atoms";
+import { playlistItemState, isLoadingAtom } from "../../../../atoms";
 import { useState } from "react";
 import Loading from "../../../../GlobalComponents/Loading/Loading";
 import VideoCard from "../Recommendation/VideoCard";
 import moment from "moment";
+import { Categories } from "../../../../Types";
 
 function IndexByCategory () {
   const videoItem = useRecoilValue(playlistItemState);

@@ -9,28 +9,9 @@ import { isLoggedInAtom } from "../../atoms";
 import Loading from "../../GlobalComponents/Loading/Loading";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
+import { IPersonal, IPersonalTeam, IPersonalAdjustmentForm } from "../../Types";
 
-interface IPersonal {
-  id: number;
-  email: string;
-  nickName: string;
-  birthYear?: string;
-  department?: string;
-  phone?: string;
-  studentId?: string;
-  introduce?: string;
-  team?: string;
-  role?: string;
-  isChief?: boolean;
-  createdAt: string;
-  updatedAt?: string;
-};
-
-interface ITeam {
-  [key:string]: string;
-};
-
-const TeamInterpreter: ITeam = {
+const TeamInterpreter: IPersonalTeam = {
   curator: "큐레이터",
   content: "컨텐츠",
   culture: "컬쳐",
@@ -38,19 +19,8 @@ const TeamInterpreter: ITeam = {
   etc: "기타"
 };
 
-interface IForm {
-  extraError: string;
-  email: string;
-  nickName: string;
-  birthYear?: string;
-  department?: string;
-  phone?: string;
-  studentId?: string;
-  introduce?: string;
-};
-
 function Personal () {
-  const { register, handleSubmit, setValue, setError, formState:{errors}, getValues, watch } = useForm<IForm>();
+  const { register, handleSubmit, setValue, setError, formState:{errors}, getValues, watch } = useForm<IPersonalAdjustmentForm>();
   const [isLoading, setIsLoading] = useState(true);
   const [copyData, setCopyData] = useState<IPersonal>();
   const [teamView, setTeamView] = useState<string>();
@@ -79,7 +49,7 @@ function Personal () {
       setTeamView(`${teamViewset} 팀`);
     };
   }, [copyData]);
-  const onValid = (data:IForm) => {
+  const onValid = (data:IPersonalAdjustmentForm) => {
     setError("extraError", {message:"Server offline"});
     const multipleValues = getValues(['email', 'nickName', 'birthYear', 'department', 'phone', 'studentId', 'introduce']);
     console.log(multipleValues);

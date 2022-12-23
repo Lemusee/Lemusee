@@ -1,18 +1,9 @@
 import { motion } from "framer-motion";
 import styled from "styled-components";
-import * as G from "../../../../GlobalComponents/Spacing/Spacing";
 import * as T from "../../../../GlobalComponents/Text/Text";
+import { IHomeCurationCardBackgroundImg, IHomeCurationFocus } from "../../../../Types";
 
-interface IBackgroundImg {
-  imgUrl?:string;
-  focus?:boolean | false;
-}
-
-interface IFocus {
-  focus?:boolean | false;
-}
-
-export const Wrapper = styled(motion.div)<IBackgroundImg>`
+export const Wrapper = styled(motion.div)<IHomeCurationCardBackgroundImg>`
   cursor: pointer;
   width: 290px;
   height: 400px;
@@ -27,7 +18,7 @@ export const Wrapper = styled(motion.div)<IBackgroundImg>`
   transition: 0.2s;
 `;
 
-export const Container = styled.div<IFocus>`
+export const Container = styled.div<IHomeCurationFocus>`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -57,7 +48,7 @@ export const Container = styled.div<IFocus>`
   }
 `;
 
-export const TextBox = styled.div<IFocus>`
+export const TextBox = styled.div<IHomeCurationFocus>`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -80,7 +71,7 @@ export const TextBox = styled.div<IFocus>`
   }
 `;
 
-export const Bar = styled.div<IFocus>`
+export const Bar = styled.div<IHomeCurationFocus>`
   width: 30px;
   height: 2px;
   background-color: ${props=> props.focus ? props.theme.lemuseeblack_00 : props.theme.lemuseeblack_70};

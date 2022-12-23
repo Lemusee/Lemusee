@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import * as G from "../../../../GlobalComponents/Spacing/Spacing";
 import * as T from "../../../../GlobalComponents/Text/Text";
+import { IThumnailUrl } from "../../../../Types";
 
 export const Wrapper = styled.button`
   display: flex;
@@ -18,10 +19,6 @@ export const Wrapper = styled.button`
     word-break: break-all;
   }
 `;
-
-interface IThumnailUrl {
-  thumnailUrl?:string;
-}
 
 export const VideoImg = styled.div<IThumnailUrl>`
   width: 270px;

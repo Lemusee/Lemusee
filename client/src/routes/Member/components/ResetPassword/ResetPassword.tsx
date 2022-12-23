@@ -1,20 +1,13 @@
 import * as S from "../Login/SHook";
 import * as T from "../../../../GlobalComponents/Text/Text";
 import NextBtn from "../../../../GlobalComponents/Buttons/NextBtn";
-import SubNextBtn from "../../../../GlobalComponents/Buttons/SubNextBtn";
 import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
-import { useRecoilState } from "recoil";
-
-interface IForm {
-  extraError: string;
-  password?: string;
-  passwordConfirm?:string;
-}
+import { IMemberResetPWForm } from "../../../../Types";
 
 function ResetPassword () {
-  const { register, handleSubmit, setValue, setError, formState:{errors}, } = useForm<IForm>();
-  const onValid = (data:IForm) => {
+  const { register, handleSubmit, setValue, setError, formState:{errors}, } = useForm<IMemberResetPWForm>();
+  const onValid = (data:IMemberResetPWForm) => {
     setError("extraError", {message:"Server offline"});
     setValue("password", "");
     setValue("passwordConfirm", "");

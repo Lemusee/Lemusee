@@ -1,14 +1,15 @@
 import { atom } from "recoil";
 import {v1} from "uuid";
+import {IVideoItems, Categories} from "./Types";
 
-export enum Categories {
-  "self_dev"="self_dev",
-  "culture_art"="culture_art",
-  "humanities_society"="humanities_society",
-  "science_tech"="science_tech",
-  "activity"="activity",
-  "etc"="etc",
-};
+// export enum Categories {
+//   "self_dev"="self_dev",
+//   "culture_art"="culture_art",
+//   "humanities_society"="humanities_society",
+//   "science_tech"="science_tech",
+//   "activity"="activity",
+//   "etc"="etc",
+// };
 
 export enum Teams {
   "curator" = "curator",
@@ -64,16 +65,16 @@ interface IThumnails {
   height:number;
 };
 
-export interface IVideoItems {
-  id: string;
-  playlistId : string;
-  publishedAt : string;
-  title: string;
-  description: string;
-  thumnailUrl: string | undefined;
-  videoURL: string;
-  category: Categories;
-};
+// export interface IVideoItems {
+//   id: string;
+//   playlistId : string;
+//   publishedAt : string;
+//   title: string;
+//   description: string;
+//   thumnailUrl: string | undefined;
+//   videoURL: string;
+//   category: Categories;
+// };
 
 export const categoryState = atom<Categories>({
   key:`userState/${v1()}`,

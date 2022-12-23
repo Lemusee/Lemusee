@@ -9,15 +9,9 @@ import Loading from "../../../../GlobalComponents/Loading/Loading";
 import {ReactComponent as NextCurationSVG} from "../../../../assets/icons/nextCuration.svg";
 import { motion, AnimatePresence, useScroll } from "framer-motion";
 import styled from "styled-components";
+import { IHomeCurationSorted } from "../../../../Types";
 
-interface ICurationSorted {
-  cardNum: number;
-  title: string;
-  contents: string;
-  imgUrl: string;
-};
-
-const initialData: ICurationSorted[] = [{
+const initialData: IHomeCurationSorted[] = [{
   cardNum: 0,
   title: "Curation Title",
   contents : "Curation Contents",
@@ -45,7 +39,7 @@ const rowVariants = {
 
 function Curation () {
   const [curationList, setCurationList] = useState([...dummyCuration.result.items]);
-  const [curationSorted, setCurationSorted] = useState<ICurationSorted[]>(initialData);
+  const [curationSorted, setCurationSorted] = useState<IHomeCurationSorted[]>(initialData);
   const [curationInfo, setCurationInfo] = useRecoilState(curationState);
   const [isLoading, setIsLoading] = useState(false);
   const [focus, setFocus] = useState(0);

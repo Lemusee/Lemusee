@@ -1,13 +1,8 @@
 import * as S from "./STeamCard";
 import * as T from "../../../../GlobalComponents/Text/Text";
+import { IHomeTeamCard } from "../../../../Types";
 
-interface ITeamCard {
-  title:string;
-  imgUrl:string;
-  content:string;
-}
-
-function TeamCard ({title,imgUrl,content}:ITeamCard) {
+function TeamCard ({title,imgUrl,content}:IHomeTeamCard) {
   return (
     <>
       <S.Card>

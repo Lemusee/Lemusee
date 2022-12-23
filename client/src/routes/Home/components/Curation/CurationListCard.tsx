@@ -1,16 +1,9 @@
 import * as S from "./SCurationListCArd";
 import * as T from "../../../../GlobalComponents/Text/Text";
+import { IHomeCurationListCardInfo } from "../../../../Types";
 
-interface ICurationInfo {
-  title?:string;
-  contents?:string;
-  imgUrl?:string;
-  cardNum?:number;
-  focus?:number;
-  onClick?:() => void;
-}
 
-function CurationListCard ({title, contents, imgUrl, cardNum, focus}:ICurationInfo) {
+function CurationListCard ({title, contents, imgUrl, cardNum, focus}:IHomeCurationListCardInfo) {
   return (
       <S.Wrapper imgUrl={imgUrl} focus={focus===cardNum}>
         <S.Container focus={focus===cardNum}>

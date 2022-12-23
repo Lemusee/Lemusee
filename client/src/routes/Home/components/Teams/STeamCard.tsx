@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import * as T from "../../../../GlobalComponents/Text/Text";
+import { IHomeImgUrl } from "../../../../Types";
 
 export const Card = styled.button`
   width: 290px;
@@ -26,11 +27,7 @@ export const Card = styled.button`
   }
 `;
 
-interface IImgUrl {
-  imgUrl?:string;
-}
-
-export const Img = styled.div<IImgUrl>`
+export const Img = styled.div<IHomeImgUrl>`
   width: 150px;
   height: 150px;
   border: 0;

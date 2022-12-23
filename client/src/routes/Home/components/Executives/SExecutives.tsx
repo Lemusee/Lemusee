@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import * as G from "../../../../GlobalComponents/Spacing/Spacing";
 import * as T from "../../../../GlobalComponents/Text/Text";
+import { IHomeImgUrl } from "../../../../Types";
 
 export const Wrapper = styled(G.Wrapper)``;
 export const Container = styled(G.Container)`
@@ -19,11 +20,7 @@ export const contentBox = styled.div`
   align-items: center;
 `;
 
-interface IImg {
-  imgUrl?:string;
-}
-
-export const ExecutivesImg = styled.div<IImg>`
+export const ExecutivesImg = styled.div<IHomeImgUrl>`
   width: 100%;
   height: 855px;
   background-image: url(${props=> props.imgUrl});

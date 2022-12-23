@@ -9,29 +9,16 @@ import { isAdmin, isLoggedInAtom, myUserIdAtom } from "../../../../atoms";
 import dummyLogInResponse from "../../../../assets/dummyData/dummyLogInResponse.json";
 import dummyPersonalInfo from "../../../../assets/dummyData/dummyPersonalInfo.json";
 import { useState } from "react";
-
-interface IForm {
-  extraError: string;
-  email?: string;
-  password?: string;
-};
-
-interface IPersonalData {
-  id?:number;
-  nickname?:string;
-  team?: string;
-  role?: string;
-  isChief?: boolean;
-};
+import { IMemberLoginForm, IMemberPersonalData } from "../../../../Types";
 
 function Login () {
-  const { register, handleSubmit, setValue, setError, formState:{errors}, } = useForm<IForm>();
-  const [personalData, setPersonalData] = useState<IPersonalData>({});
+  const { register, handleSubmit, setValue, setError, formState:{errors}, } = useForm<IMemberLoginForm>();
+  const [personalData, setPersonalData] = useState<IMemberPersonalData>({});
   const [isLoggedIn, setLoggedIn] = useRecoilState(isLoggedInAtom);
   const setUserId = useSetRecoilState(myUserIdAtom);
   const setIsAdmin = useSetRecoilState(isAdmin);
   const navigate = useNavigate();
-  const onValid = (data:IForm) => {
+  const onValid = (data:IMemberLoginForm) => {
     setError("extraError", {message:"Server offline"});
     setValue("password", "");
     /**admin access는 프론트에서 처리되며, loggedin state는 false */

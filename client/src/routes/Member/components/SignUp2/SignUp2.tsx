@@ -3,22 +3,12 @@ import * as T from "../../../../GlobalComponents/Text/Text";
 import NextBtn from "../../../../GlobalComponents/Buttons/NextBtn";
 import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
-import { useRecoilState } from "recoil";
-import { Certification } from "../../../../atoms";
+import { IMemberSignupDetailForm } from "../../../../Types";
 
-interface IForm {
-  extraError: string;
-  birthday?: number;
-  phone?:string;
-  team?:string;
-  certification?: Certification;
-  department?:string;
-  studentNum?:string;
-}
 
 function SignUp2 () {
-  const { register, handleSubmit, setValue, setError, formState:{errors}, } = useForm<IForm>();
-  const onValid = (data:IForm) => {
+  const { register, handleSubmit, setValue, setError, formState:{errors}, } = useForm<IMemberSignupDetailForm>();
+  const onValid = (data:IMemberSignupDetailForm) => {
     setError("extraError", {message:"Server offline"});
   };
   return (
@@ -47,25 +37,6 @@ function SignUp2 () {
             />
             <span>{errors?.phone?.message}</span>
           </S.InputBox>
-          {/* <S.InputBox>
-            <T.Pretendard13R>소속 팀</T.Pretendard13R>
-            <input 
-              {...register("team", {
-              })}
-              placeholder="큐레이터, 컨텐츠, 컬처, 어드민, 기타 (신규가입 시 비워두셔도 됩니다)"
-            />
-            <span>{errors?.team?.message}</span>
-          </S.InputBox>
-          <S.InputBox>
-            <T.Pretendard13R>활동 여부</T.Pretendard13R>
-            <input 
-              {...register("certification", {
-                required: "활동 여부를 입력해주세요"
-              })}
-              placeholder="활동, 비활동, 졸업, 기타"
-            />
-            <span>{errors?.certification?.message}</span>
-          </S.InputBox> */}
           <S.InputBox>
             <T.Pretendard13R>학과</T.Pretendard13R>
             <input 

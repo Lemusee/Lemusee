@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import styled from "styled-components";
 import * as G from "../../../../GlobalComponents/Spacing/Spacing";
 import * as T from "../../../../GlobalComponents/Text/Text"
+import { IHomeImgUrl } from "../../../../Types";
 
 export const Wrapper = styled(G.Wrapper)``;
 
@@ -52,11 +53,7 @@ export const BoardLeftText = styled.div`
   }
 `;
 
-interface ImgUrl {
-  imgUrl:string;
-}
-
-export const BoardRightImg = styled.img<ImgUrl>`
+export const BoardRightImg = styled.img<IHomeImgUrl>`
   width: 550px;
   height: 325px;
   background-color: ${props=>props.theme.lemuseeblack_30};

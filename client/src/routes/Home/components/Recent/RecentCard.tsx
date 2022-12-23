@@ -1,17 +1,11 @@
 import * as S from "./SRecentCard";
 import * as T from "../../../../GlobalComponents/Text/Text";
 import imgByCategory from "../../../../assets/StaticData/RecentImg.json";
-import { Categories } from "../../../../atoms";
 import { Link } from "react-router-dom";
+import { IHomeRecentCardData } from "../../../../Types";
 
-interface ICardData {
-  title:string;
-  content?:string;
-  category:Categories;
-  videoUrl?:string;
-}
 
-function RecentCard ({content, title, category, videoUrl}:ICardData) {
+function RecentCard ({content, title, category, videoUrl}:IHomeRecentCardData) {
   const titles = (title.indexOf('(') !== -1) ? title.split('(') : [title, ')'];
   const titleSorted = titles[0];
   const imgList = {...imgByCategory};

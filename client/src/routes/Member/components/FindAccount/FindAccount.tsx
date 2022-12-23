@@ -1,19 +1,12 @@
 import * as S from "../Login/SHook";
 import * as T from "../../../../GlobalComponents/Text/Text";
 import NextBtn from "../../../../GlobalComponents/Buttons/NextBtn";
-import SubNextBtn from "../../../../GlobalComponents/Buttons/SubNextBtn";
-import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
-import { useRecoilState } from "recoil";
-
-interface IForm {
-  extraError: string;
-  email?:string;
-}
+import { IMemberFindAccountForm } from "../../../../Types";
 
 function FindAccount () {
-  const { register, handleSubmit, setValue, setError, formState:{errors}, } = useForm<IForm>();
-  const onValid = (data:IForm) => {
+  const { register, handleSubmit, setValue, setError, formState:{errors}, } = useForm<IMemberFindAccountForm>();
+  const onValid = (data:IMemberFindAccountForm) => {
     setError("extraError", {message:"Server offline"});
     setValue("email", "");
   };

@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import * as T from "../../GlobalComponents/Text/Text";
 import * as G from "../../GlobalComponents/Spacing/Spacing";
+import { ISearchFocus } from "../../Types";
 
 export const Wrapper = styled(G.Wrapper)``;
 
@@ -40,10 +41,6 @@ export const TagBox = styled.div`
 `;
 
 export const Tag = styled(G.Tag)``;
-
-interface ISearchFocus {
-  focus?:boolean;
-}
 
 export const SearchTag = styled.div<ISearchFocus>`
   display: flex;

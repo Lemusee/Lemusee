@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import * as G from "../../GlobalComponents/Spacing/Spacing";
 import * as T from "../../GlobalComponents/Text/Text";
+import { IPersonalResponsiveInputWidth } from "../../Types";
 
 export const Wrapper = styled(G.Wrapper)`
   align-items: center;
@@ -116,11 +117,7 @@ export const InputBtn = styled.div`
   };
 `;
 
-interface IInputWidth {
-  width?:number;
-}
-
-export const Input = styled.input<IInputWidth>`
+export const Input = styled.input<IPersonalResponsiveInputWidth>`
   display: inline-flex;
   width: ${props=> props.width ? props.width+"px" : "490px"};
   color: ${props=>props.theme.lemuseeblack_60};

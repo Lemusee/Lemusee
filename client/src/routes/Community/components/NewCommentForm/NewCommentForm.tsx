@@ -6,10 +6,7 @@ import * as G from "../../../../GlobalComponents/Spacing/Spacing";
 import * as T from "../../../../GlobalComponents/Text/Text";
 import { commentOpenAtom } from "../../../../atoms";
 import { useRecoilState, useSetRecoilState } from "recoil";
-
-interface INewComment {
-  userId:number;
-};
+import { INewComment } from "../../../../Types";
 
 const Wrapper = styled(G.Wrapper)`
   width: 100%;

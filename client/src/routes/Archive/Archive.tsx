@@ -2,11 +2,12 @@ import Header from "../../GlobalComponents/Header/Header";
 import * as S from "./SArchive";
 import * as T from "../../GlobalComponents/Text/Text";
 import { useRecoilValue } from "recoil";
-import {channelState, playlistItemState, Categories, isLoadingAtom } from "../../atoms";
+import {channelState, playlistItemState, isLoadingAtom } from "../../atoms";
 import { useState } from "react";
 import moment from "moment";
 import ArchiveVideoCard from "./components/ArchieveVideoCard/ArchiveVideoCard";
 import Loading from "../../GlobalComponents/Loading/Loading";
+import { Categories } from "../../Types";
 
 function Archive () {
   const channelInfo = useRecoilValue(channelState);

@@ -1,12 +1,8 @@
 import styled from "styled-components";
 import * as T from "../../../../GlobalComponents/Text/Text";
-import * as G from "../../../../GlobalComponents/Spacing/Spacing";
+import { IHomeImgUrl } from "../../../../Types";
 
-interface IBackgroundImg {
-  imgUrl?:string;
-}
-
-export const Wrapper = styled.div<IBackgroundImg>`
+export const Wrapper = styled.div<IHomeImgUrl>`
   cursor: pointer;
   width: 290px;
   height: 400px;
