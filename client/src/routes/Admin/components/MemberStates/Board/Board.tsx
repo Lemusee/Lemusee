@@ -1,8 +1,8 @@
 import {Droppable} from "react-beautiful-dnd";
 import DraggableCard from "../DraggableCard/DraggableCard";
 import styled from "styled-components";
-import * as T from "../../../../GlobalComponents/Text/Text";
-import { IAreaProps, IBoardProps } from "../../../../Types";
+import * as T from "../../../../../GlobalComponents/Text/Text";
+import { IAreaProps, IBoardProps } from "../../../../../Types";
 
 
 const Wrapper = styled.div`

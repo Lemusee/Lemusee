@@ -71,29 +71,6 @@ export const TitleWrapper = styled.div`
   gap: 40px;
 `;
 
-export const CurationList = styled.div`
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 45px;
-`;
-
-export const AddNewCurationBtn = styled.button`
-  width: 100%;
-  height: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 15px;
-  border: dashed 2px ${props => props.theme.lemuseeblack_60};
-  background-color: ${props => props.theme.lemuseeblack_20};
-  margin: 0;
-  padding: 0;
-  ${T.Pretendard15M} {
-    color: ${props => props.theme.lemuseeblack_60};
-  };
-`;
-
 export const Right = styled.div`
   position: sticky;
   right: 0;

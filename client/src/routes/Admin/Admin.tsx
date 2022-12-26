@@ -1,49 +1,40 @@
-import { useRecoilState } from "recoil";
-import { isAdmin, adminCurationAtom, adminExecutiveAtom } from "../../atoms";
+import { useRecoilState, useRecoilValue, useSetRecoilState } from "recoil";
+import { isAdmin, adminCurationAtom, adminExecutiveAtom, adminMemberStateChangesAtom } from "../../atoms";
 import React, { useEffect, useRef, useState } from "react";
 import Loading from "../../GlobalComponents/Loading/Loading";
 import * as T from "../../GlobalComponents/Text/Text";
 import * as S from "./SAdmin";
 import { useNavigate } from "react-router-dom";
 import Titles from "../../assets/StaticData/AdminTitle.json";
-import AdminTitle from "./components/AdminTitle/AdminTitle";
+import AdminTitle from "./components/Common/AdminTitle/AdminTitle";
 import HomeInfo from "./components/HomeInfo/HomeInfo";
 import MemberInfo from "./components/MemberInfo/MemberInfo";
-import FileUpLoader from "./components/FileUpLoader/FilleUpLoader";
-import CurationItem from "./components/CurationItem/CurationItem";
+import FileUpLoader from "./components/Common/FileUpLoader/FilleUpLoader";
 import RecruitingForm from "./components/RecruitungForm/RecruitingForm";
-import MemberState from "./components/MemberState/MemberState";
-import dummyCuration from "../../assets/dummyData/dummyCurationGET.json";
-import dummyExecutive from "../../assets/dummyData/dummyExecutiveGET.json";
+import MemberState from "./components/MemberStates/MemberState/MemberState";
+import ChangesTracker from "./components/Trackers/ChangesTracker/ChangesTracker";
+import CurationList from "./components/Curations/CurationList/CurationList";
+import SubmitBtn from "./components/Trackers/SubmitBtn/SubmitBtn";
 
 function Admin () {
   const navigate = useNavigate();
-  //초기 데이터
-  const [adminCurationData, setAdminCurationData] = useRecoilState(adminCurationAtom);
-  const [adminExecutiveData, setAdminExecutiveData] = useRecoilState(adminExecutiveAtom);
+  const setAdminExecutiveData = useSetRecoilState(adminExecutiveAtom);
 
   //===============접근 권한 테스트
-  const [isAdminAccess, setIsAdminAccess] = useRecoilState(isAdmin);
+  const isAdminAccess = useRecoilValue(isAdmin);
+
   /**접근 권한 테스트 및 초기 데이터 설정 */
   useEffect(() => {
     if (!isAdminAccess) {
       let access = window.confirm("접근권한이 없습니다.");
       if (access) navigate(-1);
     };
-    setAdminCurationData(dummyCuration.result.items);
   },[]);
+
   /**제목 클릭 시 admin page 빠져나감, Admin access 권한 제거 */
   const titleHandler = () => {
     let exit = window.confirm("지금 페이지를 나가면 변경 사항이 저장되지 않습니다");
     if (exit) navigate("/");
-  };
-  /**변경 사항 저장 및 저장 여부 confirm */
-  const saveHandler = () => {
-    let save = window.confirm("변경 사항을 저장하시겠습니까?");
-    if (save) {
-      //변경 사항 저장, 변경 사항 저장 성공 시
-      window.alert("변경 사항이 저장되었습니다.");
-    };
   };
 
   //===============카테고리 처리
@@ -66,15 +57,6 @@ function Admin () {
     if (e.currentTarget.childNodes[0].textContent === ".../Members/State") {ref_4.current?.scrollIntoView({ behavior: 'smooth' });}
     if (e.currentTarget.childNodes[0].textContent === "/Recruting") {ref_5.current?.scrollIntoView({ behavior: 'smooth' });}
   };
-
-
-  //=================큐레이션 처리
-  /**curation을 추가하는 버튼에 할당된 함수. onClcik 시 recoil adminCurationAtom에 빈 객체를 하나 추가함 */
-  const handleNewCuration = () => {
-    const data = [...adminCurationData, {cardNum:adminCurationData.length, title:undefined, contents: undefined, imgUrl: undefined}]
-    setAdminCurationData(data);
-  };
-
 
 
   return (
@@ -119,18 +101,7 @@ function Admin () {
               </S.TitleWrapper>
               <S.TitleWrapper ref={ref_2}>
                 <AdminTitle {...Titles[2]}/>
-                <S.CurationList>
-                  <>
-                    {
-                      adminCurationData && adminCurationData.map((item, index)=>(
-                        <CurationItem key={item.cardNum} {...item} index={index}/>
-                      ))
-                    }
-                    <S.AddNewCurationBtn onClick={handleNewCuration}>
-                      <T.Pretendard15M>Click here to add a new curation.</T.Pretendard15M>
-                    </S.AddNewCurationBtn>
-                  </>
-                </S.CurationList>
+                <CurationList/>
               </S.TitleWrapper>
               <S.TitleWrapper ref={ref_3}>
                 <AdminTitle {...Titles[3]}/>
@@ -150,13 +121,9 @@ function Admin () {
                 <S.RightTitle>
                   <T.Pretendard21R>Changes</T.Pretendard21R>
                 </S.RightTitle>
+                <ChangesTracker/>
               </S.RightTop>
-              <S.RightBottom onClick={saveHandler} type="submit">
-                <T.Pretendard24B>Save Changes</T.Pretendard24B>
-                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M3 15H27M27 15C23 14 20.5 12 19 8M27 15C23 16 20.5 19 19 22" stroke="black" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              </S.RightBottom>
+              <SubmitBtn/>
             </S.Right>
           </S.Wrapper>
         ) : (

@@ -53,14 +53,14 @@ function Curation () {
           cardNum: list.cardNum,
           title: list.title,
           contents : list.contents,
-          imgUrl : list.imgUrl
+          imgUrl : list.imgData
         }
       )
     });
     setCurationSorted(curations);
     setCurationInfo(curations);
     setIsLoading(true);
-  }, [curationList, setCurationInfo]);
+  }, []);
   const totalCards = curationInfo.length - 1;
   const extraCard = (totalCards+1) % offset;
   const maxIndex = Math.floor(totalCards / offset);

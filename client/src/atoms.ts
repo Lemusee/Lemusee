@@ -2,15 +2,6 @@ import { atom } from "recoil";
 import {v1} from "uuid";
 import {IVideoItems, Categories} from "./Types";
 
-// export enum Categories {
-//   "self_dev"="self_dev",
-//   "culture_art"="culture_art",
-//   "humanities_society"="humanities_society",
-//   "science_tech"="science_tech",
-//   "activity"="activity",
-//   "etc"="etc",
-// };
-
 export enum Teams {
   "curator" = "curator",
   "contents" = "contents",
@@ -27,6 +18,7 @@ export enum Certification {
 
 //======================================
 
+/**Dark(true) & Light(false) Theme */
 export const isDarkThemeAtom = atom(
   {
     key:`userState/${v1()}`,
@@ -34,21 +26,25 @@ export const isDarkThemeAtom = atom(
   }
 );
 
+/**true 인 경우 로그인 상태 : 자동 로그인 토큰 존재 or 로그인 response succes 시 */
 export const isLoggedInAtom = atom({
   key:`userState/${v1()}`,
   default:false,
 });
 
+/**userId storage */
 export const myUserIdAtom = atom<number>({
   key:`userState/${v1()}`,
-  default: -1, //임시로 지정된 userId
+  default: -1,
 });
 
+/**isLoading(true) or not(false) */
 export const isLoadingAtom = atom({
   key:`userState/${v1()}`,
   default: false,
 });
 
+/**get admin access by response */
 export const isAdmin = atom({
   key:`userState/${v1()}`,
   default: false,
@@ -64,17 +60,6 @@ interface IThumnails {
   width:number;
   height:number;
 };
-
-// export interface IVideoItems {
-//   id: string;
-//   playlistId : string;
-//   publishedAt : string;
-//   title: string;
-//   description: string;
-//   thumnailUrl: string | undefined;
-//   videoURL: string;
-//   category: Categories;
-// };
 
 export const categoryState = atom<Categories>({
   key:`userState/${v1()}`,
@@ -179,15 +164,15 @@ export const commentOpenAtom = atom<boolean>({
 //admin Atoms
 
 export interface IAdminFileUploadereAtom {
-  imgFile?: File;
+  imgData?: File | string;
 };
 
-export const adminExecutiveAtom = atom<IAdminFileUploadereAtom[]>({
+export const adminExecutiveAtom = atom<(File | string)[]>({
   key:`userState/${v1()}`,
   default: []
 });
 
-export const adminCurationFileAtom = atom<IAdminFileUploadereAtom[]>({
+export const adminCurationFileAtom = atom<(File | string)[]>({
   key:`userState/${v1()}`,
   default: []
 });
@@ -196,7 +181,7 @@ export interface IAdminCurationAtom {
   cardNum?: number;
   title?: string;
   contents?: string;
-  imgUrl?: string;
+  imgData?: any;
 };
 
 export const adminCurationAtom = atom<IAdminCurationAtom[]>({
@@ -244,3 +229,7 @@ export const adminMemberStateAtom = atom<IAdminMemberState>({
   },
 });
 
+export const adminMemberStateChangesAtom = atom<(string | undefined)[]>({
+  key: `userState/${v1()}`,
+  default: []
+});

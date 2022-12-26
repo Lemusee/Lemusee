@@ -2,8 +2,8 @@ import { Draggable } from "react-beautiful-dnd";
 import styled from "styled-components";
 import React from "react";
 import { useSetRecoilState } from "recoil";
-import { adminMemberStateAtom } from "../../../../atoms";
-import { IDraggableCardProps } from "../../../../Types";
+import { adminMemberStateAtom } from "../../../../../atoms";
+import { IDraggableCardProps } from "../../../../../Types";
 
 const Card = styled.div<{isDragging: boolean}>`
   background-color: ${props => props.isDragging ? props.theme.lemuseeblack_30 : props.theme.lemuseeblack_00};

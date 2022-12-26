@@ -1,10 +1,11 @@
 import styled from "styled-components";
-import * as T from "../../../../GlobalComponents/Text/Text";
-import FileUpLoader from "../FileUpLoader/FilleUpLoader";
-import { adminCurationAtom, IAdminCurationAtom, adminCurationFileAtom } from "../../../../atoms";
-import { useForm } from "react-hook-form";
-import { useRecoilState, useSetRecoilState } from "recoil";
-import { ICurationItemForm, ICurationItemData } from "../../../../Types";
+import * as T from "../../../../../GlobalComponents/Text/Text";
+import FileUpLoader from "../../Common/FileUpLoader/FilleUpLoader";
+import { adminCurationAtom, IAdminCurationAtom, adminCurationFileAtom } from "../../../../../atoms";
+import { useForm, useWatch } from "react-hook-form";
+import { useRecoilState, useRecoilValue, useSetRecoilState } from "recoil";
+import { ICurationItemForm, ICurationItemData } from "../../../../../Types";
+import { useEffect } from "react";
 
 const Wrapper = styled.div`
   width: 100%;
@@ -81,14 +82,27 @@ const Form = styled.form`
   };
 `;
 
-function CurationItem ({index, cardNum, title, contents, imgUrl}:ICurationItemData) {
-  const setAdminCurationFileData = useSetRecoilState(adminCurationFileAtom);
-  const { register, handleSubmit, setError, formState:{errors}, getValues} = useForm<ICurationItemForm>();
+function CurationItem ({index, cardNum, title, contents, imgData}:ICurationItemData) {
+  const [adminCurationFileData, setAdminCurationFileData] = useRecoilState(adminCurationFileAtom);
+  const setAdminCuration = useSetRecoilState(adminCurationAtom);
+  const { register, handleSubmit, setError, formState:{errors}, getValues, control} = useForm<ICurationItemForm>();
+  const watchAll = useWatch({
+    control,
+    name: ["title", "contents"]
+  });
   const onValid = (data:ICurationItemForm) => {
     setError("extraError", {message:"Server offline"});
-    const multipleValues = getValues(['title', 'contents']);
-    console.log(multipleValues);
   };
+  useEffect(() => {
+    setAdminCuration(prev => {
+      let copyCuration = [...prev];
+      const changedData = {cardNum:index, title:getValues("title"), contents:getValues("contents"), imgData:adminCurationFileData[index]}
+      copyCuration.splice(index, 1, changedData);
+      console.log("this", copyCuration);
+      return copyCuration;
+    });
+  }, [watchAll]);
+  // console.log("files", adminCurationFileData);
   const [adminCurationData ,setAdminCurationData] = useRecoilState(adminCurationAtom);
   const handleDelete = () => {
     let data = [...adminCurationData];
@@ -109,7 +123,7 @@ function CurationItem ({index, cardNum, title, contents, imgUrl}:ICurationItemDa
         </Title>
         <Content>
           <FileUploaderLayout>
-            <FileUpLoader imgUrlPlaceholder={imgUrl ? imgUrl : undefined} grayscale={85} setRecoil={setAdminCurationFileData} />
+            <FileUpLoader imgUrlPlaceholder={typeof imgData === "string" ? imgData : undefined} grayscale={85} setRecoil={setAdminCurationFileData} />
           </FileUploaderLayout>
           <Form onSubmit={handleSubmit(onValid)}>
             <input 

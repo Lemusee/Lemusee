@@ -10,6 +10,29 @@ export enum Categories {
   "etc"="etc",
 };
 
+//api post & put
+
+export interface IJoinBody {
+  name: string;
+  email: string;
+  password: string;
+  birthYear?: number;
+  depaartment?: string;
+  phone?: string;
+  studentId?: string;
+  introduce?: string;
+  team?: string;
+  role?: string;
+  isChief?: boolean;
+};
+
+export interface ISignupBody {
+  name: string;
+  password: string;
+  autoSignup: boolean;
+};
+
+
 
 
 //Community Page
@@ -109,7 +132,7 @@ export interface ICurationItemData {
   cardNum?: number;
   title?: string;
   contents?: string;
-  imgUrl?: string;
+  imgData?: any;
 };
 
 export interface IImgUrl {
@@ -117,7 +140,7 @@ export interface IImgUrl {
   grayscale?:number;
 };
 
-type SetRecoilAtom = SetterOrUpdater<IAdminFileUploadereAtom[]>;
+type SetRecoilAtom = SetterOrUpdater<(File | string)[]>;
 
 export interface IImgFileUpLoaderPlaceholder {
   imgUrlPlaceholder?: string;
@@ -145,6 +168,15 @@ export interface IRecruitingForm {
   inquiry?: string;
   due_at?:string;
   content?: string;
+};
+
+export interface IChangesTracker {
+  changelist?:ITrackerItem[];
+};
+
+export interface ITrackerItem {
+  title: string;
+  changes: any[];
 };
 
 //Admin Drag&Drops

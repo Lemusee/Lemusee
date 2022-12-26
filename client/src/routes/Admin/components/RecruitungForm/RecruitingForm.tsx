@@ -3,7 +3,7 @@ import { useRecoilState } from "recoil";
 import styled from "styled-components";
 import { adminRecruitingAtom } from "../../../../atoms";
 import dummyRecruitingData from "../../../../assets/dummyData/dummyRecruitment.json";
-import { useForm } from "react-hook-form";
+import { useForm, useWatch } from "react-hook-form";
 import * as T from "../../../../GlobalComponents/Text/Text";
 import { IRecruitingForm } from "../../../../Types";
 
@@ -62,17 +62,36 @@ const FormTextarea = styled.textarea`
 
 function RecruitingForm () {
   const [recruitingData, setRecruitingData] = useRecoilState(adminRecruitingAtom);
+  const { register, handleSubmit, setError, formState:{errors}, getValues, control} = useForm<IRecruitingForm>();
+  const watchAll = useWatch({
+    control,
+    name: ["due_at", "inquiry", "recruitment_link", "content"]
+  });
+  /**초기 데이터 get */
   useEffect(()=> {
     const data = {...dummyRecruitingData.result};
     setRecruitingData(data);
   }, []);
-  const { register, handleSubmit, setError, formState:{errors}, getValues} = useForm<IRecruitingForm>();
+
+  /**데이터 변화 감지, 저장 */
+  useEffect(()=> {
+    const changedData = {
+      due_at : getValues("due_at"), 
+      inquiry : getValues("inquiry"), 
+      recruitment_link : getValues("recruitment_link"), 
+      content : getValues("content")
+    };
+    setRecruitingData(changedData);
+  }, [watchAll]);
+
+  /**form submit vaild */
   const onValid = (data:IRecruitingForm) => {
     setError("extraError", {message:"Server offline"});
-    const multipleValues = getValues(['recruitment_link', 'inquiry', 'due_at', 'content']);
-    console.log(multipleValues);
   };
+
   const textRef = useRef<any>();
+
+  /**textarea resizing by scroll height */
   const textareaResize = (e:React.KeyboardEvent<HTMLTextAreaElement>) => {
     textRef.current.style.height = `${e.currentTarget.scrollHeight+12}px`
   };

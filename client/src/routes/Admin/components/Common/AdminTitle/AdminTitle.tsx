@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import * as T from "../../../../GlobalComponents/Text/Text";
-import { IAdminChaptorTitle } from "../../../../Types";
+import * as T from "../../../../../GlobalComponents/Text/Text";
+import { IAdminChaptorTitle } from "../../../../../Types";
 
 const Title = styled.div`
   display: flex;

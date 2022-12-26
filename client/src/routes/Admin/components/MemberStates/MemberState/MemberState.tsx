@@ -1,8 +1,8 @@
 import styled from "styled-components";
 import { DragDropContext, DropResult } from "react-beautiful-dnd";
-import { useRecoilState } from "recoil";
-import dummyMemberState from "../../../../assets/dummyData/dummyMemberState.json";
-import { adminMemberStateAtom } from "../../../../atoms";
+import { useRecoilState, useSetRecoilState } from "recoil";
+import dummyMemberState from "../../../../../assets/dummyData/dummyMemberState.json";
+import { adminMemberStateAtom, adminMemberStateChangesAtom } from "../../../../../atoms";
 import { useEffect } from "react";
 import Board from "../Board/Board";
 
@@ -53,6 +53,7 @@ const Wrapper = styled.div`
 
 function MemberState () {
   const [memberState, setMemberState] = useRecoilState(adminMemberStateAtom);
+  const setMemberStateChanged = useSetRecoilState(adminMemberStateChangesAtom);
   /**initial data setting */
   useEffect(() => {
     const memberdata = [...dummyMemberState.result];
@@ -62,7 +63,7 @@ function MemberState () {
       "큐레이터": [...memberdata.filter(item => item.isChief && item.team === "curator")],
       "컨텐츠 팀장": [...memberdata.filter(item => item.isChief && item.team === "content")],
       "컬처 팀장": [...memberdata.filter(item => item.isChief && item.team === "culture")],
-      "어드민 팀장": [...memberdata.filter(item => item.isChief && item.team === "admin")],
+      "어드민 팀장 (관리자)": [...memberdata.filter(item => item.isChief && item.team === "admin")],
       "큐레이터 팀": [...memberdata.filter(item => !item.isChief && item.team === "curator")],
       "컨텐츠 팀": [...memberdata.filter(item => !item.isChief && item.team === "content")],
       "컬처 팀": [...memberdata.filter(item => !item.isChief && item.team === "culture")],
@@ -87,6 +88,8 @@ function MemberState () {
       })
     };
     if(destination.droppableId !== source.droppableId){
+      const obj = memberState[source.droppableId][source.index];
+      setMemberStateChanged(prev => {return [...prev, obj.nickname]});
       setMemberState((allBoards) => {
         const sourceBoard = [...allBoards[source.droppableId]];
         const targetBoard = [...allBoards[destination.droppableId]];

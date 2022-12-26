@@ -1,8 +1,8 @@
 import styled from "styled-components";
 import { useState } from "react";
 import { FileUploader } from "react-drag-drop-files";
-import * as T from "../../../../GlobalComponents/Text/Text";
-import { IImgUrl, IImgFileUpLoaderPlaceholder } from "../../../../Types";
+import * as T from "../../../../../GlobalComponents/Text/Text";
+import { IImgUrl, IImgFileUpLoaderPlaceholder } from "../../../../../Types";
 
 const fileTypes = ["JPG", "PNG", "GIF"];
 
@@ -71,10 +71,19 @@ function FileUpLoader({imgUrlPlaceholder, grayscale, setRecoil}:IImgFileUpLoader
     setImgURL(url);
     setRecoil(prev => [...prev, file]);
   };
+  const handleDelete = () => {
+    setRecoil(prev => {
+      if (prev.length === 1) return [];
+      const index = prev.findIndex(item => item === imgFile);
+      return [...prev].splice(index, 1);
+    });
+    setImgFile(null);
+    setImgURL(undefined);
+  };
   return (
     <>
       {imgURL ? (
-        <ImgViewer imgurl={imgURL} grayscale={grayscale} onClick={()=>{setImgFile(null); setImgURL(undefined)}}>
+        <ImgViewer imgurl={imgURL} grayscale={grayscale} onClick={handleDelete}>
           <div>
             <T.Pretendard15B>Click again to delete your image.</T.Pretendard15B>
           </div>

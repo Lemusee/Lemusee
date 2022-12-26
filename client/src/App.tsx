@@ -6,7 +6,7 @@ import { useRecoilState, useRecoilValue, useSetRecoilState } from "recoil";
 import { isDarkThemeAtom, playlistItemState, channelState, isLoadingAtom } from "./atoms";
 import { Categories } from './Types';
 import { useQuery } from "react-query";
-import { fetchChannelInfo } from "./api";
+import { axiosCoins } from "./api/Users";
 import dummyChannelInfo from "./assets/dummyData/dummyChannel.json";
 import dummySelfItem from "./assets/dummyData/dummySelfItems.json";
 import dummySocietyItme from "./assets/dummyData/dummySocietyItems.json";
@@ -120,7 +120,7 @@ const AllVideoList = [
 
 
 function App() {
-  // const {isLoading, data} = useQuery<IChannelInfo[]>("ChannelInfo", fetchChannelInfo);
+  // const {isLoading, data} = useQuery("coinInfo", axiosCoins);
   // console.log(data);
   // console.log(dummyChannelInfo);
   const [videoItem, setVideoItem] = useRecoilState(playlistItemState);
