@@ -1,93 +1,44 @@
 import axios from "axios";
-import { IJoinBody, ISignupBody } from "../Types";
+import { BASE_URL } from "./base_url";
 
-
-//======youtube Item apis
-
-// import dotenv from "dotenv";
-// dotenv.config({ path: "../.env", encoding: "utf8" });
-
-// const API_KEY = process.env.REACT_APP_YOUTUBE_API_KEY;
-// const API_KEY = `AIzaSyBTRV2lZH0H0p-r4MRdDIW8NBpF-2ruSrw`;
-
-// const BASE_URL = `https://www.googleapis.com/youtube/v3`
-// const CHANNEL_ID = `UCGagrr6S5Q8dGXkxnT-ScmA`;
-// const playlistIDs = {
-//   PLAYLIST_SELF_ID : `PLUxiW-oLdlowhJ0--Q3qm85e_ob85O7Pd`,
-//   PLAYLIST_CULTURE_ID : `PLUxiW-oLdloyMVkEatxjriCa_ebmihgRX`,
-//   PLAYLIST_SOCIETY_ID : `PLUxiW-oLdlowIfhNXnjXe7CZRbr2_09PP`,
-//   PLAYLIST_SCIENCE_ID : `PLUxiW-oLdloxf1adb5EaS5UosufnEUaRL`,
-//   PLAYLIST_ACTIVITY_ID : `PLUxiW-oLdlowtNuQjr1II556i7wiIaeWs`,
-// };
-
-// export function fetchChannelInfo(){
-//   return fetch(`${BASE_URL}/chennels?key=${API_KEY}&id=${CHANNEL_ID}&part=snippet,contentDetails,statistics`).then(response => response.json());
-// };
-
-// export function fetchActivityItem(){
-//   return fetch(`${BASE_URL}/playlistItems?part=snippet&maxResults=50&status=&playlistId=${playlistIDs.PLAYLIST_ACTIVITY_ID}&key=${API_KEY}`).then(response => response.json());
-// };
-// export function fetchSelfItem(){
-//   return fetch(`${BASE_URL}/playlistItems?part=snippet&maxResults=50&status=&playlistId=${playlistIDs.PLAYLIST_SELF_ID}&key=${API_KEY}`).then(response => response.json());
-// };
-// export function fetchCultureItem(){
-//   return fetch(`${BASE_URL}/playlistItems?part=snippet&maxResults=50&status=&playlistId=${playlistIDs.PLAYLIST_CULTURE_ID}&key=${API_KEY}`).then(response => response.json());
-// };
-// export function fetchSocietyItem(){
-//   return fetch(`${BASE_URL}/playlistItems?part=snippet&maxResults=50&status=&playlistId=${playlistIDs.PLAYLIST_SOCIETY_ID}&key=${API_KEY}`).then(response => response.json());
-// };
-// export function fetchScienceItem(){
-//   return fetch(`${BASE_URL}/playlistItems?part=snippet&maxResults=50&status=&playlistId=${playlistIDs.PLAYLIST_SCIENCE_ID}&key=${API_KEY}`).then(response => response.json());
-// };
-
-// export function fetchVideoDetail(VIDEO_ID:string){
-//   return fetch(`${BASE_URL}/videos?part=snippet&status=&id=${VIDEO_ID}&key=${API_KEY}`);
-// }
-
-//=========================
-
-export const axiosJoin = async (joinData :IJoinBody) => {
-  const { data } = await axios.post('auth/join', JSON.stringify(joinData));
-  return data;
+/**프로필 조회 api, userId와 access token을 받아 프로필을 조회 */
+export const axiosGetProfile = async (accessToken:string, userId:number) => {
+  try {
+    const { data } = await axios.get(`${BASE_URL}/users:${userId}`, {params:accessToken});
+    return data;
+  } catch (error) {
+    console.log(error)
+  };
 };
 
-export const axiosSignup = async (signData :ISignupBody) => {
-  const { data } = await axios.post('auth/signup', JSON.stringify(signData));
-  return data;
+/**w전체 프로필 조회 api, access token을 받아 admin인지 확인하고 전체 프로필 데이터를 반환 */
+export const axiosGetAllProfile = async (accessToken:string) => {
+  try {
+    const { data } = await axios.get(`${BASE_URL}/users/all`, {params:accessToken});
+    return data;
+  } catch (error) {
+    console.log(error)
+  };
 };
 
-export function fetchJoin (joinData :IJoinBody){
-  return fetch('/auth/join', {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(joinData),
-  }).then(response => response.json())
-  .catch((error) => console.log(error));
+/**유저 삭제 api, access token과 userId를 받아 해당 유저를 회원 리스트에서 삭제 */
+export const axiosPatchUserDelete = async (accessToken:string, userId:number) => {
+  try {
+    const { data } = await axios.patch(`${BASE_URL}/users/status`, JSON.stringify({userId:userId, accessToken:accessToken}));
+    return data;
+  } catch (error) {
+    console.log(error)
+  };
 };
 
-export function fetchSignup (signupData: ISignupBody) {
-  return fetch('/auth/signup', {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(signupData),
-  }).then(response => response.json())
-  .catch((error) => console.log(error));
+/**로그아웃 api, access token을 받아 로그아웃 처리*/
+export const axiosPatchLogout = async (accessToken:string) => {
+  try {
+    const { data } = await axios.patch(`${BASE_URL}/users/logout`, JSON.stringify(accessToken));
+    return data;
+  } catch (error) {
+    console.log(error)
+  };
 };
 
 
-
-//test codes
-const BASE_URL1 = `https://api.coinpaprika.com/v1`
-
-export function fetchCoins(){
-  return fetch(`${BASE_URL1}/coins`).then(response => response.json());
-};
-
-export const axiosCoins = async () => {
-  const { data } = await axios.get(`${BASE_URL1}/coins`);
-  return data;
-};

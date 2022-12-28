@@ -5,8 +5,6 @@ import {ReactQueryDevtools} from "react-query/devtools";
 import { useRecoilState, useRecoilValue, useSetRecoilState } from "recoil";
 import { isDarkThemeAtom, playlistItemState, channelState, isLoadingAtom } from "./atoms";
 import { Categories } from './Types';
-import { useQuery } from "react-query";
-import { axiosCoins } from "./api/Users";
 import dummyChannelInfo from "./assets/dummyData/dummyChannel.json";
 import dummySelfItem from "./assets/dummyData/dummySelfItems.json";
 import dummySocietyItme from "./assets/dummyData/dummySocietyItems.json";
@@ -14,6 +12,7 @@ import dummyCultureItem from "./assets/dummyData/dummyCultureItems.json";
 import dummyScienceItem from "./assets/dummyData/dummyScienceItem.json";
 import dummyActivityItem from "./assets/dummyData/dummyActivityItem.json"
 import { useEffect } from 'react';
+
 
 const channelInfoData = {...dummyChannelInfo};
 const channelInfo = channelInfoData.items.map(data => {
@@ -130,6 +129,7 @@ function App() {
     setVideoItem(AllVideoList);
     setChannelData([...channelInfo]);
     setIsLoading(true);
+
   },[]);
   const isDark = useRecoilValue(isDarkThemeAtom);
   return (

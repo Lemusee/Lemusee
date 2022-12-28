@@ -32,7 +32,10 @@ export interface ISignupBody {
   autoSignup: boolean;
 };
 
-
+export interface IPasswordResetBody {
+  email:string;
+  newPassword:string;
+};
 
 
 //Community Page
@@ -304,6 +307,7 @@ export interface IMemberLoginForm {
   extraError: string;
   email?: string;
   password?: string;
+  autoLogin?: boolean;
 };
 
 export interface IMemberResetPWForm {

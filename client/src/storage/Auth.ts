@@ -1,7 +1,7 @@
-import { atom, RecoilState, useSetRecoilState } from "recoil";
+import { atom, RecoilState, useRecoilState, useSetRecoilState } from "recoil";
 import { SetterOrUpdater } from "recoil";
 
-export const TOKEN_TIME_OUT = 600*1000;
+export const TOKEN_TIME_OUT = 1800*1000; //30분
 
 export interface IAuthToken {
   authenticated: boolean;
@@ -34,6 +34,9 @@ export const setToken = ({payload, setRecoil}:ISetToken) => {
   };
   setRecoil(tokenState);
 };
+// import { authAtom, setToken } from './storage/Auth';
+// const [tokenRecoil, setTokenRecoil] = useRecoilState(authAtom);
+// setToken({payload:"payload", setRecoil:setTokenRecoil});
 
 export interface IDeleteToken {
   setRecoil: SetRecoilAtom;
@@ -47,3 +50,7 @@ export const deleteToken = ({setRecoil}:IDeleteToken) => {
   };
   setRecoil(tokenState);
 };
+
+// import { authAtom, deleteToken } from './storage/Auth';
+// const [tokenRecoil, setTokenRecoil] = useRecoilState(authAtom);
+// deleteToken({payload:"payload", setRecoil:setTokenRecoil});

@@ -21,11 +21,20 @@ function Login () {
   const onValid = (data:IMemberLoginForm) => {
     setError("extraError", {message:"Server offline"});
     setValue("password", "");
-    /**admin access는 프론트에서 처리되며, loggedin state는 false */
+    /**admin access는 서버에서 처리되며, loggedin state는 false */
+    if (data.autoLogin) {
+      //자동 로그인 처리
+      //Refresh token 받아옴
+    };
+    if (!data.autoLogin) {
+      //일반 로그인 처리
+      //Access token만 받아옴
+    };
+
     if (dummyLogInResponse.isSuccess && dummyLogInResponse.code === 1000) {
       setLoggedIn(true);
       setUserId(dummyLogInResponse.result.userId);
-      /**Personal Data fatch */
+      /**Personal Data get */
       const personal = {
         id: dummyPersonalInfo.result.id,
         nickname: dummyPersonalInfo.result.nickName,
@@ -60,7 +69,10 @@ function Login () {
             <span>{errors?.email?.message}</span>
           </S.InputBox>
           <S.AutoLogInInput>
-            <input type="checkbox"></input>
+            <input 
+                type="checkbox"
+                {...register("autoLogin")}
+              />
             <T.Pretendard13R>자동 로그인</T.Pretendard13R>
           </S.AutoLogInInput>
           <S.InputBox>
