@@ -13,6 +13,7 @@ function Executives () {
       adminLeader: data.result.leaders.adminLeader
     }
   }; // 예외 처리 필요
+  
   return (
     <>
       <S.Wrapper>

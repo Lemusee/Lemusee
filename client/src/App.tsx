@@ -12,6 +12,7 @@ import dummyCultureItem from "./assets/dummyData/dummyCultureItems.json";
 import dummyScienceItem from "./assets/dummyData/dummyScienceItem.json";
 import dummyActivityItem from "./assets/dummyData/dummyActivityItem.json"
 import { useEffect } from 'react';
+import { authAtom } from './storage/Auth';
 
 
 const channelInfoData = {...dummyChannelInfo};
@@ -122,6 +123,9 @@ function App() {
   // const {isLoading, data} = useQuery("coinInfo", axiosCoins);
   // console.log(data);
   // console.log(dummyChannelInfo);
+  // const {mutate, isLoading, isError, error, isSuccess} = useMutation(axiosGetMyProfile);
+  const accessToken = useRecoilValue(authAtom);
+  // const {isLoading, data, error} = useQuery(["myProfile", accessToken.accessToken], axiosGetMyProfile);
   const [videoItem, setVideoItem] = useRecoilState(playlistItemState);
   const [channelData, setChannelData] = useRecoilState(channelState);
   const setIsLoading = useSetRecoilState(isLoadingAtom);
@@ -129,7 +133,6 @@ function App() {
     setVideoItem(AllVideoList);
     setChannelData([...channelInfo]);
     setIsLoading(true);
-
   },[]);
   const isDark = useRecoilValue(isDarkThemeAtom);
   return (

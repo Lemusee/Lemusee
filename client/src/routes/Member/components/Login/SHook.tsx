@@ -15,7 +15,7 @@ export const hookGrid = styled.div`
 
 export const btnArea = styled.div`
   width: 100%;
-  height: 100%;
+  height: fit-content;
   display: grid;
   column-gap: 70px;
   grid-template-columns: repeat(2, 1fr);

@@ -18,16 +18,6 @@ function SignUp1 () {
       <form onSubmit={handleSubmit(onValid)}>
         <S.hookGrid>
           <S.InputBox>
-            <T.Pretendard13R>Username</T.Pretendard13R>
-            <input 
-              {...register("username", {
-                required: "이름을 입력해주세요"
-              })}
-              placeholder="실명으로 입력해주세요."
-            />
-            <span>{errors?.username?.message}</span>
-          </S.InputBox>
-          <S.InputBox>
             <T.Pretendard13R>E-mail</T.Pretendard13R>
             <input 
               {...register("email", {
@@ -37,6 +27,16 @@ function SignUp1 () {
               placeholder="이메일을 입력해주세요"
             />
             <span>{errors?.email?.message}</span>
+          </S.InputBox>
+          <S.InputBox>
+            <T.Pretendard13R>Username</T.Pretendard13R>
+            <input 
+              {...register("username", {
+                required: "이름을 입력해주세요"
+              })}
+              placeholder="실명으로 입력해주세요."
+            />
+            <span>{errors?.username?.message}</span>
           </S.InputBox>
           <S.InputBox>
             <T.Pretendard13R>Password</T.Pretendard13R>
@@ -65,9 +65,9 @@ function SignUp1 () {
           </S.InputBox>
         </S.hookGrid>
         <S.btnArea>
-          <Link to="/members/signup2">
+          {/* <Link to="/members/signup2"> */}
             <NextBtn type={"submit"} name={"Next"}/>
-          </Link>
+          {/* </Link> */}
         </S.btnArea>
       </form>
     </>

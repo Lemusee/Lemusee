@@ -33,9 +33,9 @@ export const isLoggedInAtom = atom({
 });
 
 /**userId storage */
-export const myUserIdAtom = atom<number>({
+export const myUserIdAtom = atom<number | null>({
   key:`userState/${v1()}`,
-  default: -1,
+  default: null,
 });
 
 /**isLoading(true) or not(false) */

@@ -1,44 +1,61 @@
-import axios from "axios";
-import { BASE_URL } from "./base_url";
+import { lemuseeClient as axios } from "./axios";
+import { setUserId } from "../Types/api";
+import { IPersonal } from "../Types";
 
-/**프로필 조회 api, userId와 access token을 받아 프로필을 조회 */
-export const axiosGetProfile = async (accessToken:string, userId:number) => {
-  try {
-    const { data } = await axios.get(`${BASE_URL}/users:${userId}`, {params:accessToken});
-    return data;
-  } catch (error) {
-    console.log(error)
-  };
+export const userAPI = {
+
+  async axiosPatchProfile (personalData:IPersonal) {
+    const {
+      data: {code, result},
+    } = await axios.patch(`/users/profile`, personalData);
+
+    if (code !== 1000) {
+      throw new Error(code);
+    };
+
+    return result;
+  },
+
+  /**내 프로필 조회 api, access token을 받아 user data를 조회 */
+  async axiosGetMyProfile () {
+    const {
+      data: {code, result},
+    } = await axios.get(`/users`);
+
+    if (code !== 1000) {
+      throw new Error(code);
+    };
+
+    return result;
+  },
+
+  /**w전체 프로필 조회 api, access token을 받아 admin인지 확인하고 전체 프로필 데이터를 반환 */
+  async axiosGetAllProfile () {
+    const {
+      data: {code, result},
+    } = await axios.get(`/users/all`);
+
+    if (code !== 1000) {
+      throw new Error(code);
+    };
+
+    return result;
+  },
+
+  /**logout patch, token 삭제, set userId null */
+  async axiosPatchLogout (setId:setUserId) {
+    const {
+      data: { code },
+    } = await axios.patch(`/users/logout`);
+
+    if (code === 1000) {
+      this.handleLogout(setId);
+    }
+  },
+  
+  /**access token 삭제, set userId null */
+  handleLogout(setId:setUserId) {
+    delete axios.defaults.headers.common.Authorization;
+    setId(null);
+  },
 };
-
-/**w전체 프로필 조회 api, access token을 받아 admin인지 확인하고 전체 프로필 데이터를 반환 */
-export const axiosGetAllProfile = async (accessToken:string) => {
-  try {
-    const { data } = await axios.get(`${BASE_URL}/users/all`, {params:accessToken});
-    return data;
-  } catch (error) {
-    console.log(error)
-  };
-};
-
-/**유저 삭제 api, access token과 userId를 받아 해당 유저를 회원 리스트에서 삭제 */
-export const axiosPatchUserDelete = async (accessToken:string, userId:number) => {
-  try {
-    const { data } = await axios.patch(`${BASE_URL}/users/status`, JSON.stringify({userId:userId, accessToken:accessToken}));
-    return data;
-  } catch (error) {
-    console.log(error)
-  };
-};
-
-/**로그아웃 api, access token을 받아 로그아웃 처리*/
-export const axiosPatchLogout = async (accessToken:string) => {
-  try {
-    const { data } = await axios.patch(`${BASE_URL}/users/logout`, JSON.stringify(accessToken));
-    return data;
-  } catch (error) {
-    console.log(error)
-  };
-};
-
-

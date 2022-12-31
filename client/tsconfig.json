@@ -23,6 +23,8 @@
   },
   "include": [
     "src",
-    "src/svg.d.ts"
+    "src/svg.d.ts",
+    "src/styled.d.ts",
+    "src/assets/**/*.ts"
   ]
 }

@@ -18,7 +18,7 @@ function Header ({thickness, isDark}:IHeader) {
   const [isLogedIn, setIsLoggedIn] = useRecoilState(isLoggedInAtom);
   const [isAdminAccess, setIsAdminAccess] = useRecoilState(isAdmin);
   const userIdAtom = useRecoilValue(myUserIdAtom);
-  const [userId, setUserID] = useState<number>(-1);
+  const [userId, setUserID] = useState<number | null>(null);
   const [userName, setUserName] = useState<string>("");
   const navigate = useNavigate();
   

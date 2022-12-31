@@ -27,15 +27,17 @@ export interface IJoinBody {
 };
 
 export interface ISignupBody {
-  name: string;
+  email: string;
   password: string;
-  autoSignup: boolean;
+  isAuto?: boolean;
 };
 
 export interface IPasswordResetBody {
   email:string;
   newPassword:string;
 };
+
+
 
 
 //Community Page
@@ -230,12 +232,6 @@ export interface ISearchFocus {
 };
 
 
-//Community
-
-export interface INewComment {
-  userId:number;
-};
-
 //Home
 
 export interface IHomeCurationSorted {
@@ -305,9 +301,9 @@ export interface IMemberFindAccountForm {
 
 export interface IMemberLoginForm {
   extraError: string;
-  email?: string;
-  password?: string;
-  autoLogin?: boolean;
+  email: string;
+  password: string;
+  autoLogin: boolean;
 };
 
 export interface IMemberResetPWForm {

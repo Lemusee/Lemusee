@@ -2,6 +2,7 @@ import styled from "styled-components";
 import * as G from "../../../../GlobalComponents/Spacing/Spacing";
 import * as T from "../../../../GlobalComponents/Text/Text";
 import { IHomeImgUrl } from "../../../../Types";
+import ExecutivedefaultImg from "../../../../assets/images/defaults/executiveDefault.png";
 
 export const Wrapper = styled(G.Wrapper)``;
 export const Container = styled(G.Container)`
@@ -23,7 +24,7 @@ export const contentBox = styled.div`
 export const ExecutivesImg = styled.div<IHomeImgUrl>`
   width: 100%;
   height: 855px;
-  background-image: url(${props=> props.imgUrl});
+  background-image: url(${props=> props.imgUrl ? props.imgUrl : ExecutivedefaultImg});
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
