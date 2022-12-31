@@ -1,5 +1,6 @@
 import { useRecoilValue } from "recoil";
-import { myUserIdAtom, isLoggedInAtom } from "../../../../atoms";
+import { myUserIdAtom } from "../../../../storage/user";
+import { isLoggedInAtom } from "../../../../storage/common";
 import styled from "styled-components";
 import * as G from "../../../../GlobalComponents/Spacing/Spacing";
 import * as T from "../../../../GlobalComponents/Text/Text";

@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useRecoilState, useRecoilValue } from "recoil";
 import styled from "styled-components";
 import * as T from "../../../../GlobalComponents/Text/Text";
-import { communityPageIndex, communityCategoryState, communitypagenationIndex } from "../../../../atoms";
+import { communityPageIndex, communityCategoryState, communitypagenationIndex } from "../../../../storage/community";
 import dummyList from "../../../../assets/dummyData/dummyCommunityListData.json";
 import ListItem from "../ListItem/ListItem";
 import Loading from "../../../../GlobalComponents/Loading/Loading";

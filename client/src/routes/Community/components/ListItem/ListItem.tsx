@@ -2,7 +2,7 @@ import { Link, useParams } from "react-router-dom";
 import styled from "styled-components";
 import * as T from "../../../../GlobalComponents/Text/Text";
 import Moment from "react-moment";
-import { contentTitleAtom } from "../../../../atoms";
+import { contentTitleAtom } from "../../../../storage/community";
 import { useSetRecoilState } from "recoil";
 import { ICommunityListItem } from "../../../../Types";
 

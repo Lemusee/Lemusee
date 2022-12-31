@@ -1,5 +1,5 @@
 import { useRecoilState, useRecoilValue } from "recoil";
-import { communityCategoryTitleAtom, communityCategorySubTitleAtom, communityPageIndex, contentTitleAtom, newContentTitleAtom } from "../../atoms";
+import { communityCategoryTitleAtom, communityCategorySubTitleAtom, communityPageIndex, contentTitleAtom, newContentTitleAtom } from "../../storage/community";
 import styled from "styled-components";
 import * as T from "../../GlobalComponents/Text/Text";
 import * as G from "../../GlobalComponents/Spacing/Spacing";

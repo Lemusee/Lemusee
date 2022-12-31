@@ -1,6 +1,6 @@
 import { useRecoilValue, useSetRecoilState } from "recoil";
 import styled from "styled-components";
-import { adminCurationAtom, adminExecutiveAtom, adminMemberStateAtom, adminMemberStateChangesAtom, adminRecruitingAtom } from "../../../../../atoms";
+import { adminCurationAtom, adminExecutiveAtom, adminMemberStateAtom, adminMemberStateChangesAtom, adminRecruitingAtom } from "../../../../../storage/admin";
 import * as T from "../../../../../GlobalComponents/Text/Text";
 
 export const Button = styled.button`

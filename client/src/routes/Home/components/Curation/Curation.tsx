@@ -4,7 +4,7 @@ import CurationListCard from "./CurationListCard";
 import dummyCuration from "../../../../assets/dummyData/dummyCurationGET.json";
 import React, { ReactElement, useEffect, useState } from "react";
 import { useRecoilState} from "recoil";
-import { curationState } from "../../../../atoms";
+import { curationState } from "../../../../storage/home";
 import Loading from "../../../../GlobalComponents/Loading/Loading";
 import {ReactComponent as NextCurationSVG} from "../../../../assets/icons/nextCuration.svg";
 import { motion, AnimatePresence, useScroll } from "framer-motion";

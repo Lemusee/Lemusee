@@ -2,9 +2,10 @@ import { lemuseeClient as axios } from "../api/axios";
 import { userAPI } from "../api/users";
 import { JWT_EXPIRE_TIMEOUT } from "../api/auth";
 import { IMemberLoginForm } from "../Types";
-import { authAtom, setToken } from "../storage/Auth";
+import { authAtom, setToken } from "../storage/auth";
 import { useRecoilState, useSetRecoilState } from "recoil";
-import { isLoggedInAtom, myUserIdAtom } from "../atoms";
+import { myUserIdAtom } from "../storage/user";
+import { isLoggedInAtom } from "../storage/common";
 
 const useAuthAPI = () => {
   const setIsLoggedIn = useSetRecoilState(isLoggedInAtom);
@@ -53,6 +54,20 @@ const useAuthAPI = () => {
       window.alert('로그인 유지 토큰이 만료되어 로그아웃됩니다.');
     }
     userAPI.handleLogout(setUserId);
+  };
+
+  const getMyPersonalData = async () => {
+    const {
+      data: {code, result},
+    } = await axios.get('members');
+
+    if (code === 1000) {
+
+    }
+
+    if (code !== 1000) {
+      throw new Error(code);
+    };
   };
 
   return {

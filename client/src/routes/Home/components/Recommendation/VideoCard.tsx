@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import { useRecoilValue } from "recoil";
 import * as T from "../../../../GlobalComponents/Text/Text";
 import * as S from "./SVideoCard";
 import Moment from "react-moment";

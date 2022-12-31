@@ -1,11 +1,11 @@
 import moment from "moment";
 import Moment from "react-moment";
-import { ReactElement, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import styled from "styled-components";
 import * as G from "../../../../GlobalComponents/Spacing/Spacing";
 import * as T from "../../../../GlobalComponents/Text/Text";
-import { commentOpenAtom } from "../../../../atoms";
-import { useRecoilState, useSetRecoilState } from "recoil";
+import { commentOpenAtom } from "../../../../storage/community";
+import { useSetRecoilState } from "recoil";
 
 const Wrapper = styled(G.Wrapper)`
   width: 100%;

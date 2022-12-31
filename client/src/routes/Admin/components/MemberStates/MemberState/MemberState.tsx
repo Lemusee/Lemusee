@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { DragDropContext, DropResult } from "react-beautiful-dnd";
 import { useRecoilState, useSetRecoilState } from "recoil";
 import dummyMemberState from "../../../../../assets/dummyData/dummyMemberState.json";
-import { adminMemberStateAtom, adminMemberStateChangesAtom } from "../../../../../atoms";
+import { adminMemberStateAtom, adminMemberStateChangesAtom } from "../../../../../storage/admin";
 import { useEffect } from "react";
 import Board from "../Board/Board";
 

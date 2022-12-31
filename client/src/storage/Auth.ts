@@ -1,15 +1,15 @@
-import { atom, RecoilState, useRecoilState, useSetRecoilState } from "recoil";
+import { atom } from "recoil";
 import { SetterOrUpdater } from "recoil";
 
 export const TOKEN_TIME_OUT = 1800*1000; //30분
 
-export interface IAuthToken {
+export interface IAccessToken {
   authenticated: boolean;
   accessToken: string | null;
   expireTime: number | null;
 };
 
-export const authAtom = atom<IAuthToken>({
+export const authAtom = atom<IAccessToken>({
   key: 'authToken',
   // get initial state from local storage to enable user to stay logged in
   default: {
@@ -19,7 +19,7 @@ export const authAtom = atom<IAuthToken>({
   }
 });
 
-type SetRecoilAtom = SetterOrUpdater<IAuthToken>;
+type SetRecoilAtom = SetterOrUpdater<IAccessToken>;
 
 export interface ISetToken {
   payload: string;
@@ -27,7 +27,7 @@ export interface ISetToken {
 };
 
 export const setToken = ({payload, setRecoil}:ISetToken) => {
-  const tokenState:IAuthToken = {
+  const tokenState:IAccessToken = {
     authenticated: true,
     accessToken: payload,
     expireTime: new Date().getTime() + TOKEN_TIME_OUT
@@ -43,7 +43,7 @@ export interface IDeleteToken {
 };
 
 export const deleteToken = ({setRecoil}:IDeleteToken) => {
-  const tokenState:IAuthToken = {
+  const tokenState:IAccessToken = {
     authenticated: false,
     accessToken: null,
     expireTime: null

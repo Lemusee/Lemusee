@@ -3,15 +3,28 @@ import * as T from "../../../../GlobalComponents/Text/Text";
 import NextBtn from "../../../../GlobalComponents/Buttons/NextBtn";
 import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
-import { IMemberSignupForm } from "../../../../Types";
+import { IJoinBody, IMemberSignupForm } from "../../../../Types";
+import { authAPI } from "../../../../api/auth";
 
 function SignUp1 () {
+  const navigate = useNavigate();
   const { register, handleSubmit, setValue, setError, formState:{errors}, getValues} = useForm<IMemberSignupForm>();
   const onValid = (data:IMemberSignupForm) => {
     setError("extraError", {message:"Server offline"});
     setValue("password", "");
     setValue("passwordConfirm", "");
-    getValues(["username", "email", "password"]);
+    try {
+      const joinData:IJoinBody = {
+        email:data.email,
+        nickname:data.username,
+        password:data.password
+      };
+      /**exailDupCheck 필요 */
+      authAPI.axiosPostJoin(joinData);
+      navigate('/', {replace:true});
+    } catch (error) {
+      console.log(error);
+    };
   };
   return (
     <>
@@ -56,7 +69,10 @@ function SignUp1 () {
             <input 
               {...register("passwordConfirm", {
                 required: "비밀번호를 다시 입력해주세요",
-                pattern:{ value:/[A-Za-z0-9]+$/, message:"영문 + 숫자 형태로 입력해주세요"}
+                validate: (value) => {
+                  const {password} = getValues();
+                  return password === value || "비밀번호가 일치하지 않습니다.";
+                }
               })}
               placeholder="비밀번호를 한번 더 입력해주세요"
               type="password"
