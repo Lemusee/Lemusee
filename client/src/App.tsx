@@ -13,7 +13,7 @@ import dummyCultureItem from "./assets/dummyData/dummyCultureItems.json";
 import dummyScienceItem from "./assets/dummyData/dummyScienceItem.json";
 import dummyActivityItem from "./assets/dummyData/dummyActivityItem.json"
 import { useEffect } from 'react';
-import { authAtom } from './storage/auth';
+import { authAtom } from './storage/token';
   
 const selfItemData = {...dummySelfItem};
 const societyItemData = {...dummySocietyItme};

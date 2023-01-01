@@ -1,9 +1,9 @@
 import { IJoinBody, IMemberLoginForm, IPasswordResetBody, ISignupBody } from "../Types";
 import { lemuseeClient as axios } from "./axios";
-import { setUserId } from "../Types/api";
+import { setIsLoggedIn, setUserData, setUserId } from "../Types/api";
 import { userAPI } from "./users";
 
-export const JWT_EXPIRE_TIMEOUT = 20*60; //20분
+export const JWT_EXPIRE_TIMEOUT = 30*60; //30분
 
 export const authAPI = (() => {
   /**이메일 중복체크 api, email을 받아 중복인지 여부를 체크 */
@@ -62,33 +62,35 @@ export const authAPI = (() => {
   };
 
   /**access token이 만료된 경우 refresh token이 유효한 경우 access token 재발급, 그렇지 않은 경우 로그아웃 처리 */
-  const silentRefreshToken = async (setId:setUserId) => {
+  const silentRefreshToken = async (setId:setUserId, setUserData:setUserData, setIsLoggedIn:setIsLoggedIn) => {
     const { 
       data: { code, result }, 
     } = await axios.post(`/auth/jwt`);
     
     /**refresh token이 유효한 경우, access token 재발급 */
     if (code === 1000) {
-      handleLogin(result.accessToken, setId, result.userId);
+      handleLogin(result.accessToken, setId, setUserData, setIsLoggedIn, result.userId);
       return;
     };
 
     if (code !== 1000) {
       window.alert('로그인 토큰이 만료되었습니다.');
     }
-    userAPI.handleLogout(setId);
+    userAPI.handleLogout(setId, setUserData, setIsLoggedIn);
   };
 
   const handleLogin = (
     accessToken: string,
     setId : setUserId,
+    setUserData:setUserData, 
+    setIsLoggedIn:setIsLoggedIn,
     userId: number,
   ) => {
     axios.defaults.headers.common.Authorization = accessToken;
     setId(userId);
     
     setTimeout(
-      () => silentRefreshToken(setId),
+      () => silentRefreshToken(setId, setUserData, setIsLoggedIn),
       JWT_EXPIRE_TIMEOUT*1000,
     )
   };

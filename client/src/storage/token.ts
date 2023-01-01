@@ -1,5 +1,6 @@
 import { atom } from "recoil";
 import { SetterOrUpdater } from "recoil";
+import { removeCookieToken, setCookieToken } from "./accesCookie";
 
 export const TOKEN_TIME_OUT = 1800*1000; //30분
 
@@ -26,13 +27,13 @@ export interface ISetToken {
   setRecoil: SetRecoilAtom;
 };
 
-export const setToken = ({payload, setRecoil}:ISetToken) => {
-  const tokenState:IAccessToken = {
-    authenticated: true,
-    accessToken: payload,
-    expireTime: new Date().getTime() + TOKEN_TIME_OUT
-  };
-  setRecoil(tokenState);
+export const setToken = (payload:string) => {
+  // const tokenState:IAccessToken = {
+  //   authenticated: true,
+  //   accessToken: payload,
+  //   expireTime: new Date().getTime() + TOKEN_TIME_OUT
+  // };
+  setCookieToken(payload);
 };
 // import { authAtom, setToken } from './storage/Auth';
 // const [tokenRecoil, setTokenRecoil] = useRecoilState(authAtom);
@@ -42,13 +43,13 @@ export interface IDeleteToken {
   setRecoil: SetRecoilAtom;
 };
 
-export const deleteToken = ({setRecoil}:IDeleteToken) => {
-  const tokenState:IAccessToken = {
-    authenticated: false,
-    accessToken: null,
-    expireTime: null
-  };
-  setRecoil(tokenState);
+export const deleteToken = () => {
+  // const tokenState:IAccessToken = {
+  //   authenticated: false,
+  //   accessToken: null,
+  //   expireTime: null
+  // };
+  removeCookieToken();
 };
 
 // import { authAtom, deleteToken } from './storage/Auth';

@@ -1,13 +1,14 @@
 import * as S from "./HeaderStyle";
 import * as T from "../Text/Text";
 import { Link, useNavigate } from "react-router-dom";
-import { useRecoilState, useRecoilValue } from "recoil";
+import { useRecoilState, useRecoilValue, useSetRecoilState } from "recoil";
 import { isAdmin } from "../../storage/common";
-import { myUserIdAtom } from "../../storage/user";
+import { myPersonalDataAtom, myUserIdAtom } from "../../storage/user";
 import { isLoggedInAtom } from "../../storage/common";
 import PersonalInfo from "../../assets/dummyData/dummyPersonalInfo.json";
 import { useEffect, useState } from "react";
 import { useAnimation, useScroll } from "framer-motion";
+import { userAPI } from "../../api/users";
 
 interface IHeader {
   thickness?:boolean;
@@ -17,29 +18,34 @@ interface IHeader {
 function Header ({thickness, isDark}:IHeader) {
   const {scrollY} = useScroll();
   const headerAnimation = useAnimation();
-  const [isLogedIn, setIsLoggedIn] = useRecoilState(isLoggedInAtom);
+  const [isLoggedIn, setIsLoggedIn] = useRecoilState(isLoggedInAtom);
   const [isAdminAccess, setIsAdminAccess] = useRecoilState(isAdmin);
   const userIdAtom = useRecoilValue(myUserIdAtom);
-  const [userId, setUserID] = useState<number | null>(null);
+  const [userId, setUserId] = useState<number | null>(null);
+  const setUserData = useSetRecoilState(myPersonalDataAtom);
   const [userName, setUserName] = useState<string>("");
   const navigate = useNavigate();
   
   useEffect(()=>{
-    if (isLogedIn) {setUserID(userIdAtom)};
+    if (isLoggedIn) {setUserId(userIdAtom)};
     //fetch personal info by userId
     setUserName(PersonalInfo.result.nickName);
   },[]);
 
   const loginnoutHandler = () => {
-    if (isLogedIn) {
+    if (isLoggedIn) {
       //put logout/get success response
       let exit = window.confirm("로그아웃하시겠습니까?");
       if (exit) {
+        // userAPI.axiosPatchLogout(setUserId, setUserData, setIsLoggedIn);
         setIsLoggedIn(false);
+        setUserId(null);
+        setUserData(null);
         setIsAdminAccess(false);
+        
       };
     };
-    if (!isLogedIn) {
+    if (!isLoggedIn) {
       navigate("/members/login");
     };
   };
@@ -105,7 +111,7 @@ function Header ({thickness, isDark}:IHeader) {
               </S.NavTitle>
               {thickness ? <></> : 
               <S.NavTitle onClick={loginnoutHandler} isDark={isDark}>
-                  <T.Pretendard17R>{isLogedIn ? `${userName} 님` : "LogIn/SignUp"}</T.Pretendard17R>
+                  <T.Pretendard17R>{isLoggedIn ? `${userName} 님` : "LogIn/SignUp"}</T.Pretendard17R>
               </S.NavTitle>
               }
             </S.NavTitles>
@@ -125,7 +131,7 @@ function Header ({thickness, isDark}:IHeader) {
                   <T.Pretendard13R><a href="">Workspace</a></T.Pretendard13R>
                 </S.NavSubTitle>
                 <>
-                  {isLogedIn ? (
+                  {isLoggedIn ? (
                     <>
                       <S.Bar/>
                       <S.NavSubTitle>
@@ -150,7 +156,7 @@ function Header ({thickness, isDark}:IHeader) {
                 </>
               </S.NavSubTitles>
               <S.NavSubTitle onClick={loginnoutHandler}>
-                  <T.Pretendard13R>{isLogedIn ? `안녕하세요, ${userName} 님.` : "Log In / Sign Up"}</T.Pretendard13R>
+                  <T.Pretendard13R>{isLoggedIn ? `안녕하세요, ${userName} 님.` : "Log In / Sign Up"}</T.Pretendard13R>
               </S.NavSubTitle>
             </S.MenuBottom>
           : <></>}

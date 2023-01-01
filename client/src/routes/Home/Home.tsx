@@ -9,9 +9,21 @@ import Recent from "./components/Recent/Recent";
 import IndexByCategory from "./components/IndexByCategory/IndexByCategory";
 import Executives from "./components/Executives/Executives";
 import RecruitmentBanner from "../../GlobalComponents/Banners/RecruitmentBanner";
-import React from "react";
+import React, { useEffect } from "react";
 
 function Home () {
+
+  /**클릭하면 스크롤이 위로 올라가는 함수 */
+  const handleTop = () => {
+    window.scrollTo({
+      top: 0,
+    })
+  };
+  
+  useEffect(()=> {
+    handleTop();
+  }, []);
+
   return (
     <>
       <RecruitmentBanner />

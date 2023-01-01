@@ -1,5 +1,5 @@
 import { lemuseeClient as axios } from "./axios";
-import { setUserId } from "../Types/api";
+import { setIsLoggedIn, setUserData, setUserId } from "../Types/api";
 import { IPersonal } from "../Types";
 
 export const userAPI = {
@@ -43,19 +43,22 @@ export const userAPI = {
   },
 
   /**logout patch, token 삭제, set userId null */
-  async axiosPatchLogout (setId:setUserId) {
+  async axiosPatchLogout (setId:setUserId, setUserData:setUserData, setIsLoggedIn:setIsLoggedIn) {
     const {
       data: { code },
     } = await axios.patch(`/users/logout`);
 
     if (code === 1000) {
-      this.handleLogout(setId);
+      this.handleLogout(setId,setUserData,setIsLoggedIn);
     }
   },
-  
+
   /**access token 삭제, set userId null */
-  handleLogout(setId:setUserId) {
+  handleLogout(setId:setUserId, setUserData:setUserData, setIsLoggedIn:setIsLoggedIn) {
     delete axios.defaults.headers.common.Authorization;
     setId(null);
+    setUserData(null);
+    setIsLoggedIn(false);
+    
   },
 };
