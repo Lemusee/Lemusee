@@ -3,22 +3,22 @@ import * as T from "../../../../GlobalComponents/Text/Text";
 import * as S from "./SVideoCard";
 import Moment from "react-moment";
 import { IVideoItems } from "../../../../Types";
+import useTitleSort from "../../../../hooks/useTitleSort";
 
-function VideoCard ({ title, description, publishedAt, videoURL } : IVideoItems) {
-  const titles = (title.indexOf('(') !== -1) ? title.split('(') : [title, ')'];
-  const [titleSorted, nameSorted] = [titles[0], titles[1].replace(')', '')];
+function VideoCard (data : IVideoItems | null) {
+  const titles = useTitleSort(data?.title);
   return (
     <>
-      <Link to={`player/${videoURL}`}>
+      <Link to={`player/${data && data.videoURL}`}>
         <S.Card>
           <S.CardTitle>
-            <T.Pretendard15M>{titleSorted}</T.Pretendard15M>
+            <T.Pretendard15M>{titles && titles[0]}</T.Pretendard15M>
             <T.Pretendard13R>
-              <Moment format="YY.MM.DD.">{publishedAt}</Moment>
+              <Moment format="YY.MM.DD.">{data ? data.publishedAt : undefined}</Moment>
             </T.Pretendard13R>
           </S.CardTitle>
-          <S.CardContent>{description.replace(/\n/g, " ")}</S.CardContent>
-          <S.Speaker>{nameSorted}</S.Speaker>
+          <S.CardContent>{data && data.description.replace(/\n/g, " ")}</S.CardContent>
+          <S.Speaker>{titles && titles[-1]}</S.Speaker>
         </S.Card>
       </Link>
     </>

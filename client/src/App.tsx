@@ -3,7 +3,7 @@ import { ThemeProvider } from "styled-components";
 import { darkTheme, lightTheme, GlobalStyle } from "./theme";
 import {ReactQueryDevtools} from "react-query/devtools";
 import { useRecoilState, useRecoilValue, useSetRecoilState } from "recoil";
-import { playlistItemState } from './storage/archive';
+import { playlistItemCatState, playlistItemState } from './storage/archive';
 import { isLoadingAtom } from './storage/common';
 import { isDarkThemeAtom } from './storage/common';
 import { Categories } from './Types';
@@ -13,8 +13,9 @@ import dummyCultureItem from "./assets/dummyData/dummyCultureItems.json";
 import dummyScienceItem from "./assets/dummyData/dummyScienceItem.json";
 import dummyActivityItem from "./assets/dummyData/dummyActivityItem.json"
 import { useEffect } from 'react';
-import { authAtom } from './storage/token';
-import { Cookies, useCookies } from 'react-cookie';
+import { curationState, executiveState } from './storage/home';
+import moment from 'moment';
+import useVideoCategorySort from './hooks/useVideoCategorySort';
   
 const selfItemData = {...dummySelfItem};
 const societyItemData = {...dummySocietyItme};
@@ -103,20 +104,26 @@ const AllVideoList = [
 
 
 function App() {
-  // const {mutate, isLoading, isError, error, isSuccess} = useMutation(axiosGetMyProfile);
-  const accessToken = useRecoilValue(authAtom);
-  const [videoItem, setVideoItem] = useRecoilState(playlistItemState);
-  // const [channelData, setChannelData] = useRecoilState(channelState);
+  const isDark = useRecoilValue(isDarkThemeAtom);
   const setIsLoading = useSetRecoilState(isLoadingAtom);
+  const [videoItem, setVideoItem] = useRecoilState(playlistItemState)
+  const setVideoCategory = useSetRecoilState(playlistItemCatState);
+  const videoReady = useRecoilValue(playlistItemState);
+  const curationsReady = useRecoilValue(curationState);
+  const executiveReady = useRecoilValue(executiveState);
+  const videoListByCategory = useVideoCategorySort(AllVideoList);
   useEffect(()=> {
     setVideoItem(AllVideoList);
-    // setChannelData([...channelInfo]);
-    setIsLoading(true);
-  },[]);
-  const isDark = useRecoilValue(isDarkThemeAtom);
+    setVideoCategory(videoListByCategory);
+  }, []);
+
+  useEffect(()=> {
+    if (videoReady && curationsReady && executiveReady) {
+      /**videolist, executiveData, curation jwt => refreshToken이 있을 경우(myprofile) 받아올 것  */
+      setIsLoading(false);
+    };
+  },[videoReady, curationsReady, executiveReady]);
   
-  // const [cookies, setCookie, removeCookie] = useCookies(['refreshToken']);
-  // console.log("refreshToken", cookies);
   return (
     <>
       <ThemeProvider theme={isDark ? darkTheme : lightTheme}>

@@ -3,23 +3,28 @@ import * as T from "../../../../GlobalComponents/Text/Text";
 import * as G from "../../../../GlobalComponents/Spacing/Spacing";
 import * as R from "../Recommendation/SRecommends";
 import { useRecoilValue } from "recoil";
-import { playlistItemState } from "../../../../storage/archive";
+import { playlistItemCatState } from "../../../../storage/archive";
 import { isLoadingAtom } from "../../../../storage/common";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Loading from "../../../../GlobalComponents/Loading/Loading";
 import VideoCard from "../Recommendation/VideoCard";
-import moment from "moment";
-import { Categories } from "../../../../Types";
+import { Categories, IVideoItems } from "../../../../Types";
 
 function IndexByCategory () {
-  const videoItem = useRecoilValue(playlistItemState);
-  const videoListByCat = [
-    videoItem.filter(list => list.category === Categories.self_dev).sort((a,b)=> moment(a.publishedAt).diff(moment(b.publishedAt), 'seconds')).reverse().slice(0,9),
-    videoItem.filter(list => list.category === Categories.humanities_society).sort((a,b)=> moment(a.publishedAt).diff(moment(b.publishedAt), 'seconds')).reverse().slice(0,9),
-    videoItem.filter(list => list.category === Categories.culture_art).sort((a,b)=> moment(a.publishedAt).diff(moment(b.publishedAt), 'seconds')).reverse().slice(0,9),
-    videoItem.filter(list => list.category === Categories.science_tech).sort((a,b)=> moment(a.publishedAt).diff(moment(b.publishedAt), 'seconds')).reverse().slice(0,9),
-    videoItem.filter(list => list.category === Categories.activity).sort((a,b)=> moment(a.publishedAt).diff(moment(b.publishedAt), 'seconds')).reverse().slice(0,9),
-  ];
+  const videoItems = useRecoilValue(playlistItemCatState);
+  const [viewVideo, setViewVideo] = useState<IVideoItems[][]>([]);
+  useEffect(()=> {
+    if (videoItems) {
+      const videoListByCat = [
+        [...videoItems["self_dev"]].reverse().slice(0,9),
+        [...videoItems["humanities_society"]].reverse().slice(0,9),
+        [...videoItems["culture_art"]].reverse().slice(0,9),
+        [...videoItems["science_tech"]].reverse().slice(0,9),
+        [...videoItems["activity"]].reverse().slice(0,9),
+      ];
+      setViewVideo(videoListByCat);  
+    };
+  }, [videoItems]);
   const tagList = [
     {
       num: 0,
@@ -69,7 +74,7 @@ function IndexByCategory () {
             ))}
           </S.TagBox>
           <R.VideoBox>
-            {isLoading ? videoListByCat[focus].map(list => <VideoCard key={list.id} {...list}/>) : <Loading/>}
+            {/* {isLoading && !videoItems ? <Loading/> : viewVideo[focus].map(list => list && (<VideoCard key={list.id} {...list}/>))} */}
           </R.VideoBox>
         </S.Container>
       </S.Wrapper>

@@ -1,15 +1,15 @@
 import * as S from "./SPersonal";
 import * as T from "../../GlobalComponents/Text/Text";
-import PersonalData from "../../assets/dummyData/dummyPersonalInfo.json";
 import React, { useEffect, useRef, useState } from "react";
 import PrevPageBtn from "../../GlobalComponents/Buttons/PrevPageBtn";
 import Moment from "react-moment";
-import { useRecoilValue } from "recoil";
+import { useRecoilState, useRecoilValue } from "recoil";
 import { isLoggedInAtom } from "../../storage/common";
 import Loading from "../../GlobalComponents/Loading/Loading";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import { IPersonal, IPersonalTeam, IPersonalAdjustmentForm } from "../../Types";
+import { myPersonalDataAtom } from "../../storage/user";
 
 const TeamInterpreter: IPersonalTeam = {
   curator: "큐레이터",
@@ -22,20 +22,21 @@ const TeamInterpreter: IPersonalTeam = {
 function Personal () {
   const { register, handleSubmit, setValue, setError, formState:{errors}, getValues, watch } = useForm<IPersonalAdjustmentForm>();
   const [isLoading, setIsLoading] = useState(true);
-  const [copyData, setCopyData] = useState<IPersonal>();
+  const [userData, setUserData] = useRecoilState(myPersonalDataAtom);
+  const [copyData, setCopyData] = useState<IPersonal | null>();
   const [teamView, setTeamView] = useState<string>();
   const isLogedIn = useRecoilValue(isLoggedInAtom);
   const navigate = useNavigate();
   useEffect(()=>{
     if (isLogedIn) {
       /**personal data fetch */
-      setCopyData(PersonalData.result);
+      setCopyData(userData);
       setIsLoading(false);
     } else if (!isLogedIn) {
       window.alert("로그인 해주세요");
       navigate(-1);
     };
-  },[isLogedIn, navigate]);
+  },[isLogedIn, navigate, userData]);
   useEffect(()=> {
     if (copyData?.team === null) {
       setTeamView("비활동 회원")
@@ -52,7 +53,7 @@ function Personal () {
   const onValid = (data:IPersonalAdjustmentForm) => {
     setError("extraError", {message:"Server offline"});
     const multipleValues = getValues(['email', 'nickName', 'birthYear', 'department', 'phone', 'studentId', 'introduce']);
-    console.log(multipleValues);
+    // setUserData(prev => {...prev, })
   };
   return (
     <>

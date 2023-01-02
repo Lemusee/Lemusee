@@ -61,6 +61,5 @@ export const userAPI = {
     setId(null);
     setUserData(null);
     setIsLoggedIn(false);
-    
   },
 };

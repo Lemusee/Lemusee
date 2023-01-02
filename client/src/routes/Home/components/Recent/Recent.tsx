@@ -7,8 +7,8 @@ import moment from "moment";
 
 function Recent () {
   const videoItem = useRecoilValue(playlistItemState);
-  const videoItemSortByTime = [...videoItem].sort((a,b) => moment(a.publishedAt).diff(moment(b.publishedAt), 'seconds'));
-  const display = videoItemSortByTime.slice(0,8).map(list => {
+  const videoItemSortByTime = videoItem && [...videoItem].sort((a,b) => moment(a.publishedAt).diff(moment(b.publishedAt), 'seconds'));
+  const display = videoItemSortByTime && videoItemSortByTime.slice(0,8).map(list => {
     return (
       {
         title:list.title,
@@ -27,8 +27,8 @@ function Recent () {
           </S.contentTitle>
           <S.CardBlock>
             {
-              display.map(list => 
-                <RecentCard {...list} key={list.title}/>
+              display && display.map(list => 
+                list && (<RecentCard {...list} key={list.title}/>)
               )
             }
           </S.CardBlock>

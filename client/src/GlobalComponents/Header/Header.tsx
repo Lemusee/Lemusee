@@ -22,15 +22,15 @@ function Header ({thickness, isDark}:IHeader) {
   const [isAdminAccess, setIsAdminAccess] = useRecoilState(isAdmin);
   const userIdAtom = useRecoilValue(myUserIdAtom);
   const [userId, setUserId] = useState<number | null>(null);
-  const setUserData = useSetRecoilState(myPersonalDataAtom);
+  const [userData, setUserData] = useRecoilState(myPersonalDataAtom);
   const [userName, setUserName] = useState<string>("");
   const navigate = useNavigate();
   
   useEffect(()=>{
     if (isLoggedIn) {setUserId(userIdAtom)};
     //fetch personal info by userId
-    setUserName(PersonalInfo.result.nickName);
-  },[]);
+    setUserName(userData ? userData?.nickName : "");
+  },[userData, isLoggedIn]);
 
   const loginnoutHandler = () => {
     if (isLoggedIn) {
@@ -42,7 +42,6 @@ function Header ({thickness, isDark}:IHeader) {
         setUserId(null);
         setUserData(null);
         setIsAdminAccess(false);
-        
       };
     };
     if (!isLoggedIn) {

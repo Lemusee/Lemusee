@@ -219,6 +219,10 @@ export interface IVideoItems {
   category: Categories;
 };
 
+export interface IVideoItemsByCategory {
+  [key:string]: IVideoItems[];
+};
+
 export interface IThumnailUrl {
   thumnailUrl?:string;
 };
@@ -279,6 +283,11 @@ export interface IHomeTeamData {
   content : string;
 };
 
+export interface IHomeExecutivesInfo {
+  imgUrl: string;
+  leaders: {[key:string]: string};
+}
+
 //Member
 
 export interface IMemberPersonalData {
@@ -338,7 +347,7 @@ export interface IPersonal {
   team?: string;
   role?: string;
   isChief?: boolean;
-  createdAt: string;
+  createdAt?: string;
   updatedAt?: string;
 };
 
