@@ -11,10 +11,16 @@ export const authAPI = (() => {
     const { 
       data: { code }, 
     } = await axios.get(`/auth/email?email=${email}`);
-  
-    if (code !== 1000) {
-      throw new Error(code);
-    };
+
+    // if (code === 2017) {
+    //   // throw new Error(code);
+    //   window.alert("이미 존재하는 계정입니다.");
+    // };
+
+    // if (code !== 1000) {
+    //   // throw new Error(code);
+    // };
+    return code;
   };
 
   /**이메일 존재 여부 검증 api, email을 받아 회원 정보가 존재하는 지 여부를 체크 */
@@ -46,8 +52,10 @@ export const authAPI = (() => {
     } = await axios.post(`/auth/join`, joinData);
   
     if (code !== 1000) {
-      throw new Error(code);
-    }
+      // throw new Error(code);
+      window.alert('서버 연결이 불안정합니다.');
+    };
+    return code;
   };
 
   /**비밀번호 재설정 api, email과 새 비밀번호를 받아 새 회원정보 업데이트 */

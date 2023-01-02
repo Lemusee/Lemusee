@@ -20,11 +20,6 @@ const useAuthAPI = () => {
       "email": formResult.email,
       "password" : formResult.password,
     });
-    if (code === 1000) {
-      if (formResult.autoLogin) {
-        /**refresh token을 꺼내서 axios authorization에 넣어줄 것 */
-      };
-    };
     if (code !== 1000) {
       throw new Error(code);
     };
@@ -33,7 +28,7 @@ const useAuthAPI = () => {
   
 
   const handleAuthenticationSuccess = (accessToken: string) => {
-    axios.defaults.headers.common.Authorization = accessToken;
+    axios.defaults.headers.common.Authorization = accessToken; //axios header에 accessToken 추가
     setIsLoggedIn(true);
     setToken(accessToken);
     // getMyPersonalData();

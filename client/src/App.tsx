@@ -14,6 +14,7 @@ import dummyScienceItem from "./assets/dummyData/dummyScienceItem.json";
 import dummyActivityItem from "./assets/dummyData/dummyActivityItem.json"
 import { useEffect } from 'react';
 import { authAtom } from './storage/token';
+import { Cookies, useCookies } from 'react-cookie';
   
 const selfItemData = {...dummySelfItem};
 const societyItemData = {...dummySocietyItme};
@@ -113,6 +114,9 @@ function App() {
     setIsLoading(true);
   },[]);
   const isDark = useRecoilValue(isDarkThemeAtom);
+  
+  // const [cookies, setCookie, removeCookie] = useCookies(['refreshToken']);
+  // console.log("refreshToken", cookies);
   return (
     <>
       <ThemeProvider theme={isDark ? darkTheme : lightTheme}>

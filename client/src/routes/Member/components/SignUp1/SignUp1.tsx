@@ -4,11 +4,12 @@ import NextBtn from "../../../../GlobalComponents/Buttons/NextBtn";
 import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { IJoinBody, IMemberSignupForm } from "../../../../Types";
-import { authAPI } from "../../../../api/auth";
+import useJoin from "../../../../hooks/useJoin";
 
 function SignUp1 () {
   const navigate = useNavigate();
   const { register, handleSubmit, setValue, setError, formState:{errors}, getValues} = useForm<IMemberSignupForm>();
+  const { handleJoin } = useJoin();
   const onValid = (data:IMemberSignupForm) => {
     setError("extraError", {message:"Server offline"});
     setValue("password", "");
@@ -19,11 +20,13 @@ function SignUp1 () {
         nickname:data.username,
         password:data.password
       };
-      /**exailDupCheck 필요 */
-      authAPI.axiosPostJoin(joinData);
+
+      handleJoin(joinData);
       navigate('/', {replace:true});
     } catch (error) {
-      console.log(error);
+      // console.log(error);
+      window.alert('회원가입에 실패했습니다.');
+      navigate('/members/signup1', {replace:true});
     };
   };
   return (
@@ -82,7 +85,7 @@ function SignUp1 () {
         </S.hookGrid>
         <S.btnArea>
           {/* <Link to="/members/signup2"> */}
-            <NextBtn type={"submit"} name={"Next"}/>
+            <NextBtn type={"submit"} name={"Sign Up"}/>
           {/* </Link> */}
         </S.btnArea>
       </form>

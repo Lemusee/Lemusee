@@ -18,7 +18,7 @@ function RecruitmentBanner () {
   useEffect(()=>{
     setRecruitmentInfo({...dummyRecruitmentData.result});
     setIsRecruitment(isOutdated);
-    console.log("recruitment", moment(today).isBefore(recruitmentInfo.due_at), isOutdated);
+    // console.log("recruitment", moment(today).isBefore(recruitmentInfo.due_at), isOutdated);
   }, [isOutdated]);
 
   return (
