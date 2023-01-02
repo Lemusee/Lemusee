@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { useRecoilState } from "recoil";
 import styled from "styled-components";
-import { adminRecruitingAtom } from "../../../../atoms";
+import { adminRecruitingAtom } from "../../../../storage/admin";
 import dummyRecruitingData from "../../../../assets/dummyData/dummyRecruitment.json";
 import { useForm, useWatch } from "react-hook-form";
 import * as T from "../../../../GlobalComponents/Text/Text";

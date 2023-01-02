@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import * as T from "../../../../../GlobalComponents/Text/Text";
 import FileUpLoader from "../../Common/FileUpLoader/FilleUpLoader";
-import { adminCurationAtom, IAdminCurationAtom, adminCurationFileAtom } from "../../../../../atoms";
+import { adminCurationAtom, adminCurationFileAtom } from "../../../../../storage/admin";
 import { useForm, useWatch } from "react-hook-form";
 import { useRecoilState, useRecoilValue, useSetRecoilState } from "recoil";
 import { ICurationItemForm, ICurationItemData } from "../../../../../Types";

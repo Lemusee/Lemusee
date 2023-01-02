@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
-import { RecoilBridge, useRecoilState } from "recoil";
-import {communityPageIndex} from "../../../../atoms";
+import { useRecoilState } from "recoil";
+import { communityPageIndex } from "../../../../storage/community";
 import styled from "styled-components";
 import * as T from "../../../../GlobalComponents/Text/Text";
 import { motion } from "framer-motion";

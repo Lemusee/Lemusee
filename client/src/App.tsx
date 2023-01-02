@@ -3,34 +3,18 @@ import { ThemeProvider } from "styled-components";
 import { darkTheme, lightTheme, GlobalStyle } from "./theme";
 import {ReactQueryDevtools} from "react-query/devtools";
 import { useRecoilState, useRecoilValue, useSetRecoilState } from "recoil";
-import { isDarkThemeAtom, playlistItemState, channelState, isLoadingAtom } from "./atoms";
+import { playlistItemState } from './storage/archive';
+import { isLoadingAtom } from './storage/common';
+import { isDarkThemeAtom } from './storage/common';
 import { Categories } from './Types';
-import dummyChannelInfo from "./assets/dummyData/dummyChannel.json";
 import dummySelfItem from "./assets/dummyData/dummySelfItems.json";
 import dummySocietyItme from "./assets/dummyData/dummySocietyItems.json";
 import dummyCultureItem from "./assets/dummyData/dummyCultureItems.json";
 import dummyScienceItem from "./assets/dummyData/dummyScienceItem.json";
 import dummyActivityItem from "./assets/dummyData/dummyActivityItem.json"
 import { useEffect } from 'react';
-
-
-const channelInfoData = {...dummyChannelInfo};
-const channelInfo = channelInfoData.items.map(data => {
-  return (
-    {
-      id:data.id,
-      publishedAt: data.snippet.publishedAt,
-      title:data.snippet.title,
-      description:data.snippet.description,
-      thumnails:data.snippet.thumbnails.medium,
-      statistics: {
-        viewCount:data.statistics.viewCount,
-        subscriberCount:data.statistics.subscriberCount,
-        videoCount:data.statistics.videoCount
-      },
-    }
-    )
-  })
+import { authAtom } from './storage/token';
+import { Cookies, useCookies } from 'react-cookie';
   
 const selfItemData = {...dummySelfItem};
 const societyItemData = {...dummySocietyItme};
@@ -119,19 +103,20 @@ const AllVideoList = [
 
 
 function App() {
-  // const {isLoading, data} = useQuery("coinInfo", axiosCoins);
-  // console.log(data);
-  // console.log(dummyChannelInfo);
+  // const {mutate, isLoading, isError, error, isSuccess} = useMutation(axiosGetMyProfile);
+  const accessToken = useRecoilValue(authAtom);
   const [videoItem, setVideoItem] = useRecoilState(playlistItemState);
-  const [channelData, setChannelData] = useRecoilState(channelState);
+  // const [channelData, setChannelData] = useRecoilState(channelState);
   const setIsLoading = useSetRecoilState(isLoadingAtom);
   useEffect(()=> {
     setVideoItem(AllVideoList);
-    setChannelData([...channelInfo]);
+    // setChannelData([...channelInfo]);
     setIsLoading(true);
-
   },[]);
   const isDark = useRecoilValue(isDarkThemeAtom);
+  
+  // const [cookies, setCookie, removeCookie] = useCookies(['refreshToken']);
+  // console.log("refreshToken", cookies);
   return (
     <>
       <ThemeProvider theme={isDark ? darkTheme : lightTheme}>

@@ -1,6 +1,8 @@
 import styled from "styled-components";
-import imgUrls from "../../assets/StaticData/AboutUs.json";
 import * as T from "../../GlobalComponents/Text/Text";
+import TopImgData from "../../assets/images/aboutUs/aboutUsTopImg.png";
+import MiddleImgData from "../../assets/images/aboutUs/aboutUsMiddleImg.png";
+import BottomImgData from "../../assets/images/aboutUs/aboutUsBottomImg.jpg";
 
 export const Wrapper = styled.div`
   width: 100vw;
@@ -14,7 +16,7 @@ export const TopBanner = styled.div`
   top: 0;
   width: 100%;
   height: 1024px;
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.27) 0%, rgba(32, 32, 32, 0.85) 72%, ${props=>props.theme.lemuseeblack_100} 89%, ${props => props.theme.lemuseeblack_100} 100%), url(${imgUrls.titleBanner});
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.27) 0%, rgba(32, 32, 32, 0.85) 72%, ${props=>props.theme.lemuseeblack_100} 89%, ${props => props.theme.lemuseeblack_100} 100%), url(${TopImgData});
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -96,7 +98,7 @@ export const MiddleBanner = styled.div`
 export const MiddleImg = styled.div`
   width: 1320px;
   height: 100%;
-  background-image: linear-gradient(to right, #000 0%, rgba(0, 0, 0, 0) 49%, #000 100%), url(${imgUrls.middleBanner});
+  background-image: linear-gradient(to right, #000 0%, rgba(0, 0, 0, 0) 49%, #000 100%), url(${MiddleImgData});
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -111,5 +113,5 @@ export const BottomImg = styled.div`
   background-position: center;
   background-repeat: no-repeat; 
   background-size: contain;
-  background-image: url(${imgUrls.bottomBanner});
+  background-image: url(${BottomImgData});
 `;

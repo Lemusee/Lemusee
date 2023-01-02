@@ -6,7 +6,24 @@ declare module '*.css' {
   }
   const classNames: IClassNames;
   export = classNames;
-}
+};
+
+declare module "*.jpg"{
+  const path: string;
+  export default path;
+};
+declare module "*.png"{
+  const path: string;
+  export default path;
+};
+declare module "*.jpeg"{
+  const path: string;
+  export default path;
+};
+declare module "*.gif"{
+  const path: string;
+  export default path;
+};
 
 declare module 'styled-components' {
   export interface DefaultTheme {
@@ -26,7 +43,7 @@ declare module 'styled-components' {
     logoBlack:string;
     logoWhite:string;
   }
-}
+};
 
 declare module 'styled-components' {
   export interface DefaultFont {
@@ -39,4 +56,4 @@ declare module 'styled-components' {
     pretendard_13:string;
     pretendard_11:string;
   }
-}
+};

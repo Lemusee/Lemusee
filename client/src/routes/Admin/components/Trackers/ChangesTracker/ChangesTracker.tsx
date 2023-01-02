@@ -1,7 +1,7 @@
 import { useRecoilValue } from "recoil";
 import { ITrackerItem } from "../../../../../Types";
 import TrackerItem from "../TrackerItem/TrackerItem";
-import { adminExecutiveAtom, adminCurationFileAtom, adminCurationAtom, adminRecruitingAtom, adminMemberStateChangesAtom } from "../../../../../atoms";
+import { adminExecutiveAtom, adminCurationFileAtom, adminCurationAtom, adminRecruitingAtom, adminMemberStateChangesAtom } from "../../../../../storage/admin";
 import { useEffect, useState } from "react";
 import styled from "styled-components";
 
@@ -41,8 +41,6 @@ function ChangesTracker () {
       },
     ])
   }, [executiveChanges, curationFileChanges, curationChanges, recruitingChanges, memberStateChanges]);
-  // console.log(executiveChanges[0])
-  // console.log(executiveChanges, curationFileChanges, curationChanges, recruitingChanges, memberStateChanges);
   return (
       <Wrapper>
         {changes && changes.map((item) => <TrackerItem title={item.title} changes={item.changes}/>)}

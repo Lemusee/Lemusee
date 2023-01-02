@@ -3,30 +3,36 @@ import * as T from "../../../../GlobalComponents/Text/Text";
 import NextBtn from "../../../../GlobalComponents/Buttons/NextBtn";
 import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
-import { IMemberSignupForm } from "../../../../Types";
+import { IJoinBody, IMemberSignupForm } from "../../../../Types";
+import useJoin from "../../../../hooks/useJoin";
 
 function SignUp1 () {
+  const navigate = useNavigate();
   const { register, handleSubmit, setValue, setError, formState:{errors}, getValues} = useForm<IMemberSignupForm>();
+  const { handleJoin } = useJoin();
   const onValid = (data:IMemberSignupForm) => {
     setError("extraError", {message:"Server offline"});
     setValue("password", "");
     setValue("passwordConfirm", "");
-    getValues(["username", "email", "password"]);
+    try {
+      const joinData:IJoinBody = {
+        email:data.email,
+        nickname:data.username,
+        password:data.password
+      };
+
+      handleJoin(joinData);
+      navigate('/', {replace:true});
+    } catch (error) {
+      // console.log(error);
+      window.alert('회원가입에 실패했습니다.');
+      navigate('/members/signup1', {replace:true});
+    };
   };
   return (
     <>
       <form onSubmit={handleSubmit(onValid)}>
         <S.hookGrid>
-          <S.InputBox>
-            <T.Pretendard13R>Username</T.Pretendard13R>
-            <input 
-              {...register("username", {
-                required: "이름을 입력해주세요"
-              })}
-              placeholder="실명으로 입력해주세요."
-            />
-            <span>{errors?.username?.message}</span>
-          </S.InputBox>
           <S.InputBox>
             <T.Pretendard13R>E-mail</T.Pretendard13R>
             <input 
@@ -37,6 +43,16 @@ function SignUp1 () {
               placeholder="이메일을 입력해주세요"
             />
             <span>{errors?.email?.message}</span>
+          </S.InputBox>
+          <S.InputBox>
+            <T.Pretendard13R>Username</T.Pretendard13R>
+            <input 
+              {...register("username", {
+                required: "이름을 입력해주세요"
+              })}
+              placeholder="실명으로 입력해주세요."
+            />
+            <span>{errors?.username?.message}</span>
           </S.InputBox>
           <S.InputBox>
             <T.Pretendard13R>Password</T.Pretendard13R>
@@ -56,7 +72,10 @@ function SignUp1 () {
             <input 
               {...register("passwordConfirm", {
                 required: "비밀번호를 다시 입력해주세요",
-                pattern:{ value:/[A-Za-z0-9]+$/, message:"영문 + 숫자 형태로 입력해주세요"}
+                validate: (value) => {
+                  const {password} = getValues();
+                  return password === value || "비밀번호가 일치하지 않습니다.";
+                }
               })}
               placeholder="비밀번호를 한번 더 입력해주세요"
               type="password"
@@ -65,9 +84,9 @@ function SignUp1 () {
           </S.InputBox>
         </S.hookGrid>
         <S.btnArea>
-          <Link to="/members/signup2">
-            <NextBtn type={"submit"} name={"Next"}/>
-          </Link>
+          {/* <Link to="/members/signup2"> */}
+            <NextBtn type={"submit"} name={"Sign Up"}/>
+          {/* </Link> */}
         </S.btnArea>
       </form>
     </>

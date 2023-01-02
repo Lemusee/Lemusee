@@ -1,5 +1,6 @@
-import { useRecoilState, useRecoilValue, useSetRecoilState } from "recoil";
-import { isAdmin, adminCurationAtom, adminExecutiveAtom, adminMemberStateChangesAtom } from "../../atoms";
+import { useRecoilValue, useSetRecoilState } from "recoil";
+import { adminExecutiveAtom } from "../../storage/admin";
+import { isAdmin } from "../../storage/common";
 import React, { useEffect, useRef, useState } from "react";
 import Loading from "../../GlobalComponents/Loading/Loading";
 import * as T from "../../GlobalComponents/Text/Text";

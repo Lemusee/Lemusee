@@ -2,7 +2,8 @@ import { Link } from "react-router-dom";
 import * as S from "./SRecommends";
 import * as T from "../../../../GlobalComponents/Text/Text"
 import { useRecoilValue } from "recoil";
-import { playlistItemState, isLoadingAtom } from "../../../../atoms";
+import { playlistItemState } from "../../../../storage/archive";
+import { isLoadingAtom } from "../../../../storage/common";
 import VideoCard from "./VideoCard";
 import Loading from "../../../../GlobalComponents/Loading/Loading";
 

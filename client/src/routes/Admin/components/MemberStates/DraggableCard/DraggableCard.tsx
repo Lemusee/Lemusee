@@ -2,7 +2,7 @@ import { Draggable } from "react-beautiful-dnd";
 import styled from "styled-components";
 import React from "react";
 import { useSetRecoilState } from "recoil";
-import { adminMemberStateAtom } from "../../../../../atoms";
+import { adminMemberStateAtom } from "../../../../../storage/admin";
 import { IDraggableCardProps } from "../../../../../Types";
 
 const Card = styled.div<{isDragging: boolean}>`

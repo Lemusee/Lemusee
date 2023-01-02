@@ -26,7 +26,7 @@ function Router(){
         <Route path="/members/*" element={<Members/>}>
           <Route path="login" element={<Login/>}></Route>
           <Route path="signup1" element={<SignUp1/>}></Route>
-          <Route path="signup2" element={<SignUp2/>}></Route>
+          {/* <Route path="signup2" element={<SignUp2/>}></Route> */}
           <Route path="findaccount" element={<FindAccount/>}></Route>
           <Route path="resetpassword" element={<ResetPassword/>}></Route>
         </Route>

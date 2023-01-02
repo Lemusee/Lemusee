@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 import { useRecoilState, useRecoilValue } from "recoil";
 import contentData from "../../../../assets/dummyData/dummyCommunityContent.json";
-import { isLoggedInAtom, myUserIdAtom, commentOpenAtom } from "../../../../atoms";
+import { commentOpenAtom } from "../../../../storage/community";
+import { myUserIdAtom } from "../../../../storage/user";
+import { isLoggedInAtom } from "../../../../storage/common";
 import styled from "styled-components";
 import * as G from "../../../../GlobalComponents/Spacing/Spacing";
 import * as T from "../../../../GlobalComponents/Text/Text";

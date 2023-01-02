@@ -2,7 +2,8 @@ import Header from "../../GlobalComponents/Header/Header";
 import * as S from "./SArchive";
 import * as T from "../../GlobalComponents/Text/Text";
 import { useRecoilValue } from "recoil";
-import {channelState, playlistItemState, isLoadingAtom } from "../../atoms";
+import { playlistItemState } from "../../storage/archive";
+import { isLoadingAtom } from "../../storage/common";
 import { useState } from "react";
 import moment from "moment";
 import ArchiveVideoCard from "./components/ArchieveVideoCard/ArchiveVideoCard";
@@ -10,9 +11,8 @@ import Loading from "../../GlobalComponents/Loading/Loading";
 import { Categories } from "../../Types";
 
 function Archive () {
-  const channelInfo = useRecoilValue(channelState);
   const videoItem = useRecoilValue(playlistItemState);
-  const videoListByCat = [
+  const videoListByCatategory = [
     [...videoItem].sort((a,b)=> moment(a.publishedAt).diff(moment(b.publishedAt), "seconds")).reverse(),
     [...videoItem].sort((a,b) => {
       if(a.title.toLowerCase() > b.title.toLowerCase()) return 1; 
@@ -72,7 +72,7 @@ function Archive () {
         <S.Container>
           <S.TitleBlock>
             <T.Pretendard44B>Archive</T.Pretendard44B>
-            <T.Pretendard17R>{isLoading ? `${channelInfo[0]?.statistics?.videoCount} lectures` : "Loading..."}</T.Pretendard17R>
+            <T.Pretendard17R>{isLoading ? `${videoListByCatategory[0].length} lectures` : "Loading..."}</T.Pretendard17R>
             <S.TagBox>
               {tagList.map(list => (
                 <button key={list.value} onClick={()=>{setFocus(list.num)}}>
@@ -88,7 +88,7 @@ function Archive () {
             </S.TagBox>
           </S.TitleBlock>
           <S.VideoListBox>
-          {isLoading ? videoListByCat[focus].map(list => <ArchiveVideoCard key={list.id} {...list}/>) : <Loading/>}
+          {isLoading ? videoListByCatategory[focus].map(list => <ArchiveVideoCard key={list.id} {...list}/>) : <Loading/>}
           </S.VideoListBox>
         </S.Container>
       </S.Wrapper>

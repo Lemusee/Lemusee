@@ -1,5 +1,4 @@
 import { SetterOrUpdater } from "recoil";
-import { IAdminFileUploadereAtom } from "./atoms";
 
 export enum Categories {
   "self_dev"="self_dev",
@@ -13,23 +12,15 @@ export enum Categories {
 //api post & put
 
 export interface IJoinBody {
-  name: string;
+  nickname: string;
   email: string;
   password: string;
-  birthYear?: number;
-  depaartment?: string;
-  phone?: string;
-  studentId?: string;
-  introduce?: string;
-  team?: string;
-  role?: string;
-  isChief?: boolean;
 };
 
 export interface ISignupBody {
-  name: string;
+  email: string;
   password: string;
-  autoSignup: boolean;
+  isAuto?: boolean;
 };
 
 export interface IPasswordResetBody {
@@ -37,6 +28,13 @@ export interface IPasswordResetBody {
   newPassword:string;
 };
 
+//Recruitment
+export interface IRecruitment {
+  recruitment_link?:string;
+  inquiry?:string;
+  due_at?:string;
+  content?:string;
+};
 
 //Community Page
 export interface ICategoriesData {
@@ -211,9 +209,9 @@ export interface IDraggableCardProps {
 //Archieve
 
 export interface IVideoItems {
-  id: string;
   playlistId : string;
   publishedAt : string;
+  id: string;
   title: string;
   description: string;
   thumnailUrl: string | undefined;
@@ -229,12 +227,6 @@ export interface ISearchFocus {
   focus?:boolean;
 };
 
-
-//Community
-
-export interface INewComment {
-  userId:number;
-};
 
 //Home
 
@@ -305,9 +297,9 @@ export interface IMemberFindAccountForm {
 
 export interface IMemberLoginForm {
   extraError: string;
-  email?: string;
-  password?: string;
-  autoLogin?: boolean;
+  email: string;
+  password: string;
+  autoLogin: boolean;
 };
 
 export interface IMemberResetPWForm {
@@ -318,10 +310,10 @@ export interface IMemberResetPWForm {
 
 export interface IMemberSignupForm {
   extraError: string;
-  username?: string;
-  email?:string;
-  password?: string;
-  passwordConfirm?:string;
+  username: string;
+  email:string;
+  password: string;
+  passwordConfirm:string;
 };
 
 export interface IMemberSignupDetailForm {

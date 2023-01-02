@@ -5,7 +5,7 @@ import React, { useEffect, useRef, useState } from "react";
 import PrevPageBtn from "../../GlobalComponents/Buttons/PrevPageBtn";
 import Moment from "react-moment";
 import { useRecoilValue } from "recoil";
-import { isLoggedInAtom } from "../../atoms";
+import { isLoggedInAtom } from "../../storage/common";
 import Loading from "../../GlobalComponents/Loading/Loading";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";

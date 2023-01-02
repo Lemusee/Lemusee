@@ -4,53 +4,68 @@ import NextBtn from "../../../../GlobalComponents/Buttons/NextBtn";
 import SubNextBtn from "../../../../GlobalComponents/Buttons/SubNextBtn";
 import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
-import { useRecoilState, useSetRecoilState } from "recoil";
-import { isAdmin, isLoggedInAtom, myUserIdAtom } from "../../../../atoms";
+import { useRecoilState, useRecoilValue, useSetRecoilState } from "recoil";
+import { isAdmin } from "../../../../storage/common";
+import { myUserIdAtom } from "../../../../storage/user";
+import { isLoggedInAtom } from "../../../../storage/common";
 import dummyLogInResponse from "../../../../assets/dummyData/dummyLogInResponse.json";
 import dummyPersonalInfo from "../../../../assets/dummyData/dummyPersonalInfo.json";
 import { useState } from "react";
 import { IMemberLoginForm, IMemberPersonalData } from "../../../../Types";
+import useAuthAPI from "../../../../hooks/useAuthAPI";
 
 function Login () {
-  const { register, handleSubmit, setValue, setError, formState:{errors}, } = useForm<IMemberLoginForm>();
+  const { register, handleSubmit, setValue, setError, formState:{errors}, } = useForm<IMemberLoginForm>({
+    defaultValues: {
+      email: '',
+      password: '',
+      autoLogin: false
+    }
+  });
   const [personalData, setPersonalData] = useState<IMemberPersonalData>({});
   const [isLoggedIn, setLoggedIn] = useRecoilState(isLoggedInAtom);
-  const setUserId = useSetRecoilState(myUserIdAtom);
+  const userId = useRecoilValue(myUserIdAtom);
   const setIsAdmin = useSetRecoilState(isAdmin);
   const navigate = useNavigate();
-  const onValid = (data:IMemberLoginForm) => {
+  const { login } = useAuthAPI();
+
+  const onValid = async (result:IMemberLoginForm) => {
     setError("extraError", {message:"Server offline"});
     setValue("password", "");
-    /**admin access는 서버에서 처리되며, loggedin state는 false */
-    if (data.autoLogin) {
-      //자동 로그인 처리
-      //Refresh token 받아옴
-    };
-    if (!data.autoLogin) {
-      //일반 로그인 처리
-      //Access token만 받아옴
+
+    try {
+      await login(result);
+      if (userId) navigate('/', {replace:true});
+      /**프로필 get 연결 필요 */
+    } catch (code: any) {
+      if (code && code === 2017) {
+        window.alert("존재하지 않는 회원정보입니다.");
+      };
+      if (code && code === 4000) {
+        window.alert("서버 연결 오류");
+      };
     };
 
-    if (dummyLogInResponse.isSuccess && dummyLogInResponse.code === 1000) {
-      setLoggedIn(true);
-      setUserId(dummyLogInResponse.result.userId);
-      /**Personal Data get */
-      const personal = {
-        id: dummyPersonalInfo.result.id,
-        nickname: dummyPersonalInfo.result.nickName,
-        team: dummyPersonalInfo.result.team,
-        role: dummyPersonalInfo.result.role,
-        isChief: dummyPersonalInfo.result.isChief,
-      };
-      setPersonalData(personal);
-      if (personal.role === "admin") {
-        setIsAdmin(true);
-      };
-    } else if (dummyLogInResponse && dummyLogInResponse.code === 2017) {
-      window.alert("존재하지 않는 회원정보입니다.");
-    } else if (dummyLogInResponse && dummyLogInResponse.code === 4000) {
-      window.alert("서버 연결 오류");
-    };
+    // if (dummyLogInResponse.isSuccess && dummyLogInResponse.code === 1000) {
+    //   setLoggedIn(true);
+    //   setUserId(dummyLogInResponse.result.userId);
+    //   /**Personal Data get */
+    //   const personal = {
+    //     id: dummyPersonalInfo.result.id,
+    //     nickname: dummyPersonalInfo.result.nickName,
+    //     team: dummyPersonalInfo.result.team,
+    //     role: dummyPersonalInfo.result.role,
+    //     isChief: dummyPersonalInfo.result.isChief,
+    //   };
+    //   setPersonalData(personal);
+    //   if (personal.role === "admin") {
+    //     setIsAdmin(true);
+    //   };
+    // } else if (dummyLogInResponse && dummyLogInResponse.code === 2017) {
+    //   window.alert("존재하지 않는 회원정보입니다.");
+    // } else if (dummyLogInResponse && dummyLogInResponse.code === 4000) {
+    //   window.alert("서버 연결 오류");
+    // };
   };
   if (isLoggedIn) navigate("/", {replace:true});
   return (

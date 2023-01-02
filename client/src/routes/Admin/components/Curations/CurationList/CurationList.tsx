@@ -1,6 +1,6 @@
 import { useRecoilState, useSetRecoilState } from "recoil";
 import styled from "styled-components";
-import { adminCurationAtom, adminCurationFileAtom } from "../../../../../atoms";
+import { adminCurationAtom, adminCurationFileAtom } from "../../../../../storage/admin";
 import dummyCuration from "../../../../../assets/dummyData/dummyCurationGET.json";
 import { useEffect } from "react";
 import * as T from "../../../../../GlobalComponents/Text/Text";

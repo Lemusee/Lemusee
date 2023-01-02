@@ -2,7 +2,7 @@ import * as S from "./SRecent";
 import * as T from "../../../../GlobalComponents/Text/Text";
 import RecentCard from "./RecentCard";
 import { useRecoilValue } from "recoil";
-import { playlistItemState } from "../../../../atoms";
+import { playlistItemState } from "../../../../storage/archive";
 import moment from "moment";
 
 function Recent () {

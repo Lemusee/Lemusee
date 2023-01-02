@@ -5,7 +5,8 @@ import * as S from "./SRecruitmentBanner";
 import dummyRecruitmentData from "../../assets/dummyData/dummyRecruitment.json";
 import moment from "moment";
 import { useRecoilState } from "recoil";
-import { recruitmentInfoAtom, isRecruitmentAtom } from "../../atoms";
+import { recruitmentInfoAtom } from "../../storage/common";
+import { isRecruitmentAtom } from "../../storage/common";
 import { useEffect, useState } from "react";
 import Moment from "react-moment";
 
@@ -17,7 +18,7 @@ function RecruitmentBanner () {
   useEffect(()=>{
     setRecruitmentInfo({...dummyRecruitmentData.result});
     setIsRecruitment(isOutdated);
-    console.log("recruitment", moment(today).isBefore(recruitmentInfo.due_at), isOutdated);
+    // console.log("recruitment", moment(today).isBefore(recruitmentInfo.due_at), isOutdated);
   }, [isOutdated]);
 
   return (

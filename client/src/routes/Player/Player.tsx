@@ -6,6 +6,7 @@ import Footer from "../../GlobalComponents/Footer/Footer";
 import CommentsData from "../../assets/dummyData/dummyComments.json";
 import CommentsCard from "./components/CommentsCard/CommentsCard";
 import dummyVideoDetail from "../../assets/dummyData/dummyVideoDetail.json";
+import { useEffect } from "react";
 
 function Player () {
   const {videoId} = useParams();
@@ -16,6 +17,19 @@ function Player () {
   const copy = () => {
     navigator.clipboard.writeText(`https://youtu.be/${videoId}`).then(()=> {alert("링크가 복사되었습니다")});
   };
+
+    /**클릭하면 스크롤이 위로 올라가는 함수 */
+    const handleTop = () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      })
+    };
+    
+    useEffect(()=> {
+      handleTop();
+    }, []);
+
   return (
     <>
       <Header thickness={false}/>
