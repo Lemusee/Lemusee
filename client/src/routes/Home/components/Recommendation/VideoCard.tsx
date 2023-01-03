@@ -18,7 +18,7 @@ function VideoCard (data : IVideoItems | null) {
             </T.Pretendard13R>
           </S.CardTitle>
           <S.CardContent>{data && data.description.replace(/\n/g, " ")}</S.CardContent>
-          <S.Speaker>{titles && titles[-1]}</S.Speaker>
+          <S.Speaker>{titles && titles[1]}</S.Speaker>
         </S.Card>
       </Link>
     </>

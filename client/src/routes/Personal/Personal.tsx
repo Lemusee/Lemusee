@@ -16,21 +16,18 @@ const TeamInterpreter: IPersonalTeam = {
   content: "컨텐츠",
   culture: "컬쳐",
   admin: "어드민",
-  etc: "기타"
 };
 
 function Personal () {
   const { register, handleSubmit, setValue, setError, formState:{errors}, getValues, watch } = useForm<IPersonalAdjustmentForm>();
   const [isLoading, setIsLoading] = useState(true);
   const [userData, setUserData] = useRecoilState(myPersonalDataAtom);
-  const [copyData, setCopyData] = useState<IPersonal | null>();
   const [teamView, setTeamView] = useState<string>();
   const isLogedIn = useRecoilValue(isLoggedInAtom);
   const navigate = useNavigate();
   useEffect(()=>{
     if (isLogedIn) {
       /**personal data fetch */
-      setCopyData(userData);
       setIsLoading(false);
     } else if (!isLogedIn) {
       window.alert("로그인 해주세요");
@@ -38,22 +35,37 @@ function Personal () {
     };
   },[isLogedIn, navigate, userData]);
   useEffect(()=> {
-    if (copyData?.team === null) {
+    if (userData?.team === "INACTIVE") {
       setTeamView("비활동 회원")
-    } else if (copyData?.isChief) {
-      const thisTeam = copyData.team;
-      const teamViewset = TeamInterpreter[thisTeam ? thisTeam : "etc"];
+    } else if (userData?.isChief) {
+      const thisTeam = userData.team;
+      const teamViewset = TeamInterpreter[thisTeam ? thisTeam : "INACTIVE"];
       setTeamView(`${teamViewset} 팀장`);
-    } else if (!copyData?.isChief) {
-      const thisTeam = copyData?.team;
-      const teamViewset = TeamInterpreter[thisTeam ? thisTeam : "etc"];
+    } else if (!userData?.isChief) {
+      const thisTeam = userData?.team;
+      const teamViewset = TeamInterpreter[thisTeam ? thisTeam : "INACTIVE"];
       setTeamView(`${teamViewset} 팀`);
     };
-  }, [copyData]);
+  }, [userData]);
   const onValid = (data:IPersonalAdjustmentForm) => {
     setError("extraError", {message:"Server offline"});
-    const multipleValues = getValues(['email', 'nickName', 'birthYear', 'department', 'phone', 'studentId', 'introduce']);
-    // setUserData(prev => {...prev, })
+    /**profile change upload */
+    setUserData((prev) => {
+      if (prev) {
+        const returnData = {
+          ...prev,
+          email : data.email, 
+          nickName : data.nickName,
+          birthYear : data.birthYear,
+          department : data.department,
+          phone : data.phone,
+          studentId : data.studentId,
+          introduce : data.introduce
+        };
+        return returnData
+      } else return prev;
+    });
+
   };
   return (
     <>
@@ -63,7 +75,7 @@ function Personal () {
             <S.Top>
               <S.Introduce 
                   {...register("introduce", {
-                    value: `${copyData ? copyData?.introduce : "자기소개를 입력해주세요"}`,
+                    value: `${userData?.introduce ? userData?.introduce : "자기소개를 입력해주세요"}`,
                     max: 200,
                   })}
                 />
@@ -71,7 +83,7 @@ function Personal () {
                 <S.NickNameInput
                     type="text"
                     {...register("nickName", {
-                      value: `${copyData?.nickName ? copyData?.nickName : "이름을 입력해주세요"}`
+                      value: `${userData?.nickName ? userData?.nickName : "이름을 입력해주세요"}`
                     })}
                   />
                 <T.Pretendard44M>/ NAME</T.Pretendard44M>
@@ -88,7 +100,7 @@ function Personal () {
                       width={typeof watch("department") === 'string' ? (39 * (watch("department") || "..").length) : 240}
                       type="text"
                       {...register("department", {
-                        value: `${copyData?.department ? copyData?.department : "학과"}`
+                        value: `${userData?.department !== null ? userData?.department : "학과"}`
                       })}
                     />
                   <T.Pretendard44M>/</T.Pretendard44M>
@@ -98,7 +110,7 @@ function Personal () {
                       width={typeof watch("studentId") === 'string' ? (27 * (watch("studentId") || "..").length) : 240}
                       type="text"
                       {...register("studentId", {
-                        value: `${copyData ? copyData?.studentId : "학번"}`
+                        value: `${userData?.studentId !== null ? userData?.studentId : "학번"}`
                       })}
                     />
                   <T.Pretendard44M>/</T.Pretendard44M>
@@ -114,8 +126,12 @@ function Personal () {
                   <T.Pretendard44M>/</T.Pretendard44M>
                 </S.InputBtn>
                 <S.InputBtn>
-                  <T.Pretendard44M>{copyData ? teamView : "소속 팀"}</T.Pretendard44M>
-                  <T.Pretendard44M>/</T.Pretendard44M>
+                  {teamView !== "비활동 회원" ? (
+                    <>
+                      <T.Pretendard44M>{teamView}</T.Pretendard44M>
+                      <T.Pretendard44M>/</T.Pretendard44M>
+                    </>
+                  ) : null}
                 </S.InputBtn>
               </S.InputArea>
               <S.InputArea>
@@ -128,7 +144,7 @@ function Personal () {
                       width={typeof watch("email") === 'string' ? (27 * (watch("email") || "..").length) : 240}
                       type="text"
                       {...register("email", {
-                        value: `${copyData ? copyData?.email : "이메일"}`
+                        value: `${userData?.email ? userData?.email : "이메일"}`
                       })}
                     />
                   <T.Pretendard44M>/</T.Pretendard44M>
@@ -144,7 +160,7 @@ function Personal () {
                       width={typeof watch("birthYear") === 'string' ? (27.5 * (watch("birthYear") || "..").length) : 240}
                       type="text"
                       {...register("birthYear", {
-                        value: `${copyData ? copyData?.birthYear : "생일"}`
+                        value: `${userData?.birthYear !== null ? userData?.birthYear : "생일"}`
                       })}
                     />
                   <T.Pretendard44M>/</T.Pretendard44M>
@@ -155,15 +171,27 @@ function Personal () {
               <S.DateInfo>
                 <S.InfoBlock>
                   <T.Pretendard15B>JOIN DATE.</T.Pretendard15B>
-                  <T.Pretendard15R>
-                    <Moment format="YY.MM.DD. HH:MM">{copyData?.createdAt}</Moment>
-                  </T.Pretendard15R>
+                    {userData?.createdAt !== "" ? (
+                      <>
+                        <T.Pretendard15R>
+                          <Moment format="YY.MM.DD. HH:MM">{userData?.createdAt}</Moment>
+                        </T.Pretendard15R>
+                      </>
+                    ) : (
+                      <T.Pretendard15R>회원가입 일시 정보가 없습니다.</T.Pretendard15R>
+                    )}
                 </S.InfoBlock>
                 <S.InfoBlock>
                   <T.Pretendard15B>LAST MODIFIED DATE.</T.Pretendard15B>
-                  <T.Pretendard15R>
-                    <Moment format="YY.MM.DD. HH:MM">{copyData?.updatedAt}</Moment>
-                  </T.Pretendard15R>
+                    {userData?.updatedAt !== "" ? (
+                      <>
+                        <T.Pretendard15R>
+                          <Moment format="YY.MM.DD. HH:MM">{userData?.updatedAt}</Moment>
+                        </T.Pretendard15R>
+                      </>
+                    ) : (
+                      <T.Pretendard15R>개인정보 갱신 정보가 없습니다.</T.Pretendard15R>
+                    )}
                 </S.InfoBlock>
               </S.DateInfo>
               <PrevPageBtn name="Save Changes"/>

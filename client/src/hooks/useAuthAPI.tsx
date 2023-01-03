@@ -56,8 +56,9 @@ const useAuthAPI = () => {
 
     if (code === 2003) {
       window.alert('로그인 유지 토큰이 만료되어 로그아웃됩니다.');
+      userAPI.handleLogout(setUserId, setUserData, setIsLoggedIn);
+      setIsAdmin(false);
     }
-    userAPI.handleLogout(setUserId, setUserData, setIsLoggedIn);
   };
 
   

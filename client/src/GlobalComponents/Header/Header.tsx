@@ -37,7 +37,7 @@ function Header ({thickness, isDark}:IHeader) {
       //put logout/get success response
       let exit = window.confirm("로그아웃하시겠습니까?");
       if (exit) {
-        // userAPI.axiosPatchLogout(setUserId, setUserData, setIsLoggedIn);
+        userAPI.axiosPatchLogout(setUserId, setUserData, setIsLoggedIn);
         setIsLoggedIn(false);
         setUserId(null);
         setUserData(null);

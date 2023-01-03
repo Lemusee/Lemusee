@@ -87,6 +87,19 @@ export const authAPI = (() => {
     userAPI.handleLogout(setId, setUserData, setIsLoggedIn);
   };
 
+  const refreshAccessToken = async () => {
+    const { 
+      data: { code, result }, 
+    } = await axios.post(`/auth/jwt`);
+    if (code === 1000) {
+      axios.defaults.headers.common.Authorization = result.accessToken;
+      return code;
+    }
+    if (code !== 1000) {
+      return code;
+    }
+  }
+
   const handleLogin = (
     accessToken: string,
     setId : setUserId,
@@ -110,7 +123,8 @@ export const authAPI = (() => {
     axiosPostLogin,
     axiosPostJoin,
     axiosPatchPasswordReset,
-    handleLogin
+    handleLogin,
+    refreshAccessToken
   };
 })();
 

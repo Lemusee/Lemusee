@@ -35,8 +35,8 @@ export const Space150px = styled.div`
 `;
 
 interface IFocus {
-  focus?:number;
-  state?:number;
+  focus?:any;
+  state?:any;
 }
 
 export const Tag = styled.div<IFocus>`
