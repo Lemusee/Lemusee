@@ -8,8 +8,6 @@ import { useRecoilState, useRecoilValue, useSetRecoilState } from "recoil";
 import { isAdmin } from "../../../../storage/common";
 import { myUserIdAtom } from "../../../../storage/user";
 import { isLoggedInAtom } from "../../../../storage/common";
-import dummyLogInResponse from "../../../../assets/dummyData/dummyLogInResponse.json";
-import dummyPersonalInfo from "../../../../assets/dummyData/dummyPersonalInfo.json";
 import { useState } from "react";
 import { IMemberLoginForm, IMemberPersonalData } from "../../../../Types";
 import useAuthAPI from "../../../../hooks/useAuthAPI";
@@ -22,10 +20,8 @@ function Login () {
       autoLogin: false
     }
   });
-  const [personalData, setPersonalData] = useState<IMemberPersonalData>({});
-  const [isLoggedIn, setLoggedIn] = useRecoilState(isLoggedInAtom);
+  const isLoggedIn = useRecoilValue(isLoggedInAtom);
   const userId = useRecoilValue(myUserIdAtom);
-  const setIsAdmin = useSetRecoilState(isAdmin);
   const navigate = useNavigate();
   const { login } = useAuthAPI();
 
@@ -45,27 +41,6 @@ function Login () {
         window.alert("서버 연결 오류");
       };
     };
-
-    // if (dummyLogInResponse.isSuccess && dummyLogInResponse.code === 1000) {
-    //   setLoggedIn(true);
-    //   setUserId(dummyLogInResponse.result.userId);
-    //   /**Personal Data get */
-    //   const personal = {
-    //     id: dummyPersonalInfo.result.id,
-    //     nickname: dummyPersonalInfo.result.nickName,
-    //     team: dummyPersonalInfo.result.team,
-    //     role: dummyPersonalInfo.result.role,
-    //     isChief: dummyPersonalInfo.result.isChief,
-    //   };
-    //   setPersonalData(personal);
-    //   if (personal.role === "admin") {
-    //     setIsAdmin(true);
-    //   };
-    // } else if (dummyLogInResponse && dummyLogInResponse.code === 2017) {
-    //   window.alert("존재하지 않는 회원정보입니다.");
-    // } else if (dummyLogInResponse && dummyLogInResponse.code === 4000) {
-    //   window.alert("서버 연결 오류");
-    // };
   };
   if (isLoggedIn) navigate("/", {replace:true});
   return (
@@ -106,10 +81,10 @@ function Login () {
           <Link to="/members/findaccount">
             <SubNextBtn type={"button"} name={"비밀번호 찾기"}/>
           </Link>
-          <S.InputBox>
+          {/* <S.InputBox>
             <T.Pretendard13R>You can also sign in with:</T.Pretendard13R>
             <Link to=""><S.GoogleLoginBtn/></Link>
-          </S.InputBox>
+          </S.InputBox> */}
         </S.hookGrid>
         <S.btnArea>
             <NextBtn type={"submit"} name={"Log in"}/>

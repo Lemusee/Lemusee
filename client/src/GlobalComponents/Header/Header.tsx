@@ -1,14 +1,13 @@
 import * as S from "./HeaderStyle";
 import * as T from "../Text/Text";
 import { Link, useNavigate } from "react-router-dom";
-import { useRecoilState, useRecoilValue, useSetRecoilState } from "recoil";
+import { useRecoilValue } from "recoil";
 import { isAdmin } from "../../storage/common";
-import { myPersonalDataAtom, myUserIdAtom } from "../../storage/user";
+import { myPersonalDataAtom } from "../../storage/user";
 import { isLoggedInAtom } from "../../storage/common";
-import PersonalInfo from "../../assets/dummyData/dummyPersonalInfo.json";
 import { useEffect, useState } from "react";
 import { useAnimation, useScroll } from "framer-motion";
-import { userAPI } from "../../api/users";
+import useLogout from "../../hooks/useLogout";
 
 interface IHeader {
   thickness?:boolean;
@@ -18,30 +17,22 @@ interface IHeader {
 function Header ({thickness, isDark}:IHeader) {
   const {scrollY} = useScroll();
   const headerAnimation = useAnimation();
-  const [isLoggedIn, setIsLoggedIn] = useRecoilState(isLoggedInAtom);
-  const [isAdminAccess, setIsAdminAccess] = useRecoilState(isAdmin);
-  const userIdAtom = useRecoilValue(myUserIdAtom);
-  const [userId, setUserId] = useState<number | null>(null);
-  const [userData, setUserData] = useRecoilState(myPersonalDataAtom);
+  const isLoggedIn = useRecoilValue(isLoggedInAtom);
+  const isAdminAccess = useRecoilValue(isAdmin);
+  const userData = useRecoilValue(myPersonalDataAtom);
   const [userName, setUserName] = useState<string>("");
   const navigate = useNavigate();
+  const { axiosPatchLogout } = useLogout();
   
   useEffect(()=>{
-    if (isLoggedIn) {setUserId(userIdAtom)};
-    //fetch personal info by userId
-    setUserName(userData ? userData?.nickName : "");
+    setUserName(userData ? userData?.nickname : "");
   },[userData, isLoggedIn]);
 
   const loginnoutHandler = () => {
     if (isLoggedIn) {
-      //put logout/get success response
       let exit = window.confirm("로그아웃하시겠습니까?");
       if (exit) {
-        userAPI.axiosPatchLogout(setUserId, setUserData, setIsLoggedIn);
-        setIsLoggedIn(false);
-        setUserId(null);
-        setUserData(null);
-        setIsAdminAccess(false);
+        axiosPatchLogout();
       };
     };
     if (!isLoggedIn) {

@@ -1,16 +1,15 @@
 import { lemuseeClient as axios } from "../api/axios";
-import { userAPI } from "../api/users";
 import { JWT_EXPIRE_TIMEOUT } from "../api/auth";
-import { IMemberLoginForm, IPersonal } from "../Types";
-import { setToken } from "../storage/token";
+import { IMemberLoginForm } from "../Types";
 import { useSetRecoilState } from "recoil";
-import { myUserIdAtom, myPersonalDataAtom } from "../storage/user";
+import { myPersonalDataAtom } from "../storage/user";
 import { isAdmin, isLoggedInAtom } from "../storage/common";
-import { getCookieToken } from "../storage/accesCookie";
+import { getCookieToken, setCookieToken } from "../storage/accesCookie";
+import { userAPI } from "../api/users";
+import { Cookies } from "react-cookie";
 
 const useAuthAPI = () => {
   const setIsLoggedIn = useSetRecoilState(isLoggedInAtom);
-  const setUserId = useSetRecoilState(myUserIdAtom);
   const setUserData = useSetRecoilState(myPersonalDataAtom);
   const setIsAdmin = useSetRecoilState(isAdmin);
   
@@ -31,7 +30,7 @@ const useAuthAPI = () => {
   const handleAuthenticationSuccess = (accessToken: string) => {
     axios.defaults.headers.common.Authorization = accessToken; //axios header에 accessToken 추가
     setIsLoggedIn(true);
-    setToken(accessToken);
+    setCookieToken(accessToken);
     getMyPersonalData();
     silentlyRefreshAccessTokenAfterInterval();
   };
@@ -43,7 +42,11 @@ const useAuthAPI = () => {
     );
 
   const silentlyRefreshAccessToken = async () => {
-    const token = getCookieToken();
+    const token = getCookieToken('accessToken');
+    console.log(getCookieToken('refreshToken'));
+    const headers = {
+      'Cookie': token,
+    }
     const {
       data: { code, result },
     } = await axios.post('/auth/jwt', token);
@@ -51,41 +54,27 @@ const useAuthAPI = () => {
     // 유효한 로그인 상태일 때 (유효한 refresh token)
     if (code === 1000) {
       handleAuthenticationSuccess(result.accessToken);
+      console.log("jwt 재발급 완료", result);
       return;
     }
-
-    if (code === 2003) {
+    else if (code === 2003) {
       window.alert('로그인 유지 토큰이 만료되어 로그아웃됩니다.');
-      userAPI.handleLogout(setUserId, setUserData, setIsLoggedIn);
+      userAPI.handleLogout(setUserData, setIsLoggedIn);
       setIsAdmin(false);
     }
+    else {
+      console.log("JWT POST 실패");
+      console.log("result", code);
+    }
   };
-
-  
 
   const getMyPersonalData = async () => {
     const {
       data: {code, result},
-    } = await axios.get('members');
+    } = await axios.get('/members');
 
     if (code === 1000) {
-      const userData:IPersonal = {
-        id: result.userId,
-        email: result.email,
-        nickName: result.nickname,
-        team: result.team,
-        isChief: result.isChief,
-        birthYear: result.birthYear,
-        department: result.department,
-        phone: result.phone,
-        studentId: result.studentId,
-        introduce: result.introduce,
-        role: result.isChief,
-        createdAt: "",
-        updatedAt: "",
-      };
-      setUserData(userData);
-      setUserId(result.userId);
+      setUserData(result);
       if (result.isChief) {
         setIsAdmin(true);
       };

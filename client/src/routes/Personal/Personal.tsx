@@ -1,6 +1,6 @@
 import * as S from "./SPersonal";
 import * as T from "../../GlobalComponents/Text/Text";
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import PrevPageBtn from "../../GlobalComponents/Buttons/PrevPageBtn";
 import Moment from "react-moment";
 import { useRecoilState, useRecoilValue } from "recoil";
@@ -8,8 +8,9 @@ import { isLoggedInAtom } from "../../storage/common";
 import Loading from "../../GlobalComponents/Loading/Loading";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
-import { IPersonal, IPersonalTeam, IPersonalAdjustmentForm } from "../../Types";
+import { IPersonalTeam, IPersonalAdjustmentForm } from "../../Types";
 import { myPersonalDataAtom } from "../../storage/user";
+import usePersonal from "../../hooks/usePersonal";
 
 const TeamInterpreter: IPersonalTeam = {
   curator: "큐레이터",
@@ -19,12 +20,14 @@ const TeamInterpreter: IPersonalTeam = {
 };
 
 function Personal () {
-  const { register, handleSubmit, setValue, setError, formState:{errors}, getValues, watch } = useForm<IPersonalAdjustmentForm>();
+  const { register, handleSubmit, setError, formState:{errors}, watch} = useForm<IPersonalAdjustmentForm>();
   const [isLoading, setIsLoading] = useState(true);
   const [userData, setUserData] = useRecoilState(myPersonalDataAtom);
   const [teamView, setTeamView] = useState<string>();
   const isLogedIn = useRecoilValue(isLoggedInAtom);
   const navigate = useNavigate();
+  const { axiosPostProfile } = usePersonal();
+
   useEffect(()=>{
     if (isLogedIn) {
       /**personal data fetch */
@@ -34,6 +37,8 @@ function Personal () {
       navigate(-1);
     };
   },[isLogedIn, navigate, userData]);
+
+
   useEffect(()=> {
     if (userData?.team === "INACTIVE") {
       setTeamView("비활동 회원")
@@ -47,6 +52,8 @@ function Personal () {
       setTeamView(`${teamViewset} 팀`);
     };
   }, [userData]);
+
+
   const onValid = (data:IPersonalAdjustmentForm) => {
     setError("extraError", {message:"Server offline"});
     /**profile change upload */
@@ -54,8 +61,7 @@ function Personal () {
       if (prev) {
         const returnData = {
           ...prev,
-          email : data.email, 
-          nickName : data.nickName,
+          nickname : data.nickname,
           birthYear : data.birthYear,
           department : data.department,
           phone : data.phone,
@@ -65,8 +71,10 @@ function Personal () {
         return returnData
       } else return prev;
     });
-
+    // if (userData) axiosPostProfile(userData);
   };
+
+
   return (
     <>
       {!isLoading&&isLogedIn ? (
@@ -82,8 +90,8 @@ function Personal () {
               <S.NameArea>
                 <S.NickNameInput
                     type="text"
-                    {...register("nickName", {
-                      value: `${userData?.nickName ? userData?.nickName : "이름을 입력해주세요"}`
+                    {...register("nickname", {
+                      value: `${userData?.nickname ? userData?.nickname : "이름을 입력해주세요"}`
                     })}
                   />
                 <T.Pretendard44M>/ NAME</T.Pretendard44M>
@@ -110,7 +118,7 @@ function Personal () {
                       width={typeof watch("studentId") === 'string' ? (27 * (watch("studentId") || "..").length) : 240}
                       type="text"
                       {...register("studentId", {
-                        value: `${userData?.studentId !== null ? userData?.studentId : "학번"}`
+                        value: `${userData?.studentId !== null ? userData?.studentId : "학번(200000000)"}`
                       })}
                     />
                   <T.Pretendard44M>/</T.Pretendard44M>
@@ -140,14 +148,12 @@ function Personal () {
                   <T.Pretendard44M>/</T.Pretendard44M>
                 </S.Index>
                 <S.InputBtn>
-                  <S.Input 
-                      width={typeof watch("email") === 'string' ? (27 * (watch("email") || "..").length) : 240}
-                      type="text"
-                      {...register("email", {
-                        value: `${userData?.email ? userData?.email : "이메일"}`
-                      })}
-                    />
-                  <T.Pretendard44M>/</T.Pretendard44M>
+                  {userData?.email ? (
+                    <>
+                      <T.Pretendard44M>{userData?.email}</T.Pretendard44M>
+                      <T.Pretendard44M>/</T.Pretendard44M>
+                    </>
+                  ) : null}
                 </S.InputBtn>
               </S.InputArea>
               <S.InputArea>
@@ -160,7 +166,7 @@ function Personal () {
                       width={typeof watch("birthYear") === 'string' ? (27.5 * (watch("birthYear") || "..").length) : 240}
                       type="text"
                       {...register("birthYear", {
-                        value: `${userData?.birthYear !== null ? userData?.birthYear : "생일"}`
+                        value: `${userData?.birthYear !== null ? userData?.birthYear : "생일(YYMMDD)"}`
                       })}
                     />
                   <T.Pretendard44M>/</T.Pretendard44M>

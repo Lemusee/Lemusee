@@ -1,5 +1,4 @@
-import moment from "moment";
-import { Cookies, useCookies } from "react-cookie";
+import { Cookies } from "react-cookie";
 import { JWT_EXPIRE_TIMEOUT } from "../api/auth";
 
 const cookies = new Cookies();
@@ -11,13 +10,13 @@ export const setCookieToken = (accessToken:string) => {
   return cookies.set('accessToken', accessToken, { 
       sameSite: 'strict', 
       path: "/", 
-      expires: new Date(expireDate),
-      // httpOnly: true,
+      // expires: new Date(expireDate),
+      httpOnly: true,
   });
 };
 
-export const getCookieToken = () => {
-  return cookies.get('accessToken');
+export const getCookieToken = (key:string) => {
+  return cookies.get(key);
 };
 
 export const removeCookieToken = () => {

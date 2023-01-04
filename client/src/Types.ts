@@ -336,16 +336,15 @@ export interface IMemberSignupDetailForm {
 //Personal
 
 export interface IPersonal {
-  id: number;
+  userId: number;
   email: string;
-  nickName: string;
+  nickname: string;
   birthYear?: string;
   department?: string;
   phone?: string;
   studentId?: string;
   introduce?: string;
   team?: string;
-  role?: string;
   isChief?: boolean;
   createdAt?: string;
   updatedAt?: string;
@@ -358,7 +357,7 @@ export interface IPersonalTeam {
 export interface IPersonalAdjustmentForm {
   extraError: string;
   email: string;
-  nickName: string;
+  nickname: string;
   birthYear?: string;
   department?: string;
   phone?: string;

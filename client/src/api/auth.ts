@@ -84,7 +84,7 @@ export const authAPI = (() => {
     if (code !== 1000) {
       window.alert('로그인 토큰이 만료되었습니다.');
     }
-    userAPI.handleLogout(setId, setUserData, setIsLoggedIn);
+    userAPI.handleLogout(setUserData, setIsLoggedIn);
   };
 
   const refreshAccessToken = async () => {

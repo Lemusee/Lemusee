@@ -4,7 +4,7 @@ import { darkTheme, lightTheme, GlobalStyle } from "./theme";
 import {ReactQueryDevtools} from "react-query/devtools";
 import { useRecoilState, useRecoilValue, useSetRecoilState } from "recoil";
 import { playlistItemCatState, playlistItemState } from './storage/archive';
-import { isLoadingAtom } from './storage/common';
+import { isLoadingAtom, isLoggedInAtom } from './storage/common';
 import { isDarkThemeAtom } from './storage/common';
 import { Categories } from './Types';
 import dummySelfItem from "./assets/dummyData/dummySelfItems.json";
@@ -14,8 +14,8 @@ import dummyScienceItem from "./assets/dummyData/dummyScienceItem.json";
 import dummyActivityItem from "./assets/dummyData/dummyActivityItem.json"
 import { useEffect } from 'react';
 import { curationState, executiveState } from './storage/home';
-import moment from 'moment';
 import useVideoCategorySort from './hooks/useVideoCategorySort';
+import useAuthAPI from './hooks/useAuthAPI';
   
 const selfItemData = {...dummySelfItem};
 const societyItemData = {...dummySocietyItme};
@@ -104,17 +104,24 @@ const AllVideoList = [
 
 
 function App() {
+  const isLoggedIn = useRecoilValue(isLoggedInAtom);
   const isDark = useRecoilValue(isDarkThemeAtom);
   const setIsLoading = useSetRecoilState(isLoadingAtom);
-  const [videoItem, setVideoItem] = useRecoilState(playlistItemState)
+  const setVideoItem = useSetRecoilState(playlistItemState);
   const setVideoCategory = useSetRecoilState(playlistItemCatState);
   const videoReady = useRecoilValue(playlistItemState);
   const curationsReady = useRecoilValue(curationState);
   const executiveReady = useRecoilValue(executiveState);
   const videoListByCategory = useVideoCategorySort(AllVideoList);
+
+  const {silentlyRefreshAccessToken} = useAuthAPI();
+
   useEffect(()=> {
     setVideoItem(AllVideoList);
     setVideoCategory(videoListByCategory);
+    if (!isLoggedIn) {
+      silentlyRefreshAccessToken();
+    };
   }, []);
 
   useEffect(()=> {

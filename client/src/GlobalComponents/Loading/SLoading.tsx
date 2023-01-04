@@ -4,7 +4,7 @@ import * as T from "../Text/Text";
 
 export const Wrapper = styled(G.Wrapper)`
   width: 100%;
-  height: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -12,6 +12,7 @@ export const Wrapper = styled(G.Wrapper)`
 `;
 
 export const Area = styled.div`
+  align-self: center;
   display: flex;
   flex-direction: column;
   align-items: center;
