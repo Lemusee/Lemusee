@@ -121,7 +121,6 @@ function App() {
     setVideoItem(AllVideoList);
     setVideoCategory(videoListByCategory);
     const token = getCookieToken('accessToken');
-    console.log(token);
     if (token) {
       silentlyRefreshAccessToken();
     };

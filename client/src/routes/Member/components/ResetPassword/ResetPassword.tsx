@@ -12,7 +12,7 @@ import { authAPI } from "../../../../api/auth";
 function ResetPassword () {
   const [email, setEmail] = useRecoilState(resetPasswordEmailAtom);
   const navigate = useNavigate();
-  const { register, handleSubmit, setValue, setError, formState:{errors}, } = useForm<IMemberResetPWForm>();
+  const { register, handleSubmit, setValue, setError, formState:{errors}, watch} = useForm<IMemberResetPWForm>();
   const onValid = async (data:IMemberResetPWForm) => {
     setError("extraError", {message:"Server offline"});
     setValue("password", "");
@@ -57,7 +57,10 @@ function ResetPassword () {
             <input 
               {...register("passwordConfirm", {
                 required: "비밀번호를 다시 입력해주세요",
-                pattern:{ value:/[A-Za-z0-9]+$/, message:"영문 + 숫자 형태로 입력해주세요"}
+                pattern:{ value:/[A-Za-z0-9]+$/, message:"영문 + 숫자 형태로 입력해주세요"},
+                validate: {
+                  Confirm : (value) => value !== watch('password') ? "비밀번호가 일치하지 않습니다" : true,
+                },
               })}
               placeholder="비밀번호를 한번 더 입력해주세요"
               type="password"
