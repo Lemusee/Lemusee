@@ -11,7 +11,7 @@ export const setCookieToken = (accessToken:string) => {
       sameSite: 'strict', 
       path: "/", 
       // expires: new Date(expireDate),
-      httpOnly: true,
+      // httpOnly: true,
   });
 };
 

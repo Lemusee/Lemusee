@@ -20,8 +20,12 @@ const useAuthAPI = () => {
       "email": formResult.email,
       "password" : formResult.password,
     });
-    if (code !== 1000) {
-      throw new Error(code);
+    
+    if (code && code === 2017) {
+      window.alert("존재하지 않는 회원정보입니다.");
+    };
+    if (code && code === 4000) {
+      window.alert("서버 연결 오류");
     };
     handleAuthenticationSuccess(result);
   };
@@ -43,10 +47,7 @@ const useAuthAPI = () => {
 
   const silentlyRefreshAccessToken = async () => {
     const token = getCookieToken('accessToken');
-    console.log(getCookieToken('refreshToken'));
-    const headers = {
-      'Cookie': token,
-    }
+    console.log(token);
     const {
       data: { code, result },
     } = await axios.post('/auth/jwt', token);
@@ -63,6 +64,7 @@ const useAuthAPI = () => {
       setIsAdmin(false);
     }
     else {
+      userAPI.handleLogout(setUserData, setIsLoggedIn);
       console.log("JWT POST 실패");
       console.log("result", code);
     }

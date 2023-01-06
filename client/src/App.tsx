@@ -16,6 +16,7 @@ import { useEffect } from 'react';
 import { curationState, executiveState } from './storage/home';
 import useVideoCategorySort from './hooks/useVideoCategorySort';
 import useAuthAPI from './hooks/useAuthAPI';
+import { getCookieToken } from './storage/accesCookie';
   
 const selfItemData = {...dummySelfItem};
 const societyItemData = {...dummySocietyItme};
@@ -119,7 +120,9 @@ function App() {
   useEffect(()=> {
     setVideoItem(AllVideoList);
     setVideoCategory(videoListByCategory);
-    if (!isLoggedIn) {
+    const token = getCookieToken('accessToken');
+    console.log(token);
+    if (token) {
       silentlyRefreshAccessToken();
     };
   }, []);
@@ -143,3 +146,4 @@ function App() {
 }
 
 export default App;
+  

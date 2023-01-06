@@ -29,9 +29,10 @@ export const authAPI = (() => {
       data: { code }, 
     } = await axios.get(`/auth/email/existence?email=${email}`);
   
-    if (code !== 1000) {
+    if (code !== 1000 && code !== 2011) {
       throw new Error(code);
     }
+    return code;
   };
   
   /**일반 로그인 api, 이메일과 비밀번호, isAuto:boolean을 받아 Access token과 userId를 반환 */
@@ -54,6 +55,7 @@ export const authAPI = (() => {
     if (code !== 1000) {
       // throw new Error(code);
       window.alert('서버 연결이 불안정합니다.');
+      return code;
     };
     return code;
   };
@@ -67,6 +69,7 @@ export const authAPI = (() => {
     if (code !== 1000) {
       throw new Error(code);
     }
+    return code;
   };
 
   /**access token이 만료된 경우 refresh token이 유효한 경우 access token 재발급, 그렇지 않은 경우 로그아웃 처리 */

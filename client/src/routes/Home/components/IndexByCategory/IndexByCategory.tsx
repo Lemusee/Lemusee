@@ -8,21 +8,21 @@ import { isLoadingAtom } from "../../../../storage/common";
 import { useEffect, useState } from "react";
 import Loading from "../../../../GlobalComponents/Loading/Loading";
 import VideoCard from "../Recommendation/VideoCard";
-import { Categories, IVideoItems } from "../../../../Types";
+import { Categories, IVideoItems, IVideoItemsByCategory } from "../../../../Types";
 
 function IndexByCategory () {
   const videoItems = useRecoilValue(playlistItemCatState);
-  const [viewVideo, setViewVideo] = useState<IVideoItems[][]>([]);
+  const [viewVideo, setViewVideo] = useState<IVideoItemsByCategory>();
   useEffect(()=> {
     if (videoItems) {
-      const videoListByCat = [
-        [...videoItems["self_dev"]].reverse().slice(0,9),
-        [...videoItems["humanities_society"]].reverse().slice(0,9),
-        [...videoItems["culture_art"]].reverse().slice(0,9),
-        [...videoItems["science_tech"]].reverse().slice(0,9),
-        [...videoItems["activity"]].reverse().slice(0,9),
-      ];
-      setViewVideo(videoListByCat);  
+      const videoListByCat = {
+        self_dev : [...videoItems["self_dev"]].reverse().slice(0,9),
+        humanities_society : [...videoItems["humanities_society"]].reverse().slice(0,9),
+        culture_art : [...videoItems["culture_art"]].reverse().slice(0,9),
+        science_tech : [...videoItems["science_tech"]].reverse().slice(0,9),
+        activity : [...videoItems["activity"]].reverse().slice(0,9),
+      };
+      setViewVideo(videoItems ? videoListByCat : {});  
     };
   }, [videoItems]);
   const tagList = [
@@ -55,7 +55,7 @@ function IndexByCategory () {
       value: Categories.activity,
     },
   ];
-  const [focus, setFocus] = useState<number>(0);
+  const [focus, setFocus] = useState<string>("self_dev");
   const isLoading = useRecoilValue(isLoadingAtom);
   return (
     <>
@@ -68,13 +68,13 @@ function IndexByCategory () {
           </S.contentTitle>
           <S.TagBox>
             {tagList.map(list => (
-              <button key={list.value} onClick={()=>{setFocus(list.num)}}>
-                <G.Tag focus={focus} state={list.num}>{list.title}</G.Tag>
+              <button key={list.value} onClick={()=>{setFocus(list.value)}}>
+                <G.Tag focus={focus} state={list.value}>{list.title}</G.Tag>
               </button>
             ))}
           </S.TagBox>
           <R.VideoBox>
-            {/* {isLoading && !videoItems ? <Loading/> : viewVideo[focus].map(list => list && (<VideoCard key={list.id} {...list}/>))} */}
+            {isLoading && !viewVideo ? <Loading/> : viewVideo && viewVideo[focus].map(list => list && (<VideoCard key={list.id} {...list}/>))}
           </R.VideoBox>
         </S.Container>
       </S.Wrapper>

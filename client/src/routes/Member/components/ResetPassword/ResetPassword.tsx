@@ -1,16 +1,39 @@
 import * as S from "../Login/SHook";
 import * as T from "../../../../GlobalComponents/Text/Text";
 import NextBtn from "../../../../GlobalComponents/Buttons/NextBtn";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
-import { IMemberResetPWForm } from "../../../../Types";
+import { IMemberResetPWForm, IPasswordResetBody } from "../../../../Types";
+import { useRecoilState } from "recoil";
+import { resetPasswordEmailAtom } from "../../../../storage/members";
+import { authAPI } from "../../../../api/auth";
+
 
 function ResetPassword () {
+  const [email, setEmail] = useRecoilState(resetPasswordEmailAtom);
+  const navigate = useNavigate();
   const { register, handleSubmit, setValue, setError, formState:{errors}, } = useForm<IMemberResetPWForm>();
-  const onValid = (data:IMemberResetPWForm) => {
+  const onValid = async (data:IMemberResetPWForm) => {
     setError("extraError", {message:"Server offline"});
     setValue("password", "");
     setValue("passwordConfirm", "");
+    if (email && data.password) {
+      const resetData: IPasswordResetBody = {
+        email: email,
+        newPassword: data.password,
+      };
+      const code = await authAPI.axiosPatchPasswordReset(resetData);
+      if (code === 1000) {
+        setEmail("");
+        let exit = window.confirm("비밀번호 변경이 완료되었습니다. 로그인하시겠습니까?");
+        if (exit) navigate('/login', {replace: true});
+        if (!exit) navigate('/', {replace:true});
+      }
+      if (code !== 1000) {
+        setEmail("");
+        navigate('/', {replace:true});
+      };
+    }
   };
   return (
     <>
@@ -43,9 +66,7 @@ function ResetPassword () {
           </S.InputBox>
         </S.hookGrid>
         <S.btnArea>
-          <Link to="/members/login">
-            <NextBtn type={"submit"} name={"Password Confirm & Log in"}/>
-          </Link>
+          <NextBtn type={"submit"} name={"Password Confirm & Log in"}/>
         </S.btnArea>
       </form>
     </>
