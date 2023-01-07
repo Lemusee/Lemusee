@@ -105,7 +105,6 @@ const AllVideoList = [
 
 
 function App() {
-  const isLoggedIn = useRecoilValue(isLoggedInAtom);
   const isDark = useRecoilValue(isDarkThemeAtom);
   const setIsLoading = useSetRecoilState(isLoadingAtom);
   const setVideoItem = useSetRecoilState(playlistItemState);

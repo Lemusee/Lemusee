@@ -57,6 +57,14 @@ function Personal () {
   const onValid = (data:IPersonalAdjustmentForm) => {
     setError("extraError", {message:"Server offline"});
     /**profile change upload */
+    const changedData = {
+      nickname : data.nickname,
+      birthYear : data.birthYear,
+      department : data.department,
+      phone : data.phone,
+      studentId : data.studentId,
+      introduce : data.introduce
+    };
     setUserData((prev) => {
       if (prev) {
         const returnData = {
@@ -71,7 +79,7 @@ function Personal () {
         return returnData
       } else return prev;
     });
-    // if (userData) axiosPostProfile(userData);
+    axiosPostProfile(changedData);
   };
 
 
@@ -158,7 +166,7 @@ function Personal () {
               </S.InputArea>
               <S.InputArea>
                 <S.Index>
-                  <T.Pretendard44M>Birthday</T.Pretendard44M>
+                  <T.Pretendard44M>Birthday&Phone</T.Pretendard44M>
                   <T.Pretendard44M>/</T.Pretendard44M>
                 </S.Index>
                 <S.InputBtn>
@@ -166,7 +174,17 @@ function Personal () {
                       width={typeof watch("birthYear") === 'string' ? (27.5 * (watch("birthYear") || "..").length) : 240}
                       type="text"
                       {...register("birthYear", {
-                        value: `${userData?.birthYear !== null ? userData?.birthYear : "생일(YYMMDD)"}`
+                        value: `${userData?.birthYear !== null ? userData?.birthYear : "YYMMDD"}`
+                      })}
+                    />
+                  <T.Pretendard44M>/</T.Pretendard44M>
+                </S.InputBtn>
+                <S.InputBtn>
+                  <S.Input 
+                      width={typeof watch("phone") === 'string' ? (27.5 * (watch("phone") || "..").length) : 240}
+                      type="text"
+                      {...register("phone", {
+                        value: `${userData?.phone !== null ? userData?.phone : "(-없이 숫자만)"}`
                       })}
                     />
                   <T.Pretendard44M>/</T.Pretendard44M>

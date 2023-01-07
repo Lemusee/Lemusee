@@ -33,7 +33,7 @@ const useLogout = () => {
   
   const handleLogout = () => {
     delete axios.defaults.headers.common.Authorization;
-    // removeCookieToken();
+    removeCookieToken();
     setUserData(null);
     setIsLoggedIn(false);
     setIsAdmin(false);

@@ -2,7 +2,7 @@ import { useRecoilState, useSetRecoilState } from "recoil";
 import { lemuseeClient as axios } from "../api/axios";
 import { isAdmin } from "../storage/common";
 import { myPersonalDataAtom } from "../storage/user";
-import { IPersonal } from "../Types";
+import { IPersonal, IPersonalAxios } from "../Types";
 
 const usePersonal = () => {
   const setUserData = useSetRecoilState(myPersonalDataAtom);
@@ -24,13 +24,14 @@ const usePersonal = () => {
     }
   };
 
-  const axiosPostProfile =async (changedData:IPersonal) => {
+  const axiosPostProfile =async (changedData:IPersonalAxios) => {
     const {
       data: {code, result}
     } = await axios.post('members/profile', changedData);
 
     if (code === 1000) {
-      setUserData(result);
+      window.alert("프로필 정보 변경에 성공했습니다.");
+      // setUserData(result);
     }
     if (code !== 1000) {
       throw new Error(code);

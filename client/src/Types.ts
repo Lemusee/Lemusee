@@ -66,6 +66,11 @@ export interface IComment {
   updatedAt : string;
 };
 
+export interface ICommentForm {
+  extraError: string;
+  comment?: string;
+};
+
 export interface IContent {
   id: number;
   communityTitleId: string;
@@ -348,6 +353,14 @@ export interface IPersonal {
   isChief?: boolean;
   createdAt?: string;
   updatedAt?: string;
+};
+
+export interface IPersonalAxios {
+  birthYear?: string;
+  department?: string;
+  phone?: string;
+  studentId?: string;
+  introduce?: string;
 };
 
 export interface IPersonalTeam {

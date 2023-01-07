@@ -58,9 +58,9 @@ const useAuthAPI = () => {
       handleAuthenticationSuccess(result.token);
       return;
     }
+    /**token이 만료되지 않은 경우 보유한 accessToken을 통해 자동 로그인 */
     if (code === 2009) {
       handleAuthenticationSuccess(token);
-      console.log("토큰이 만료되지 않아 자동으로 로그인 됩니다.");
       return;
     }
     else if (code === 2003) {
@@ -71,7 +71,6 @@ const useAuthAPI = () => {
     else {
       userAPI.handleLogout(setUserData, setIsLoggedIn);
       console.log("JWT POST 실패");
-      console.log("result", code);
     }
   };
 
