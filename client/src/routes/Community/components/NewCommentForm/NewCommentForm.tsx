@@ -5,7 +5,10 @@ import styled from "styled-components";
 import * as G from "../../../../GlobalComponents/Spacing/Spacing";
 import * as T from "../../../../GlobalComponents/Text/Text";
 import { commentOpenAtom } from "../../../../storage/community";
-import { useSetRecoilState } from "recoil";
+import { useRecoilValue, useSetRecoilState } from "recoil";
+import { myPersonalDataAtom } from "../../../../storage/user";
+import { useForm } from "react-hook-form";
+import { ICommentForm } from "../../../../Types";
 
 const Wrapper = styled(G.Wrapper)`
   width: 100%;
@@ -35,6 +38,11 @@ const UserDate = styled.div`
 
 const TextForm = styled.form`
   width: 100%;
+  span {
+    font-size: 11px;
+    color: ${props=>props.theme.error_red};
+    text-align: left;
+  }
 `;
 
 const CommentTextArea = styled.textarea`
@@ -59,19 +67,22 @@ type INewCommentForm = {
 }
 
 function NewCommentForm ({userId}:INewCommentForm) {
+  const {register, handleSubmit, setError, formState:{errors}} = useForm<ICommentForm>();
   const [nowTime, setNowTime] = useState<string>("");
   const [writer, setWriter] = useState("");
-  const [newCommentContent, setNewCommentContent] = useState("");
+  const [newCommentContent, setNewCommentContent] = useState<string>("");
   const setCommentOpen = useSetRecoilState(commentOpenAtom);
-  const onSubmit = (e:React.FormEvent<HTMLFormElement>) => {
-    console.log(e);
-    setNewCommentContent("");
-    setCommentOpen(true);
+  const personalData = useRecoilValue(myPersonalDataAtom);
+  const onSubmit = (data:ICommentForm) => {
+    setError("extraError", {message:"Server offline"});
+    if (data.comment) setNewCommentContent(data.comment);
+    setCommentOpen(false);
   };
+  
   useEffect(()=> {
     const now = moment();
     setNowTime(String(now));
-    setWriter("여용현");
+    if (personalData?.nickname) setWriter(personalData?.nickname);
   }, []);
 
   return (
@@ -83,9 +94,15 @@ function NewCommentForm ({userId}:INewCommentForm) {
             <Moment format="YY.MM.DD.">{nowTime}</Moment>
           </T.Pretendard13R>
         </UserDate>
-        <TextForm onSubmit={onSubmit}>
-          <CommentTextArea placeholder="댓글을 입력하세요..."/>
+        <TextForm onSubmit={handleSubmit(onSubmit)}>
+          <CommentTextArea
+          {...register("comment",{
+            minLength: {value: 1, message:"내용을 작성해주세요."}
+          })}
+            placeholder="댓글을 입력하세요..."
+            />
           <button type="submit">수정완료</button>
+          <span>{errors?.comment?.message}</span>
         </TextForm>
       </Wrapper>
     </>

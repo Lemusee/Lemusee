@@ -1,5 +1,5 @@
 import { useRecoilValue } from "recoil";
-import { myUserIdAtom } from "../../../../storage/user";
+import { myPersonalDataAtom, myUserIdAtom } from "../../../../storage/user";
 import { isLoggedInAtom } from "../../../../storage/common";
 import styled from "styled-components";
 import * as G from "../../../../GlobalComponents/Spacing/Spacing";
@@ -52,11 +52,12 @@ const DeletBtn = styled.button`
 `;
 
 function Comments ({id, userId, writer, content, updatedAt}:IComment) {
-  const isloged = useRecoilValue(isLoggedInAtom);
+  const islogged = useRecoilValue(isLoggedInAtom);
+  const personalData = useRecoilValue(myPersonalDataAtom);
   const userIdState = useRecoilValue(myUserIdAtom);
   return (
     <>
-      <Wrapper isMine={(userId === userIdState) && isloged}>
+      <Wrapper isMine={(userId === personalData?.userId) && islogged}>
         <UserDate>
           <T.Pretendard15M>{writer}</T.Pretendard15M>
           <T.Pretendard13R>
@@ -64,7 +65,7 @@ function Comments ({id, userId, writer, content, updatedAt}:IComment) {
           </T.Pretendard13R>
         </UserDate>
         <T.Pretendard15R>{content}</T.Pretendard15R>
-        {isloged && userIdState === userId ? (
+        {islogged && personalData?.userId === userId ? (
           <Btns>
             <EditBtn>
               <T.Pretendard11R>수정</T.Pretendard11R>

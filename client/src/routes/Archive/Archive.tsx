@@ -4,27 +4,34 @@ import * as T from "../../GlobalComponents/Text/Text";
 import { useRecoilValue } from "recoil";
 import { playlistItemState } from "../../storage/archive";
 import { isLoadingAtom } from "../../storage/common";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import moment from "moment";
 import ArchiveVideoCard from "./components/ArchieveVideoCard/ArchiveVideoCard";
 import Loading from "../../GlobalComponents/Loading/Loading";
-import { Categories } from "../../Types";
+import { Categories, IVideoItems } from "../../Types";
 
 function Archive () {
   const videoItem = useRecoilValue(playlistItemState);
-  const videoListByCatategory = [
-    [...videoItem].sort((a,b)=> moment(a.publishedAt).diff(moment(b.publishedAt), "seconds")).reverse(),
-    [...videoItem].sort((a,b) => {
-      if(a.title.toLowerCase() > b.title.toLowerCase()) return 1; 
-      if(a.title.toLowerCase() < b.title.toLowerCase()) return -1; 
-      return 0;
-      }),
-    [...videoItem].filter(list => list.category === Categories.self_dev).sort((a,b)=> moment(a.publishedAt).diff(moment(b.publishedAt), 'seconds')).reverse(),
-    [...videoItem].filter(list => list.category === Categories.humanities_society).sort((a,b)=> moment(a.publishedAt).diff(moment(b.publishedAt), 'seconds')).reverse(),
-    [...videoItem].filter(list => list.category === Categories.culture_art).sort((a,b)=> moment(a.publishedAt).diff(moment(b.publishedAt), 'seconds')).reverse(),
-    [...videoItem].filter(list => list.category === Categories.science_tech).sort((a,b)=> moment(a.publishedAt).diff(moment(b.publishedAt), 'seconds')).reverse(),
-    [...videoItem].filter(list => list.category === Categories.activity).sort((a,b)=> moment(a.publishedAt).diff(moment(b.publishedAt), 'seconds')).reverse(),
-  ];
+  const [videoCategory, setVideoCategory] = useState<IVideoItems[][] | null>(null);
+  useEffect(()=> {
+    if (videoItem !== null) {
+      setVideoCategory(
+        [
+          [...videoItem].sort((a,b)=> moment(a.publishedAt).diff(moment(b.publishedAt), "seconds")).reverse(),
+          [...videoItem].sort((a,b) => {
+            if(a.title.toLowerCase() > b.title.toLowerCase()) return 1; 
+            if(a.title.toLowerCase() < b.title.toLowerCase()) return -1; 
+            return 0;
+            }),
+          [...videoItem].filter(list => list.category === Categories.self_dev).sort((a,b)=> moment(a.publishedAt).diff(moment(b.publishedAt), 'seconds')).reverse(),
+          [...videoItem].filter(list => list.category === Categories.humanities_society).sort((a,b)=> moment(a.publishedAt).diff(moment(b.publishedAt), 'seconds')).reverse(),
+          [...videoItem].filter(list => list.category === Categories.culture_art).sort((a,b)=> moment(a.publishedAt).diff(moment(b.publishedAt), 'seconds')).reverse(),
+          [...videoItem].filter(list => list.category === Categories.science_tech).sort((a,b)=> moment(a.publishedAt).diff(moment(b.publishedAt), 'seconds')).reverse(),
+          [...videoItem].filter(list => list.category === Categories.activity).sort((a,b)=> moment(a.publishedAt).diff(moment(b.publishedAt), 'seconds')).reverse(),
+        ]
+      )
+    }
+  }, [videoItem]);
   const tagList = [
     {
       num: 0,
@@ -72,7 +79,7 @@ function Archive () {
         <S.Container>
           <S.TitleBlock>
             <T.Pretendard44B>Archive</T.Pretendard44B>
-            <T.Pretendard17R>{isLoading ? `${videoListByCatategory[0].length} lectures` : "Loading..."}</T.Pretendard17R>
+            <T.Pretendard17R>{isLoading && videoCategory ? `${videoCategory[0].length} lectures` : "Loading..."}</T.Pretendard17R>
             <S.TagBox>
               {tagList.map(list => (
                 <button key={list.value} onClick={()=>{setFocus(list.num)}}>
@@ -88,7 +95,7 @@ function Archive () {
             </S.TagBox>
           </S.TitleBlock>
           <S.VideoListBox>
-          {isLoading ? videoListByCatategory[focus].map(list => <ArchiveVideoCard key={list.id} {...list}/>) : <Loading/>}
+          {isLoading ? <Loading/> : videoCategory && videoCategory[focus].map(list => <ArchiveVideoCard key={list.id} {...list}/>)}
           </S.VideoListBox>
         </S.Container>
       </S.Wrapper>

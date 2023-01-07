@@ -16,10 +16,10 @@ export const isLoggedInAtom = atom({
   default:false,
 });
 
-/**isLoading(true) or not(false) */
+/**is Loading(true) or not(false), initial value = true */
 export const isLoadingAtom = atom({
   key:`userState/${v1()}`,
-  default: false,
+  default: true,
 });
 
 /**get admin access by response */

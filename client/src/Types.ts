@@ -66,6 +66,11 @@ export interface IComment {
   updatedAt : string;
 };
 
+export interface ICommentForm {
+  extraError: string;
+  comment?: string;
+};
+
 export interface IContent {
   id: number;
   communityTitleId: string;
@@ -219,6 +224,10 @@ export interface IVideoItems {
   category: Categories;
 };
 
+export interface IVideoItemsByCategory {
+  [key:string]: IVideoItems[];
+};
+
 export interface IThumnailUrl {
   thumnailUrl?:string;
 };
@@ -279,6 +288,11 @@ export interface IHomeTeamData {
   content : string;
 };
 
+export interface IHomeExecutivesInfo {
+  imgUrl: string;
+  leaders: {[key:string]: string};
+}
+
 //Member
 
 export interface IMemberPersonalData {
@@ -327,19 +341,26 @@ export interface IMemberSignupDetailForm {
 //Personal
 
 export interface IPersonal {
-  id: number;
+  userId: number;
   email: string;
-  nickName: string;
+  nickname: string;
   birthYear?: string;
   department?: string;
   phone?: string;
   studentId?: string;
   introduce?: string;
   team?: string;
-  role?: string;
   isChief?: boolean;
-  createdAt: string;
+  createdAt?: string;
   updatedAt?: string;
+};
+
+export interface IPersonalAxios {
+  birthYear?: string;
+  department?: string;
+  phone?: string;
+  studentId?: string;
+  introduce?: string;
 };
 
 export interface IPersonalTeam {
@@ -349,7 +370,7 @@ export interface IPersonalTeam {
 export interface IPersonalAdjustmentForm {
   extraError: string;
   email: string;
-  nickName: string;
+  nickname: string;
   birthYear?: string;
   department?: string;
   phone?: string;

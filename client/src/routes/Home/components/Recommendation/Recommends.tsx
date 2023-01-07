@@ -8,14 +8,14 @@ import VideoCard from "./VideoCard";
 import Loading from "../../../../GlobalComponents/Loading/Loading";
 
 function Recommends () {
+  const isLoading = useRecoilValue(isLoadingAtom);
   const videoList = useRecoilValue(playlistItemState);
-  const copyList = [...videoList];
+  const copyList = videoList && [...videoList];
   var randomList =[];
   while(randomList.length < 9){
-    var movenum = copyList.splice(Math.floor(Math.random() * copyList.length),1)[0];
+    var movenum = copyList && copyList.splice(Math.floor(Math.random() * copyList.length),1)[0];
     randomList.push(movenum)
   };
-  const isLoading = useRecoilValue(isLoadingAtom);
   return (
     <>
       <S.Wrapper>
@@ -29,7 +29,7 @@ function Recommends () {
               </svg>
           </S.ConstentTitle>
           <S.VideoBox>
-            {isLoading ? randomList.map(list => <VideoCard key={list.id} {...list}/>) : <Loading/>}
+            {isLoading ? <Loading/> : randomList && randomList.map(list => list && (<VideoCard key={list && list.id} {...list}/>))}
           </S.VideoBox>
         </S.Container>
       </S.Wrapper>
