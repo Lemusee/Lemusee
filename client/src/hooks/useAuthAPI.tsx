@@ -95,6 +95,7 @@ const useAuthAPI = () => {
   return {
     login,
     silentlyRefreshAccessToken,
+    getMyPersonalData,
   }
 };
 

@@ -15,10 +15,21 @@ export const setCookieToken = (accessToken:string) => {
   });
 };
 
+export const setCookie = (name:string, key:string) => {
+  const today = new Date();
+  const expireDate = today.setDate(Date.now() + (5*60)*1000);//5분
+  
+  return cookies.set(name, key, { 
+    sameSite: 'strict', 
+    path: "/", 
+    expires: new Date(expireDate),
+});
+}
+
 export const getCookieToken = (key:string) => {
   return cookies.get(key);
 };
 
-export const removeCookieToken = () => {
-  return cookies.remove('accessToken', { sameSite: 'strict', path: "/" })
+export const removeCookieToken = (key:string) => {
+  return cookies.remove(key, { sameSite: 'strict', path: "/" })
 };

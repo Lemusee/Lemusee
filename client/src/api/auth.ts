@@ -64,8 +64,7 @@ export const authAPI = (() => {
   const axiosPatchPasswordReset = async ({email, newPassword}:IPasswordResetBody) => {
     const { 
       data: { code }, 
-    } = await axios.patch(`/auth/password`, JSON.stringify({email:email, newPassword:newPassword}));
-  
+    } = await axios.patch(`/auth/password`, {email:email, newPassword:newPassword});
     if (code !== 1000) {
       throw new Error(code);
     }

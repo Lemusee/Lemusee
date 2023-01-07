@@ -7,13 +7,11 @@ import emailjs from '@emailjs/browser';
 import SubNextBtn from "../../../../GlobalComponents/Buttons/SubNextBtn";
 import { authAPI } from "../../../../api/auth";
 import { useState } from "react";
-import { useSetRecoilState } from "recoil";
-import { resetPasswordEmailAtom } from "../../../../storage/members";
+import { setCookie } from "../../../../storage/accesCookie";
 
 
 function FindAccount () {
   const [isExistence, setIsExistence] = useState<boolean>(false);
-  const setResetPasswordEmail = useSetRecoilState(resetPasswordEmailAtom);
   emailjs.init("WYjdzgbtaMNxhTIOL");
   const { register, handleSubmit, setValue, setError, formState:{errors}, getValues } = useForm<IMemberFindAccountForm>();
   const onValid = (data:IMemberFindAccountForm) => {
@@ -24,7 +22,7 @@ function FindAccount () {
       emailLink: "https://lemusee.site/members/resetpassword",
     }
     emailjs.send("service_zxyz92g", "template_5jqhoeh", template).then(response=>{
-      setResetPasswordEmail(data.email);
+      if (data?.email) setCookie("email", data.email);
       window.alert(`${data.email}로 인증메일이 전송되었습니다.`);
     }).catch(error => {console.log(error)});
   };
@@ -41,7 +39,6 @@ function FindAccount () {
         setIsExistence(false);
       }
     };
-    if (!email) window.alert("이메일을 입력해주세요");
   };
   return (
     <>

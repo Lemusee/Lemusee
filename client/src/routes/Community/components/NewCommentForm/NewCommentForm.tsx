@@ -78,7 +78,7 @@ function NewCommentForm ({userId}:INewCommentForm) {
     if (data.comment) setNewCommentContent(data.comment);
     setCommentOpen(false);
   };
-  
+
   useEffect(()=> {
     const now = moment();
     setNowTime(String(now));
@@ -97,7 +97,7 @@ function NewCommentForm ({userId}:INewCommentForm) {
         <TextForm onSubmit={handleSubmit(onSubmit)}>
           <CommentTextArea
           {...register("comment",{
-            minLength: {value: 1, message:"내용을 작성해주세요."}
+            required: "내용을 작성해주세요."
           })}
             placeholder="댓글을 입력하세요..."
             />

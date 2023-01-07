@@ -24,8 +24,9 @@ export interface ISignupBody {
 };
 
 export interface IPasswordResetBody {
-  email:string;
-  newPassword:string;
+  email?:string;
+  newPassword?:string;
+  oldPassword?:string;
 };
 
 //Recruitment
@@ -356,6 +357,7 @@ export interface IPersonal {
 };
 
 export interface IPersonalAxios {
+  nickname?:string;
   birthYear?: string;
   department?: string;
   phone?: string;
