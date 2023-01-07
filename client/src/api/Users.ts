@@ -39,7 +39,7 @@ export const userAPI = {
   /**access token 삭제, set userId null */
   handleLogout(setUserData:setUserData, setIsLoggedIn:setIsLoggedIn) {
     delete axios.defaults.headers.common.Authorization;
-    removeCookieToken();
+    removeCookieToken('accessToken');
     setUserData(null);
     setIsLoggedIn(false);
   },

@@ -1,5 +1,5 @@
 import { useRecoilValue } from "recoil";
-import { myPersonalDataAtom, myUserIdAtom } from "../../../../storage/user";
+import { myPersonalDataAtom } from "../../../../storage/user";
 import { isLoggedInAtom } from "../../../../storage/common";
 import styled from "styled-components";
 import * as G from "../../../../GlobalComponents/Spacing/Spacing";
@@ -54,7 +54,6 @@ const DeletBtn = styled.button`
 function Comments ({id, userId, writer, content, updatedAt}:IComment) {
   const islogged = useRecoilValue(isLoggedInAtom);
   const personalData = useRecoilValue(myPersonalDataAtom);
-  const userIdState = useRecoilValue(myUserIdAtom);
   return (
     <>
       <Wrapper isMine={(userId === personalData?.userId) && islogged}>

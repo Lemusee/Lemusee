@@ -26,7 +26,7 @@ function Personal () {
   const [teamView, setTeamView] = useState<string>();
   const isLogedIn = useRecoilValue(isLoggedInAtom);
   const navigate = useNavigate();
-  const { axiosPostProfile } = usePersonal();
+  const { axiosPatchProfile } = usePersonal();
 
   useEffect(()=>{
     if (isLogedIn) {
@@ -65,21 +65,21 @@ function Personal () {
       studentId : data.studentId,
       introduce : data.introduce
     };
-    setUserData((prev) => {
-      if (prev) {
-        const returnData = {
-          ...prev,
-          nickname : data.nickname,
-          birthYear : data.birthYear,
-          department : data.department,
-          phone : data.phone,
-          studentId : data.studentId,
-          introduce : data.introduce
-        };
-        return returnData
-      } else return prev;
-    });
-    axiosPostProfile(changedData);
+    // setUserData((prev) => {
+    //   if (prev) {
+    //     const returnData = {
+    //       ...prev,
+    //       nickname : data.nickname,
+    //       birthYear : data.birthYear,
+    //       department : data.department,
+    //       phone : data.phone,
+    //       studentId : data.studentId,
+    //       introduce : data.introduce
+    //     };
+    //     return returnData
+    //   } else return prev;
+    // });
+    axiosPatchProfile(changedData);
   };
 
 
