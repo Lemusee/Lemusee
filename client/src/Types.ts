@@ -237,6 +237,11 @@ export interface ISearchFocus {
   focus?:boolean;
 };
 
+export interface ISearchTag {
+  focus:boolean;
+  onClickFunc:()=>void;
+};
+
 
 //Home
 
