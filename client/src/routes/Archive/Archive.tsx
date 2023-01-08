@@ -26,15 +26,21 @@ function Archive () {
             <T.Pretendard17R>{!isLoading && videoItem ? `${videoItem.length} lectures` : "Loading..."}</T.Pretendard17R>
             <S.TagBox>
               {tagList.map(list => (
-                <button key={list.value} onClick={()=>{setFocus(list.value)}}>
-                  <S.Tag focus={focus} state={list.value}>{list.title}</S.Tag>
-                </button>
+                list.value !== "search" ? (
+                  <button key={list.value} onClick={()=>{setFocus(list.value)}}>
+                    <S.Tag focus={focus} state={list.value}>{list.title}</S.Tag>
+                  </button>
+                ) : (
+                  <SearchTag focus={focus} state={list.value} onClickFunc={()=>{
+                    setSearchFocus(prev => !prev);
+                    setFocus(list.value);
+                  }}/>
+                )
               ))}
-              <SearchTag focus={searchFocus} onClickFunc={()=>(setSearchFocus(prev => !prev))}/>
             </S.TagBox>
           </S.TitleBlock>
           <S.VideoListBox>
-          {isLoading ? <Loading/> : videoCat && videoCat[focus].map(list => <ArchiveVideoCard key={list.id} {...list}/>)}
+          {!isLoading && focus !== "search" ? videoCat && videoCat[focus].map(list => <ArchiveVideoCard key={list.id} {...list}/>) : focus === "search"? <></> : <Loading/>}
           </S.VideoListBox>
         </S.Container>
       </S.Wrapper>

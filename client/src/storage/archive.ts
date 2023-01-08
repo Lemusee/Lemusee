@@ -49,5 +49,10 @@ export const tagList = [
     num: 6,
     title: "활동기록",
     value: Categories.activity,
+  },
+  {
+    num:7,
+    title: "검색",
+    value: "search"
   }
 ];
