@@ -1,10 +1,9 @@
 import { useEffect } from "react";
 import { useForm } from "react-hook-form";
-import { useRecoilValue, useSetRecoilState } from "recoil";
+import { useSetRecoilState } from "recoil";
 import styled from "styled-components";
 import { IFocus } from "../../../../GlobalComponents/Spacing/Spacing";
-import * as T from "../../../../GlobalComponents/Text/Text"; 
-import { playlistItemState, searchItemAtom } from "../../../../storage/archive";
+import { searchItemAtom } from "../../../../storage/archive";
 import { ISearchForm, ISearchTag } from "../../../../Types";
 
 
@@ -45,15 +44,14 @@ export const SearchInput = styled.input`
 
 
 function SearchTag ({focus, state, onClickFunc}:ISearchTag) {
-  const videoItem = useRecoilValue(playlistItemState);
   const setSearchItem = useSetRecoilState(searchItemAtom);
   const { register, handleSubmit, setValue, setError, formState:{errors}, watch} = useForm<ISearchForm>();
   const onValid = (data:ISearchForm) => {
     setError("extraError", {message:"Fail to access"});
-    if (data.searchKeyword) setSearchItem(data.searchKeyword);
-    if (!data.searchKeyword) setSearchItem("");
-    // setValue("searchKeyword", "");
-    //watch 사용해서 검색해야할 듯
+    // if (data.searchKeyword) setSearchItem(data.searchKeyword);
+    // if (!data.searchKeyword) setSearchItem("");
+    // // setValue("searchKeyword", "");
+    // //watch 사용해서 검색해야할 듯
   };
 
   useEffect(() => {
@@ -73,11 +71,9 @@ function SearchTag ({focus, state, onClickFunc}:ISearchTag) {
           placeholder="Search for..."
         />
         ) : <></>}
-        <button type="submit">
           <svg onClick={onClickFunc} width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M16 16.7059L18 19M18 12.1176C18 15.4963 15.3137 18.2353 12 18.2353C8.68629 18.2353 6 15.4963 6 12.1176C6 8.73896 8.68629 6 12 6C15.3137 6 18 8.73896 18 12.1176Z" stroke="#202020" strokeLinecap="round" strokeLinejoin="round"/>
           </svg>
-        </button>
       </Tag>
     </>
   )

@@ -7,10 +7,11 @@ import { useRecoilState, useRecoilValue } from "recoil";
 import { isLoggedInAtom } from "../../storage/common";
 import Loading from "../../GlobalComponents/Loading/Loading";
 import { useForm } from "react-hook-form";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { IPersonalTeam, IPersonalAdjustmentForm } from "../../Types";
 import { myPersonalDataAtom } from "../../storage/user";
 import usePersonal from "../../hooks/usePersonal";
+import NextBtn, { Button } from "../../GlobalComponents/Buttons/NextBtn";
 
 const TeamInterpreter: IPersonalTeam = {
   curator: "큐레이터",
@@ -194,8 +195,8 @@ function Personal () {
             <S.Bottom>
               <S.DateInfo>
                 <S.InfoBlock>
-                  <T.Pretendard15B>JOIN DATE.</T.Pretendard15B>
-                    {userData?.createdAt !== "" ? (
+                  <T.Pretendard15B>RESET PASSWORD.</T.Pretendard15B>
+                    {/* {userData?.createdAt ? (
                       <>
                         <T.Pretendard15R>
                           <Moment format="YY.MM.DD. HH:MM">{userData?.createdAt}</Moment>
@@ -203,11 +204,14 @@ function Personal () {
                       </>
                     ) : (
                       <T.Pretendard15R>회원가입 일시 정보가 없습니다.</T.Pretendard15R>
-                    )}
+                    )} */}
+                    <Link to="/members/findaccount">
+                      <NextBtn name={"비밀번호 재설정"} type={"button"}/>
+                    </Link>
                 </S.InfoBlock>
                 <S.InfoBlock>
-                  <T.Pretendard15B>LAST MODIFIED DATE.</T.Pretendard15B>
-                    {userData?.updatedAt !== "" ? (
+                  <T.Pretendard15B>SECESSION.</T.Pretendard15B>
+                    {/* {userData?.updatedAt ? (
                       <>
                         <T.Pretendard15R>
                           <Moment format="YY.MM.DD. HH:MM">{userData?.updatedAt}</Moment>
@@ -215,7 +219,10 @@ function Personal () {
                       </>
                     ) : (
                       <T.Pretendard15R>개인정보 갱신 정보가 없습니다.</T.Pretendard15R>
-                    )}
+                    )} */}
+                    <div>
+                      <NextBtn name={"탈퇴하기"} type={"button"}/>
+                    </div>
                 </S.InfoBlock>
               </S.DateInfo>
               <PrevPageBtn name="Save Changes"/>

@@ -2,6 +2,7 @@ import styled from "styled-components";
 import * as T from "../../GlobalComponents/Text/Text";
 import * as G from "../../GlobalComponents/Spacing/Spacing";
 import { ISearchFocus } from "../../Types";
+import { motion } from "framer-motion";
 
 export const Wrapper = styled(G.Wrapper)``;
 
@@ -30,7 +31,7 @@ export const TitleBlock = styled.div`
   }
 `;
 
-export const TagBox = styled.div`
+export const TagBox = styled(motion.div)`
   display: flex;
   flex-direction: row;
   gap: 10px;

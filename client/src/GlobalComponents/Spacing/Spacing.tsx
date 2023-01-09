@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import styled from "styled-components";
 import * as T from "../Text/Text";
 
@@ -39,7 +40,7 @@ export interface IFocus {
   state?:any;
 }
 
-export const Tag = styled.div<IFocus>`
+export const Tag = styled(motion.div)<IFocus>`
   display: flex;
   flex-direction: row;
   justify-content: center;

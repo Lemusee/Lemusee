@@ -154,9 +154,10 @@ export const InfoBlock = styled.div`
   flex-direction: column;
   gap: 7px;
   ${T.Pretendard15B} {
+    padding-left: 5px;
     color: ${props => props.theme.lemuseeblack_100};
   };
   ${T.Pretendard15R} {
-    color: ${props => props.theme.lemuseeblack_60};
+    color: ${props => props.theme.lemuseeblack_80};
   }
 `;
