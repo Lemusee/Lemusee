@@ -34,7 +34,7 @@ export const Space150px = styled.div`
   background-color: transparent;
 `;
 
-interface IFocus {
+export interface IFocus {
   focus?:any;
   state?:any;
 }

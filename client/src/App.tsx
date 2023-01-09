@@ -17,6 +17,8 @@ import { curationState, executiveState } from './storage/home';
 import useVideoCategorySort from './hooks/useVideoCategorySort';
 import useAuthAPI from './hooks/useAuthAPI';
 import { getCookieToken } from './storage/accesCookie';
+import { userAPI } from './api/users';
+import { myPersonalDataAtom } from './storage/user';
   
 const selfItemData = {...dummySelfItem};
 const societyItemData = {...dummySocietyItme};
@@ -113,6 +115,8 @@ function App() {
   const curationsReady = useRecoilValue(curationState);
   const executiveReady = useRecoilValue(executiveState);
   const videoListByCategory = useVideoCategorySort(AllVideoList);
+  const setUserData = useSetRecoilState(myPersonalDataAtom);
+  const setIsLoggedIn = useSetRecoilState(isLoggedInAtom);
 
   const {silentlyRefreshAccessToken} = useAuthAPI();
 
@@ -122,6 +126,9 @@ function App() {
     const token = getCookieToken('accessToken');
     if (token) {
       silentlyRefreshAccessToken();
+    };
+    if (!token) {
+      userAPI.handleLogout(setUserData, setIsLoggedIn);
     };
   }, []);
 
