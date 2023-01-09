@@ -243,6 +243,10 @@ export interface ISearchTag {
   onClickFunc:()=>void;
 };
 
+export interface ISearchForm {
+  extraError:string;
+  searchKeyword?:string;
+};
 
 //Home
 

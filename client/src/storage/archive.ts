@@ -14,6 +14,11 @@ export const playlistItemCatState = atom<IVideoItemsByCategory | null>({
   default: null
 });
 
+export const searchItemAtom = atom<string>({
+  key:`userState/${v1()}`,
+  default: ""
+});
+
 export const tagList = [
   {
     num: 0,
