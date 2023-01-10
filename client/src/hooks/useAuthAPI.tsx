@@ -27,7 +27,12 @@ const useAuthAPI = () => {
     if (code && code === 4000) {
       window.alert("서버 연결 오류");
     };
-    handleAuthenticationSuccess(result);
+    if (code === 1000) {
+      handleAuthenticationSuccess(result);
+    }
+    else {
+      window.alert("로그인에 실패했습니다.")
+    };
   };
   
   /**로그인 성공시 accessToken 세팅 및 프로필 데이터 get */

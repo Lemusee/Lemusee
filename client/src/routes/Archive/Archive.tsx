@@ -10,6 +10,7 @@ import Loading from "../../GlobalComponents/Loading/Loading";
 import { tagList } from "../../storage/archive";
 import SearchTag from "./components/SearchTag/SearchTag";
 import { IVideoItems } from "../../Types";
+import { AnimatePresence } from "framer-motion";
 
 function Archive () {
   const videoItem = useRecoilValue(playlistItemState);
@@ -28,6 +29,7 @@ function Archive () {
       );
     }
   }, [searchKeyword]);
+
   return(
     <>
       <Header thickness={false}/>
@@ -36,19 +38,26 @@ function Archive () {
           <S.TitleBlock>
             <T.Pretendard44B>Archive</T.Pretendard44B>
             <T.Pretendard17R>{!isLoading && videoItem ? `${videoItem.length} lectures` : "Loading..."}</T.Pretendard17R>
-            <S.TagBox>
-              {tagList.map(list => (
-                list.value !== "search" ? (
-                  <button key={list.value} onClick={()=>{setFocus(list.value)}}>
-                    <S.Tag focus={focus} state={list.value}>{list.title}</S.Tag>
-                  </button>
-                ) : (
-                  <SearchTag focus={focus} state={list.value} onClickFunc={()=>{
-                    setFocus(list.value);
-                  }}/>
-                )
-              ))}
-            </S.TagBox>
+            <AnimatePresence>
+              <S.TagBox>
+                {tagList.map(list => (
+                  list.value !== "search" ? (
+                    <button 
+                      key={list.value} 
+                      onClick={()=>{setFocus(list.value)}}
+                    >
+                      <S.Tag 
+                        focus={focus} 
+                        state={list.value}
+                        layoutId={list.value}
+                      >{list.title}</S.Tag>
+                    </button>
+                  ) : (
+                    <SearchTag focus={focus} state={list.value} onClickFunc={()=>setFocus(list.value)}/>
+                  )
+                ))}
+              </S.TagBox>
+            </AnimatePresence>
           </S.TitleBlock>
           <S.VideoListBox>
           {!isLoading && focus !== "search" ? videoCat && videoCat[focus].map(list => <ArchiveVideoCard key={list.id} {...list}/>) : focus === "search"? searchResult && searchResult.map(list => <ArchiveVideoCard key={list.id} {...list}/>) : <Loading/>}
