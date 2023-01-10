@@ -27,7 +27,7 @@ function Personal () {
   const [teamView, setTeamView] = useState<string>();
   const isLogedIn = useRecoilValue(isLoggedInAtom);
   const navigate = useNavigate();
-  const { axiosPatchProfile } = usePersonal();
+  const { axiosPatchProfile, axiosDeleteSecession } = usePersonal();
 
   useEffect(()=>{
     if (isLogedIn) {
@@ -66,21 +66,12 @@ function Personal () {
       studentId : data.studentId,
       introduce : data.introduce
     };
-    // setUserData((prev) => {
-    //   if (prev) {
-    //     const returnData = {
-    //       ...prev,
-    //       nickname : data.nickname,
-    //       birthYear : data.birthYear,
-    //       department : data.department,
-    //       phone : data.phone,
-    //       studentId : data.studentId,
-    //       introduce : data.introduce
-    //     };
-    //     return returnData
-    //   } else return prev;
-    // });
     axiosPatchProfile(changedData);
+  };
+
+  const onSecession = () => {
+    let exit = window.confirm("정말 탈퇴하시겠습니까?");
+    if (exit) axiosDeleteSecession();
   };
 
 
@@ -220,7 +211,7 @@ function Personal () {
                     ) : (
                       <T.Pretendard15R>개인정보 갱신 정보가 없습니다.</T.Pretendard15R>
                     )} */}
-                    <div>
+                    <div onClick={onSecession}>
                       <NextBtn name={"탈퇴하기"} type={"button"}/>
                     </div>
                 </S.InfoBlock>

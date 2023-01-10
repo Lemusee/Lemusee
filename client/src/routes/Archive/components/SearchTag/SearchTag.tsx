@@ -48,14 +48,10 @@ function SearchTag ({focus, state, onClickFunc}:ISearchTag) {
   const { register, handleSubmit, setValue, setError, formState:{errors}, watch} = useForm<ISearchForm>();
   const onValid = (data:ISearchForm) => {
     setError("extraError", {message:"Fail to access"});
-    // if (data.searchKeyword) setSearchItem(data.searchKeyword);
-    // if (!data.searchKeyword) setSearchItem("");
-    // // setValue("searchKeyword", "");
-    // //watch 사용해서 검색해야할 듯
   };
 
   useEffect(() => {
-    const keyword = watch('searchKeyword')
+    const keyword = watch('searchKeyword');
     if (keyword) {
       setSearchItem(keyword);
     }
