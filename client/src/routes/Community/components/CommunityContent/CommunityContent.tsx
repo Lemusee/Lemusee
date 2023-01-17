@@ -10,11 +10,10 @@ import * as T from "../../../../GlobalComponents/Text/Text";
 import Loading from "../../../../GlobalComponents/Loading/Loading";
 import Moment from "react-moment";
 import Comment from "../Comment/Comment";
-import {ReactComponent as AddNewSVG} from "../../../../assets/icons/add_new.svg";
-import NewCommentForm from "../NewCommentForm/NewCommentForm";
 import * as DOMPurify from 'dompurify';
 import "./CommunityContent.css";
 import { IContent } from "../../../../Types";
+import NewCommentForm from "../../../../GlobalComponents/Comment/NewCommentForm";
 
 
 const Wrapper = styled(G.Wrapper)`
@@ -81,18 +80,6 @@ const Comments = styled.div`
   margin-top: 15px;
 `;
 
-const NewCommentsBtn = styled.button`
-  width: 100%;
-  height: 100px;
-  border-radius: 5px;
-  padding: 10px 5px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items:center;
-  border: dashed 2px ${props=> props.theme.lemuseeblack_60};
-`;
-
 const TitleArea = styled(T.Pretendard17B)`
   width: 100%;
   margin-bottom: 30px;
@@ -104,7 +91,6 @@ function CommunityContent () {
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const isLogedIn = useRecoilValue(isLoggedInAtom);
   const userId = useRecoilValue(myUserIdAtom);
-  const [commentOpen, setCommentOpen] = useRecoilState(commentOpenAtom);
   const createMarkup = (textdata:string | undefined) => {
     if (!textdata) return;
     return {__html: DOMPurify.sanitize(textdata)};
@@ -147,15 +133,7 @@ function CommunityContent () {
               ))}
             </Comments>
             <Comments>
-              {!isLogedIn ? (
-                null
-              ) : commentOpen ? (
-                <NewCommentForm userId={userId} />
-              ) : (
-                <NewCommentsBtn onClick={()=>setCommentOpen(true)}>
-                  <AddNewSVG/>
-                </NewCommentsBtn>
-              )}
+              <NewCommentForm/>
             </Comments>
           </Wrapper>
         )}

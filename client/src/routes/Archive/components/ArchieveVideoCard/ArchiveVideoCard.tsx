@@ -1,11 +1,15 @@
 import * as S from "./SArchiveVideoCard";
 import * as T from "../../../../GlobalComponents/Text/Text";
 import Moment from "react-moment";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { IVideoItems } from "../../../../Types";
+import { useSetRecoilState } from "recoil";
+import { searchItemAtom } from "../../../../storage/archive";
 
 
 function VideoCard ({ title, publishedAt, videoURL, thumnailUrl, category } : IVideoItems) {
+  const setSearchKeyWord = useSetRecoilState(searchItemAtom);
+  const navigate = useNavigate();
   const titles = (title.indexOf('(') !== -1) ? title.split('(') : [title, ')'];
   const [titleSorted, nameSorted] = [titles[0], titles[1].replace(')', '')];
   const categoryList = {
@@ -15,7 +19,11 @@ function VideoCard ({ title, publishedAt, videoURL, thumnailUrl, category } : IV
     science_tech: "기술과학",
     activity: "활동기록",
     etc: "기타영상"
-  }
+  };
+  const onClickName = () => {
+    setSearchKeyWord(nameSorted);
+    navigate('/archive');
+  };
   return (
     <>
       <Link to={`/player/${videoURL}`}>
@@ -23,7 +31,9 @@ function VideoCard ({ title, publishedAt, videoURL, thumnailUrl, category } : IV
           <S.VideoImg thumnailUrl={thumnailUrl}/>
           <T.Pretendard15M>{titleSorted}</T.Pretendard15M>
           <S.videoDetailText>
-            <T.Pretendard13R>{nameSorted}</T.Pretendard13R>
+            <div onClick={onClickName}>
+              <T.Pretendard13R>{nameSorted}</T.Pretendard13R>
+            </div>
             <T.Pretendard11R>
               <Moment format="YY.MM.DD.">{publishedAt}</Moment>
             </T.Pretendard11R>
