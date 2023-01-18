@@ -60,11 +60,10 @@ export interface IisMine {
 }
 
 export interface IComment {
-  id: number;
-  userId : number;
-  writer : string;
+  authorId : number;
+  username : string;
   content : string;
-  updatedAt : string;
+  createdAt : string;
 };
 
 export interface ICommentForm {

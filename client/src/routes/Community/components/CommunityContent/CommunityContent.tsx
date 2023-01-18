@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { useRecoilState, useRecoilValue } from "recoil";
 import contentData from "../../../../assets/dummyData/dummyCommunityContent.json";
-import { commentOpenAtom } from "../../../../storage/community";
 import { myUserIdAtom } from "../../../../storage/user";
 import { isLoggedInAtom } from "../../../../storage/common";
 import styled from "styled-components";
@@ -9,11 +8,11 @@ import * as G from "../../../../GlobalComponents/Spacing/Spacing";
 import * as T from "../../../../GlobalComponents/Text/Text";
 import Loading from "../../../../GlobalComponents/Loading/Loading";
 import Moment from "react-moment";
-import Comment from "../Comment/Comment";
 import * as DOMPurify from 'dompurify';
 import "./CommunityContent.css";
 import { IContent } from "../../../../Types";
 import NewCommentForm from "../../../../GlobalComponents/Comment/NewCommentForm";
+import Comment from "../../../../GlobalComponents/Comment/Comment"
 
 
 const Wrapper = styled(G.Wrapper)`
@@ -128,8 +127,8 @@ function CommunityContent () {
             <TextArea dangerouslySetInnerHTML={createMarkup(copydata?.content)}/>
             <T.Pretendard17M>COMMENTS</T.Pretendard17M>
             <Comments>
-              {copydata && copydata?.comments.map(i => (
-                <Comment key={i.id} id={i.id} userId={i.userId} writer={i.writer} content={i.content} updatedAt={i.updatedAt} />
+              {copydata && copydata?.comments.map(list => (
+                <Comment key={list.createdAt} {...list} />
               ))}
             </Comments>
             <Comments>

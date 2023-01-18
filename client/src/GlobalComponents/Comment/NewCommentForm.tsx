@@ -115,7 +115,7 @@ function NewCommentForm () {
             })}
               placeholder="댓글을 입력하세요..."
               />
-            <button type="submit">수정완료</button>
+            <button type="submit" onClick={()=>setOpen(false)}>제출하기</button>
             <span>{errors?.comment?.message}</span>
           </TextForm>
         </Wrapper>  

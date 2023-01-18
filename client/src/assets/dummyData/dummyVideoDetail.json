@@ -3,41 +3,23 @@
   "code": 1000,
   "message": "요청에 성공하였습니다.",
   "result": {
-    "kind": "youtube#playlistItem",
-    "etag": "eE23e-gljGP8wWmbdnnlIl-01B0",
-    "id": "UExVeGlXLW9MZGxvd0lmaE5YbmpYZTdDWlJicjJfMDlQUC41NkI0NEY2RDEwNTU3Q0M2",
-    "snippet": {
-      "publishedAt": "2022-10-01T11:15:18Z",
-      "channelId": "UCGagrr6S5Q8dGXkxnT-ScmA",
-      "title": "알 카포네, 금주법과 우유 유통망 (지윤상 연사자)",
-      "description": "본 영상은 2022년 3월 31일 건국대학교 중앙 강연 동아리 레뮤제에서 진행된 강연 촬영본입니다. \n\n알 카포네, 금주법과 우유 유통망 – 지윤상 연사자\n\n미국에 내 지나친 음주 문제는 금주법의 시행으로 이어졌고, 금주법을 피한 불법행위가 증가하자 ‘알 카포네’라는 마피아가 혜성처럼 등장합니다. 금주법이 폐지되자, ‘알 카포네’는 그 당시 미국 내 심각한 문제였던 우유 산업에 뛰어들며 정부와 기업도 해결하지 못한 우유 유통 문제를 단숨에 해결하고 지금의 우유 산업의 기반을 만들게 됩니다\n\n*본 강연회는 정부의 방역수칙을 준수하여 진행되었습니다*",
-      "thumbnails": {
-        "default": {
-          "url": "https://i.ytimg.com/vi/hGqBykQpC68/default.jpg",
-          "width": 120,
-          "height": 90
+      "videoId" : "AFI9gl3_U6o",
+      "title" : "알 카포네, 금주법과 우유 유통망 (지윤상 연사자)",
+      "description" : "본 영상은 2022년 3월 31일 건국대학교 중앙 강연 동아리 레뮤제에서 진행된 강연 촬영본입니다. \n\n알 카포네, 금주법과 우유 유통망 – 지윤상 연사자\n\n미국에 내 지나친 음주 문제는 금주법의 시행으로 이어졌고, 금주법을 피한 불법행위가 증가하자 ‘알 카포네’라는 마피아가 혜성처럼 등장합니다. 금주법이 폐지되자, ‘알 카포네’는 그 당시 미국 내 심각한 문제였던 우유 산업에 뛰어들며 정부와 기업도 해결하지 못한 우유 유통 문제를 단숨에 해결하고 지금의 우유 산업의 기반을 만들게 됩니다\n\n*본 강연회는 정부의 방역수칙을 준수하여 진행되었습니다*",
+      "playlistId" : "UExVeGlXLW9MZGxvd0lmaE5YbmpYZTdDWlJicjJfMDlQUC41NkI0NEY2RDEwNTU3Q0M2",
+      "comments" : [
+        {
+            "username":"구민성",
+            "createdAt":"2022-10-01T11:07:58Z",
+            "content": "그러나 마디씩 가을로 패, 아직 너무나 잔디가 하나에 이런 있습니다. 말 시인의 가을로 마디씩 벌써 내 언덕 동경과 거외다. 내 노루, 겨울이 없이 내 계십니다. 어머니 마리아 청춘이 경, 언덕 너무나 흙으로 거외다.",
+            "authorId": 8
         },
-        "medium": {
-          "url": "https://i.ytimg.com/vi/hGqBykQpC68/mqdefault.jpg",
-          "width": 320,
-          "height": 180
-        },
-        "high": {
-          "url": "https://i.ytimg.com/vi/hGqBykQpC68/hqdefault.jpg",
-          "width": 480,
-          "height": 360
-        },
-        "standard": {
-          "url": "https://i.ytimg.com/vi/hGqBykQpC68/sddefault.jpg",
-          "width": 640,
-          "height": 480
-        },
-        "maxres": {
-          "url": "https://i.ytimg.com/vi/hGqBykQpC68/maxresdefault.jpg",
-          "width": 1280,
-          "height": 720
+        {
+            "username":"윤창우",
+            "createdAt":"2022-10-01T11:07:58Z",
+            "content": "그러나 마디씩 가을로 패, 아직 너무나 잔디가 하나에 이런 있습니다. 말 시인의 가을로 마디씩 벌써 내 언덕 동경과 거외다. 내 노루, 겨울이 없이 내 계십니다. 어머니 마리아 청춘이 경, 언덕 너무나 흙으로 거외다.",
+            "authorId": 3
         }
-      }
-    }
+    ]
   }
 }

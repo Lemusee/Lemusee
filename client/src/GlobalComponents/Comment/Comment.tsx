@@ -34,6 +34,13 @@ const UserDate = styled.div`
   };
 `;
 
+const UserSession = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+`;
+
 const Btns = styled.div`
   margin-top: 8px;
   display: flex;
@@ -51,29 +58,31 @@ const DeletBtn = styled.button`
   };
 `;
 
-function Comments ({userId, writer, content, updatedAt}:IComment) {
+function Comments ({authorId, username, content, createdAt}:IComment) {
   const islogged = useRecoilValue(isLoggedInAtom);
   const personalData = useRecoilValue(myPersonalDataAtom);
   return (
     <>
-      <Wrapper isMine={(userId === personalData?.userId) && islogged}>
+      <Wrapper isMine={(authorId === personalData?.userId) && islogged}>
         <UserDate>
-          <T.Pretendard15M>{writer}</T.Pretendard15M>
+          <UserSession>
+            <T.Pretendard15M>{username}</T.Pretendard15M>
+            {islogged && personalData?.userId === authorId ? (
+              <Btns>
+                <EditBtn>
+                  <T.Pretendard11R>수정</T.Pretendard11R>
+                </EditBtn>
+                <DeletBtn>
+                  <T.Pretendard11R>삭제</T.Pretendard11R>
+                </DeletBtn>
+              </Btns>
+            ) : null}
+          </UserSession>
           <T.Pretendard13R>
-            <Moment format="YY.MM.DD.">{updatedAt}</Moment>
+            <Moment format="YY.MM.DD.">{createdAt}</Moment>
           </T.Pretendard13R>
         </UserDate>
         <T.Pretendard15R>{content}</T.Pretendard15R>
-        {islogged && personalData?.userId === userId ? (
-          <Btns>
-            <EditBtn>
-              <T.Pretendard11R>수정</T.Pretendard11R>
-            </EditBtn>
-            <DeletBtn>
-              <T.Pretendard11R>삭제</T.Pretendard11R>
-            </DeletBtn>
-          </Btns>
-        ) : null}
       </Wrapper>
     </>
   )

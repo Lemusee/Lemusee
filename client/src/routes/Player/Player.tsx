@@ -3,16 +3,19 @@ import * as S from "./SPlayer";
 import * as T from "../../GlobalComponents/Text/Text";
 import { useParams } from "react-router-dom";
 import Footer from "../../GlobalComponents/Footer/Footer";
-import CommentsData from "../../assets/dummyData/dummyComments.json";
-import CommentsCard from "./components/CommentsCard/CommentsCard";
 import dummyVideoDetail from "../../assets/dummyData/dummyVideoDetail.json";
 import { useEffect } from "react";
+import Comment from "../../GlobalComponents/Comment/Comment";
+import NewCommentForm from "../../GlobalComponents/Comment/NewCommentForm";
+import { useRecoilValue } from "recoil";
+import { isLoggedInAtom } from "../../storage/common";
 
 function Player () {
   const {videoId} = useParams();
-  const comments = [...CommentsData.result.items];
+  const isLoggedIn = useRecoilValue(isLoggedInAtom);
+  const comments = [...dummyVideoDetail.result.comments];
   const videoDetail = {...dummyVideoDetail.result};
-  const titles = (videoDetail.snippet.title.indexOf('(') !== -1) ? videoDetail.snippet.title.split('(') : [videoDetail.snippet.title, ')'];
+  const titles = (videoDetail.title.indexOf('(') !== -1) ? videoDetail.title.split('(') : [videoDetail.title, ')'];
   const [titleSorted, nameSorted] = [titles[0], titles[1].replace(')', '')];
   const copy = () => {
     navigator.clipboard.writeText(`https://youtu.be/${videoId}`).then(()=> {alert("링크가 복사되었습니다")});
@@ -52,7 +55,7 @@ function Player () {
       <S.DescriptionWrapper>
         <S.DescriptionContainer>
           <T.Pretendard15R>
-            {videoDetail.snippet.description}
+            {videoDetail.description}
           </T.Pretendard15R>
         </S.DescriptionContainer>
       </S.DescriptionWrapper>
@@ -62,7 +65,10 @@ function Player () {
             <T.Pretendard17M>comments</T.Pretendard17M>
           </S.contentTitle>
           <S.CommentsBox>
-            {comments.map(list => <CommentsCard key={list.createdAt} {...list}/>)}
+            {comments.map(list => <Comment key={list.createdAt} {...list}/>)}
+          </S.CommentsBox>
+          <S.CommentsBox>
+            <NewCommentForm/>
           </S.CommentsBox>
         </S.CommentContainer>
       </S.CommentWrapper>
